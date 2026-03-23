@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Check } from "lucide-react";
 import { CEO } from "@/data/team";
 import SectionTitle from "@/components/shared/SectionTitle";
 import FadeIn from "@/components/shared/FadeIn";
@@ -23,10 +24,10 @@ export default function CeoMessage() {
                 &ldquo;{CEO.message}&rdquo;
               </p>
             </blockquote>
-            <div className="mt-8 space-y-3">
+            <div className="mt-8 flex flex-wrap gap-3">
               {CEO.philosophy.map((item) => (
-                <div key={item} className="flex items-center gap-3">
-                  <div className="h-1.5 w-1.5 rounded-full bg-primary" />
+                <div key={item} className="inline-flex items-center gap-2 rounded-full border border-primary/15 bg-primary/5 px-4 py-2">
+                  <Check className="h-3.5 w-3.5 text-primary" />
                   <span className="text-sm font-medium">{item}</span>
                 </div>
               ))}

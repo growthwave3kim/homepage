@@ -90,7 +90,7 @@ export default function WhyChooseUs() {
                       <h3 className="mb-2 text-xl font-bold text-white lg:text-2xl">
                         {reason.title}
                       </h3>
-                      <p className="text-sm leading-relaxed text-white/50 lg:text-base">
+                      <p className="text-sm leading-relaxed text-white/45 lg:text-base">
                         {reason.description}
                       </p>
                     </div>

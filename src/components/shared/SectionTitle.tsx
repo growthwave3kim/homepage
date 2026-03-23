@@ -26,7 +26,7 @@ export default function SectionTitle({
       )}
     >
       {subtitle && (
-        <p className="mb-2 text-sm font-medium tracking-widest text-muted-foreground uppercase">
+        <p className="mb-3 text-[11px] font-medium tracking-[0.4em] text-muted-foreground uppercase">
           {subtitle}
         </p>
       )}

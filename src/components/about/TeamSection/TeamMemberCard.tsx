@@ -1,6 +1,5 @@
 import type { TeamMember } from "@/types";
 import { Badge } from "@/components/ui/badge";
-import { Quote } from "lucide-react";
 
 interface TeamMemberCardProps {
   member: TeamMember;
@@ -38,10 +37,9 @@ export default function TeamMemberCard({ member, index }: TeamMemberCardProps) {
           <Badge variant="secondary">{member.title}</Badge>
         </div>
         <p className="mb-3 text-sm text-muted-foreground">{member.role}</p>
-        <div className="flex items-start gap-2 rounded-lg bg-muted/50 p-3">
-          <Quote className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+        <div className="border-l-2 border-primary/30 pl-4">
           <p className="text-sm leading-relaxed italic text-muted-foreground">
-            {member.quote}
+            &ldquo;{member.quote}&rdquo;
           </p>
         </div>
         <p className="mt-3 text-sm leading-relaxed text-muted-foreground">

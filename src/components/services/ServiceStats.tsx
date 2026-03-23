@@ -17,7 +17,7 @@ export default function ServiceStats({ stats }: ServiceStatsProps) {
                 <p className="text-3xl font-bold text-white lg:text-4xl">
                   {stat.value}
                 </p>
-                <p className="mt-2 text-xs font-medium tracking-widest text-white/35 uppercase">
+                <p className="mt-2 text-xs font-medium tracking-widest text-white/30 uppercase">
                   {stat.label}
                 </p>
               </div>

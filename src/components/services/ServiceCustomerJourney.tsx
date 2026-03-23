@@ -41,12 +41,9 @@ export default function ServiceCustomerJourney() {
 
         <div className="relative flex flex-col gap-4 lg:flex-row lg:items-stretch lg:gap-0">
           {JOURNEY.map((item, index) => (
-            <div key={item.step} className="flex items-center lg:flex-1">
-              <div className="flex flex-1 flex-col items-center rounded-2xl border bg-card p-6 text-center transition-all hover:shadow-lg">
-                <span className="mb-3 text-xs font-semibold tracking-widest text-muted-foreground uppercase">
-                  Step {item.step}
-                </span>
-                <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
+            <div key={item.step} className="flex flex-1 items-center">
+              <div className="flex flex-1 flex-col items-center rounded-2xl border bg-card p-6 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
                   <span className="text-sm font-bold text-primary">{item.step}</span>
                 </div>
                 <h3 className="mb-2 font-semibold">{item.label}</h3>

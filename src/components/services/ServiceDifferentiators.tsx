@@ -39,7 +39,7 @@ export default function ServiceDifferentiators() {
         <div className="grid gap-6 md:grid-cols-3">
           {ITEMS.map((item, i) => (
             <FadeIn key={item.title} delay={i * 120} direction="up">
-              <div className="group relative overflow-hidden rounded-2xl border bg-card transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_24px_64px_oklch(0.22_0.035_265/0.12)]">
+              <div className="group relative overflow-hidden rounded-2xl border bg-card transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_24px_64px_oklch(0.22_0.035_265/0.12)]">
                 <div
                   className={`relative flex h-32 items-center justify-center bg-gradient-to-br ${item.gradient} overflow-hidden`}
                 >

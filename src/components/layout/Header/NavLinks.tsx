@@ -64,7 +64,7 @@ export default function NavLinks({ transparent }: NavLinksProps) {
       })}
 
       <button
-        onClick={() => alert("회사소개서는 준비 중입니다.")}
+        onClick={() => {}}
         className={cn(
           "text-sm font-medium transition-colors duration-300",
           transparent

@@ -34,7 +34,7 @@ export default function ServiceReviews() {
         {/* 헤더 */}
         <FadeIn direction="up">
           <div className="mb-16 flex flex-col items-center gap-4 text-center">
-            <p className="text-[11px] font-medium tracking-[0.4em] text-white/35 uppercase">
+            <p className="text-[11px] font-medium tracking-[0.4em] text-white/30 uppercase">
               Client Reviews
             </p>
             <div className="flex items-end gap-4">
@@ -60,11 +60,11 @@ export default function ServiceReviews() {
         <div className="grid gap-5 md:grid-cols-3">
           {REVIEWS.map((review, i) => (
             <FadeIn key={review.name} delay={i * 120} direction="up">
-              <div className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-white/[0.07] bg-white/[0.04] p-7 backdrop-blur-sm transition-all duration-400 hover:-translate-y-1 hover:border-white/[0.12] hover:bg-white/[0.07]">
+              <div className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-white/[0.07] bg-white/[0.04] p-7 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-white/[0.12] hover:bg-white/[0.07]">
                 {/* 인용 마크 */}
                 <Quote className="mb-4 h-7 w-7 text-white/15" />
 
-                <p className="mb-6 flex-1 text-sm leading-relaxed text-white/55">
+                <p className="mb-6 flex-1 text-sm leading-relaxed text-white/45">
                   {review.text}
                 </p>
 
@@ -73,7 +73,7 @@ export default function ServiceReviews() {
                     <p className="text-sm font-semibold text-white/80">
                       {review.name}
                     </p>
-                    <p className="text-xs text-white/35">{review.company}</p>
+                    <p className="text-xs text-white/30">{review.company}</p>
                   </div>
                   <div className="flex gap-0.5">
                     {Array.from({ length: review.rating }).map((_, j) => (

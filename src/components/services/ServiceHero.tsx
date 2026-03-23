@@ -10,7 +10,7 @@ export default function ServiceHero({
   description,
 }: ServiceHeroProps) {
   return (
-    <section className="relative overflow-hidden bg-[oklch(0.10_0.025_265)] pb-28 pt-44 lg:pb-36 lg:pt-52">
+    <section className="relative overflow-hidden bg-[oklch(0.10_0.025_265)] pb-24 pt-40 lg:pb-32 lg:pt-48">
       {/* 오브 */}
       <div className="animate-float absolute -left-32 -top-32 h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_at_center,oklch(0.36_0.09_265/0.35),transparent_65%)] blur-[80px]" />
       <div className="animate-float-d1 absolute -bottom-32 -right-32 h-[400px] w-[400px] rounded-full bg-[radial-gradient(circle_at_center,oklch(0.30_0.07_280/0.28),transparent_65%)] blur-[70px]" />
@@ -30,7 +30,7 @@ export default function ServiceHero({
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 text-center lg:px-8">
-        <p className="mb-4 animate-fade-up text-xs font-medium tracking-[0.4em] text-white/40 uppercase">
+        <p className="mb-4 animate-fade-up text-[11px] font-medium tracking-[0.4em] text-white/30 uppercase">
           {subtitle}
         </p>
         <h1
@@ -42,7 +42,7 @@ export default function ServiceHero({
         <div className="mx-auto mb-8 h-px w-20 bg-gradient-to-r from-transparent via-white/20 to-transparent"
           style={{ animation: "fade-in 0.7s ease 0.2s both" }} />
         <p
-          className="mx-auto max-w-2xl text-base leading-relaxed text-white/50 lg:text-lg"
+          className="mx-auto max-w-2xl text-base leading-relaxed text-white/45 lg:text-lg"
           style={{ animation: "fade-up 0.7s ease 0.25s both" }}
         >
           {description}

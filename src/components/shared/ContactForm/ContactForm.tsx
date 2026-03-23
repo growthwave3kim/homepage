@@ -63,17 +63,19 @@ export default function ContactForm() {
     privacyAgreed: false,
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [status, setStatus] = useState<"idle" | "error" | "success">("idle");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.privacyAgreed) {
-      alert("개인정보 수집 및 이용에 동의해주세요.");
+      setStatus("error");
       return;
     }
+    setStatus("idle");
     setIsSubmitting(true);
     // TODO: Supabase에 저장
     await new Promise((r) => setTimeout(r, 1000));
-    alert("상담 문의가 접수되었습니다. 빠르게 연락드리겠습니다.");
+    setStatus("success");
     setFormData({
       company: "",
       name: "",
@@ -93,7 +95,7 @@ export default function ContactForm() {
         <div className="grid gap-12 lg:grid-cols-5 lg:gap-16">
           {/* Left — Info */}
           <div className="lg:col-span-2">
-            <p className="mb-2 text-sm font-medium tracking-widest text-muted-foreground uppercase">
+            <p className="mb-3 text-[11px] font-medium tracking-[0.4em] text-muted-foreground uppercase">
               Contact
             </p>
             <h2 className="mb-4 text-3xl font-bold tracking-tight lg:text-4xl">
@@ -295,6 +297,17 @@ export default function ContactForm() {
                 >
                   {isSubmitting ? "접수 중..." : "프로젝트 문의하기"}
                 </Button>
+
+                {status === "error" && (
+                  <p className="text-sm font-medium text-red-500">
+                    개인정보 수집 및 이용에 동의해주세요.
+                  </p>
+                )}
+                {status === "success" && (
+                  <p className="text-sm font-medium text-emerald-600">
+                    상담 문의가 접수되었습니다. 빠르게 연락드리겠습니다.
+                  </p>
+                )}
               </form>
             </div>
           </div>

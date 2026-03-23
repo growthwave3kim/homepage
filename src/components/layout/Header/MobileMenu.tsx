@@ -58,10 +58,7 @@ export default function MobileMenu({ transparent }: MobileMenuProps) {
             </Link>
           ))}
           <button
-            onClick={() => {
-              setOpen(false);
-              alert("회사소개서는 준비 중입니다.");
-            }}
+            onClick={() => setOpen(false)}
             className="rounded-lg px-4 py-3 text-left text-base font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
           >
             회사소개서

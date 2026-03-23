@@ -97,7 +97,7 @@ export default function ServiceShowcase() {
           {SERVICES.map((svc, i) => (
             <FadeIn key={svc.num} delay={i * 80} direction="up">
               <Link href={svc.href} className="group block">
-                <div className="grid overflow-hidden rounded-3xl border border-border/60 bg-card transition-all duration-500 hover:border-border hover:shadow-[0_24px_80px_oklch(0.22_0.035_265/0.09)] lg:grid-cols-5">
+                <div className="grid overflow-hidden rounded-2xl border border-border/60 bg-card transition-all duration-300 hover:border-border hover:shadow-[0_24px_80px_oklch(0.22_0.035_265/0.09)] lg:grid-cols-5">
                   {/* 비주얼 패널 */}
                   <div
                     className={`relative order-1 h-56 overflow-hidden lg:col-span-2 lg:h-auto ${i % 2 === 1 ? "lg:order-2" : ""}`}

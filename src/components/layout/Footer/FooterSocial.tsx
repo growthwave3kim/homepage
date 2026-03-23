@@ -1,6 +1,5 @@
-"use client";
-
 import { Instagram } from "lucide-react";
+import { COMPANY_INFO } from "@/data/navigation";
 
 function NaverBlogIcon({ className }: { className?: string }) {
   return (
@@ -16,26 +15,26 @@ function NaverBlogIcon({ className }: { className?: string }) {
 }
 
 export default function FooterSocial() {
-  const handleSocial = (name: string) => {
-    alert(`${name} 채널은 준비 중입니다.`);
-  };
-
   return (
-    <div className="flex items-center gap-4">
-      <button
-        onClick={() => handleSocial("Instagram")}
-        className="flex h-10 w-10 items-center justify-center rounded-full bg-muted text-muted-foreground transition-colors hover:bg-primary hover:text-primary-foreground"
+    <div className="flex items-center gap-3">
+      <a
+        href={COMPANY_INFO.socials.instagram}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex h-10 w-10 items-center justify-center rounded-full bg-muted text-muted-foreground transition-colors duration-300 hover:bg-primary hover:text-primary-foreground"
         aria-label="Instagram"
       >
         <Instagram className="h-5 w-5" />
-      </button>
-      <button
-        onClick={() => handleSocial("네이버 블로그")}
-        className="flex h-10 w-10 items-center justify-center rounded-full bg-muted text-muted-foreground transition-colors hover:bg-primary hover:text-primary-foreground"
+      </a>
+      <a
+        href={COMPANY_INFO.socials.blog}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex h-10 w-10 items-center justify-center rounded-full bg-muted text-muted-foreground transition-colors duration-300 hover:bg-primary hover:text-primary-foreground"
         aria-label="네이버 블로그"
       >
         <NaverBlogIcon className="h-4 w-4" />
-      </button>
+      </a>
     </div>
   );
 }
