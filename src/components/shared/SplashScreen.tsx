@@ -8,15 +8,11 @@ export default function SplashScreen() {
   const [leaving, setLeaving] = useState(false);
 
   useEffect(() => {
-    const shown = sessionStorage.getItem("gw_splash");
-    if (shown) return;
-
     setVisible(true);
 
     const leaveTimer = setTimeout(() => setLeaving(true), 2400);
     const hideTimer = setTimeout(() => {
       setVisible(false);
-      sessionStorage.setItem("gw_splash", "1");
     }, 3000);
 
     return () => {

@@ -3,7 +3,7 @@ import type { TeamMember } from "@/types";
 export const CEO = {
   name: "김성민",
   role: "대표이사 · Founder",
-  image: "",
+  image: "/images/ceo.jpg",
   message:
     "GrowthWave는 브랜드가 시장에서 고유한 존재감을 가질 수 있도록 돕습니다. 데이터와 크리에이티브의 교차점에서 가장 효과적인 성장 전략을 설계하고, 클라이언트와 함께 성장하는 파트너가 되겠습니다.",
   philosophy: [
