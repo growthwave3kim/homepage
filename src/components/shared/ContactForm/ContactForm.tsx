@@ -290,7 +290,7 @@ export default function ContactForm() {
                 <Button
                   type="submit"
                   size="lg"
-                  className="w-full"
+                  className="h-14 w-full text-base"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? "접수 중..." : "프로젝트 문의하기"}

@@ -25,10 +25,10 @@ export const NAV_ITEMS: NavItem[] = [
 export const COMPANY_INFO = {
   name: "GrowthWave",
   nameEn: "GrowthWave",
-  representative: "김도현",
+  representative: "김성민",
   address: "서울특별시 강남구 테헤란로 427 위워크타워 12층",
-  phone: "02-6952-0837",
-  email: "hello@growthwave.kr",
+  phone: "010-8415-3244",
+  email: "asdn568907@naver.com",
   hours: "평일 10:00 - 19:00 (주말/공휴일 휴무)",
   businessNumber: "492-87-02531",
   socials: {

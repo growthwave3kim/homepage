@@ -3,11 +3,16 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
+// 클라이언트 세션 동안 한 번만 표시 (새로고침 시 초기화됨)
+let splashDismissed = false;
+
 export default function SplashScreen() {
-  const [visible, setVisible] = useState(true);
+  const [visible, setVisible] = useState(!splashDismissed);
   const [leaving, setLeaving] = useState(false);
 
   useEffect(() => {
+    if (!visible) return;
+    splashDismissed = true;
     document.body.style.overflow = "hidden";
 
     const leaveTimer = setTimeout(() => setLeaving(true), 2400);
