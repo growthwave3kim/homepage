@@ -4,11 +4,10 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 
 export default function SplashScreen() {
-  const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState(true);
   const [leaving, setLeaving] = useState(false);
 
   useEffect(() => {
-    setVisible(true);
     document.body.style.overflow = "hidden";
 
     const leaveTimer = setTimeout(() => setLeaving(true), 2400);
