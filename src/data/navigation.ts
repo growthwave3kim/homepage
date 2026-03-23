@@ -6,7 +6,7 @@ export const NAV_ITEMS: NavItem[] = [
     href: "/about",
     children: [
       { label: "CEO 인사말", href: "/about" },
-      { label: "팀 소개", href: "/about" },
+      { label: "팀 소개", href: "/about#team" },
     ],
   },
   {
