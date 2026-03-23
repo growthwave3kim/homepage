@@ -19,8 +19,8 @@ export default function ProcessSteps({
   return (
     <div className={`grid gap-5 sm:grid-cols-2 ${gridCols[columns]}`}>
       {steps.map((step, i) => (
-        <FadeIn key={step.step} delay={i * 70} direction="up">
-          <div className="group relative overflow-hidden rounded-2xl border bg-card p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_48px_oklch(0.22_0.035_265/0.09)]">
+        <FadeIn key={step.step} delay={i * 70} direction="up" className="h-full">
+          <div className="group relative h-full overflow-hidden rounded-2xl border bg-card p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_48px_oklch(0.22_0.035_265/0.09)]">
             {/* 번호 뱃지 */}
             <div className="mb-5 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-primary text-sm font-bold text-primary-foreground">
               {step.step}
