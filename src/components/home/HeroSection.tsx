@@ -157,7 +157,7 @@ export default function HeroSection() {
               key={stat.label}
               className={`flex-1 px-8 text-center ${i < STATS.length - 1 ? "border-r border-white/[0.07]" : ""}`}
             >
-              <p className="text-3xl font-bold text-white lg:text-4xl">
+              <p className="whitespace-nowrap text-3xl font-bold text-white lg:text-4xl">
                 <CountUp end={stat.end} suffix={stat.suffix} decimals={stat.decimals ?? 0} />
               </p>
               <p className="mt-2 text-[10px] font-medium tracking-[0.3em] text-white/30 uppercase">
