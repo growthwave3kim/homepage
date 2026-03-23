@@ -53,14 +53,13 @@ export default function SplashScreen() {
             {/* 글로우 링 */}
             <div className="absolute inset-0 animate-ping rounded-3xl bg-[oklch(0.65_0.18_175/0.08)]" style={{animationDuration: '2s'}} />
             <div className="absolute inset-[-2px] rounded-3xl bg-gradient-to-br from-[oklch(0.65_0.18_175/0.4)] via-transparent to-[oklch(0.45_0.15_230/0.4)]" />
-            <div className="relative flex h-full w-full items-center justify-center overflow-hidden rounded-3xl bg-[oklch(0.14_0.025_265)]">
+            <div className="relative flex h-full w-full items-center justify-center overflow-hidden rounded-3xl bg-white">
               <Image
-                src="/images/logo.jpg"
+                src="/images/logo.png"
                 alt="GrowthWave"
                 width={96}
                 height={96}
                 className="h-20 w-20 object-contain"
-                style={{ filter: "drop-shadow(0 0 12px oklch(0.65 0.18 175 / 0.8))" }}
                 priority
               />
             </div>

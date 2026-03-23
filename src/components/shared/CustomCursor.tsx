@@ -51,18 +51,17 @@ export default function CustomCursor() {
           position: "fixed",
           left: "-300px",
           top: "-300px",
-          width: clicking ? 36 : 44,
-          height: clicking ? 36 : 44,
+          width: clicking ? 50 : 62,
+          height: clicking ? 50 : 62,
           transform: "translate(-50%, -50%)",
           pointerEvents: "none",
           zIndex: 99998,
-          mixBlendMode: "multiply",
           transition: "width 0.15s ease, height 0.15s ease",
         }}
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/images/logo.jpg"
+          src="/images/logo.png"
           alt=""
           style={{ width: "100%", height: "100%", objectFit: "contain", display: "block" }}
         />
