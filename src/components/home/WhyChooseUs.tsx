@@ -1,7 +1,6 @@
-"use client";
-
-import { useRef } from "react";
+import Link from "next/link";
 import { BarChart3, Lightbulb, TrendingUp } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import FadeIn from "@/components/shared/FadeIn";
 
 const REASONS = [
@@ -11,9 +10,10 @@ const REASONS = [
     title: "데이터 드리븐",
     description:
       "감이 아닌 데이터로 의사결정합니다. 실시간 트래킹과 정밀한 분석으로 마케팅 효율을 극대화하고 낭비를 없앱니다.",
-    accent: "from-blue-500/20 to-indigo-500/10",
+    href: "/services",
     iconBg: "bg-blue-500/10",
     iconColor: "text-blue-400",
+    borderHover: "hover:border-blue-500/30",
   },
   {
     num: "02",
@@ -21,9 +21,10 @@ const REASONS = [
     title: "크리에이티브 퍼스트",
     description:
       "트렌드를 따르는 것이 아닌, 새로운 기준을 만듭니다. 브랜드의 본질을 꿰뚫는 차별화된 크리에이티브로 시장에서 존재감을 만듭니다.",
-    accent: "from-violet-500/20 to-purple-500/10",
+    href: "/about",
     iconBg: "bg-violet-500/10",
     iconColor: "text-violet-400",
+    borderHover: "hover:border-violet-500/30",
   },
   {
     num: "03",
@@ -31,9 +32,10 @@ const REASONS = [
     title: "지속 가능한 성장",
     description:
       "단기 성과가 아닌 장기적 브랜드 자산을 구축합니다. 전략적 파트너십으로 함께 성장하는 것이 GrowthWave의 핵심 철학입니다.",
-    accent: "from-emerald-500/20 to-teal-500/10",
+    href: "/about",
     iconBg: "bg-emerald-500/10",
     iconColor: "text-emerald-400",
+    borderHover: "hover:border-emerald-500/30",
   },
 ];
 
@@ -65,52 +67,42 @@ export default function WhyChooseUs() {
         <div className="space-y-4">
           {REASONS.map((reason, i) => (
             <FadeIn key={reason.num} delay={i * 100} direction="up">
-              <div className="group relative flex flex-col gap-6 overflow-hidden rounded-2xl border border-white/[0.06] bg-white/[0.03] p-8 backdrop-blur-sm transition-all duration-500 hover:border-white/[0.12] hover:bg-white/[0.05] lg:flex-row lg:items-center lg:gap-12 lg:p-10">
-                {/* 그라디언트 배경 */}
+              <Link href={reason.href} className="group block">
                 <div
-                  className={`absolute inset-0 bg-gradient-to-r ${reason.accent} opacity-0 transition-opacity duration-500 group-hover:opacity-100`}
-                />
+                  className={`relative flex flex-col gap-6 overflow-hidden rounded-2xl border border-white/[0.07] bg-white/[0.03] p-8 transition-all duration-300 hover:bg-white/[0.06] lg:flex-row lg:items-center lg:gap-12 lg:p-10 ${reason.borderHover}`}
+                >
+                  {/* 번호 */}
+                  <span className="shrink-0 bg-gradient-to-br from-white/35 to-white/08 bg-clip-text text-6xl font-black text-transparent lg:text-8xl">
+                    {reason.num}
+                  </span>
 
-                {/* 번호 */}
-                <span className="relative shrink-0 bg-gradient-to-br from-white/40 to-white/10 bg-clip-text text-6xl font-black text-transparent lg:text-8xl">
-                  {reason.num}
-                </span>
+                  {/* 구분선 (데스크탑) */}
+                  <div className="hidden h-16 w-px bg-white/[0.08] lg:block" />
 
-                {/* 구분선 (데스크탑) */}
-                <div className="hidden h-16 w-px bg-white/[0.08] lg:block" />
-
-                {/* 아이콘 + 내용 */}
-                <div className="relative flex flex-1 flex-col gap-4 lg:flex-row lg:items-center lg:gap-8">
-                  <div
-                    className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl ${reason.iconBg} transition-transform duration-500 group-hover:scale-110`}
-                  >
-                    <reason.icon className={`h-7 w-7 ${reason.iconColor}`} />
-                  </div>
-                  <div>
-                    <h3 className="mb-2 text-xl font-bold text-white lg:text-2xl">
-                      {reason.title}
-                    </h3>
-                    <p className="text-sm leading-relaxed text-white/50 lg:text-base">
-                      {reason.description}
-                    </p>
-                  </div>
-                </div>
-
-                {/* 우측 화살표 */}
-                <div className="relative hidden shrink-0 items-center justify-center lg:flex">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 transition-all duration-300 group-hover:border-white/30 group-hover:bg-white/[0.05]">
-                    <svg
-                      className="h-4 w-4 text-white/30 transition-all duration-300 group-hover:translate-x-0.5 group-hover:text-white/70"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      strokeWidth={2}
+                  {/* 아이콘 + 내용 */}
+                  <div className="flex flex-1 flex-col gap-4 lg:flex-row lg:items-center lg:gap-8">
+                    <div
+                      className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl ${reason.iconBg}`}
                     >
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                    </svg>
+                      <reason.icon className={`h-7 w-7 ${reason.iconColor}`} />
+                    </div>
+                    <div>
+                      <h3 className="mb-2 text-xl font-bold text-white lg:text-2xl">
+                        {reason.title}
+                      </h3>
+                      <p className="text-sm leading-relaxed text-white/50 lg:text-base">
+                        {reason.description}
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* 우측 화살표 → 자세히 보기 */}
+                  <div className="hidden shrink-0 items-center gap-2 text-xs font-medium text-white/30 transition-all duration-300 group-hover:text-white/70 lg:flex">
+                    자세히 보기
+                    <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" />
                   </div>
                 </div>
-              </div>
+              </Link>
             </FadeIn>
           ))}
         </div>
