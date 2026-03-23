@@ -26,7 +26,7 @@ export default function Header() {
         "fixed top-0 right-0 left-0 z-50 transition-all duration-500",
         transparent
           ? "bg-transparent"
-          : "border-b border-border/50 bg-background/80 shadow-[0_1px_32px_oklch(0.22_0.035_265/0.06)] backdrop-blur-xl",
+          : "border-b border-border/40 bg-white shadow-[0_1px_12px_rgba(0,0,0,0.06)]",
       )}
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 lg:h-[72px] lg:px-8">

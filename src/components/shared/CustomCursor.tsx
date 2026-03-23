@@ -53,7 +53,7 @@ export default function CustomCursor() {
           top: "-300px",
           width: clicking ? 50 : 62,
           height: clicking ? 50 : 62,
-          transform: "translate(-70%, -70%)",
+          transform: "translate(-85%, -85%)",
           pointerEvents: "none",
           zIndex: 99998,
           transition: "width 0.15s ease, height 0.15s ease",

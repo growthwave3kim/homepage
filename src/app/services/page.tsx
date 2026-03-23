@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, PenTool, Instagram, Users, Monitor } from "lucide-react";
 import { SERVICES, MARKETING_PROCESS } from "@/data/services";
+import ServiceHero from "@/components/services/ServiceHero";
 import SectionTitle from "@/components/shared/SectionTitle";
 import ProcessSteps from "@/components/shared/ProcessSteps";
 import ContactForm from "@/components/shared/ContactForm/ContactForm";
@@ -22,20 +23,11 @@ const ICON_MAP: Record<string, React.ComponentType<{ className?: string }>> = {
 export default function ServicesPage() {
   return (
     <div>
-      {/* Hero */}
-      <section className="bg-primary py-24 lg:py-32">
-        <div className="mx-auto max-w-7xl px-4 text-center lg:px-8">
-          <p className="mb-3 text-sm font-medium tracking-widest text-primary-foreground/70 uppercase">
-            Our Services
-          </p>
-          <h1 className="mb-6 text-3xl font-bold text-primary-foreground md:text-4xl lg:text-5xl">
-            서비스 소개
-          </h1>
-          <p className="mx-auto max-w-2xl text-base leading-relaxed text-primary-foreground/80 lg:text-lg">
-            브랜드의 성장 단계에 맞춘 최적의 솔루션을 제공합니다.
-          </p>
-        </div>
-      </section>
+      <ServiceHero
+        title="서비스 소개"
+        subtitle="Our Services"
+        description="브랜드의 성장 단계에 맞춘 최적의 솔루션을 제공합니다."
+      />
 
       {/* Service Cards */}
       <section className="py-20 lg:py-28">
