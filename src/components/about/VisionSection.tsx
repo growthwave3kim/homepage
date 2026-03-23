@@ -4,23 +4,25 @@ import FadeIn from "@/components/shared/FadeIn";
 
 const STATS = [
   {
-    end: 320,
-    suffix: "+",
-    label: "운영 브랜드",
-    description: "다양한 업종에서 검증된 마케팅 성과",
-  },
-  {
-    end: 4.9,
-    suffix: "",
-    decimals: 1,
-    label: "고객 만족도",
-    description: "투명한 소통과 체계적인 성과 관리",
+    end: 4,
+    suffix: "가지",
+    decimals: 0,
+    label: "핵심 서비스",
+    description: "콘텐츠 · 소셜 · 인플루언서 · 웹사이트",
   },
   {
     end: 6,
     suffix: "년+",
-    label: "평균 경력",
-    description: "실전 경험이 풍부한 전문가 팀",
+    decimals: 0,
+    label: "대표 평균 경력",
+    description: "디지털 마케팅 실전 경험 보유",
+  },
+  {
+    end: 2,
+    suffix: "주",
+    decimals: 0,
+    label: "온보딩 기간",
+    description: "계약 후 2주 이내 첫 콘텐츠 발행",
   },
 ];
 

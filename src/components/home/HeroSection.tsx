@@ -21,9 +21,9 @@ const MARQUEE_BRANDS = [
 ];
 
 const STATS = [
-  { end: 320, suffix: "+", label: "운영 브랜드" },
-  { end: 4.9, suffix: "", label: "고객 만족도", decimals: 1 },
-  { end: 6, suffix: "년+", label: "평균 경력" },
+  { end: 4, suffix: "가지", decimals: 0, label: "핵심 서비스" },
+  { end: 2, suffix: "주", decimals: 0, label: "온보딩 기간" },
+  { end: 6, suffix: "년+", decimals: 0, label: "대표 평균 경력" },
 ];
 
 export default function HeroSection() {

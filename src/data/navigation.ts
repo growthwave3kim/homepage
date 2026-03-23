@@ -19,7 +19,6 @@ export const NAV_ITEMS: NavItem[] = [
       { label: "웹사이트 제작", href: "/services/homepage" },
     ],
   },
-  { label: "포트폴리오", href: "/portfolio" },
   { label: "FAQ", href: "/faq" },
 ];
 
