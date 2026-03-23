@@ -10,7 +10,7 @@ export default function ServiceHero({
   description,
 }: ServiceHeroProps) {
   return (
-    <section className="relative overflow-hidden bg-[oklch(0.10_0.025_265)] py-28 lg:py-36">
+    <section className="relative overflow-hidden bg-[oklch(0.10_0.025_265)] pb-28 pt-44 lg:pb-36 lg:pt-52">
       {/* 오브 */}
       <div className="animate-float absolute -left-32 -top-32 h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_at_center,oklch(0.36_0.09_265/0.35),transparent_65%)] blur-[80px]" />
       <div className="animate-float-d1 absolute -bottom-32 -right-32 h-[400px] w-[400px] rounded-full bg-[radial-gradient(circle_at_center,oklch(0.30_0.07_280/0.28),transparent_65%)] blur-[70px]" />

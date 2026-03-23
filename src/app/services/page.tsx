@@ -21,7 +21,7 @@ const ICON_MAP: Record<string, React.ComponentType<{ className?: string }>> = {
 
 export default function ServicesPage() {
   return (
-    <div className="pt-16 lg:pt-20">
+    <div>
       {/* Hero */}
       <section className="bg-primary py-24 lg:py-32">
         <div className="mx-auto max-w-7xl px-4 text-center lg:px-8">
