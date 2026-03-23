@@ -21,8 +21,7 @@ export default function CustomCursor() {
 
     const animate = () => {
       if (cursorRef.current) {
-        cursorRef.current.style.left = `${pos.current.x}px`;
-        cursorRef.current.style.top = `${pos.current.y}px`;
+        cursorRef.current.style.transform = `translate(${pos.current.x}px, ${pos.current.y}px) translate(-85%, -85%)`;
       }
       raf.current = requestAnimationFrame(animate);
     };
@@ -49,13 +48,13 @@ export default function CustomCursor() {
         ref={cursorRef}
         style={{
           position: "fixed",
-          left: "-300px",
-          top: "-300px",
+          left: 0,
+          top: 0,
           width: clicking ? 50 : 62,
           height: clicking ? 50 : 62,
-          transform: "translate(-85%, -85%)",
           pointerEvents: "none",
           zIndex: 99998,
+          willChange: "transform",
           transition: "width 0.15s ease, height 0.15s ease",
         }}
       >

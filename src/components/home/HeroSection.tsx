@@ -34,9 +34,6 @@ export default function HeroSection() {
     return () => clearTimeout(t);
   }, []);
 
-  const cls = (delay: number) =>
-    `transition-all duration-700 ease-out ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`;
-
   return (
     <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-[oklch(0.10_0.025_265)]">
       {/* ─── 그라디언트 오브 ─── */}
@@ -89,7 +86,7 @@ export default function HeroSection() {
           브랜드의 성장을
           <br />
           <span
-            className="animate-shimmer bg-gradient-to-r from-white via-blue-100 via-50% to-white/60 bg-[length:300%_auto] bg-clip-text text-transparent"
+            className="animate-shimmer bg-gradient-to-r from-white/70 via-blue-200/80 via-50% to-white/40 bg-[length:300%_auto] bg-clip-text text-transparent"
           >
             디자인합니다
           </span>

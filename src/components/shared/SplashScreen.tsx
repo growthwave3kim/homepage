@@ -15,11 +15,11 @@ export default function SplashScreen() {
     splashDismissed = true;
     document.body.style.overflow = "hidden";
 
-    const leaveTimer = setTimeout(() => setLeaving(true), 2400);
+    const leaveTimer = setTimeout(() => setLeaving(true), 2200);
     const hideTimer = setTimeout(() => {
       setVisible(false);
       document.body.style.overflow = "";
-    }, 3000);
+    }, 2800);
 
     return () => {
       clearTimeout(leaveTimer);
@@ -39,7 +39,7 @@ export default function SplashScreen() {
       }}
     >
       {/* 배경 오브 */}
-      <div className="absolute left-1/2 top-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,oklch(0.65_0.18_175/0.08),transparent_65%)] blur-[100px]" />
+      <div className="absolute top-1/2 left-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,oklch(0.65_0.18_175/0.08),transparent_65%)] blur-[100px]" />
       <div className="absolute -bottom-20 -left-20 h-[400px] w-[400px] rounded-full bg-[radial-gradient(circle,oklch(0.45_0.15_230/0.08),transparent_65%)] blur-[80px]" />
 
       {/* 로고 + 텍스트 */}
@@ -57,7 +57,10 @@ export default function SplashScreen() {
             }}
           >
             {/* 글로우 링 */}
-            <div className="absolute inset-0 animate-ping rounded-3xl bg-[oklch(0.65_0.18_175/0.08)]" style={{animationDuration: '2s'}} />
+            <div
+              className="absolute inset-0 animate-ping rounded-3xl bg-[oklch(0.65_0.18_175/0.08)]"
+              style={{ animationDuration: "2s" }}
+            />
             <div className="absolute inset-[-2px] rounded-3xl bg-gradient-to-br from-[oklch(0.65_0.18_175/0.4)] via-transparent to-[oklch(0.45_0.15_230/0.4)]" />
             <div className="relative flex h-full w-full items-center justify-center overflow-hidden rounded-3xl bg-white">
               <Image
@@ -78,7 +81,8 @@ export default function SplashScreen() {
             Growth
             <span
               style={{
-                background: "linear-gradient(90deg, oklch(0.75 0.18 175), oklch(0.60 0.20 220))",
+                background:
+                  "linear-gradient(90deg, oklch(0.75 0.18 175), oklch(0.60 0.20 220))",
                 WebkitBackgroundClip: "text",
                 backgroundClip: "text",
                 color: "transparent",
@@ -104,7 +108,10 @@ export default function SplashScreen() {
         >
           <div
             className="h-full rounded-full bg-gradient-to-r from-[oklch(0.65_0.18_175)] to-[oklch(0.45_0.15_230)]"
-            style={{ animation: "shimmer-load 1.8s ease 0.8s forwards", width: 0 }}
+            style={{
+              animation: "shimmer-load 1.8s ease 0.8s forwards",
+              width: 0,
+            }}
           />
         </div>
       </div>
