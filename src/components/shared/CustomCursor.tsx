@@ -67,7 +67,6 @@ export default function CustomCursor() {
         />
       </div>
 
-      <style>{`* { cursor: none !important; }`}</style>
     </>
   );
 }
