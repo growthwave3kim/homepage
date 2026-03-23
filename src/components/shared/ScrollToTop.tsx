@@ -25,7 +25,7 @@ export default function ScrollToTop() {
     <Button
       onClick={scrollToTop}
       size="icon"
-      className="fixed right-6 bottom-6 z-40 h-12 w-12 rounded-full shadow-lg"
+      className="fixed bottom-6 left-1/2 z-40 h-12 w-12 -translate-x-1/2 rounded-full shadow-lg"
       aria-label="맨 위로"
     >
       <ArrowUp className="h-5 w-5" />
