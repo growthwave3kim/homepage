@@ -9,12 +9,12 @@ export default function TeamSection() {
         <SectionTitle
           subtitle="Our Team"
           title="전문 AE 소개"
-          description="평균 4년 이상의 경력을 보유한 전문 AE가 브랜드를 담당합니다."
+          description="평균 6년 이상의 경력을 보유한 전문가 팀이 브랜드를 담당합니다."
         />
 
         <div className="mx-auto grid max-w-4xl gap-8 md:grid-cols-2">
-          {TEAM_MEMBERS.map((member) => (
-            <TeamMemberCard key={member.name} member={member} />
+          {TEAM_MEMBERS.map((member, index) => (
+            <TeamMemberCard key={member.name} member={member} index={index} />
           ))}
         </div>
       </div>

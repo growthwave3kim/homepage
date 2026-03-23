@@ -4,6 +4,9 @@ import "./globals.css";
 import Header from "@/components/layout/Header/Header";
 import Footer from "@/components/layout/Footer/Footer";
 import ScrollToTop from "@/components/shared/ScrollToTop";
+import FloatingContact from "@/components/shared/FloatingContact";
+import SplashScreen from "@/components/shared/SplashScreen";
+import CustomCursor from "@/components/shared/CustomCursor";
 import QueryProvider from "@/providers/QueryProvider";
 
 const geistSans = Geist({
@@ -58,6 +61,9 @@ export default function RootLayout({
           <main className="flex-1">{children}</main>
           <Footer />
           <ScrollToTop />
+          <FloatingContact />
+          <SplashScreen />
+          <CustomCursor />
         </QueryProvider>
       </body>
     </html>

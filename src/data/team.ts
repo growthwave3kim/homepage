@@ -1,8 +1,9 @@
 import type { TeamMember } from "@/types";
 
 export const CEO = {
-  name: "김도현",
+  name: "김성민",
   role: "대표이사 · Founder",
+  image: "",
   message:
     "GrowthWave는 브랜드가 시장에서 고유한 존재감을 가질 수 있도록 돕습니다. 데이터와 크리에이티브의 교차점에서 가장 효과적인 성장 전략을 설계하고, 클라이언트와 함께 성장하는 파트너가 되겠습니다.",
   philosophy: [
@@ -10,11 +11,41 @@ export const CEO = {
     "크리에이티브 우선주의",
     "지속 가능한 성장 설계",
   ],
+  career: [
+    {
+      year: "2016",
+      items: [
+        "국내 주요 종합광고대행사 디지털 마케팅본부 입사",
+        "퍼포먼스 캠페인 운영 · 데이터 분석 담당",
+      ],
+    },
+    {
+      year: "2018",
+      items: [
+        "글로벌 이커머스 플랫폼 그로스 마케팅 PM",
+        "D2C 뷰티·라이프스타일 브랜드 채널 전략 수립",
+      ],
+    },
+    {
+      year: "2021",
+      items: [
+        "디지털 에이전시 마케팅 디렉터",
+        "중소기업 온라인 마케팅 컨설팅 다수 진행",
+      ],
+    },
+    {
+      year: "2023",
+      items: [
+        "GrowthWave 설립 · 대표이사",
+        "누적 운영 브랜드 320+ · 고객 만족도 4.9",
+      ],
+    },
+  ],
 };
 
 export const TEAM_MEMBERS: TeamMember[] = [
   {
-    name: "이서연",
+    name: "김도현",
     role: "Creative Director",
     title: "PRO",
     quote: "좋은 브랜딩은 말하지 않아도 느껴지는 것입니다.",

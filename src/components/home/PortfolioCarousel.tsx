@@ -7,6 +7,15 @@ import { Button } from "@/components/ui/button";
 import { PORTFOLIO_ITEMS } from "@/data/portfolio";
 import SectionTitle from "@/components/shared/SectionTitle";
 
+const GRADIENTS: Record<string, string> = {
+  "1": "from-slate-700 via-slate-600 to-slate-500",
+  "2": "from-zinc-800 via-zinc-700 to-stone-600",
+  "3": "from-stone-700 via-neutral-600 to-stone-500",
+  "4": "from-amber-900 via-stone-700 to-amber-800",
+  "5": "from-rose-900 via-rose-800 to-pink-700",
+  "6": "from-pink-900 via-pink-800 to-rose-700",
+};
+
 export default function PortfolioCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const visibleItems = PORTFOLIO_ITEMS.slice(0, 6);
@@ -56,14 +65,27 @@ export default function PortfolioCarousel() {
           >
             {visibleItems.map((item) => (
               <div key={item.id} className="w-full shrink-0 sm:w-1/2 lg:w-1/3">
-                <div className="group overflow-hidden rounded-2xl border bg-card">
-                  <div className="aspect-[4/3] overflow-hidden bg-muted">
-                    <div className="flex h-full items-center justify-center bg-gradient-to-br from-muted to-muted/50 text-muted-foreground transition-transform duration-500 group-hover:scale-105">
-                      <span className="text-lg font-medium">{item.title}</span>
+                <div className="group overflow-hidden rounded-2xl border bg-card transition-all hover:shadow-xl">
+                  <div className="aspect-[4/3] overflow-hidden">
+                    <div
+                      className={`relative flex h-full items-end bg-gradient-to-br p-5 transition-transform duration-500 group-hover:scale-105 ${GRADIENTS[item.id] ?? "from-slate-700 to-slate-500"}`}
+                    >
+                      <div className="absolute inset-0 bg-black/20" />
+                      <div className="relative">
+                        <p className="text-xs font-medium tracking-widest text-white/50 uppercase mb-1">
+                          {item.category === "homepage"
+                            ? "Website"
+                            : item.category === "brand"
+                              ? "Brand"
+                              : "Performance"}
+                        </p>
+                        <p className="text-lg font-bold text-white">
+                          {item.title}
+                        </p>
+                      </div>
                     </div>
                   </div>
                   <div className="p-5">
-                    <h3 className="mb-1 font-semibold">{item.title}</h3>
                     <p className="mb-3 text-sm text-muted-foreground">
                       {item.description}
                     </p>

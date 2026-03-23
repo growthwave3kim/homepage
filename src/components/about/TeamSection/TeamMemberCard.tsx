@@ -4,17 +4,32 @@ import { Quote } from "lucide-react";
 
 interface TeamMemberCardProps {
   member: TeamMember;
+  index: number;
 }
 
-export default function TeamMemberCard({ member }: TeamMemberCardProps) {
+const CARD_GRADIENTS = [
+  "from-slate-700 via-slate-600 to-slate-500",
+  "from-zinc-800 via-zinc-700 to-stone-600",
+];
+
+export default function TeamMemberCard({ member, index }: TeamMemberCardProps) {
+  const initials = member.name
+    .split("")
+    .filter((_, i) => i === 0 || i === 1)
+    .join("");
+
+  const gradient = CARD_GRADIENTS[index % CARD_GRADIENTS.length];
+
   return (
     <div className="group overflow-hidden rounded-2xl border bg-card transition-all hover:shadow-lg">
-      <div className="aspect-square overflow-hidden bg-muted">
-        <div className="flex h-full items-center justify-center text-muted-foreground transition-transform duration-500 group-hover:scale-105">
-          <div className="text-center">
-            <p className="text-5xl font-bold opacity-20">AE</p>
-            <p className="mt-2 text-sm">{member.name}</p>
+      <div className={`aspect-square bg-gradient-to-br ${gradient}`}>
+        <div className="flex h-full flex-col items-center justify-center gap-3 transition-transform duration-500 group-hover:scale-105">
+          <div className="flex h-20 w-20 items-center justify-center rounded-full border border-white/20 bg-white/10">
+            <span className="text-2xl font-bold tracking-wider text-white/80">
+              {initials}
+            </span>
           </div>
+          <p className="text-sm font-medium text-white/60">{member.role}</p>
         </div>
       </div>
       <div className="p-6">

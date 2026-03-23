@@ -14,13 +14,24 @@ import { NAV_ITEMS } from "@/data/navigation";
 import { cn } from "@/lib/utils";
 import { useState } from "react";
 
-export default function MobileMenu() {
+interface MobileMenuProps {
+  transparent: boolean;
+}
+
+export default function MobileMenu({ transparent }: MobileMenuProps) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
   return (
     <Sheet open={open} onOpenChange={setOpen}>
-      <SheetTrigger className="inline-flex h-8 w-8 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:bg-muted hover:text-foreground lg:hidden">
+      <SheetTrigger
+        className={cn(
+          "inline-flex h-8 w-8 items-center justify-center rounded-lg transition-colors hover:bg-muted lg:hidden",
+          transparent
+            ? "text-white/70 hover:bg-white/10 hover:text-white"
+            : "text-muted-foreground hover:text-foreground",
+        )}
+      >
         <Menu className="h-6 w-6" />
         <span className="sr-only">메뉴 열기</span>
       </SheetTrigger>
@@ -30,7 +41,7 @@ export default function MobileMenu() {
             GrowthWave
           </SheetTitle>
         </SheetHeader>
-        <nav className="mt-8 flex flex-col gap-4 px-4">
+        <nav className="mt-8 flex flex-col gap-2 px-4">
           {NAV_ITEMS.map((item) => (
             <Link
               key={item.href}
@@ -46,14 +57,15 @@ export default function MobileMenu() {
               {item.label}
             </Link>
           ))}
-          <a
-            href="/downloads/company.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-lg px-4 py-3 text-base font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+          <button
+            onClick={() => {
+              setOpen(false);
+              alert("회사소개서는 준비 중입니다.");
+            }}
+            className="rounded-lg px-4 py-3 text-left text-base font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
           >
             회사소개서
-          </a>
+          </button>
           <Link
             href="/#contact"
             onClick={() => setOpen(false)}

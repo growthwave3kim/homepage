@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
@@ -12,8 +13,6 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
   const isHome = pathname === "/";
-
-  // 투명 헤더는 홈에서 스크롤 전에만 적용
   const transparent = isHome && !scrolled;
 
   useEffect(() => {
@@ -34,7 +33,22 @@ export default function Header() {
       )}
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 lg:h-20 lg:px-8">
-        <Link href="/" className="flex items-center gap-2">
+        <Link href="/" className="flex items-center gap-2.5">
+          <div className={cn(
+            "flex h-8 w-8 items-center justify-center overflow-hidden rounded-lg transition-all duration-300",
+            transparent
+              ? "bg-white/10 shadow-[0_0_12px_oklch(0.65_0.18_175/0.3)]"
+              : "bg-foreground/5",
+          )}>
+            <Image
+              src="/images/logo.jpg"
+              alt="GrowthWave"
+              width={28}
+              height={28}
+              className="h-7 w-7 object-contain"
+              style={{ filter: transparent ? "drop-shadow(0 0 4px oklch(0.65 0.18 175 / 0.6))" : "none" }}
+            />
+          </div>
           <span
             className={cn(
               "text-xl font-bold tracking-tight transition-colors duration-300",
@@ -55,13 +69,13 @@ export default function Header() {
               className={cn(
                 "transition-all duration-300",
                 transparent &&
-                  "border-white/30 bg-transparent text-white hover:bg-white/10",
+                  "border-white/20 bg-transparent text-white hover:bg-white/10",
               )}
             >
               견적문의
             </Button>
           </Link>
-          <MobileMenu />
+          <MobileMenu transparent={transparent} />
         </div>
       </div>
     </header>

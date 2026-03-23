@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import FadeIn from "@/components/shared/FadeIn";
 
 interface SectionTitleProps {
   title: string;
@@ -16,7 +17,8 @@ export default function SectionTitle({
   className,
 }: SectionTitleProps) {
   return (
-    <div
+    <FadeIn
+      direction="up"
       className={cn(
         "mb-12 lg:mb-16",
         align === "center" && "text-center",
@@ -36,6 +38,6 @@ export default function SectionTitle({
           {description}
         </p>
       )}
-    </div>
+    </FadeIn>
   );
 }

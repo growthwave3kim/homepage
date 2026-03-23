@@ -1,8 +1,24 @@
 import type { NavItem } from "@/types";
 
 export const NAV_ITEMS: NavItem[] = [
-  { label: "회사소개", href: "/about" },
-  { label: "서비스", href: "/services" },
+  {
+    label: "회사소개",
+    href: "/about",
+    children: [
+      { label: "CEO 인사말", href: "/about" },
+      { label: "팀 소개", href: "/about" },
+    ],
+  },
+  {
+    label: "서비스",
+    href: "/services",
+    children: [
+      { label: "콘텐츠 마케팅", href: "/services/blog" },
+      { label: "소셜 미디어", href: "/services/instagram" },
+      { label: "인플루언서 마케팅", href: "/services/influencer" },
+      { label: "웹사이트 제작", href: "/services/homepage" },
+    ],
+  },
   { label: "포트폴리오", href: "/portfolio" },
   { label: "FAQ", href: "/faq" },
 ];

@@ -6,10 +6,11 @@ import {
   Monitor,
   Layout,
   BarChart,
+  ArrowRight,
 } from "lucide-react";
 import { SERVICE_OVERVIEW } from "@/data/services";
 import SectionTitle from "@/components/shared/SectionTitle";
-import { ArrowRight } from "lucide-react";
+import FadeIn from "@/components/shared/FadeIn";
 
 const ICON_MAP: Record<string, React.ComponentType<{ className?: string }>> = {
   "pen-tool": PenTool,
@@ -40,28 +41,29 @@ export default function ServicesOverview() {
         />
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {SERVICE_OVERVIEW.map((service) => {
+          {SERVICE_OVERVIEW.map((service, i) => {
             const Icon = ICON_MAP[service.icon];
             const href = HREF_MAP[service.title] || "/services";
 
             return (
-              <Link
-                key={service.title}
-                href={href}
-                className="group rounded-2xl border bg-card p-8 transition-all hover:shadow-lg"
-              >
-                <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-primary/5 transition-colors group-hover:bg-primary/10">
-                  {Icon && <Icon className="h-7 w-7 text-primary" />}
-                </div>
-                <h3 className="mb-2 text-lg font-semibold">{service.title}</h3>
-                <p className="mb-4 text-sm leading-relaxed text-muted-foreground">
-                  {service.description}
-                </p>
-                <span className="inline-flex items-center gap-1 text-sm font-medium text-primary transition-colors group-hover:gap-2">
-                  자세히 보기
-                  <ArrowRight className="h-4 w-4" />
-                </span>
-              </Link>
+              <FadeIn key={service.title} delay={i * 80} direction="up">
+                <Link
+                  href={href}
+                  className="group flex h-full flex-col rounded-2xl border bg-card p-8 transition-all hover:shadow-lg"
+                >
+                  <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-primary/5 transition-colors group-hover:bg-primary/10">
+                    {Icon && <Icon className="h-7 w-7 text-primary" />}
+                  </div>
+                  <h3 className="mb-2 text-lg font-semibold">{service.title}</h3>
+                  <p className="mb-4 flex-1 text-sm leading-relaxed text-muted-foreground">
+                    {service.description}
+                  </p>
+                  <span className="inline-flex items-center gap-1 text-sm font-medium text-primary transition-all group-hover:gap-2">
+                    자세히 보기
+                    <ArrowRight className="h-4 w-4" />
+                  </span>
+                </Link>
+              </FadeIn>
             );
           })}
         </div>
