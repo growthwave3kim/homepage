@@ -6,18 +6,18 @@ import Link from "next/link";
 import CountUp from "@/components/shared/CountUp";
 
 const MARQUEE_BRANDS = [
-  "MAISON BLANC",
-  "ATELIER NOIR",
-  "VERRE",
-  "ONUL",
-  "FLO",
-  "NHN KCP",
-  "바비톡",
-  "비상교육",
-  "아이비김영",
-  "한국패션산업협회",
-  "대교 차이홍",
-  "브라운편입",
+  "CONTENT MARKETING",
+  "SOCIAL MEDIA",
+  "INFLUENCER",
+  "WEBSITE",
+  "PERFORMANCE",
+  "BRANDING",
+  "DATA DRIVEN",
+  "CREATIVE",
+  "GROWTH HACKING",
+  "SEO",
+  "ROAS",
+  "DIGITAL MARKETING",
 ];
 
 const STATS = [
