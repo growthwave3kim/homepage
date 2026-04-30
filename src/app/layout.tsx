@@ -1,72 +1,90 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
-import Header from "@/components/layout/Header/Header";
-import Footer from "@/components/layout/Footer/Footer";
-import ScrollToTop from "@/components/shared/ScrollToTop";
-import FloatingContact from "@/components/shared/FloatingContact";
-import SplashScreen from "@/components/shared/SplashScreen";
-import CustomCursor from "@/components/shared/CustomCursor";
-import QueryProvider from "@/providers/QueryProvider";
+import Footer from "@/components/layout/Footer";
+import Header from "@/components/layout/Header";
+import StickyCTA from "@/components/shared/StickyCTA";
+import { siteConfig } from "@/config/site";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const pretendard = localFont({
+	src: "../../node_modules/pretendard/dist/web/variable/woff2/PretendardVariable.woff2",
+	variable: "--font-pretendard",
+	display: "swap",
+	weight: "45 920",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const inter = Inter({
+	subsets: ["latin"],
+	variable: "--font-inter",
+	display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: {
-    default: "GrowthWave | 통합 마케팅 에이전시",
-    template: "%s | GrowthWave",
-  },
-  description:
-    "데이터 기반의 전략과 크리에이티브로 브랜드의 지속 가능한 성장을 디자인합니다.",
-  keywords: [
-    "마케팅 에이전시",
-    "콘텐츠 마케팅",
-    "소셜 미디어 마케팅",
-    "인플루언서 마케팅",
-    "웹사이트 제작",
-    "퍼포먼스 마케팅",
-    "GrowthWave",
-  ],
-  openGraph: {
-    type: "website",
-    locale: "ko_KR",
-    siteName: "GrowthWave",
-    title: "GrowthWave | 통합 마케팅 에이전시",
-    description:
-      "데이터 기반의 전략과 크리에이티브로 브랜드의 지속 가능한 성장을 디자인합니다.",
-  },
+	metadataBase: new URL(siteConfig.url),
+	title: siteConfig.title,
+	description: siteConfig.description,
+	keywords: [...siteConfig.keywords],
+	authors: [...siteConfig.authors],
+	creator: siteConfig.creator,
+	openGraph: {
+		type: "website",
+		locale: siteConfig.locale,
+		url: siteConfig.url,
+		siteName: siteConfig.name,
+		title: siteConfig.title,
+		description: siteConfig.description,
+		images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: siteConfig.name }],
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: siteConfig.title,
+		description: siteConfig.description,
+		images: ["/opengraph-image"],
+	},
+	robots: {
+		index: true,
+		follow: true,
+		googleBot: { index: true, follow: true, "max-image-preview": "large" },
+	},
+	alternates: {
+		canonical: siteConfig.url,
+	},
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html
-      lang="ko"
-      data-scroll-behavior="smooth"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="flex min-h-full flex-col">
-        <QueryProvider>
-          <Header />
-          <main className="flex-1">{children}</main>
-          <Footer />
-          <ScrollToTop />
-          <FloatingContact />
-          <SplashScreen />
-          <CustomCursor />
-        </QueryProvider>
-      </body>
-    </html>
-  );
+const jsonLd = {
+	"@context": "https://schema.org",
+	"@type": "ProfessionalService",
+	name: `${siteConfig.name} (${siteConfig.nameKo})`,
+	description: siteConfig.description,
+	url: siteConfig.url,
+	telephone: siteConfig.contact.tel,
+	email: siteConfig.contact.email,
+	address: {
+		"@type": "PostalAddress",
+		streetAddress: siteConfig.contact.address,
+		addressCountry: "KR",
+	},
+	serviceType: ["법무법인 마케팅", "변호사 블로그 마케팅", "숏폼 마케팅"],
+};
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+	return (
+		<html
+			lang="ko"
+			className={`${pretendard.variable} ${inter.variable} h-full`}
+			suppressHydrationWarning
+		>
+			<body
+				className="flex min-h-full flex-col bg-background text-foreground antialiased"
+				suppressHydrationWarning
+			>
+				<script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+				<Header />
+				<main className="flex-1">{children}</main>
+				<Footer />
+				<StickyCTA />
+			</body>
+		</html>
+	);
 }

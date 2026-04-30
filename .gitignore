@@ -39,3 +39,14 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# claude code
+.claude/settings.json
+
+# oh-my-claudecode
+.omc/specs/
+.omc/plans/
+.omc/handoffs/
+.omc/sessions/
+.omc/state/
+.omc/project-memory.json

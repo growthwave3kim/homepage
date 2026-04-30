@@ -1,19 +1,33 @@
-import HeroSection from "@/components/home/HeroSection";
-import WhyChooseUs from "@/components/home/WhyChooseUs";
-import ServiceShowcase from "@/components/home/ServiceShowcase";
-import MarketingProcess from "@/components/home/MarketingProcess";
-import EarlyBird from "@/components/home/EarlyBird";
-import ContactForm from "@/components/shared/ContactForm/ContactForm";
+import Cases from "@/components/sections/Cases";
+import ClientLogos from "@/components/sections/ClientLogos";
+import Comparison from "@/components/sections/Comparison";
+import Contact from "@/components/sections/Contact";
+import CTA from "@/components/sections/CTA";
+import FAQ from "@/components/sections/FAQ";
+import Hero from "@/components/sections/Hero";
+import Numbers from "@/components/sections/Numbers";
+import PainPoints from "@/components/sections/PainPoints";
+import Services from "@/components/sections/Services";
+import Team from "@/components/sections/Team";
+import Testimonials from "@/components/sections/Testimonials";
+import WhyUs from "@/components/sections/WhyUs";
 
 export default function HomePage() {
-  return (
-    <>
-      <HeroSection />
-      <WhyChooseUs />
-      <ServiceShowcase />
-      <MarketingProcess />
-      <EarlyBird />
-      <ContactForm />
-    </>
-  );
+	return (
+		<>
+			<Hero />
+			<ClientLogos />
+			<Numbers />
+			<PainPoints />
+			<WhyUs />
+			<Comparison />
+			<Services />
+			<Cases />
+			<Testimonials />
+			<Team />
+			<Contact />
+			<FAQ />
+			<CTA />
+		</>
+	);
 }
