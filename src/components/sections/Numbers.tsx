@@ -3,12 +3,6 @@ import Reveal from "@/components/shared/Reveal";
 import SectionHeading from "@/components/shared/SectionHeading";
 import { NUMBERS } from "@/data/numbers";
 
-const PARTNER_BADGES = [
-	"네이버 공식 파트너",
-	"메타 비즈니스 파트너",
-	"서울지방변호사회 협력업체",
-] as const;
-
 export default function Numbers() {
 	return (
 		<section className="bg-white px-4 py-24">
@@ -31,23 +25,6 @@ export default function Numbers() {
 						</Reveal>
 					))}
 				</div>
-
-				{/* Partner badges */}
-				<Reveal delay={0.5}>
-					<div className="mt-12 flex flex-wrap items-center justify-center gap-3 border-slate-100 border-t pt-10">
-						<span className="text-[11px] text-slate-400 uppercase tracking-widest">
-							공식 파트너
-						</span>
-						{PARTNER_BADGES.map((badge) => (
-							<span
-								key={badge}
-								className="rounded-full border border-slate-200 px-4 py-1.5 text-slate-400 text-xs"
-							>
-								{badge}
-							</span>
-						))}
-					</div>
-				</Reveal>
 			</div>
 		</section>
 	);

@@ -10,6 +10,7 @@ import PainPoints from "@/components/sections/PainPoints";
 import Services from "@/components/sections/Services";
 import Team from "@/components/sections/Team";
 import Testimonials from "@/components/sections/Testimonials";
+import VideoTestimonials from "@/components/sections/VideoTestimonials";
 import WhyUs from "@/components/sections/WhyUs";
 
 export default function HomePage() {
@@ -23,6 +24,7 @@ export default function HomePage() {
 			<Comparison />
 			<Services />
 			<Cases />
+			<VideoTestimonials />
 			<Testimonials />
 			<Team />
 			<Contact />

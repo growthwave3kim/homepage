@@ -36,6 +36,13 @@ export default function Footer() {
 							>
 								YT
 							</button>
+							<button
+								type="button"
+								aria-label="카카오톡"
+								className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-white text-xs transition-colors hover:bg-white/20"
+							>
+								KT
+							</button>
 						</div>
 					</div>
 

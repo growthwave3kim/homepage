@@ -1,6 +1,6 @@
 "use client";
 
-import { CheckCircle2, CheckIcon, Mail, Phone } from "lucide-react";
+import { CheckCircle2, CheckIcon, Mail, MessageCircle, Phone } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import { useState } from "react";
 import Reveal from "@/components/shared/Reveal";
@@ -81,6 +81,16 @@ export default function Contact() {
 							>
 								<Mail className="h-4 w-4 text-[#7c3aed]" />
 								{siteConfig.contact.email}
+							</a>
+							{/* TODO: 카카오톡 채널 ID 발급 후 href 교체 */}
+							<a
+								href="https://pf.kakao.com"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="flex items-center gap-3 text-muted-foreground text-sm transition-colors hover:text-foreground"
+							>
+								<MessageCircle className="h-4 w-4 text-[#7c3aed]" />
+								카카오톡 채널 상담
 							</a>
 						</div>
 					</Reveal>

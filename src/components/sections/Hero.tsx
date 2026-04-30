@@ -47,9 +47,9 @@ export default function Hero() {
 					transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
 					className="mb-6 font-bold text-[52px] text-foreground leading-[1.12] tracking-tight md:text-[68px] lg:text-[80px]"
 				>
-					변호사를 위한,
+					노출이 아닌 수임,
 					<br />
-					<span className="gradient-text">변호사만의 마케팅</span>
+					<span className="gradient-text">변호사를 위한 마케팅</span>
 				</motion.h1>
 
 				{/* Sub */}
@@ -59,9 +59,9 @@ export default function Hero() {
 					transition={{ duration: 0.6, delay: 0.22, ease: [0.22, 1, 0.36, 1] }}
 					className="mb-10 text-lg text-muted-foreground leading-relaxed md:text-xl"
 				>
-					법무법인에 특화된 콘텐츠 마케팅으로
+					법률 키워드 데이터와 광고 규정 이해로
 					<br className="hidden sm:block" />
-					사건 수임을 만듭니다.
+					실제 상담 문의와 수임을 설계합니다.
 				</motion.p>
 
 				{/* CTAs */}
@@ -86,6 +86,16 @@ export default function Hero() {
 						서비스 보기
 					</button>
 				</motion.div>
+
+				{/* G4: 광고 규정 신뢰 문구 */}
+				<motion.p
+					initial={{ opacity: 0 }}
+					animate={{ opacity: 1 }}
+					transition={{ duration: 0.6, delay: 0.5 }}
+					className="mt-5 text-[11px] text-slate-400 tracking-wide"
+				>
+					모든 콘텐츠는 대한변호사협회 광고 규정 검토 후 발행됩니다
+				</motion.p>
 			</div>
 
 			{/* Wave bottom */}
