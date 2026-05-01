@@ -50,29 +50,29 @@ export default function BlogServicePage() {
 					<Reveal delay={0.1}>
 						<div className="overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-sm">
 							<div className="min-w-[480px]">
-							<div className="grid grid-cols-3 border-slate-200 border-b bg-slate-50 px-6 py-3">
-								<span className="font-semibold text-slate-500 text-xs uppercase tracking-wider">
-									항목
-								</span>
-								<span className="font-semibold text-slate-500 text-xs uppercase tracking-wider">
-									일반 대행사
-								</span>
-								<span className="font-semibold text-[#7c3aed] text-xs uppercase tracking-wider">
-									그로스웨이브
-								</span>
-							</div>
-							{BLOG_COMPARISON.map((row, i) => (
-								<div
-									key={row.label}
-									className={`grid grid-cols-3 px-6 py-4 text-sm ${
-										i < BLOG_COMPARISON.length - 1 ? "border-slate-100 border-b" : ""
-									}`}
-								>
-									<span className="font-medium text-foreground">{row.label}</span>
-									<span className="text-muted-foreground">{row.general}</span>
-									<span className="font-medium text-[#7c3aed]">{row.us}</span>
+								<div className="grid grid-cols-3 border-slate-200 border-b bg-slate-50 px-6 py-3">
+									<span className="font-semibold text-slate-500 text-xs uppercase tracking-wider">
+										항목
+									</span>
+									<span className="font-semibold text-slate-500 text-xs uppercase tracking-wider">
+										일반 대행사
+									</span>
+									<span className="font-semibold text-[#7c3aed] text-xs uppercase tracking-wider">
+										그로스웨이브
+									</span>
 								</div>
-							))}
+								{BLOG_COMPARISON.map((row, i) => (
+									<div
+										key={row.label}
+										className={`grid grid-cols-3 px-6 py-4 text-sm ${
+											i < BLOG_COMPARISON.length - 1 ? "border-slate-100 border-b" : ""
+										}`}
+									>
+										<span className="font-medium text-foreground">{row.label}</span>
+										<span className="text-muted-foreground">{row.general}</span>
+										<span className="font-medium text-[#7c3aed]">{row.us}</span>
+									</div>
+								))}
 							</div>
 						</div>
 					</Reveal>

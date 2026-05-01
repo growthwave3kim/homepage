@@ -15,7 +15,7 @@ export default function Numbers() {
 					{NUMBERS.map((stat, i) => (
 						<Reveal key={stat.label} delay={i * 0.1}>
 							<div className="bg-white px-8 py-12 text-center">
-								<p className="mb-2 font-[var(--font-inter)] font-bold text-[64px] leading-none">
+								<p className="mb-2 font-[var(--font-inter)] font-bold text-[40px] leading-none sm:text-[52px] md:text-[64px]">
 									<span className="gradient-text">
 										<CountUp end={stat.value} suffix={stat.suffix} decimals={stat.decimals ?? 0} />
 									</span>
