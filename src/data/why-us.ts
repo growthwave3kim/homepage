@@ -1,28 +1,67 @@
 import type { WhyUsCard } from "@/types";
 
-export const WHY_US_CARDS: WhyUsCard[] = [
+export interface WhyUsBoldCard {
+	icon: string;
+	title: string;
+	description: string;
+	stat: string;
+	before: string;
+	after: string;
+}
+
+export const WHY_US_BOLD_CARDS: WhyUsBoldCard[] = [
 	{
 		icon: "ShieldCheck",
-		title: "변호사 광고 규정 완벽 이해",
+		title: "광고 규정 완벽 준수",
 		description:
-			"대한변호사협회 광고 규정을 숙지하고, 규정 내에서 최대 효과를 끌어내는 콘텐츠를 설계합니다.",
+			"변호사·한의사 등 광고 규정이 까다로운 전문직에 특화된 콘텐츠를 설계합니다. 규정 검토 후 전 콘텐츠를 발행합니다.",
+		stat: "의료·법률 광고 심의 통과율 100%",
+		before: "규정 무시 → 플랫폼 제재·삭제 위험",
+		after: "규정 검토 후 전 콘텐츠 발행",
 	},
 	{
 		icon: "Database",
-		title: "법률 키워드 데이터베이스 보유",
+		title: "전문직 키워드 DB 보유",
 		description:
-			"분야별 실제 의뢰인이 검색하는 키워드를 데이터로 보유하여 검색 의도에 정확히 부합하는 콘텐츠를 제작합니다.",
+			"분야별 실제 고객이 검색하는 키워드를 데이터로 보유합니다. 검색 의도에 정확히 부합하는 콘텐츠로 상위 노출을 설계합니다.",
+		stat: "6개 직군 전용 키워드 데이터베이스",
+		before: "감으로 잡은 키워드 → 검색 유입 없음",
+		after: "실검 데이터 기반 키워드 전략",
+	},
+	{
+		icon: "Target",
+		title: "수임 전환만 봅니다",
+		description:
+			"노출 수가 아닌 상담·의뢰 전환을 목표로 합니다. 매월 전환 데이터를 기준으로 전략을 개선합니다.",
+		stat: "월별 수임 전환 데이터 보고",
+		before: "노출·클릭만 보고 → 실제 수임 불명",
+		after: "상담 신청·수임 전환 중심 보고",
+	},
+];
+
+export const WHY_US_CARDS: WhyUsCard[] = [
+	{
+		icon: "ShieldCheck",
+		title: "전문직 광고 규정 완벽 이해",
+		description:
+			"변호사·한의사 등 광고 규정이 까다로운 전문직에 특화된 콘텐츠를 설계합니다. 규정 검토 후 전 콘텐츠를 발행합니다.",
+	},
+	{
+		icon: "Database",
+		title: "전문직 키워드 데이터베이스 보유",
+		description:
+			"분야별 실제 고객이 검색하는 키워드를 데이터로 보유합니다. 검색 의도에 정확히 부합하는 콘텐츠로 상위 노출을 설계합니다.",
 	},
 	{
 		icon: "Search",
-		title: "검색 의도 기반 콘텐츠 설계",
+		title: "상담 전환 목표 콘텐츠 설계",
 		description:
-			"노출 수가 아닌 상담 전환을 목표로, 의뢰인이 실제로 찾는 정보를 중심으로 콘텐츠 구조를 설계합니다.",
+			"노출 수가 아닌 상담·의뢰 전환을 목표로 합니다. 고객이 실제로 찾는 정보를 중심으로 콘텐츠 구조를 설계합니다.",
 	},
 	{
 		icon: "User",
-		title: "변호사 개인 브랜드 빌딩 노하우",
+		title: "전문가 개인 브랜드 빌딩",
 		description:
-			"숏폼과 블로그를 통해 변호사 개인의 전문성을 자연스럽게 알리고, 신뢰도 높은 퍼스널 브랜드를 구축합니다.",
+			"숏폼과 블로그를 통해 전문가의 신뢰도를 자연스럽게 쌓습니다. 고객이 먼저 찾아오는 퍼스널 브랜드를 구축합니다.",
 	},
 ];

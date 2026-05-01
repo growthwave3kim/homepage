@@ -40,12 +40,14 @@ export interface Case {
 	metric: string;
 	period: string;
 	anonymous: string;
+	profession?: string;
 }
 
 export interface Testimonial {
 	text: string;
 	author: string;
 	role: string;
+	profession?: string;
 }
 
 export interface TeamMember {
@@ -59,3 +61,15 @@ export interface FaqItem {
 	question: string;
 	answer: string;
 }
+
+export interface NavChild {
+	label: string;
+	href: string;
+	description: string;
+	icon: string;
+	flagship?: boolean;
+}
+
+export type NavItem =
+	| { label: string; href: string; children?: undefined }
+	| { label: string; href: string; matchPrefix?: string; children: NavChild[] };

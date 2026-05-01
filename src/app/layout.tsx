@@ -52,20 +52,22 @@ export const metadata: Metadata = {
 	},
 };
 
+const DUMMY_TEL = "02-000-0000";
+
 const jsonLd = {
 	"@context": "https://schema.org",
 	"@type": "ProfessionalService",
 	name: `${siteConfig.name} (${siteConfig.nameKo})`,
 	description: siteConfig.description,
 	url: siteConfig.url,
-	telephone: siteConfig.contact.tel,
+	...(siteConfig.contact.tel !== DUMMY_TEL && { telephone: siteConfig.contact.tel }),
 	email: siteConfig.contact.email,
 	address: {
 		"@type": "PostalAddress",
 		streetAddress: siteConfig.contact.address,
 		addressCountry: "KR",
 	},
-	serviceType: ["법무법인 마케팅", "변호사 블로그 마케팅", "숏폼 마케팅"],
+	serviceType: ["전문직 마케팅", "블로그 마케팅", "숏폼 마케팅", "변호사 마케팅", "한의사 마케팅"],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

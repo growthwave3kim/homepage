@@ -3,11 +3,11 @@ import type { ComparisonRow } from "@/types";
 export const COMPARISON_ROWS: ComparisonRow[] = [
 	{
 		general: "키워드 무관 대량 발행",
-		growthwave: "의뢰인 검색 의도 기반 발행",
+		growthwave: "고객 검색 의도 기반 발행",
 	},
 	{
-		general: "광고 규정 미이해",
-		growthwave: "변호사 광고 규정 완벽 준수",
+		general: "직군 광고 규정 별도 검토 없음",
+		growthwave: "직군별 광고 규정 사전 검토 후 제작",
 	},
 	{
 		general: "노출 수 위주 보고",
@@ -23,6 +23,6 @@ export const COMPARISON_ROWS: ComparisonRow[] = [
 	},
 	{
 		general: "성과 검증 모호",
-		growthwave: "수임 단위 성과 측정",
+		growthwave: "수임·의뢰 단위 성과 측정",
 	},
 ];

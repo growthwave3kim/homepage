@@ -17,8 +17,8 @@ export default function WhyUs() {
 				<Reveal>
 					<SectionHeading
 						eyebrow="Why Growth Wave"
-						title="왜 변호사 마케팅만 합니까?"
-						sub="법무법인의 사건 수임 구조에 맞춘 콘텐츠를 설계합니다."
+						title="왜 전문직 마케팅만 합니까?"
+						sub="6개 직군의 광고 규정과 의뢰 구조에 맞춘 콘텐츠를 설계합니다."
 						className="mb-16"
 					/>
 				</Reveal>

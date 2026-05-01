@@ -68,13 +68,15 @@ export default function Contact() {
 							))}
 						</ul>
 						<div className="space-y-3 border-slate-200 border-t pt-8">
-							<a
-								href={`tel:${siteConfig.contact.tel}`}
-								className="flex items-center gap-3 text-muted-foreground text-sm transition-colors hover:text-foreground"
-							>
-								<Phone className="h-4 w-4 text-[#7c3aed]" />
-								{siteConfig.contact.tel}
-							</a>
+							{siteConfig.contact.tel !== "02-000-0000" && (
+								<a
+									href={`tel:${siteConfig.contact.tel}`}
+									className="flex items-center gap-3 text-muted-foreground text-sm transition-colors hover:text-foreground"
+								>
+									<Phone className="h-4 w-4 text-[#7c3aed]" />
+									{siteConfig.contact.tel}
+								</a>
+							)}
 							<a
 								href={`mailto:${siteConfig.contact.email}`}
 								className="flex items-center gap-3 text-muted-foreground text-sm transition-colors hover:text-foreground"
@@ -216,7 +218,7 @@ export default function Contact() {
 											type="submit"
 											className="gradient-brand w-full rounded-2xl py-4 font-semibold text-base text-white shadow-[0_4px_20px_rgba(124,58,237,0.25)] transition-opacity hover:opacity-90"
 										>
-											무료 상담 신청 →
+											무료 상담 신청
 										</button>
 									</div>
 								</motion.form>

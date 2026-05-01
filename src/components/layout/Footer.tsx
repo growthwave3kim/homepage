@@ -2,6 +2,9 @@ import Logo from "@/components/shared/Logo";
 import WaveDivider from "@/components/shared/WaveDivider";
 import { siteConfig } from "@/config/site";
 
+const isDummyTel = siteConfig.contact.tel === "02-000-0000";
+const isDummyBizNum = siteConfig.contact.businessNumber === "000-00-00000";
+
 export default function Footer() {
 	return (
 		<footer className="bg-[#0f172a] text-white">
@@ -12,7 +15,7 @@ export default function Footer() {
 					<div>
 						<Logo variant="light" className="mb-3" />
 						<p className="max-w-xs text-slate-400 text-sm leading-relaxed">
-							변호사·법무법인만을 위한 마케팅 대행사. 수임으로 이어지는 콘텐츠를 설계합니다.
+							전문직 6개 직군 전용 마케팅 파트너. 의뢰인이 먼저 찾아오는 구조를 만듭니다.
 						</p>
 						<div className="mt-5 flex gap-3">
 							<button
@@ -51,16 +54,20 @@ export default function Footer() {
 						<p>
 							<span className="text-slate-300">회사명</span> {siteConfig.contact.businessName}
 						</p>
+						{!isDummyBizNum && (
 						<p>
 							<span className="text-slate-300">사업자등록번호</span>{" "}
 							{siteConfig.contact.businessNumber}
 						</p>
+					)}
 						<p>
 							<span className="text-slate-300">주소</span> {siteConfig.contact.address}
 						</p>
+					{!isDummyTel && (
 						<p>
 							<span className="text-slate-300">TEL</span> {siteConfig.contact.tel}
 						</p>
+					)}
 						<p>
 							<span className="text-slate-300">EMAIL</span> {siteConfig.contact.email}
 						</p>

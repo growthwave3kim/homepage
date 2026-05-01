@@ -1,35 +1,29 @@
 import Cases from "@/components/sections/Cases";
-import ClientLogos from "@/components/sections/ClientLogos";
-import Comparison from "@/components/sections/Comparison";
-import Contact from "@/components/sections/Contact";
-import CTA from "@/components/sections/CTA";
-import FAQ from "@/components/sections/FAQ";
+import FAQPreview from "@/components/sections/FAQPreview";
+import FinalCTA from "@/components/sections/FinalCTA";
 import Hero from "@/components/sections/Hero";
 import Numbers from "@/components/sections/Numbers";
-import PainPoints from "@/components/sections/PainPoints";
-import Services from "@/components/sections/Services";
-import Team from "@/components/sections/Team";
+import ProcessTimeline from "@/components/sections/ProcessTimeline";
+import ProfessionRotator from "@/components/sections/ProfessionRotator";
+import ServiceCards from "@/components/sections/ServiceCards";
+import TeamPreview from "@/components/sections/TeamPreview";
 import Testimonials from "@/components/sections/Testimonials";
-import VideoTestimonials from "@/components/sections/VideoTestimonials";
-import WhyUs from "@/components/sections/WhyUs";
+import WhyUsBold from "@/components/sections/WhyUsBold";
 
 export default function HomePage() {
 	return (
 		<>
 			<Hero />
-			<ClientLogos />
+			<ProfessionRotator />
+			<WhyUsBold />
+			<ServiceCards />
 			<Numbers />
-			<PainPoints />
-			<WhyUs />
-			<Comparison />
-			<Services />
+			<ProcessTimeline />
 			<Cases />
-			<VideoTestimonials />
 			<Testimonials />
-			<Team />
-			<Contact />
-			<FAQ />
-			<CTA />
+			<TeamPreview />
+			<FAQPreview />
+			<FinalCTA />
 		</>
 	);
 }

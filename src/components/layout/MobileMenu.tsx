@@ -1,21 +1,27 @@
 "use client";
 
 import { MenuIcon } from "lucide-react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import Logo from "@/components/shared/Logo";
+import {
+	Accordion,
+	AccordionContent,
+	AccordionItem,
+	AccordionTrigger,
+} from "@/components/ui/accordion";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { siteConfig } from "@/config/site";
+import { cn } from "@/lib/utils";
 
 export default function MobileMenu() {
 	const [open, setOpen] = useState(false);
+	const pathname = usePathname();
 
-	const handleNavClick = (href: string) => {
-		setOpen(false);
-		if (href.startsWith("#")) {
-			const el = document.querySelector(href);
-			if (el) el.scrollIntoView({ behavior: "smooth" });
-		}
-	};
+	const defaultAccordion = siteConfig.nav
+		.filter((item) => item.children && item.matchPrefix && pathname.startsWith(item.matchPrefix))
+		.map((item) => item.label);
 
 	return (
 		<Sheet open={open} onOpenChange={setOpen}>
@@ -27,29 +33,92 @@ export default function MobileMenu() {
 			</SheetTrigger>
 			<SheetContent side="right" className="w-72 bg-white p-0">
 				<div className="flex h-full flex-col">
+					{/* Logo */}
 					<div className="border-slate-100 border-b px-6 py-5">
 						<Logo />
 					</div>
-					<nav className="flex flex-1 flex-col gap-1 p-4">
-						{siteConfig.nav.map((item) => (
-							<button
-								key={item.href}
-								type="button"
-								onClick={() => handleNavClick(item.href)}
-								className="rounded-lg px-4 py-3 text-left font-medium text-[15px] text-foreground transition-colors hover:bg-slate-50"
-							>
-								{item.label}
-							</button>
-						))}
-					</nav>
-					<div className="border-slate-100 border-t p-4">
-						<button
-							type="button"
-							onClick={() => handleNavClick("#contact")}
-							className="gradient-brand w-full rounded-full py-3 font-semibold text-sm text-white transition-opacity hover:opacity-90"
+
+					{/* 상단 CTA */}
+					<div className="px-4 pt-4">
+						<Link
+							href="/contact"
+							onClick={() => setOpen(false)}
+							className="gradient-brand block w-full rounded-full py-3 text-center font-semibold text-sm text-white transition-opacity hover:opacity-90"
 						>
-							상담문의
-						</button>
+							무료 상담 신청
+						</Link>
+					</div>
+
+					{/* Nav */}
+					<nav className="flex flex-1 flex-col gap-0.5 overflow-y-auto p-4">
+						{siteConfig.nav.map((item) => {
+							if (item.children) {
+								const isParentActive = !!item.matchPrefix && pathname.startsWith(item.matchPrefix);
+								return (
+									<Accordion key={item.label} defaultValue={defaultAccordion} multiple>
+										<AccordionItem value={item.label} className="border-0">
+											<AccordionTrigger
+												className={cn(
+													"rounded-lg px-4 py-3 font-medium text-[15px] hover:bg-slate-50 hover:no-underline",
+													isParentActive ? "text-[#7c3aed]" : "text-foreground",
+												)}
+											>
+												{item.label}
+											</AccordionTrigger>
+											<AccordionContent className="pb-0">
+												<div className="ml-4 flex flex-col gap-0.5 border-slate-100 border-l pl-3">
+													{item.children.map((child) => {
+														const isChildActive =
+															pathname === child.href || pathname.startsWith(`${child.href}/`);
+														return (
+															<Link
+																key={child.href}
+																href={child.href}
+																onClick={() => setOpen(false)}
+																className={cn(
+																	"rounded-lg px-3 py-2.5 text-sm transition-colors hover:bg-slate-50",
+																	isChildActive
+																		? "bg-[#7c3aed]/10 font-semibold text-[#7c3aed]"
+																		: "text-slate-600",
+																)}
+															>
+																{child.label}
+															</Link>
+														);
+													})}
+												</div>
+											</AccordionContent>
+										</AccordionItem>
+									</Accordion>
+								);
+							}
+
+							const isActive = pathname === item.href || pathname.startsWith(`${item.href}/`);
+							return (
+								<Link
+									key={item.href}
+									href={item.href}
+									onClick={() => setOpen(false)}
+									className={cn(
+										"rounded-lg px-4 py-3 font-medium text-[15px] transition-colors hover:bg-slate-50",
+										isActive ? "text-[#7c3aed]" : "text-foreground",
+									)}
+								>
+									{item.label}
+								</Link>
+							);
+						})}
+					</nav>
+
+					{/* 하단 문의하기 */}
+					<div className="border-slate-100 border-t p-4">
+						<Link
+							href="/contact"
+							onClick={() => setOpen(false)}
+							className="gradient-brand block w-full rounded-full py-3.5 text-center font-semibold text-sm text-white transition-opacity hover:opacity-90"
+						>
+							무료 상담 신청
+						</Link>
 					</div>
 				</div>
 			</SheetContent>
