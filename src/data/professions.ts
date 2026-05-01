@@ -37,7 +37,7 @@ export const PROFESSIONS: Profession[] = [
 			"진료과목별 환자 검색 키워드 분석",
 			"예약 전환 중심 콘텐츠 설계",
 		],
-		strength: "의료광고 심의 통과율 100%",
+		strength: "의료광고 심의 규정 준수 발행",
 		tag: "한방병원 · 개원의",
 	},
 	{

@@ -51,17 +51,6 @@ export default function ProfessionRotator() {
 					6개 직군, 광고 규정 데이터. 전문직만 다루는 단 하나의 팀.
 				</p>
 
-				{/* 진행바 */}
-				<div className="mx-auto h-[3px] w-24 overflow-hidden rounded-full bg-slate-200">
-					<motion.div
-						key={index}
-						className="h-full bg-[#7c3aed]"
-						initial={{ width: "0%" }}
-						animate={{ width: "100%" }}
-						transition={{ duration: INTERVAL / 1000, ease: "linear" }}
-					/>
-				</div>
-
 				{/* 직군 dot 인디케이터 */}
 				<div className="mt-6 flex items-center justify-center gap-2">
 					{labels.map((label, i) => (

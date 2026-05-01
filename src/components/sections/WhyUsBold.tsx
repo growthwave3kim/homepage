@@ -20,7 +20,9 @@ export default function WhyUsBold() {
 						<h2 className="font-bold text-3xl text-foreground leading-tight tracking-tight md:text-4xl">
 							대행사 절반은 노출 수만 보고합니다.
 						</h2>
-						<p className="mt-4 text-lg text-muted-foreground">그로스웨이브는 수임 전환만 봅니다.</p>
+						<p className="mt-4 text-lg text-muted-foreground">
+							그로스웨이브는 실제 전환된 수치만 봅니다.
+						</p>
 					</div>
 				</Reveal>
 
@@ -29,7 +31,7 @@ export default function WhyUsBold() {
 					{WHY_US_BOLD_CARDS.map((card, i) => {
 						const Icon = ICON_MAP[card.icon] ?? ShieldCheck;
 						return (
-							<Reveal key={card.title} delay={i * 0.1}>
+							<Reveal key={card.title} delay={i * 0.1} className="h-full">
 								<div className="flex h-full flex-col rounded-2xl bg-white p-8 shadow-sm">
 									<div className="gradient-brand mb-5 flex h-12 w-12 items-center justify-center rounded-full">
 										<Icon className="h-5 w-5 text-white" aria-hidden="true" />
@@ -53,12 +55,12 @@ export default function WhyUsBold() {
 				<Reveal>
 					<div className="overflow-hidden rounded-2xl border border-slate-200 bg-white">
 						<div className="grid grid-cols-2">
-							<div className="border-slate-200 border-r bg-slate-50 px-6 py-4">
+							<div className="border-slate-200 border-r bg-slate-100 px-6 py-4">
 								<p className="font-semibold text-slate-400 text-xs uppercase tracking-widest">
 									일반 대행사
 								</p>
 							</div>
-							<div className="px-6 py-4">
+							<div className="border-l-2 border-[#7c3aed] bg-[#7c3aed]/10 px-6 py-4">
 								<p className="font-semibold text-[#7c3aed] text-xs uppercase tracking-widest">
 									그로스웨이브
 								</p>
@@ -69,10 +71,10 @@ export default function WhyUsBold() {
 								key={`compare-${card.title}`}
 								className="grid grid-cols-2 border-slate-200 border-t"
 							>
-								<div className="border-slate-200 border-r px-6 py-4">
-									<p className="text-slate-500 text-sm">{card.before}</p>
+								<div className="border-slate-200 border-r bg-slate-50 px-6 py-4">
+									<p className="text-slate-400 text-sm">{card.before}</p>
 								</div>
-								<div className="px-6 py-4">
+								<div className="border-l-2 border-[#7c3aed] bg-[#7c3aed]/5 px-6 py-4">
 									<p className="font-medium text-foreground text-sm">{card.after}</p>
 								</div>
 							</div>

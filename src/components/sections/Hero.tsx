@@ -44,11 +44,10 @@ export default function Hero() {
 					transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
 					className="mb-6 leading-[1.2] tracking-tight md:leading-[1.12]"
 				>
-					<span className="block font-semibold text-[28px] text-slate-400 sm:text-[36px] md:text-[44px] lg:text-[52px]">
-						일반 광고로는
-					</span>
 					<span className="gradient-text font-bold text-[40px] sm:text-[52px] md:text-[68px] lg:text-[80px]">
-						의뢰가 잘 늘지 않습니다.
+						전문직 마케팅은
+						<br />
+						달라야합니다.
 					</span>
 				</motion.h1>
 

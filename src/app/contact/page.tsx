@@ -21,10 +21,10 @@ export default function ContactPage() {
 					문의하기
 				</p>
 				<h1 className="mb-4 font-bold text-4xl text-foreground leading-tight tracking-tight md:text-5xl">
-					첫 상담, 지금 신청하세요
+					상담은 언제나, 당연히 무료입니다.
 				</h1>
 				<p className="text-lg text-muted-foreground">
-					첫 상담은 무료이며, 영업일 1일 내 직접 연락드립니다.
+					부담없이 연락 주시면 1일 내로 빠르게 연락드리겠습니다.
 				</p>
 			</div>
 
@@ -41,8 +41,10 @@ export default function ContactPage() {
 					</div>
 
 					{/* Dual form guide */}
-					<p className="mb-8 text-center text-muted-foreground text-sm">
-						간단히 연락처만 남겨도 되고, 자세히 알려주셔도 됩니다.
+					<p className="mb-8 text-center text-muted-foreground text-sm leading-relaxed">
+						단 3줄로도 상담이 가능하십니다. 저희 서비스도 똑같습니다.
+						<br />
+						고생하실 필요 없이 저희가 알아서 다 진행해 드립니다.
 					</p>
 
 					{/* Dual form */}
