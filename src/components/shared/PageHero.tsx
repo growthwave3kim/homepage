@@ -47,7 +47,7 @@ export default function PageHero({
 				<p className="mb-5 font-semibold text-[#7c3aed] text-sm uppercase tracking-[0.25em]">
 					{eyebrow}
 				</p>
-				<h1 className="mb-5 font-bold text-[44px] text-foreground leading-[1.12] tracking-tight md:text-[60px] lg:text-[72px]">
+				<h1 className="mb-5 font-bold text-[34px] text-foreground leading-[1.2] tracking-tight md:text-[56px] md:leading-[1.12] lg:text-[68px]">
 					{titleHighlight ? (
 						<>
 							{title}

@@ -74,7 +74,12 @@
 			system-ui, sans-serif;
 	}
 	html {
-		scroll-padding-top: 80px;
+		scroll-padding-top: 64px;
+	}
+	@media (min-width: 768px) {
+		html {
+			scroll-padding-top: 80px;
+		}
 	}
 	a,
 	button,

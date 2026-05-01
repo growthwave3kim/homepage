@@ -43,7 +43,7 @@ export const CASES: Case[] = [
 			"의료광고심의를 먼저 검토하고 들어오는 팀이라 안심이 됐습니다. 심의 통과 후 신규 예약이 눈에 띄게 늘었어요.",
 		metric: "의료광고심의 6건 통과",
 		period: "2개월",
-		profession: "hanbang",
+		profession: "oriental",
 	},
 	{
 		field: "특허·상표",

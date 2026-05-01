@@ -12,7 +12,7 @@ export default function FAQPreview() {
 	const previewItems = FAQ_ITEMS.slice(0, 4);
 
 	return (
-		<section className="bg-white px-4 py-24">
+		<section className="bg-white px-4 py-20 md:py-24">
 			<div className="mx-auto max-w-3xl">
 				<Reveal>
 					<div className="mb-10 text-center">

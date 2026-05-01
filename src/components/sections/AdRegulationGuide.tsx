@@ -48,7 +48,7 @@ const REGULATIONS = [
 
 export default function AdRegulationGuide() {
 	return (
-		<section className="bg-slate-50 px-4 py-20">
+		<section className="bg-slate-50 px-4 py-20 md:py-24">
 			<div className="mx-auto max-w-6xl">
 				<Reveal>
 					<div className="mb-12 text-center">

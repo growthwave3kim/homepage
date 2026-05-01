@@ -5,7 +5,7 @@ import { PAIN_POINTS } from "@/data/pain-points";
 
 export default function PainPoints() {
 	return (
-		<section className="bg-slate-50 px-4 py-24">
+		<section className="bg-slate-50 px-4 py-20 md:py-24">
 			<div className="mx-auto max-w-7xl">
 				<Reveal>
 					<SectionHeading

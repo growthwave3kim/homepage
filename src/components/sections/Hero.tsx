@@ -18,7 +18,7 @@ function BlobShape({ className, delay = 0 }: { className: string; delay?: number
 
 export default function Hero() {
 	return (
-		<section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-white pt-20">
+		<section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-white pt-16 md:pt-20">
 			{/* Blobs */}
 			<BlobShape className="top-[-5%] right-[-10%] h-[500px] w-[500px] bg-[#7c3aed]/10" delay={0} />
 			<BlobShape
@@ -42,12 +42,12 @@ export default function Hero() {
 					initial={{ opacity: 0, y: 24 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-					className="mb-6 leading-[1.12] tracking-tight"
+					className="mb-6 leading-[1.2] tracking-tight md:leading-[1.12]"
 				>
-					<span className="block font-semibold text-[36px] text-slate-400 md:text-[44px] lg:text-[52px]">
+					<span className="block font-semibold text-[28px] text-slate-400 sm:text-[36px] md:text-[44px] lg:text-[52px]">
 						일반 광고로는
 					</span>
-					<span className="gradient-text font-bold text-[52px] md:text-[68px] lg:text-[80px]">
+					<span className="gradient-text font-bold text-[40px] sm:text-[52px] md:text-[68px] lg:text-[80px]">
 						의뢰가 잘 늘지 않습니다.
 					</span>
 				</motion.h1>

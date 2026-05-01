@@ -48,7 +48,8 @@ export default function BlogServicePage() {
 						/>
 					</Reveal>
 					<Reveal delay={0.1}>
-						<div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+						<div className="overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-sm">
+							<div className="min-w-[480px]">
 							<div className="grid grid-cols-3 border-slate-200 border-b bg-slate-50 px-6 py-3">
 								<span className="font-semibold text-slate-500 text-xs uppercase tracking-wider">
 									항목
@@ -72,6 +73,7 @@ export default function BlogServicePage() {
 									<span className="font-medium text-[#7c3aed]">{row.us}</span>
 								</div>
 							))}
+							</div>
 						</div>
 					</Reveal>
 				</div>

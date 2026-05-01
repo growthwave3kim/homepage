@@ -28,7 +28,7 @@ export default function StickyCTA() {
 					animate={{ opacity: 1, y: 0 }}
 					exit={{ opacity: 0, y: 16 }}
 					transition={{ duration: 0.22 }}
-					className="fixed right-4 bottom-6 z-40 md:hidden"
+					className="fixed right-4 bottom-[calc(1.5rem+env(safe-area-inset-bottom))] z-40 md:hidden"
 				>
 					<Link
 						href="/contact"

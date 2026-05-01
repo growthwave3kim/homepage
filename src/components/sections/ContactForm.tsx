@@ -74,7 +74,7 @@ export default function ContactForm() {
 	}
 
 	return (
-		<div className="rounded-3xl border border-slate-100 bg-white p-8 shadow-[0_8px_40px_rgba(0,0,0,0.07)]">
+		<div className="rounded-2xl border border-slate-100 bg-white p-8 shadow-[0_8px_40px_rgba(0,0,0,0.07)]">
 			<p className="mb-1 font-semibold text-[#7c3aed] text-sm uppercase tracking-widest">
 				상세 문의
 			</p>
@@ -103,7 +103,7 @@ export default function ContactForm() {
 						<div className="grid gap-4 sm:grid-cols-2">
 							<div className="space-y-1.5">
 								<Label htmlFor="company">
-									회사/소속명 <span className="font-normal text-red-400">*</span>
+									회사/소속명 <span className="font-normal text-destructive">*</span>
 								</Label>
 								<Input
 									id="company"
@@ -120,7 +120,7 @@ export default function ContactForm() {
 										type="button"
 										onClick={() => setProfessionOpen((v) => !v)}
 										className={cn(
-											"flex h-10 w-full items-center justify-between rounded-md border bg-background px-3 py-2 text-sm transition-colors",
+											"flex h-12 w-full items-center justify-between rounded-md border bg-background px-3 py-2 text-sm transition-colors",
 											professionOpen
 												? "border-[#7c3aed] ring-2 ring-[#7c3aed]/20"
 												: "border-input hover:border-slate-400",
@@ -179,13 +179,13 @@ export default function ContactForm() {
 						<div className="grid gap-4 sm:grid-cols-2">
 							<div className="space-y-1.5">
 								<Label htmlFor="name">
-									담당자 이름 <span className="font-normal text-red-400">*</span>
+									담당자 이름 <span className="font-normal text-destructive">*</span>
 								</Label>
 								<Input id="name" name="name" placeholder="홍길동" required />
 							</div>
 							<div className="space-y-1.5">
 								<Label htmlFor="contact-tel">
-									연락처 <span className="font-normal text-red-400">*</span>
+									연락처 <span className="font-normal text-destructive">*</span>
 								</Label>
 								<Input
 									id="contact-tel"
@@ -211,11 +211,12 @@ export default function ContactForm() {
 										key={opt.id}
 										type="button"
 										onClick={() => toggleService(opt.id)}
-										className={`flex items-center gap-1.5 rounded-full border px-4 py-2 font-medium text-sm transition-all ${
+										className={cn(
+											"flex items-center gap-1.5 rounded-full border px-4 py-2 font-medium text-sm transition-all",
 											services.includes(opt.id)
 												? "gradient-brand border-transparent text-white"
-												: "border-slate-200 text-slate-500 hover:border-[#7c3aed]/40 hover:text-[#7c3aed]"
-										}`}
+												: "border-slate-200 text-slate-500 hover:border-[#7c3aed]/40 hover:text-[#7c3aed]",
+										)}
 									>
 										{services.includes(opt.id) && <CheckIcon className="h-3.5 w-3.5" />}
 										{opt.label}
@@ -246,14 +247,14 @@ export default function ContactForm() {
 								htmlFor="privacy"
 								className="cursor-pointer text-muted-foreground text-xs leading-relaxed"
 							>
-								<span className="text-red-400">*</span> 개인정보 수집·이용에 동의합니다. 수집된
+								<span className="text-destructive">*</span> 개인정보 수집·이용에 동의합니다. 수집된
 								정보는 상담 목적으로만 사용됩니다.
 							</label>
 						</div>
 
 						<button
 							type="submit"
-							className="gradient-brand w-full rounded-2xl py-4 font-semibold text-base text-white shadow-[0_4px_20px_rgba(124,58,237,0.25)] transition-opacity hover:opacity-90"
+							className="gradient-brand w-full rounded-2xl py-3.5 font-semibold text-base text-white shadow-[0_4px_20px_rgba(124,58,237,0.25)] transition-opacity hover:opacity-90"
 						>
 							무료 상담 신청
 						</button>

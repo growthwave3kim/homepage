@@ -63,7 +63,7 @@ function PhoneMockup() {
 
 export default function Services() {
 	return (
-		<section id="services" className="bg-white px-4 py-24">
+		<section id="services" className="bg-white px-4 py-20 md:py-24">
 			<div className="mx-auto max-w-7xl">
 				<Reveal>
 					<SectionHeading

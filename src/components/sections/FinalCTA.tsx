@@ -3,7 +3,7 @@ import Reveal from "@/components/shared/Reveal";
 
 export default function FinalCTA() {
 	return (
-		<section className="relative overflow-hidden bg-[#0f172a] px-4 py-28">
+		<section className="relative overflow-hidden bg-[#0f172a] px-4 py-24 md:py-28">
 			{/* 보라 radial glow */}
 			<div
 				className="pointer-events-none absolute inset-0"
@@ -29,7 +29,7 @@ export default function FinalCTA() {
 					<div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
 						<Link
 							href="/contact"
-							className="gradient-brand w-full rounded-full px-8 py-4 font-semibold text-base text-white shadow-[0_8px_32px_rgba(124,58,237,0.4)] transition-opacity hover:opacity-90 sm:w-auto"
+							className="gradient-brand w-full rounded-full px-8 py-3.5 font-semibold text-base text-white shadow-[0_8px_32px_rgba(124,58,237,0.4)] transition-opacity hover:opacity-90 sm:w-auto"
 						>
 							무료 상담 신청
 						</Link>

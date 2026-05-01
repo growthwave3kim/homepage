@@ -19,7 +19,7 @@ const PRICING_FACTORS = [
 
 export default function PricingNote() {
 	return (
-		<section className="bg-white px-4 py-20">
+		<section className="bg-white px-4 py-20 md:py-24">
 			<div className="mx-auto max-w-4xl">
 				<Reveal>
 					<div className="mb-10 text-center">

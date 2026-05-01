@@ -21,7 +21,7 @@ const VALUES = [
 
 export default function TeamValues() {
 	return (
-		<section className="bg-white px-4 py-20">
+		<section className="bg-white px-4 py-20 md:py-24">
 			<div className="mx-auto max-w-6xl">
 				<Reveal>
 					<div className="mb-12 text-center">

@@ -5,7 +5,7 @@ import { COMPARISON_ROWS } from "@/data/comparison";
 
 export default function Comparison() {
 	return (
-		<section className="bg-slate-50 px-4 py-24">
+		<section className="bg-slate-50 px-4 py-20 md:py-24">
 			<div className="mx-auto max-w-5xl">
 				<Reveal>
 					<SectionHeading title="일반 대행사 vs 그로스웨이브" className="mb-16" />

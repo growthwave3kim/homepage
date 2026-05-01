@@ -11,7 +11,7 @@ import { FAQ_ITEMS } from "@/data/faq";
 
 export default function FAQ() {
 	return (
-		<section id="faq" className="bg-white px-4 py-24">
+		<section id="faq" className="bg-white px-4 py-20 md:py-24">
 			<div className="mx-auto max-w-3xl">
 				<Reveal delay={0.1}>
 					<Accordion>

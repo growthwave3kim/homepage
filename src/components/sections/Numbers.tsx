@@ -5,7 +5,7 @@ import { NUMBERS } from "@/data/numbers";
 
 export default function Numbers() {
 	return (
-		<section className="bg-white px-4 py-24">
+		<section className="bg-white px-4 py-20 md:py-24">
 			<div className="mx-auto max-w-7xl">
 				<Reveal>
 					<SectionHeading eyebrow="Results" title="숫자로 증명합니다" className="mb-16" />

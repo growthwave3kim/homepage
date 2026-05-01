@@ -10,7 +10,7 @@ const ICON_MAP: Record<string, React.ComponentType<{ className?: string }>> = {
 
 export default function WhyUsBold() {
 	return (
-		<section className="bg-slate-50 px-4 py-24">
+		<section className="bg-slate-50 px-4 py-20 md:py-24">
 			<div className="mx-auto max-w-6xl">
 				<Reveal>
 					<div className="mb-12 text-center">

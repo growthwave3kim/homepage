@@ -3,7 +3,7 @@ import { PROCESS_STEPS } from "@/data/process";
 
 export default function ProcessTimeline() {
 	return (
-		<section className="bg-white px-4 py-24">
+		<section className="bg-white px-4 py-20 md:py-24">
 			<div className="mx-auto max-w-6xl">
 				<Reveal>
 					<div className="mb-16 text-center">

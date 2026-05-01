@@ -7,7 +7,7 @@ import { PROFESSIONS } from "@/data/professions";
 
 export default function ProfessionTabs() {
 	return (
-		<section className="bg-slate-50 px-4 py-20">
+		<section className="bg-slate-50 px-4 py-20 md:py-24">
 			<div className="mx-auto max-w-6xl">
 				<p className="mb-3 text-center font-semibold text-[#7c3aed] text-sm uppercase tracking-[0.25em]">
 					Profession

@@ -33,7 +33,7 @@ const CARDS = [
 
 export default function ServiceCards() {
 	return (
-		<section className="bg-slate-50 px-4 py-20">
+		<section className="bg-slate-50 px-4 py-20 md:py-24">
 			<div className="mx-auto max-w-6xl">
 				<p className="mb-10 text-center font-semibold text-[#7c3aed] text-sm uppercase tracking-[0.25em]">
 					Services

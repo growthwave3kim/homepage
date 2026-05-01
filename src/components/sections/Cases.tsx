@@ -4,7 +4,7 @@ import { CASES } from "@/data/cases";
 
 export default function Cases() {
 	return (
-		<section className="bg-slate-50 px-4 py-24">
+		<section className="bg-slate-50 px-4 py-20 md:py-24">
 			<div className="mx-auto max-w-7xl">
 				<Reveal>
 					<SectionHeading
