@@ -1,4 +1,4 @@
-export type ProfessionSlug = "lawyer" | "oriental" | "patent" | "labor" | "tax" | "appraiser";
+export type ProfessionSlug = "lawyer" | "oriental" | "patent" | "labor" | "tax";
 
 export interface Profession {
 	slug: ProfessionSlug;
@@ -81,19 +81,5 @@ export const PROFESSIONS: Profession[] = [
 		],
 		strength: "종소세·양도세 시즌 공략",
 		tag: "개인 세무사 · 세무법인",
-	},
-	{
-		slug: "appraiser",
-		label: "감정평가사",
-		icon: "ClipboardList",
-		adRule: false,
-		description: "부동산·보상 평가의 신뢰도를 콘텐츠로 쌓아 의뢰인이 먼저 연락하게 만듭니다.",
-		keyPoints: [
-			"부동산·보상 평가 검색 키워드 분석",
-			"신뢰 중심 전문가 브랜딩 콘텐츠",
-			"의뢰 문의 전환 최적화",
-		],
-		strength: "보상·부동산 신뢰 브랜딩",
-		tag: "감정평가법인 · 개인",
 	},
 ];

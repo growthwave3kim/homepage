@@ -37,13 +37,6 @@ const REGULATIONS = [
 		rule: "세무사 광고 기준",
 		note: "성공 실적 수치 금지. 수수료 허위 표시 금지.",
 	},
-	{
-		profession: "감정평가사",
-		slug: "appraiser",
-		law: "감정평가사법",
-		rule: "광고 기준",
-		note: "과장 표현 금지. 특정 의뢰인 연계 광고 제한.",
-	},
 ];
 
 export default function AdRegulationGuide() {

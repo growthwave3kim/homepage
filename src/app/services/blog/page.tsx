@@ -75,10 +75,7 @@ export default function BlogServicePage() {
 							</div>
 							{/* Rows */}
 							{BLOG_COMPARISON.map((row) => (
-								<div
-									key={row.label}
-									className="grid grid-cols-3 border-slate-100 border-t"
-								>
+								<div key={row.label} className="grid grid-cols-3 border-slate-100 border-t">
 									<div className="bg-white px-6 py-4">
 										<span className="font-medium text-foreground text-sm">{row.label}</span>
 									</div>

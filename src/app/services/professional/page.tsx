@@ -14,7 +14,7 @@ import ProfessionStrip from "@/components/shared/ProfessionStrip";
 export const metadata: Metadata = {
 	title: "전문직 마케팅 | Growth Wave",
 	description:
-		"변호사·한의사·변리사·노무사·세무사·감정평가사 등 전문직을 위한 마케팅. 광고 규정을 이해하고 수임·의뢰 전환을 설계합니다.",
+		"변호사·한의사·변리사·노무사·세무사 등 전문직을 위한 마케팅. 광고 규정을 이해하고 수임·의뢰 전환을 설계합니다.",
 };
 
 export default function ProfessionalServicePage() {

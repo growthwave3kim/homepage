@@ -21,7 +21,7 @@ const PROFESSION_OPTIONS = [
 	{ id: "patent", label: "변리사" },
 	{ id: "labor", label: "노무사" },
 	{ id: "tax", label: "세무사" },
-	{ id: "appraiser", label: "감정평가사" },
+
 	{ id: "other", label: "기타" },
 ] as const;
 
