@@ -15,7 +15,9 @@ export default function Footer() {
 					<div>
 						<Logo variant="light" className="mb-3" />
 						<p className="max-w-xs text-slate-400 text-sm leading-relaxed">
-							전문직 6개 직군 전용 마케팅 파트너. 의뢰인이 먼저 찾아오는 구조를 만듭니다.
+							전문직 6개 직군 전용 마케팅 파트너.
+							<br />
+							의뢰인이 먼저 찾아오는 구조를 만듭니다.
 						</p>
 						<div className="mt-5 flex gap-3">
 							<button

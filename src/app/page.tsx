@@ -6,6 +6,7 @@ import ProcessTimeline from "@/components/sections/ProcessTimeline";
 import ProfessionRotator from "@/components/sections/ProfessionRotator";
 import ServiceCards from "@/components/sections/ServiceCards";
 import TeamPreview from "@/components/sections/TeamPreview";
+import Testimonials from "@/components/sections/Testimonials";
 import WhyUsBold from "@/components/sections/WhyUsBold";
 
 export default function HomePage() {
@@ -17,6 +18,7 @@ export default function HomePage() {
 			<ServiceCards />
 			<ProcessTimeline />
 			<Cases />
+			<Testimonials />
 			<TeamPreview />
 			<FAQPreview />
 			<FinalCTA />
