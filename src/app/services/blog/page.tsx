@@ -1,6 +1,6 @@
+import { Check, X } from "lucide-react";
 import type { Metadata } from "next";
 import Cases from "@/components/sections/Cases";
-import Numbers from "@/components/sections/Numbers";
 import CTACard from "@/components/shared/CTACard";
 import PageHero from "@/components/shared/PageHero";
 import Reveal from "@/components/shared/Reveal";
@@ -48,32 +48,48 @@ export default function BlogServicePage() {
 						/>
 					</Reveal>
 					<Reveal delay={0.1}>
-						<div className="overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-sm">
-							<div className="min-w-[480px]">
-								<div className="grid grid-cols-3 border-slate-200 border-b bg-slate-50 px-6 py-3">
-									<span className="font-semibold text-slate-500 text-xs uppercase tracking-wider">
+						<div className="overflow-hidden rounded-2xl shadow-sm">
+							{/* Header */}
+							<div className="grid grid-cols-3">
+								<div className="bg-slate-100 px-6 py-4">
+									<span className="font-semibold text-slate-400 text-xs uppercase tracking-wider">
 										항목
 									</span>
+								</div>
+								<div className="flex items-center gap-2 bg-slate-100 px-6 py-4">
+									<div className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-slate-300">
+										<X className="h-3 w-3 text-white" />
+									</div>
 									<span className="font-semibold text-slate-500 text-xs uppercase tracking-wider">
 										일반 대행사
 									</span>
-									<span className="font-semibold text-[#7c3aed] text-xs uppercase tracking-wider">
+								</div>
+								<div className="gradient-brand flex items-center gap-2 px-6 py-4">
+									<div className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-white/25">
+										<Check className="h-3 w-3 text-white" />
+									</div>
+									<span className="font-semibold text-sm text-white uppercase tracking-wider">
 										그로스웨이브
 									</span>
 								</div>
-								{BLOG_COMPARISON.map((row, i) => (
-									<div
-										key={row.label}
-										className={`grid grid-cols-3 px-6 py-4 text-sm ${
-											i < BLOG_COMPARISON.length - 1 ? "border-slate-100 border-b" : ""
-										}`}
-									>
-										<span className="font-medium text-foreground">{row.label}</span>
-										<span className="text-muted-foreground">{row.general}</span>
-										<span className="font-medium text-[#7c3aed]">{row.us}</span>
-									</div>
-								))}
 							</div>
+							{/* Rows */}
+							{BLOG_COMPARISON.map((row) => (
+								<div
+									key={row.label}
+									className="grid grid-cols-3 border-slate-100 border-t"
+								>
+									<div className="bg-white px-6 py-4">
+										<span className="font-medium text-foreground text-sm">{row.label}</span>
+									</div>
+									<div className="bg-slate-50 px-6 py-4">
+										<span className="text-slate-400 text-sm">{row.general}</span>
+									</div>
+									<div className="bg-[#7c3aed]/5 px-6 py-4">
+										<span className="font-semibold text-[#7c3aed] text-sm">{row.us}</span>
+									</div>
+								</div>
+							))}
 						</div>
 					</Reveal>
 				</div>
@@ -110,7 +126,6 @@ export default function BlogServicePage() {
 				</div>
 			</section>
 
-			<Numbers />
 			<Cases />
 			<CTACard
 				headline="읽히는 블로그, 지금 시작하세요"

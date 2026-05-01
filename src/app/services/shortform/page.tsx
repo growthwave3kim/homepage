@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Cases from "@/components/sections/Cases";
-import Numbers from "@/components/sections/Numbers";
 import CTACard from "@/components/shared/CTACard";
 import PageHero from "@/components/shared/PageHero";
 import Reveal from "@/components/shared/Reveal";
@@ -103,7 +102,6 @@ export default function ShortformServicePage() {
 				</div>
 			</section>
 
-			<Numbers />
 			<Cases />
 			<CTACard
 				headline="터지는 숏폼, 지금 시작하세요"
