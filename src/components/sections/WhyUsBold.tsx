@@ -30,7 +30,7 @@ export default function WhyUsBold() {
 						const Icon = ICON_MAP[card.icon] ?? ShieldCheck;
 						return (
 							<Reveal key={card.title} delay={i * 0.1}>
-								<div className="flex flex-col rounded-2xl bg-white p-8 shadow-sm">
+								<div className="flex h-full flex-col rounded-2xl bg-white p-8 shadow-sm">
 									<div className="gradient-brand mb-5 flex h-12 w-12 items-center justify-center rounded-full">
 										<Icon className="h-5 w-5 text-white" aria-hidden="true" />
 									</div>

@@ -18,7 +18,7 @@ export default function PainPoints() {
 				<div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
 					{PAIN_POINTS.map((point, i) => (
 						<Reveal key={point.id} delay={i * 0.08}>
-							<div className="card-hover flex flex-col gap-4 rounded-2xl border border-slate-200 bg-white p-6">
+							<div className="card-hover flex h-full flex-col gap-4 rounded-2xl border border-slate-200 bg-white p-6">
 								<div
 									className="gradient-brand flex h-8 w-8 shrink-0 items-center justify-center rounded-lg"
 									aria-hidden="true"
@@ -34,7 +34,7 @@ export default function PainPoints() {
 
 					{/* Extra card */}
 					<Reveal delay={PAIN_POINTS.length * 0.08}>
-						<div className="gradient-brand flex flex-col justify-center gap-3 rounded-2xl p-6 text-white sm:col-span-2 lg:col-span-1">
+						<div className="gradient-brand flex h-full flex-col justify-center gap-3 rounded-2xl p-6 text-white sm:col-span-2 lg:col-span-1">
 							<p className="font-bold text-xl leading-snug">
 								그로스웨이브는 그 문제를 알고 있습니다.
 							</p>

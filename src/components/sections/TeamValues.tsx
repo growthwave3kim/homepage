@@ -38,7 +38,7 @@ export default function TeamValues() {
 						const Icon = v.icon;
 						return (
 							<Reveal key={v.title} delay={i * 0.1}>
-								<div className="rounded-2xl border border-slate-100 bg-white p-8 shadow-sm">
+								<div className="h-full rounded-2xl border border-slate-100 bg-white p-8 shadow-sm">
 									<div className="gradient-brand mb-5 flex h-12 w-12 items-center justify-center rounded-full">
 										<Icon className="h-5 w-5 text-white" aria-hidden="true" />
 									</div>

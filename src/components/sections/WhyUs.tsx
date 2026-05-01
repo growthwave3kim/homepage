@@ -28,7 +28,7 @@ export default function WhyUs() {
 						const Icon = ICON_MAP[card.icon] ?? ShieldCheck;
 						return (
 							<Reveal key={card.title} delay={i * 0.1}>
-								<div className="card-hover flex gap-5 rounded-2xl border border-slate-200 bg-white p-7">
+								<div className="card-hover flex h-full gap-5 rounded-2xl border border-slate-200 bg-white p-7">
 									<div className="gradient-brand flex h-12 w-12 shrink-0 items-center justify-center rounded-full">
 										<Icon className="h-5 w-5 text-white" aria-hidden="true" />
 									</div>
