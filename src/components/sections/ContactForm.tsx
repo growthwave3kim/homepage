@@ -2,11 +2,12 @@
 
 import { CheckCircle2, CheckIcon, ChevronDown } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { siteConfig } from "@/config/site";
+import { cn } from "@/lib/utils";
 
 const SERVICE_OPTIONS = [
 	{ id: "blog", label: "네이버 블로그" },
@@ -27,6 +28,19 @@ const PROFESSION_OPTIONS = [
 export default function ContactForm() {
 	const [services, setServices] = useState<string[]>([]);
 	const [sent, setSent] = useState(false);
+	const [profession, setProfession] = useState("");
+	const [professionOpen, setProfessionOpen] = useState(false);
+	const professionRef = useRef<HTMLDivElement>(null);
+
+	useEffect(() => {
+		function handleOutside(e: MouseEvent) {
+			if (professionRef.current && !professionRef.current.contains(e.target as Node)) {
+				setProfessionOpen(false);
+			}
+		}
+		if (professionOpen) document.addEventListener("mousedown", handleOutside);
+		return () => document.removeEventListener("mousedown", handleOutside);
+	}, [professionOpen]);
 
 	function toggleService(id: string) {
 		setServices((prev) => (prev.includes(id) ? prev.filter((s) => s !== id) : [...prev, id]));
@@ -99,26 +113,65 @@ export default function ContactForm() {
 								/>
 							</div>
 							<div className="space-y-1.5">
-								<Label htmlFor="profession">직군</Label>
-								<div className="relative">
-									<select
-										id="profession"
-										name="profession"
-										className="flex h-10 w-full appearance-none rounded-md border border-input bg-background px-3 py-2 pr-10 text-sm text-foreground ring-offset-background transition-colors hover:border-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+								<Label>직군</Label>
+								<div ref={professionRef} className="relative">
+									<input type="hidden" name="profession" value={profession} />
+									<button
+										type="button"
+										onClick={() => setProfessionOpen((v) => !v)}
+										className={cn(
+											"flex h-10 w-full items-center justify-between rounded-md border bg-background px-3 py-2 text-sm transition-colors",
+											professionOpen
+												? "border-[#7c3aed] ring-2 ring-[#7c3aed]/20"
+												: "border-input hover:border-slate-400",
+											profession ? "text-foreground" : "text-muted-foreground",
+										)}
 									>
-										<option value="" className="text-muted-foreground">
-											선택해주세요
-										</option>
-										{PROFESSION_OPTIONS.map((opt) => (
-											<option key={opt.id} value={opt.label}>
-												{opt.label}
-											</option>
-										))}
-									</select>
-									<ChevronDown
-										className="pointer-events-none absolute top-1/2 right-3 h-4 w-4 -translate-y-1/2 text-slate-400"
-										aria-hidden="true"
-									/>
+										<span>{profession || "선택해주세요"}</span>
+										<ChevronDown
+											className={cn(
+												"h-4 w-4 shrink-0 text-slate-400 transition-transform duration-200",
+												professionOpen && "rotate-180",
+											)}
+											aria-hidden="true"
+										/>
+									</button>
+									<AnimatePresence>
+										{professionOpen && (
+											<motion.ul
+												initial={{ opacity: 0, y: -6 }}
+												animate={{ opacity: 1, y: 0 }}
+												exit={{ opacity: 0, y: -6 }}
+												transition={{ duration: 0.15, ease: [0.22, 1, 0.36, 1] }}
+												className="absolute top-full right-0 left-0 z-50 mt-1 overflow-hidden rounded-xl border border-slate-200 bg-white py-1 shadow-[0_8px_30px_rgba(0,0,0,0.12)]"
+											>
+												{PROFESSION_OPTIONS.map((opt) => (
+													<li key={opt.id}>
+														<button
+															type="button"
+															onClick={() => {
+																setProfession(opt.label);
+																setProfessionOpen(false);
+															}}
+															className={cn(
+																"flex w-full items-center gap-2 px-3 py-2.5 text-left text-sm transition-colors hover:bg-slate-50",
+																profession === opt.label
+																	? "font-semibold text-[#7c3aed]"
+																	: "text-foreground",
+															)}
+														>
+															<span className="flex h-4 w-4 shrink-0 items-center justify-center">
+																{profession === opt.label && (
+																	<CheckIcon className="h-3.5 w-3.5 text-[#7c3aed]" />
+																)}
+															</span>
+															{opt.label}
+														</button>
+													</li>
+												))}
+											</motion.ul>
+										)}
+									</AnimatePresence>
 								</div>
 							</div>
 						</div>
