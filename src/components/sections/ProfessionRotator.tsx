@@ -23,7 +23,7 @@ export default function ProfessionRotator() {
 					<p className="mb-4 font-semibold text-[#7c3aed] text-sm uppercase tracking-[0.25em]">
 						Specialized
 					</p>
-					<h2 className="font-extrabold text-[56px] leading-[1.05] tracking-tight text-foreground md:text-[80px]">
+					<h2 className="font-extrabold text-[56px] text-foreground leading-[1.05] tracking-tight md:text-[80px]">
 						오직 <span className="text-[#7c3aed]">[</span>
 						<span className="inline-block min-w-[3ch] text-center">
 							<AnimatePresence mode="popLayout" initial={false}>
@@ -41,7 +41,7 @@ export default function ProfessionRotator() {
 						</span>
 						<span className="text-[#7c3aed]">]</span>를 위해
 					</h2>
-					<h2 className="font-extrabold text-[56px] leading-[1.05] tracking-tight text-foreground md:text-[80px]">
+					<h2 className="font-extrabold text-[56px] text-foreground leading-[1.05] tracking-tight md:text-[80px]">
 						만들어졌습니다.
 					</h2>
 				</div>

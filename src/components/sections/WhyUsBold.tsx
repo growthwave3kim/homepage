@@ -20,7 +20,7 @@ export default function WhyUsBold() {
 						<h2 className="font-bold text-3xl text-foreground leading-tight tracking-tight md:text-4xl">
 							대행사 절반은 노출 수만 보고합니다.
 						</h2>
-						<p className="mt-4 text-muted-foreground text-lg">그로스웨이브는 수임 전환만 봅니다.</p>
+						<p className="mt-4 text-lg text-muted-foreground">그로스웨이브는 수임 전환만 봅니다.</p>
 					</div>
 				</Reveal>
 

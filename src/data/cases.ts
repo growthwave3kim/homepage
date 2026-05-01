@@ -57,8 +57,7 @@ export const CASES: Case[] = [
 	{
 		field: "인사·노무 컨설팅",
 		anonymous: "부산, 공인노무사 사무소",
-		quote:
-			"중대재해법 시행 이후 검색으로 들어오는 사업장 문의 비율이 절반을 넘어섰습니다.",
+		quote: "중대재해법 시행 이후 검색으로 들어오는 사업장 문의 비율이 절반을 넘어섰습니다.",
 		metric: "검색 유입 비율 52%",
 		period: "4개월",
 		profession: "labor",

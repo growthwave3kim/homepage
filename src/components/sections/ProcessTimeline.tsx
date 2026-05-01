@@ -32,7 +32,7 @@ export default function ProcessTimeline() {
 									<div className="gradient-brand relative z-10 mb-5 flex h-12 w-12 items-center justify-center rounded-full font-bold text-base text-white shadow-[0_4px_16px_rgba(124,58,237,0.3)]">
 										{step.step}
 									</div>
-									<h3 className="mb-2 font-bold text-foreground text-base">{step.title}</h3>
+									<h3 className="mb-2 font-bold text-base text-foreground">{step.title}</h3>
 									<p className="text-muted-foreground text-sm leading-relaxed">
 										{step.description}
 									</p>
@@ -55,7 +55,7 @@ export default function ProcessTimeline() {
 										{step.step}
 									</div>
 									<div className="pt-1.5">
-										<h3 className="mb-1 font-bold text-foreground text-base">{step.title}</h3>
+										<h3 className="mb-1 font-bold text-base text-foreground">{step.title}</h3>
 										<p className="text-muted-foreground text-sm leading-relaxed">
 											{step.description}
 										</p>

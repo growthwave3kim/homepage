@@ -8,8 +8,7 @@ const PRICING_FACTORS = [
 	},
 	{
 		title: "운영 채널",
-		description:
-			"블로그 단독 / 숏폼 포함 / 멀티채널 여부에 따라 월 작업 규모가 달라집니다.",
+		description: "블로그 단독 / 숏폼 포함 / 멀티채널 여부에 따라 월 작업 규모가 달라집니다.",
 	},
 	{
 		title: "성과 목표 KPI",
@@ -32,8 +31,8 @@ export default function PricingNote() {
 						</h2>
 						<p className="mt-4 text-muted-foreground leading-relaxed">
 							직군·채널·목표 KPI에 따라 달라지기 때문에 일률적인 가격표는 없습니다.
-							<br className="hidden sm:block" />
-							첫 상담에서 구체적인 방향과 예상 비용을 함께 안내드립니다.
+							<br className="hidden sm:block" />첫 상담에서 구체적인 방향과 예상 비용을 함께
+							안내드립니다.
 						</p>
 					</div>
 				</Reveal>

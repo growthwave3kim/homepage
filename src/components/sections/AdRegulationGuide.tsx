@@ -67,15 +67,9 @@ export default function AdRegulationGuide() {
 				<Reveal>
 					<div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
 						{REGULATIONS.map((r) => (
-							<div
-								key={r.slug}
-								className="rounded-2xl border border-slate-200 bg-white p-6"
-							>
+							<div key={r.slug} className="rounded-2xl border border-slate-200 bg-white p-6">
 								<div className="mb-3 flex items-center gap-3">
-									<BookText
-										className="h-5 w-5 shrink-0 text-[#7c3aed]"
-										aria-hidden="true"
-									/>
+									<BookText className="h-5 w-5 shrink-0 text-[#7c3aed]" aria-hidden="true" />
 									<span className="font-bold text-foreground">{r.profession}</span>
 								</div>
 								<p className="mb-2 font-medium text-[#7c3aed] text-xs">

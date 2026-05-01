@@ -38,7 +38,7 @@ function NavigationMenuTrigger({ className, ...props }: NavigationMenuPrimitive.
 		<NavigationMenuPrimitive.Trigger
 			data-slot="navigation-menu-trigger"
 			className={cn(
-				"group flex items-center gap-1 rounded-lg px-4 py-2 font-medium text-sm text-slate-600 transition-colors hover:bg-slate-50 hover:text-foreground data-[popup-open]:text-[#7c3aed]",
+				"group flex items-center gap-1 rounded-lg px-4 py-2 font-medium text-slate-600 text-sm transition-colors hover:bg-slate-50 hover:text-foreground data-[popup-open]:text-[#7c3aed]",
 				className,
 			)}
 			{...props}
@@ -78,7 +78,7 @@ function NavigationMenuPopup({ className, ...props }: NavigationMenuPrimitive.Po
 		<NavigationMenuPrimitive.Popup
 			data-slot="navigation-menu-popup"
 			className={cn(
-				"w-[400px] rounded-2xl border border-slate-200 bg-white p-2 shadow-[0_24px_60px_rgba(15,23,42,0.12)] outline-none transition-[opacity,transform] data-[ending-style]:scale-95 data-[ending-style]:opacity-0 data-[starting-style]:scale-95 data-[starting-style]:opacity-0",
+				"w-[400px] rounded-2xl border border-slate-200 bg-white p-2 shadow-[0_24px_60px_rgba(15,23,42,0.12)] outline-none transition-[opacity,transform] data-[ending-style]:scale-95 data-[starting-style]:scale-95 data-[ending-style]:opacity-0 data-[starting-style]:opacity-0",
 				className,
 			)}
 			{...props}
@@ -96,10 +96,7 @@ function NavigationMenuContent({ className, ...props }: NavigationMenuPrimitive.
 	);
 }
 
-function NavigationMenuBackdrop({
-	className,
-	...props
-}: NavigationMenuPrimitive.Backdrop.Props) {
+function NavigationMenuBackdrop({ className, ...props }: NavigationMenuPrimitive.Backdrop.Props) {
 	return (
 		<NavigationMenuPrimitive.Backdrop
 			data-slot="navigation-menu-backdrop"

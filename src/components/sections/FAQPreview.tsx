@@ -30,7 +30,7 @@ export default function FAQPreview() {
 					<Accordion className="divide-y divide-slate-100">
 						{previewItems.map((item) => (
 							<AccordionItem key={item.question} value={item.question} className="border-0">
-								<AccordionTrigger className="py-4 text-left font-semibold text-foreground text-base hover:no-underline">
+								<AccordionTrigger className="py-4 text-left font-semibold text-base text-foreground hover:no-underline">
 									{item.question}
 								</AccordionTrigger>
 								<AccordionContent>

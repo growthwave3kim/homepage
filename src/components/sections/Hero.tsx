@@ -57,7 +57,7 @@ export default function Hero() {
 					initial={{ opacity: 0, y: 20 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.6, delay: 0.22, ease: [0.22, 1, 0.36, 1] }}
-					className="mb-10 text-lg text-muted-foreground leading-relaxed text-pretty md:text-xl"
+					className="mb-10 text-pretty text-lg text-muted-foreground leading-relaxed md:text-xl"
 				>
 					전문직은 검색 의도와 신뢰 누적이 다릅니다.
 					<br className="hidden sm:block" />
@@ -95,7 +95,7 @@ export default function Hero() {
 					{PROFESSIONS.map((p) => (
 						<span
 							key={p.slug}
-							className="rounded-full bg-slate-100 px-3 py-1 text-[12px] font-medium text-slate-500"
+							className="rounded-full bg-slate-100 px-3 py-1 font-medium text-[12px] text-slate-500"
 						>
 							{p.label}
 						</span>

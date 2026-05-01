@@ -21,8 +21,7 @@ const SHORTFORM_BENEFITS = [
 	},
 	{
 		title: "멀티 채널 동시 배포",
-		description:
-			"인스타그램 릴스, 유튜브 쇼츠, 틱톡에 동시 배포해 더 많은 잠재 고객에게 닿습니다.",
+		description: "인스타그램 릴스, 유튜브 쇼츠, 틱톡에 동시 배포해 더 많은 잠재 고객에게 닿습니다.",
 	},
 	{
 		title: "퍼스널 브랜드 구축",
@@ -65,9 +64,7 @@ export default function ShortformServicePage() {
 										<span className="font-bold text-sm text-white">0{i + 1}</span>
 									</div>
 									<h3 className="mb-3 font-bold text-foreground text-lg">{b.title}</h3>
-									<p className="text-muted-foreground text-sm leading-relaxed">
-										{b.description}
-									</p>
+									<p className="text-muted-foreground text-sm leading-relaxed">{b.description}</p>
 								</div>
 							</Reveal>
 						))}

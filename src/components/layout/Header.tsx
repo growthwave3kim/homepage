@@ -72,8 +72,7 @@ export default function Header() {
 											{item.children.map((child) => {
 												const ChildIcon = CHILD_ICON_MAP[child.icon];
 												const isChildActive =
-													pathname === child.href ||
-													pathname.startsWith(`${child.href}/`);
+													pathname === child.href || pathname.startsWith(`${child.href}/`);
 												return (
 													<Link
 														key={child.href}
@@ -85,10 +84,7 @@ export default function Header() {
 													>
 														<div className="gradient-brand flex h-10 w-10 shrink-0 items-center justify-center rounded-full">
 															{ChildIcon && (
-																<ChildIcon
-																	className="h-4 w-4 text-white"
-																	aria-hidden="true"
-																/>
+																<ChildIcon className="h-4 w-4 text-white" aria-hidden="true" />
 															)}
 														</div>
 														<div className="min-w-0 flex-1">
@@ -96,16 +92,12 @@ export default function Header() {
 																<span
 																	className={cn(
 																		"font-semibold text-sm",
-																		isChildActive
-																			? "text-[#7c3aed]"
-																			: "text-foreground",
+																		isChildActive ? "text-[#7c3aed]" : "text-foreground",
 																	)}
 																>
 																	{child.label}
 																</span>
-																{child.flagship && (
-																	<span className="badge-purple">대표</span>
-																)}
+																{child.flagship && <span className="badge-purple">대표</span>}
 															</div>
 															<p className="truncate text-muted-foreground text-xs">
 																{child.description}
@@ -120,8 +112,7 @@ export default function Header() {
 							);
 						}
 
-						const isActive =
-							pathname === item.href || pathname.startsWith(`${item.href}/`);
+						const isActive = pathname === item.href || pathname.startsWith(`${item.href}/`);
 						return (
 							<Link
 								key={item.href}
