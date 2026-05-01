@@ -39,7 +39,9 @@ export default function ProfessionRotator() {
 								</motion.span>
 							</AnimatePresence>
 						</span>
-						<span className="text-[#7c3aed]">]</span>를 위해
+						<span className="text-[#7c3aed]">]</span>
+						<br className="block sm:hidden" />
+						를 위해
 					</h2>
 					<h2 className="font-extrabold text-[40px] text-foreground leading-[1.05] tracking-tight md:text-[56px] lg:text-[72px]">
 						만들어졌습니다.
