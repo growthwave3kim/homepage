@@ -10,6 +10,12 @@ import { siteConfig } from "@/config/site";
 export default function QuickContactForm() {
 	const [sent, setSent] = useState(false);
 
+	function handleKeyDown(e: React.KeyboardEvent<HTMLFormElement>) {
+		if (e.key === "Enter" && (e.target as HTMLElement).tagName !== "TEXTAREA") {
+			e.preventDefault();
+		}
+	}
+
 	function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
 		e.preventDefault();
 		const fd = new FormData(e.currentTarget);
@@ -46,7 +52,7 @@ export default function QuickContactForm() {
 						<p className="text-muted-foreground text-sm">영업일 1일 내 연락드립니다.</p>
 					</motion.div>
 				) : (
-					<motion.form key="form" onSubmit={handleSubmit} className="space-y-4">
+					<motion.form key="form" onSubmit={handleSubmit} onKeyDown={handleKeyDown} className="space-y-4">
 						<div className="space-y-1.5">
 							<Label htmlFor="quick-name">
 								이름 <span className="font-normal text-red-400">*</span>

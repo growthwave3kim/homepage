@@ -74,7 +74,6 @@
 			system-ui, sans-serif;
 	}
 	html {
-		@apply scroll-smooth;
 		scroll-padding-top: 80px;
 	}
 	a,

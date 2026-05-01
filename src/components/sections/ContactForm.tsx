@@ -1,6 +1,6 @@
 "use client";
 
-import { CheckCircle2, CheckIcon } from "lucide-react";
+import { CheckCircle2, CheckIcon, ChevronDown } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
@@ -30,6 +30,12 @@ export default function ContactForm() {
 
 	function toggleService(id: string) {
 		setServices((prev) => (prev.includes(id) ? prev.filter((s) => s !== id) : [...prev, id]));
+	}
+
+	function handleKeyDown(e: React.KeyboardEvent<HTMLFormElement>) {
+		if (e.key === "Enter" && (e.target as HTMLElement).tagName !== "TEXTAREA") {
+			e.preventDefault();
+		}
 	}
 
 	function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -74,7 +80,12 @@ export default function ContactForm() {
 						<p className="text-muted-foreground text-sm">영업일 1일 내로 직접 연락드리겠습니다.</p>
 					</motion.div>
 				) : (
-					<motion.form key="form" onSubmit={handleSubmit} className="space-y-5">
+					<motion.form
+						key="form"
+						onSubmit={handleSubmit}
+						onKeyDown={handleKeyDown}
+						className="space-y-5"
+					>
 						<div className="grid gap-4 sm:grid-cols-2">
 							<div className="space-y-1.5">
 								<Label htmlFor="company">
@@ -89,18 +100,26 @@ export default function ContactForm() {
 							</div>
 							<div className="space-y-1.5">
 								<Label htmlFor="profession">직군</Label>
-								<select
-									id="profession"
-									name="profession"
-									className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-								>
-									<option value="">선택해주세요</option>
-									{PROFESSION_OPTIONS.map((opt) => (
-										<option key={opt.id} value={opt.label}>
-											{opt.label}
+								<div className="relative">
+									<select
+										id="profession"
+										name="profession"
+										className="flex h-10 w-full appearance-none rounded-md border border-input bg-background px-3 py-2 pr-10 text-sm text-foreground ring-offset-background transition-colors hover:border-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+									>
+										<option value="" className="text-muted-foreground">
+											선택해주세요
 										</option>
-									))}
-								</select>
+										{PROFESSION_OPTIONS.map((opt) => (
+											<option key={opt.id} value={opt.label}>
+												{opt.label}
+											</option>
+										))}
+									</select>
+									<ChevronDown
+										className="pointer-events-none absolute top-1/2 right-3 h-4 w-4 -translate-y-1/2 text-slate-400"
+										aria-hidden="true"
+									/>
+								</div>
 							</div>
 						</div>
 

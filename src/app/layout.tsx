@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
+import PageTransition from "@/components/shared/PageTransition";
 import StickyCTA from "@/components/shared/StickyCTA";
 import { siteConfig } from "@/config/site";
 
@@ -83,7 +84,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 			>
 				<script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
 				<Header />
-				<main className="flex-1">{children}</main>
+				<main className="flex-1">
+					<PageTransition>{children}</PageTransition>
+				</main>
 				<Footer />
 				<StickyCTA />
 			</body>
