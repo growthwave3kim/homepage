@@ -3,7 +3,6 @@
 import { motion } from "motion/react";
 import Link from "next/link";
 import WaveDivider from "@/components/shared/WaveDivider";
-import { PROFESSIONS } from "@/data/professions";
 
 function BlobShape({ className, delay = 0 }: { className: string; delay?: number }) {
 	return (
@@ -37,7 +36,7 @@ export default function Hero() {
 					전문직 마케팅 전문
 				</motion.p>
 
-				{/* Headline — 2-tier hierarchy: setup(muted·small) → punchline(gradient·large) */}
+				{/* Headline */}
 				<motion.h1
 					initial={{ opacity: 0, y: 24 }}
 					animate={{ opacity: 1, y: 0 }}
@@ -58,9 +57,7 @@ export default function Hero() {
 					transition={{ duration: 0.6, delay: 0.22, ease: [0.22, 1, 0.36, 1] }}
 					className="mb-10 text-pretty text-lg text-muted-foreground leading-relaxed md:text-xl"
 				>
-					전문직은 검색 의도와 신뢰 누적이 다릅니다.
-					<br className="hidden sm:block" />
-					6개 직군의 광고 규정을 이해하고 콘텐츠를 설계합니다.
+					읽히는 블로그와 터지는 숏폼, 저희가 가장 잘 만듭니다.
 				</motion.p>
 
 				{/* CTAs */}
@@ -68,37 +65,28 @@ export default function Hero() {
 					initial={{ opacity: 0, y: 20 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.6, delay: 0.34, ease: [0.22, 1, 0.36, 1] }}
-					className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center"
+					className="flex flex-col items-center gap-3"
 				>
+					<div className="flex flex-col gap-3 sm:flex-row sm:justify-center">
+						<Link
+							href="/services/blog"
+							className="gradient-brand rounded-full px-8 py-3.5 font-semibold text-base text-white shadow-[0_8px_24px_rgba(124,58,237,0.3)] transition-opacity hover:opacity-90"
+						>
+							읽히는 블로그란?
+						</Link>
+						<Link
+							href="/services/shortform"
+							className="rounded-full border border-slate-200 px-8 py-3.5 font-semibold text-base text-foreground transition-colors hover:border-slate-300 hover:bg-slate-50"
+						>
+							터지는 숏폼이란?
+						</Link>
+					</div>
 					<Link
 						href="/contact"
-						className="gradient-brand rounded-full px-8 py-3.5 font-semibold text-base text-white shadow-[0_8px_24px_rgba(124,58,237,0.3)] transition-opacity hover:opacity-90"
+						className="rounded-full border border-slate-200 px-8 py-3 font-medium text-slate-500 text-sm transition-colors hover:border-slate-300 hover:text-foreground"
 					>
-						무료 상담 신청
+						단 3줄로 상담하기
 					</Link>
-					<Link
-						href="/services/professional"
-						className="rounded-full border border-slate-200 px-8 py-3.5 font-semibold text-base text-foreground transition-colors hover:border-slate-300 hover:bg-slate-50"
-					>
-						어떻게 다른가요
-					</Link>
-				</motion.div>
-
-				{/* 직군 pill row */}
-				<motion.div
-					initial={{ opacity: 0 }}
-					animate={{ opacity: 1 }}
-					transition={{ duration: 0.6, delay: 0.45 }}
-					className="mt-6 flex flex-wrap items-center justify-center gap-2"
-				>
-					{PROFESSIONS.map((p) => (
-						<span
-							key={p.slug}
-							className="rounded-full bg-slate-100 px-3 py-1 font-medium text-[12px] text-slate-500"
-						>
-							{p.label}
-						</span>
-					))}
 				</motion.div>
 
 				{/* Trust copy */}
@@ -106,9 +94,9 @@ export default function Hero() {
 					initial={{ opacity: 0 }}
 					animate={{ opacity: 1 }}
 					transition={{ duration: 0.6, delay: 0.55 }}
-					className="mt-5 text-[11px] text-slate-400 tracking-wide"
+					className="mt-8 text-[11px] text-slate-400 tracking-wide"
 				>
-					첫 상담 무료 · 계약 압박 없음 · 영업일 1일 내 회신
+					24시간 안으로 답변드립니다.
 				</motion.p>
 			</div>
 

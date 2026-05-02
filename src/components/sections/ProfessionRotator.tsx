@@ -48,7 +48,7 @@ export default function ProfessionRotator() {
 
 				{/* 서브 */}
 				<p className="mb-10 text-lg text-muted-foreground leading-relaxed md:text-xl">
-					6개 직군, 광고 규정 데이터. 전문직만 다루는 단 하나의 팀.
+					전문직 마케팅만 합니다. 그래서 가장 잘 합니다.
 				</p>
 
 				{/* 직군 dot 인디케이터 */}

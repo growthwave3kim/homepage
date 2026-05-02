@@ -7,6 +7,7 @@ import ProfessionRotator from "@/components/sections/ProfessionRotator";
 import ServiceCards from "@/components/sections/ServiceCards";
 import TeamPreview from "@/components/sections/TeamPreview";
 import Testimonials from "@/components/sections/Testimonials";
+import WhyUs from "@/components/sections/WhyUs";
 import WhyUsBold from "@/components/sections/WhyUsBold";
 
 export default function HomePage() {
@@ -14,11 +15,12 @@ export default function HomePage() {
 		<>
 			<Hero />
 			<ProfessionRotator />
-			<WhyUsBold />
 			<ServiceCards />
 			<ProcessTimeline />
 			<Cases />
 			<Testimonials />
+			<WhyUsBold />
+			<WhyUs />
 			<TeamPreview />
 			<FAQPreview />
 			<FinalCTA />
