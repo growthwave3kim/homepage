@@ -1,4 +1,4 @@
-export type ProfessionSlug = "lawyer" | "oriental" | "patent" | "labor" | "tax";
+export type ProfessionSlug = "lawyer" | "doctor" | "oriental" | "patent" | "labor" | "tax";
 
 export interface Profession {
 	slug: ProfessionSlug;
@@ -25,6 +25,20 @@ export const PROFESSIONS: Profession[] = [
 		],
 		strength: "광고심사위원회 통과 콘텐츠만",
 		tag: "법무법인 · 개인변호사",
+	},
+	{
+		slug: "doctor",
+		label: "의사",
+		icon: "HeartPulse",
+		adRule: true,
+		description: "의료광고 심의를 통과하는 범위에서 환자가 안심하고 선택하는 콘텐츠를 제작합니다.",
+		keyPoints: [
+			"의료광고 심의 기준 준수",
+			"진료과목별 환자 검색 키워드 분석",
+			"내원·예약 전환 중심 콘텐츠 설계",
+		],
+		strength: "의료광고 심의 규정 준수 발행",
+		tag: "의원 · 병원 · 개원의",
 	},
 	{
 		slug: "oriental",

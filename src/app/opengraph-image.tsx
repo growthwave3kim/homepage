@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 import { siteConfig } from "@/config/site";
 
-export const alt = `${siteConfig.name} | 법무법인 전문 마케팅 대행사`;
+export const alt = `${siteConfig.name} | 전문직 마케팅 대행사`;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -52,7 +52,7 @@ export default function Image() {
 						textTransform: "uppercase",
 					}}
 				>
-					변호사·법무법인 전문 마케팅
+					변호사·의사·한의사 등 전문직 마케팅
 				</div>
 
 				<div

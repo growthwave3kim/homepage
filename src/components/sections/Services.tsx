@@ -68,7 +68,7 @@ export default function Services() {
 				<Reveal>
 					<SectionHeading
 						eyebrow="Services"
-						title="변호사 사건 수임을 만드는 두 가지 채널"
+						title="전문직 의뢰·수임을 만드는 두 가지 채널"
 						className="mb-20"
 					/>
 				</Reveal>

@@ -8,7 +8,7 @@ export default function Testimonials() {
 		<section className="bg-white px-4 py-20 md:py-24">
 			<div className="mx-auto max-w-7xl">
 				<Reveal>
-					<SectionHeading eyebrow="Reviews" title="변호사들의 후기" className="mb-16" />
+					<SectionHeading eyebrow="Reviews" title="전문직 고객의 후기" className="mb-16" />
 				</Reveal>
 
 				<div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">

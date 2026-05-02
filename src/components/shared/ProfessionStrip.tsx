@@ -3,6 +3,7 @@ import {
 	Calculator,
 	ClipboardList,
 	FileSearch,
+	HeartPulse,
 	Scale,
 	ShieldCheck,
 	Stethoscope,
@@ -11,6 +12,7 @@ import { PROFESSIONS } from "@/data/professions";
 
 const ICON_MAP: Record<string, React.ComponentType<{ className?: string }>> = {
 	Scale,
+	HeartPulse,
 	Stethoscope,
 	FileSearch,
 	Briefcase,

@@ -9,7 +9,7 @@ export default function Cases() {
 				<Reveal>
 					<SectionHeading
 						eyebrow="Success Stories"
-						title="수임으로 이어진 사례"
+						title="의뢰·수임으로 이어진 사례"
 						className="mb-16"
 					/>
 				</Reveal>

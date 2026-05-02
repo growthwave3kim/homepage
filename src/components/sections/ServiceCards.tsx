@@ -6,7 +6,7 @@ const CARDS = [
 		href: "/services/professional",
 		icon: Users,
 		eyebrow: "전문직 마케팅",
-		title: "변호사·한의사·변리사 등\n전문직 특화 마케팅",
+		title: "변호사·의사·한의사·변리사 등\n전문직 특화 마케팅",
 		description: "광고 규정과 신뢰가 까다로운 분야에서 상담 전환을 설계합니다.",
 		cta: "자세히 보기",
 	},

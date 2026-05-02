@@ -10,7 +10,7 @@ const VALUES = [
 	{
 		icon: BarChart3,
 		title: "숫자로 말합니다",
-		description: "노출이 아니라 상담 인입수로 보고합니다. 매월 수임 KPI를 함께 확인합니다.",
+		description: "노출이 아니라 상담 인입수로 보고합니다. 매월 의뢰·수임 KPI를 함께 확인합니다.",
 	},
 	{
 		icon: Layers,

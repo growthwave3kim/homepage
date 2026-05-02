@@ -68,7 +68,14 @@ const jsonLd = {
 		streetAddress: siteConfig.contact.address,
 		addressCountry: "KR",
 	},
-	serviceType: ["전문직 마케팅", "블로그 마케팅", "숏폼 마케팅", "변호사 마케팅", "한의사 마케팅"],
+	serviceType: [
+		"전문직 마케팅",
+		"블로그 마케팅",
+		"숏폼 마케팅",
+		"변호사 마케팅",
+		"의사 마케팅",
+		"한의사 마케팅",
+	],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

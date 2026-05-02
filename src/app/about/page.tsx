@@ -8,7 +8,7 @@ import PageHero from "@/components/shared/PageHero";
 export const metadata: Metadata = {
 	title: "회사소개 | Growth Wave",
 	description:
-		"변호사·한의사·변리사·노무사 등 전문직 마케팅에 집중하는 그로스웨이브. 광고 규정을 이해하는 팀이 직접 콘텐츠를 설계합니다.",
+		"변호사·의사·한의사·변리사·노무사 등 전문직 마케팅에 집중하는 그로스웨이브. 광고 규정을 이해하는 팀이 직접 콘텐츠를 설계합니다.",
 };
 
 export default function AboutPage() {

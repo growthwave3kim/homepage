@@ -10,6 +10,13 @@ const REGULATIONS = [
 		note: "허위·과장·비교 광고 금지. 수임 사건 성공 사례 표현 제한.",
 	},
 	{
+		profession: "의사",
+		slug: "doctor",
+		law: "의료법 §56",
+		rule: "의료광고 심의위원회",
+		note: "효능·치료 결과 과장 금지. 환자 후기·비교 광고 사전 심의 필요.",
+	},
+	{
 		profession: "한의사",
 		slug: "hanbang",
 		law: "의료법 §56",

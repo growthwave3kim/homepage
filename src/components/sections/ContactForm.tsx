@@ -17,6 +17,7 @@ const SERVICE_OPTIONS = [
 
 const PROFESSION_OPTIONS = [
 	{ id: "lawyer", label: "변호사" },
+	{ id: "doctor", label: "의사" },
 	{ id: "oriental", label: "한의사" },
 	{ id: "patent", label: "변리사" },
 	{ id: "labor", label: "노무사" },

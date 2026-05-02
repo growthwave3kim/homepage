@@ -8,10 +8,11 @@ export const siteConfig = {
 	nameKo: "그로스웨이브",
 	title: "Growth Wave | 전문직 마케팅 대행사",
 	description:
-		"변호사·한의사·변리사·노무사 등 전문직을 위한 네이버 블로그·숏폼 콘텐츠 마케팅. 광고 규정을 이해하는 그로스웨이브.",
+		"변호사·의사·한의사·변리사·노무사 등 전문직을 위한 네이버 블로그·숏폼 콘텐츠 마케팅. 광고 규정을 이해하는 그로스웨이브.",
 	keywords: [
 		"전문직 마케팅",
 		"변호사 마케팅",
+		"의사 마케팅",
 		"한의사 마케팅",
 		"변리사 마케팅",
 		"노무사 마케팅",
@@ -46,7 +47,7 @@ export const siteConfig = {
 				{
 					label: "전문직 마케팅",
 					href: "/services/professional",
-					description: "변호사·한의사·변리사 등 광고 규정이 까다로운 직군 전용",
+					description: "변호사·의사·한의사·변리사 등 광고 규정이 까다로운 직군 전용",
 					icon: "Crown",
 					flagship: true,
 				},
