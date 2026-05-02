@@ -1,29 +1,26 @@
 "use client";
 
 import { motion } from "motion/react";
+import Image from "next/image";
 import Link from "next/link";
 import WaveDivider from "@/components/shared/WaveDivider";
-
-function BlobShape({ className, delay = 0 }: { className: string; delay?: number }) {
-	return (
-		<motion.div
-			className={`pointer-events-none absolute rounded-full blur-3xl ${className}`}
-			animate={{ y: [0, -20, 0], x: [0, 10, 0] }}
-			transition={{ duration: 10, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut", delay }}
-			aria-hidden="true"
-		/>
-	);
-}
 
 export default function Hero() {
 	return (
 		<section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-white pt-16 md:pt-20">
-			{/* Blobs */}
-			<BlobShape className="top-[-5%] right-[-10%] h-[500px] w-[500px] bg-[#7c3aed]/10" delay={0} />
-			<BlobShape
-				className="bottom-[-5%] left-[-10%] h-[450px] w-[450px] bg-[#1e3a8a]/10"
-				delay={3}
+			{/* Background GIF */}
+			<Image
+				src="/hero-bg.gif"
+				alt=""
+				fill
+				priority
+				unoptimized
+				sizes="100vw"
+				className="pointer-events-none absolute inset-0 object-cover"
+				aria-hidden="true"
 			/>
+			{/* Readability overlay */}
+			<div className="pointer-events-none absolute inset-0 bg-white/25" aria-hidden="true" />
 
 			<div className="relative z-10 mx-auto max-w-4xl px-4 py-24 text-center">
 				{/* Eyebrow */}
@@ -55,7 +52,7 @@ export default function Hero() {
 					initial={{ opacity: 0, y: 20 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.6, delay: 0.22, ease: [0.22, 1, 0.36, 1] }}
-					className="mb-10 text-pretty text-lg text-muted-foreground leading-relaxed md:text-xl"
+					className="mb-10 text-pretty font-medium text-lg text-slate-800 leading-relaxed md:text-xl"
 				>
 					읽히는 블로그와 터지는 숏폼, 저희가 가장 잘 만듭니다.
 				</motion.p>
@@ -76,14 +73,14 @@ export default function Hero() {
 						</Link>
 						<Link
 							href="/services/shortform"
-							className="rounded-full border border-slate-200 px-8 py-3.5 font-semibold text-base text-foreground transition-colors hover:border-slate-300 hover:bg-slate-50"
+							className="rounded-full border border-slate-300 bg-white px-8 py-3.5 font-semibold text-base text-foreground shadow-[0_4px_16px_rgba(0,0,0,0.08)] transition-colors hover:bg-slate-50"
 						>
 							터지는 숏폼이란?
 						</Link>
 					</div>
 					<Link
 						href="/contact"
-						className="rounded-full border border-slate-200 px-8 py-3 font-medium text-slate-500 text-sm transition-colors hover:border-slate-300 hover:text-foreground"
+						className="rounded-full border border-slate-300 bg-white/90 px-8 py-3 font-medium text-slate-700 text-sm backdrop-blur-sm transition-colors hover:bg-white hover:text-foreground"
 					>
 						단 3줄로 상담하기
 					</Link>
@@ -94,7 +91,7 @@ export default function Hero() {
 					initial={{ opacity: 0 }}
 					animate={{ opacity: 1 }}
 					transition={{ duration: 0.6, delay: 0.55 }}
-					className="mt-8 text-[11px] text-slate-400 tracking-wide"
+					className="mt-8 font-medium text-[11px] text-slate-700 tracking-wide"
 				>
 					24시간 안으로 답변드립니다.
 				</motion.p>
