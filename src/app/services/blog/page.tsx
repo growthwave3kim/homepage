@@ -47,8 +47,8 @@ export default function BlogServicePage() {
 							className="mb-12"
 						/>
 					</Reveal>
-					<Reveal delay={0.1}>
-						<div className="overflow-hidden rounded-2xl shadow-sm">
+					<Reveal delay={0.1} className="overflow-x-auto">
+						<div className="min-w-[500px] overflow-hidden rounded-2xl shadow-sm">
 							{/* Header */}
 							<div className="grid grid-cols-3">
 								<div className="bg-slate-100 px-6 py-4">
@@ -104,7 +104,7 @@ export default function BlogServicePage() {
 						/>
 					</Reveal>
 					<Reveal delay={0.1}>
-						<ol className="flex flex-wrap justify-center gap-4">
+						<ol className="flex flex-col items-center gap-6 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-4">
 							{service.steps.map((step, si) => (
 								<li key={step.step} className="flex items-center gap-3">
 									<div className="flex flex-col items-center gap-2 text-center">
@@ -114,7 +114,7 @@ export default function BlogServicePage() {
 										<span className="font-medium text-foreground text-sm">{step.label}</span>
 									</div>
 									{si < service.steps.length - 1 && (
-										<span className="mb-6 text-slate-300 text-xl">→</span>
+										<span className="mb-6 hidden text-slate-300 text-xl sm:block">→</span>
 									)}
 								</li>
 							))}

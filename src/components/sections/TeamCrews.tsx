@@ -9,7 +9,6 @@ const VIDEO_PHOTOS = [
 	{ src: "/images/team/video-03.jpg", alt: "인터뷰 디렉팅" },
 	{ src: "/images/team/video-04.jpg", alt: "텔레프롬프터·카메라 셋업" },
 	{ src: "/images/team/video-05.jpg", alt: "팀 모니터링 현장" },
-	{ src: "/images/team/video-06.jpg", alt: "다카메라 모니터링" },
 	{ src: "/images/team/video-07.jpg", alt: "스튜디오 본 촬영" },
 ];
 
@@ -26,9 +25,18 @@ interface CrewBlockProps {
 	body: string;
 	photos: { src: string; alt: string }[];
 	reverse?: boolean;
+	gridCols?: string;
 }
 
-function CrewBlock({ icon, label, heading, body, photos, reverse = false }: CrewBlockProps) {
+function CrewBlock({
+	icon,
+	label,
+	heading,
+	body,
+	photos,
+	reverse = false,
+	gridCols = "grid-cols-2 sm:grid-cols-3",
+}: CrewBlockProps) {
 	return (
 		<div
 			className={`flex flex-col gap-8 lg:flex-row lg:items-start lg:gap-12 ${reverse ? "lg:flex-row-reverse" : ""}`}
@@ -46,7 +54,7 @@ function CrewBlock({ icon, label, heading, body, photos, reverse = false }: Crew
 				</div>
 			</Reveal>
 
-			<div className="grid flex-1 grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-3">
+			<div className={`grid flex-1 gap-3 ${gridCols}`}>
 				{photos.map((photo, i) => (
 					<Reveal key={photo.src} delay={i * 0.07}>
 						<div className="relative aspect-[4/3] overflow-hidden rounded-xl">
@@ -92,6 +100,7 @@ export default function TeamCrews() {
 						heading="초안부터 발행본까지 한 손에서"
 						body="숏폼·릴스의 호흡과 블로그 비주얼을 함께 책임지는 인하우스 편집팀이 컷·자막·썸네일을 일관된 톤으로 다듬습니다."
 						photos={EDIT_PHOTOS}
+						gridCols="grid-cols-2 sm:grid-cols-3"
 						reverse
 					/>
 				</div>

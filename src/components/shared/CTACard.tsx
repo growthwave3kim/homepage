@@ -14,7 +14,7 @@ export default function CTACard({
 	return (
 		<section className="px-4 py-24">
 			<div className="mx-auto max-w-3xl text-center">
-				<div className="rounded-3xl bg-gradient-to-br from-[#7c3aed]/8 via-[#4338ca]/6 to-[#1e3a8a]/8 p-12 ring-1 ring-[#7c3aed]/15">
+				<div className="rounded-3xl bg-gradient-to-br from-[#7c3aed]/8 via-[#4338ca]/6 to-[#1e3a8a]/8 p-8 ring-1 ring-[#7c3aed]/15 sm:p-12">
 					<h2 className="mb-3 font-bold text-3xl text-foreground leading-tight tracking-tight md:text-4xl">
 						{headline}
 					</h2>

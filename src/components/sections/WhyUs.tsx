@@ -13,7 +13,7 @@ const ICON_MAP: Record<string, React.ElementType> = {
 export default function WhyUs() {
 	return (
 		<section id="about" className="bg-white px-4 py-20 md:py-24">
-			<div className="mx-auto max-w-7xl">
+			<div className="mx-auto max-w-6xl">
 				<Reveal>
 					<SectionHeading
 						eyebrow="Why Growth Wave"

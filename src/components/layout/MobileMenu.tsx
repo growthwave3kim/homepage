@@ -31,7 +31,7 @@ export default function MobileMenu() {
 			>
 				<MenuIcon className="h-5 w-5" />
 			</SheetTrigger>
-			<SheetContent side="right" className="w-72 bg-white p-0">
+			<SheetContent side="right" className="w-[85vw] bg-white p-0 sm:w-72">
 				<div className="flex h-full flex-col">
 					{/* Logo */}
 					<div className="border-slate-100 border-b px-6 py-5">

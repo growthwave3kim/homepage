@@ -29,7 +29,9 @@ export default function Reveal({
 		none: { x: 0, y: 0 },
 	};
 
-	const initial = { opacity: 0, ...directionMap[direction] };
+	// Omit opacity from initial so server-rendered content is visible before hydration.
+	// This prevents LCP elements from being invisible on slow connections.
+	const initial = directionMap[direction];
 
 	return (
 		<motion.div

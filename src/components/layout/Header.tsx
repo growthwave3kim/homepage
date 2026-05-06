@@ -29,10 +29,10 @@ export default function Header() {
 	return (
 		<header
 			className={cn(
-				"fixed top-0 right-0 left-0 z-50 h-16 transition-all duration-300 md:h-20",
+				"fixed top-0 right-0 left-0 z-50 h-16 border-b transition-all duration-300 md:h-20",
 				scrolled
-					? "border-slate-200 border-b bg-white/95 shadow-[0_1px_12px_rgba(0,0,0,0.06)] backdrop-blur-sm"
-					: "bg-white",
+					? "border-slate-200 bg-white/95 shadow-[0_1px_12px_rgba(0,0,0,0.06)] backdrop-blur-sm"
+					: "border-transparent bg-white",
 			)}
 		>
 			<div className="mx-auto flex h-full max-w-7xl items-center justify-between px-4 lg:px-8">

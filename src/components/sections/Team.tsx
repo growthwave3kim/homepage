@@ -16,7 +16,7 @@ export default function Team() {
 					/>
 				</Reveal>
 
-				<div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+				<div className="grid gap-6 md:grid-cols-3">
 					{TEAM_MEMBERS.map((member, i) => (
 						<Reveal key={member.nameEn} delay={i * 0.08}>
 							<TeamCard member={member} />

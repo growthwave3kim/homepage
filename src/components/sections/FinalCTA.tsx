@@ -29,13 +29,13 @@ export default function FinalCTA() {
 					<div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
 						<Link
 							href="/contact"
-							className="gradient-brand w-full rounded-full px-8 py-3.5 font-semibold text-base text-white shadow-[0_8px_32px_rgba(124,58,237,0.4)] transition-opacity hover:opacity-90 sm:w-auto"
+							className="gradient-brand w-full rounded-full px-8 py-3.5 font-semibold text-base text-white shadow-[0_8px_24px_rgba(124,58,237,0.3)] transition-opacity hover:opacity-90 sm:w-auto"
 						>
 							무료 상담 신청
 						</Link>
 						<Link
 							href="/contact"
-							className="w-full rounded-full border border-white/20 px-8 py-4 font-semibold text-base text-white/80 transition-colors hover:border-white/40 hover:text-white sm:w-auto"
+							className="w-full rounded-full border border-white/20 px-8 py-3.5 font-semibold text-base text-white/80 transition-colors hover:border-white/40 hover:text-white sm:w-auto"
 						>
 							카카오톡 1:1 문의
 						</Link>

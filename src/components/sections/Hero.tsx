@@ -1,31 +1,33 @@
 "use client";
 
 import { motion } from "motion/react";
-import Image from "next/image";
 import Link from "next/link";
 import WaveDivider from "@/components/shared/WaveDivider";
 
 export default function Hero() {
 	return (
-		<section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-white pt-16 md:pt-20">
-			{/* Background GIF */}
-			<Image
-				src="/hero-bg.gif"
-				alt=""
-				fill
-				priority
-				unoptimized
-				sizes="100vw"
-				className="pointer-events-none absolute inset-0 object-cover"
+		<section className="relative flex min-h-[640px] items-center justify-center overflow-hidden bg-white pt-16 md:min-h-screen md:pt-20">
+			{/* Background video (converted from GIF for performance) */}
+			<video
+				autoPlay
+				muted
+				loop
+				playsInline
+				poster="/hero-bg-poster.jpg"
+				tabIndex={-1}
 				aria-hidden="true"
-			/>
+				className="pointer-events-none absolute inset-0 h-full w-full object-cover"
+			>
+				<source src="/hero-bg.webm" type="video/webm" />
+				<source src="/hero-bg.mp4" type="video/mp4" />
+			</video>
 			{/* Readability overlay */}
-			<div className="pointer-events-none absolute inset-0 bg-white/25" aria-hidden="true" />
+			<div className="pointer-events-none absolute inset-0 bg-white/35" aria-hidden="true" />
 
-			<div className="relative z-10 mx-auto max-w-4xl px-4 py-24 text-center">
+			<div className="relative z-10 mx-auto max-w-4xl px-4 py-16 text-center md:py-24">
 				{/* Eyebrow */}
 				<motion.p
-					initial={{ opacity: 0, y: 16 }}
+					initial={{ y: 16 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
 					className="mb-6 font-semibold text-[#7c3aed] text-sm uppercase tracking-[0.25em]"
@@ -35,12 +37,12 @@ export default function Hero() {
 
 				{/* Headline */}
 				<motion.h1
-					initial={{ opacity: 0, y: 24 }}
+					initial={{ y: 24 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
 					className="mb-6 leading-[1.2] tracking-tight md:leading-[1.12]"
 				>
-					<span className="gradient-text font-bold text-[40px] sm:text-[52px] md:text-[68px] lg:text-[80px]">
+					<span className="gradient-text font-bold text-[32px] sm:text-[44px] md:text-[68px] lg:text-[80px]">
 						전문직 마케팅은
 						<br />
 						달라야합니다.
@@ -49,7 +51,7 @@ export default function Hero() {
 
 				{/* Sub */}
 				<motion.p
-					initial={{ opacity: 0, y: 20 }}
+					initial={{ y: 20 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.6, delay: 0.22, ease: [0.22, 1, 0.36, 1] }}
 					className="mb-10 text-pretty font-medium text-lg text-slate-800 leading-relaxed md:text-xl"
@@ -59,7 +61,7 @@ export default function Hero() {
 
 				{/* CTAs */}
 				<motion.div
-					initial={{ opacity: 0, y: 20 }}
+					initial={{ y: 20 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.6, delay: 0.34, ease: [0.22, 1, 0.36, 1] }}
 					className="flex flex-col items-center gap-3"
@@ -80,7 +82,7 @@ export default function Hero() {
 					</div>
 					<Link
 						href="/contact"
-						className="rounded-full border border-slate-300 bg-white/90 px-8 py-3 font-medium text-slate-700 text-sm backdrop-blur-sm transition-colors hover:bg-white hover:text-foreground"
+						className="rounded-full border border-slate-300 bg-white/90 px-8 py-3.5 font-medium text-slate-700 text-sm backdrop-blur-sm transition-colors hover:bg-white hover:text-foreground"
 					>
 						단 3줄로 상담하기
 					</Link>
@@ -99,7 +101,7 @@ export default function Hero() {
 
 			{/* Wave bottom */}
 			<div className="absolute right-0 bottom-0 left-0">
-				<WaveDivider fillColor="#f8fafc" height={64} />
+				<WaveDivider fillColor="#f8fafc" height={60} />
 			</div>
 		</section>
 	);

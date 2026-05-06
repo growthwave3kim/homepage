@@ -32,7 +32,7 @@ export default function StickyCTA() {
 				>
 					<Link
 						href="/contact"
-						className="gradient-brand flex items-center gap-2 rounded-full px-5 py-3 font-semibold text-sm text-white shadow-[0_8px_24px_rgba(124,58,237,0.4)] transition-opacity hover:opacity-90"
+						className="gradient-brand flex items-center gap-2 rounded-full px-5 py-3 font-semibold text-sm text-white shadow-[0_8px_24px_rgba(124,58,237,0.3)] transition-opacity hover:opacity-90"
 						aria-label="무료 상담 신청"
 					>
 						무료 상담 신청

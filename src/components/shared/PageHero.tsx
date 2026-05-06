@@ -29,7 +29,7 @@ export default function PageHero({
 	return (
 		<section
 			className={cn(
-				"relative overflow-hidden bg-white px-4 py-20 pt-36 text-center md:py-28 md:pt-40",
+				"relative overflow-hidden bg-white px-4 py-20 pt-28 text-center md:py-28 md:pt-32",
 				className,
 			)}
 		>
@@ -47,7 +47,7 @@ export default function PageHero({
 				<p className="mb-5 font-semibold text-[#7c3aed] text-sm uppercase tracking-[0.25em]">
 					{eyebrow}
 				</p>
-				<h1 className="mb-5 font-bold text-[34px] text-foreground leading-[1.2] tracking-tight md:text-[56px] md:leading-[1.12] lg:text-[68px]">
+				<h1 className="mb-5 font-bold text-[28px] text-foreground leading-[1.2] tracking-tight sm:text-[34px] md:text-[56px] md:leading-[1.12] lg:text-[68px]">
 					{titleHighlight ? (
 						<>
 							{title}
