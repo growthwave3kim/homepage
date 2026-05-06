@@ -1,4 +1,4 @@
-export type ProfessionSlug = "lawyer" | "doctor" | "oriental" | "patent" | "labor" | "tax";
+export type ProfessionSlug = "lawyer" | "doctor" | "oriental" | "vet" | "labor" | "tax";
 
 export interface Profession {
 	slug: ProfessionSlug;
@@ -55,18 +55,19 @@ export const PROFESSIONS: Profession[] = [
 		tag: "한방병원 · 개원의",
 	},
 	{
-		slug: "patent",
-		label: "변리사",
-		icon: "FileSearch",
+		slug: "vet",
+		label: "수의사",
+		icon: "PawPrint",
 		adRule: false,
-		description: "기술·상표·디자인 분야의 전문 용어를 일반인이 이해하는 콘텐츠로 풀어냅니다.",
+		description:
+			"반려동물 보호자가 믿고 찾는 동물병원이 되도록 진료 신뢰도와 전문성을 담은 콘텐츠를 설계합니다.",
 		keyPoints: [
-			"특허·상표·디자인 분야 키워드 최적화",
-			"기술 용어를 읽히는 글로 변환",
-			"출원 의뢰 전환 유도 CTA 설계",
+			"동물병원 키워드 분석 및 지역 검색 최적화",
+			"반려동물 증상별 정보 콘텐츠 기획",
+			"진료 예약·상담 전환 유도 설계",
 		],
-		strength: "특허·상표·디자인 키워드 DB",
-		tag: "개인 변리사 · 펌",
+		strength: "반려동물 검색 키워드 DB",
+		tag: "동물병원 · 개원 수의사",
 	},
 	{
 		slug: "labor",

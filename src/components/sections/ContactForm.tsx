@@ -9,17 +9,19 @@ import { Textarea } from "@/components/ui/textarea";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 
-const SERVICE_OPTIONS = [
-	{ id: "blog", label: "네이버 블로그" },
-	{ id: "shortform", label: "숏폼 제작" },
-	{ id: "both", label: "통합 패키지" },
+const SOURCE_OPTIONS = [
+	{ id: "instagram", label: "인스타그램" },
+	{ id: "naver", label: "네이버 검색" },
+	{ id: "referral", label: "지인 소개" },
+	{ id: "blog", label: "블로그" },
+	{ id: "other", label: "기타" },
 ] as const;
 
 const PROFESSION_OPTIONS = [
 	{ id: "lawyer", label: "변호사" },
 	{ id: "doctor", label: "의사" },
 	{ id: "oriental", label: "한의사" },
-	{ id: "patent", label: "변리사" },
+	{ id: "vet", label: "수의사" },
 	{ id: "labor", label: "노무사" },
 	{ id: "tax", label: "세무사" },
 
@@ -27,7 +29,7 @@ const PROFESSION_OPTIONS = [
 ] as const;
 
 export default function ContactForm() {
-	const [services, setServices] = useState<string[]>([]);
+	const [source, setSource] = useState("");
 	const [sent, setSent] = useState(false);
 	const [profession, setProfession] = useState("");
 	const [professionOpen, setProfessionOpen] = useState(false);
@@ -42,10 +44,6 @@ export default function ContactForm() {
 		if (professionOpen) document.addEventListener("mousedown", handleOutside);
 		return () => document.removeEventListener("mousedown", handleOutside);
 	}, [professionOpen]);
-
-	function toggleService(id: string) {
-		setServices((prev) => (prev.includes(id) ? prev.filter((s) => s !== id) : [...prev, id]));
-	}
 
 	function handleKeyDown(e: React.KeyboardEvent<HTMLFormElement>) {
 		if (e.key === "Enter" && (e.target as HTMLElement).tagName !== "TEXTAREA") {
@@ -66,7 +64,7 @@ export default function ContactForm() {
 				`담당자: ${fd.get("name") ?? ""}`,
 				`연락처: ${fd.get("tel") ?? ""}`,
 				`이메일: ${fd.get("email") ?? ""}`,
-				`관심 서비스: ${services.length ? services.join(", ") : "미선택"}`,
+				`유입 경로: ${source || "미선택"}`,
 				`\n문의 내용:\n${fd.get("message") ?? ""}`,
 			].join("\n"),
 		);
@@ -203,23 +201,23 @@ export default function ContactForm() {
 							<Input id="contact-email" name="email" type="email" placeholder="name@example.com" />
 						</div>
 
-						{/* Service selection pills */}
+						{/* Source selection pills */}
 						<div className="space-y-2">
-							<Label>관심 서비스</Label>
+							<Label>유입 경로</Label>
 							<div className="flex flex-wrap gap-2">
-								{SERVICE_OPTIONS.map((opt) => (
+								{SOURCE_OPTIONS.map((opt) => (
 									<button
 										key={opt.id}
 										type="button"
-										onClick={() => toggleService(opt.id)}
+										onClick={() => setSource(opt.label)}
 										className={cn(
 											"flex items-center gap-1.5 rounded-full border px-4 py-2 font-medium text-sm transition-all",
-											services.includes(opt.id)
+											source === opt.label
 												? "gradient-brand border-transparent text-white"
 												: "border-slate-200 text-slate-500 hover:border-[#7c3aed]/40 hover:text-[#7c3aed]",
 										)}
 									>
-										{services.includes(opt.id) && <CheckIcon className="h-3.5 w-3.5" />}
+										{source === opt.label && <CheckIcon className="h-3.5 w-3.5" />}
 										{opt.label}
 									</button>
 								))}

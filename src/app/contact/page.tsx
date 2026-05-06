@@ -1,7 +1,6 @@
-import { CheckCircle2, Mail, Phone } from "lucide-react";
+import { CheckCircle2, Mail } from "lucide-react";
 import type { Metadata } from "next";
 import ContactForm from "@/components/sections/ContactForm";
-import QuickContactForm from "@/components/sections/QuickContactForm";
 import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
@@ -29,7 +28,7 @@ export default function ContactPage() {
 			</div>
 
 			<section className="px-4 pb-24">
-				<div className="mx-auto max-w-5xl">
+				<div className="mx-auto max-w-2xl">
 					{/* Trust badges */}
 					<div className="mb-10 flex flex-wrap items-center justify-center gap-6">
 						{TRUST_BADGES.map((badge) => (
@@ -40,41 +39,17 @@ export default function ContactPage() {
 						))}
 					</div>
 
-					{/* Dual form guide */}
-					<p className="mb-8 text-center text-muted-foreground text-sm leading-relaxed">
-						단 3줄로도 상담이 가능하십니다. 저희 서비스도 똑같습니다.
-						<br />
-						고생하실 필요 없이 저희가 알아서 다 진행해 드립니다.
-					</p>
+					<ContactForm />
 
-					{/* Dual form */}
-					<div className="grid items-start gap-8 md:grid-cols-2">
-						{/* Left: quick form + contact channels */}
-						<div className="flex flex-col gap-6">
-							<QuickContactForm />
-							<div className="space-y-3 rounded-2xl border border-slate-100 bg-slate-50 px-6 py-5">
-								<p className="font-medium text-foreground text-sm">직접 연락하기</p>
-								{siteConfig.contact.tel !== "02-000-0000" && (
-									<a
-										href={`tel:${siteConfig.contact.tel}`}
-										className="flex items-center gap-3 text-muted-foreground text-sm transition-colors hover:text-foreground"
-									>
-										<Phone className="h-4 w-4 text-[#7c3aed]" />
-										{siteConfig.contact.tel}
-									</a>
-								)}
-								<a
-									href={`mailto:${siteConfig.contact.email}`}
-									className="flex items-center gap-3 text-muted-foreground text-sm transition-colors hover:text-foreground"
-								>
-									<Mail className="h-4 w-4 text-[#7c3aed]" />
-									{siteConfig.contact.email}
-								</a>
-							</div>
-						</div>
-
-						{/* Right: detailed form */}
-						<ContactForm />
+					{/* Direct contact */}
+					<div className="mt-6 flex items-center justify-center gap-2 text-muted-foreground text-sm">
+						<Mail className="h-4 w-4 text-[#7c3aed]" />
+						<a
+							href={`mailto:${siteConfig.contact.email}`}
+							className="transition-colors hover:text-foreground"
+						>
+							{siteConfig.contact.email}
+						</a>
 					</div>
 				</div>
 			</section>

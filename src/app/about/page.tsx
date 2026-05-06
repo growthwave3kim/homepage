@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import AboutTeamLeads from "@/components/sections/AboutTeamLeads";
 import Comparison from "@/components/sections/Comparison";
+import OrgChart from "@/components/sections/OrgChart";
 import TeamPreview from "@/components/sections/TeamPreview";
 import WhyUs from "@/components/sections/WhyUs";
 import CTACard from "@/components/shared/CTACard";
@@ -8,7 +10,7 @@ import PageHero from "@/components/shared/PageHero";
 export const metadata: Metadata = {
 	title: "회사소개 | Growth Wave",
 	description:
-		"변호사·의사·한의사·변리사·노무사 등 전문직 마케팅에 집중하는 그로스웨이브. 광고 규정을 이해하는 팀이 직접 콘텐츠를 설계합니다.",
+		"변호사·의사·한의사·수의사·노무사 등 전문직 마케팅에 집중하는 그로스웨이브. 광고 규정을 이해하는 팀이 직접 콘텐츠를 설계합니다.",
 };
 
 export default function AboutPage() {
@@ -21,8 +23,9 @@ export default function AboutPage() {
 				sub="광고 규정·신뢰·검색 의도가 까다로운 전문직의 마케팅은 다릅니다. 규정을 알고, 직군을 알고, 의뢰 구조를 이해하는 팀이 필요합니다."
 				ctaText="무료 상담 신청"
 				ctaHref="/contact"
-				secondaryText="서비스 살펴보기"
-				secondaryHref="/services/professional"
+				secondaryText="회사소개서 다운로드"
+				secondaryHref="/downloads/growthwave-company.pdf"
+				secondaryDownload
 			/>
 
 			{/* Mission */}
@@ -44,6 +47,8 @@ export default function AboutPage() {
 				</div>
 			</section>
 
+			<AboutTeamLeads />
+			<OrgChart />
 			<WhyUs />
 			<TeamPreview />
 			<Comparison />

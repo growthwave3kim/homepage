@@ -1,3 +1,4 @@
+import { Download } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
@@ -10,6 +11,7 @@ interface PageHeroProps {
 	ctaHref?: string;
 	secondaryText?: string;
 	secondaryHref?: string;
+	secondaryDownload?: boolean;
 	children?: React.ReactNode;
 	className?: string;
 }
@@ -23,6 +25,7 @@ export default function PageHero({
 	ctaHref = "/contact",
 	secondaryText,
 	secondaryHref,
+	secondaryDownload = false,
 	children,
 	className,
 }: PageHeroProps) {
@@ -67,14 +70,25 @@ export default function PageHero({
 					>
 						{ctaText}
 					</Link>
-					{secondaryText && secondaryHref && (
-						<Link
-							href={secondaryHref}
-							className="rounded-full border border-slate-200 px-8 py-3.5 font-semibold text-base text-foreground transition-colors hover:border-slate-300 hover:bg-slate-50"
-						>
-							{secondaryText}
-						</Link>
-					)}
+					{secondaryText &&
+						secondaryHref &&
+						(secondaryDownload ? (
+							<a
+								href={secondaryHref}
+								download
+								className="flex items-center gap-2 rounded-full border border-slate-200 px-8 py-3.5 font-semibold text-base text-foreground transition-colors hover:border-slate-300 hover:bg-slate-50"
+							>
+								<Download className="h-4 w-4" aria-hidden="true" />
+								{secondaryText}
+							</a>
+						) : (
+							<Link
+								href={secondaryHref}
+								className="rounded-full border border-slate-200 px-8 py-3.5 font-semibold text-base text-foreground transition-colors hover:border-slate-300 hover:bg-slate-50"
+							>
+								{secondaryText}
+							</Link>
+						))}
 				</div>
 
 				{children && <div className="mt-12">{children}</div>}

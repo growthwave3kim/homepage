@@ -24,11 +24,11 @@ const REGULATIONS = [
 		note: "효능 과장·비교 표현 금지. 일부 매체 사전 심의 필요.",
 	},
 	{
-		profession: "변리사",
-		slug: "patent",
-		law: "변리사법 §23",
-		rule: "변리사 광고 기준",
-		note: "자격 과장 금지. 성공률 수치 표현 제한.",
+		profession: "수의사",
+		slug: "vet",
+		law: "수의사법 §12",
+		rule: "수의사 광고 기준",
+		note: "허위·과장 광고 금지. 치료 결과 보장 표현 제한. 의약품·시술 효능 과장 금지.",
 	},
 	{
 		profession: "노무사",
