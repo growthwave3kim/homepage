@@ -36,7 +36,7 @@ export default function QuickContactForm() {
 			<p className="mb-1 font-semibold text-[#7c3aed] text-sm uppercase tracking-widest">
 				빠른 문의
 			</p>
-			<h3 className="mb-6 font-bold text-foreground text-xl">3줄로 바로 문의하기</h3>
+			<h2 className="mb-6 font-bold text-foreground text-xl">3줄로 바로 문의하기</h2>
 			<AnimatePresence mode="wait">
 				{sent ? (
 					<motion.div

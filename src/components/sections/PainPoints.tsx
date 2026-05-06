@@ -38,7 +38,7 @@ export default function PainPoints() {
 						<p className="font-bold text-xl leading-snug">
 							그로스웨이브는 그 문제를 알고 있습니다.
 						</p>
-						<p className="text-sm text-white/80 leading-relaxed sm:border-l sm:border-white/30 sm:pl-6">
+						<p className="text-sm text-white/80 leading-relaxed sm:border-white/30 sm:border-l sm:pl-6">
 							전문직 마케팅에 특화된 팀이 의뢰·수임으로 이어지는 콘텐츠를 직접 설계합니다.
 						</p>
 					</div>

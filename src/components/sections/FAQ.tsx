@@ -14,6 +14,7 @@ export default function FAQ() {
 		<section id="faq" className="bg-white px-4 py-20 md:py-24">
 			<div className="mx-auto max-w-3xl">
 				<Reveal delay={0.1}>
+					<h2 className="sr-only">자주 묻는 질문 목록</h2>
 					<Accordion>
 						{FAQ_ITEMS.map((item, i) => (
 							<AccordionItem key={item.question} value={`item-${i}`}>

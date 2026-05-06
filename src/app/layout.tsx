@@ -13,6 +13,7 @@ const pretendard = localFont({
 	variable: "--font-pretendard",
 	display: "swap",
 	weight: "45 920",
+	adjustFontFallback: "Arial",
 });
 
 const inter = Inter({

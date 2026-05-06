@@ -25,28 +25,28 @@ export default function Footer() {
 								aria-label="네이버 블로그"
 								className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-white text-xs transition-colors hover:bg-white/20"
 							>
-								N
+								<span aria-hidden="true">N</span>
 							</button>
 							<button
 								type="button"
 								aria-label="인스타그램"
 								className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-white text-xs transition-colors hover:bg-white/20"
 							>
-								IG
+								<span aria-hidden="true">IG</span>
 							</button>
 							<button
 								type="button"
 								aria-label="유튜브"
 								className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-white text-xs transition-colors hover:bg-white/20"
 							>
-								YT
+								<span aria-hidden="true">YT</span>
 							</button>
 							<button
 								type="button"
 								aria-label="카카오톡"
 								className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-white text-xs transition-colors hover:bg-white/20"
 							>
-								KT
+								<span aria-hidden="true">KT</span>
 							</button>
 						</div>
 					</div>
@@ -76,7 +76,7 @@ export default function Footer() {
 					</div>
 				</div>
 
-				<div className="mt-10 border-white/10 border-t pt-6 text-center text-slate-600 text-xs">
+				<div className="mt-10 border-white/10 border-t pt-6 text-center text-slate-400 text-xs">
 					Copyright © 2026 Growth Wave. All rights reserved.
 				</div>
 			</div>

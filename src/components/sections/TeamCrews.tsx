@@ -56,7 +56,7 @@ function CrewBlock({
 
 			<div className={`grid flex-1 gap-3 ${gridCols}`}>
 				{photos.map((photo, i) => (
-					<Reveal key={photo.src} delay={i * 0.07}>
+					<Reveal key={photo.src} delay={i * 0.04}>
 						<div className="relative aspect-[4/3] overflow-hidden rounded-xl">
 							<Image
 								src={photo.src}

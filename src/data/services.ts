@@ -20,7 +20,7 @@ export const SERVICES: Service[] = [
 		category: "Short-form Marketing",
 		title: "전문직도 콘텐츠 시대입니다",
 		description:
-			"인스타그램 릴스, 유튜브 쇼츠, 틱톡을 통해 전문가의 신뢰도를 자연스럽게 알립니다. 멀티 채널 배포로 더 많은 고객에게 닿고, 퍼스널 브랜드를 구축합니다.",
+			"인스타그램 릴스, 유튜브 쇼츠, 틱톡으로 전문가의 신뢰도를 자연스럽게 알립니다. 멀티 채널 배포로 더 많은 고객에게 닿고, 퍼스널 브랜드를 구축합니다.",
 		steps: [
 			{ step: 1, label: "기획" },
 			{ step: 2, label: "촬영" },

@@ -79,7 +79,7 @@ export default function ContactForm() {
 			<p className="mb-1 font-semibold text-[#7c3aed] text-sm uppercase tracking-widest">
 				상세 문의
 			</p>
-			<h3 className="mb-6 font-bold text-foreground text-xl">자세히 알려주세요</h3>
+			<h2 className="mb-6 font-bold text-foreground text-xl">자세히 알려주세요</h2>
 			<AnimatePresence mode="wait">
 				{sent ? (
 					<motion.div
@@ -91,7 +91,7 @@ export default function ContactForm() {
 						<div className="gradient-brand mx-auto mb-2 flex h-16 w-16 items-center justify-center rounded-full">
 							<CheckCircle2 className="h-8 w-8 text-white" />
 						</div>
-						<h3 className="font-bold text-foreground text-xl">신청이 완료되었습니다</h3>
+						<h2 className="font-bold text-foreground text-xl">신청이 완료되었습니다</h2>
 						<p className="text-muted-foreground text-sm">영업일 1일 내로 직접 연락드리겠습니다.</p>
 					</motion.div>
 				) : (

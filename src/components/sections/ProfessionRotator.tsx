@@ -1,19 +1,21 @@
 "use client";
 
-import { AnimatePresence, motion } from "motion/react";
+import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { useEffect, useReducer } from "react";
 import { PROFESSIONS } from "@/data/professions";
 
 const labels = PROFESSIONS.map((p) => p.label);
-const INTERVAL = 1800;
+const INTERVAL = 2400;
 
 export default function ProfessionRotator() {
 	const [index, tick] = useReducer((i: number) => (i + 1) % labels.length, 0);
+	const prefersReducedMotion = useReducedMotion();
 
 	useEffect(() => {
+		if (prefersReducedMotion) return;
 		const id = setInterval(tick, INTERVAL);
 		return () => clearInterval(id);
-	}, []);
+	}, [prefersReducedMotion]);
 
 	return (
 		<section className="bg-gradient-to-b from-white via-slate-50 to-white px-4 py-20 md:py-24">

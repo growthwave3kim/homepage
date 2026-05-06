@@ -15,7 +15,7 @@ const CARDS = [
 		icon: BookOpen,
 		eyebrow: "블로그 마케팅",
 		title: "검색하는 고객을 만나는\n읽히는 블로그",
-		description: "전문직 키워드 DB로 검색 상위 노출을 설계합니다.",
+		description: "전문직 키워드 DB로 검색 상위 노출을 끌어냅니다.",
 		cta: "자세히 보기",
 	},
 	{

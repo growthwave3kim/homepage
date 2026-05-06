@@ -26,7 +26,7 @@ export default function ProcessTimeline() {
 
 					<div className="relative grid grid-cols-5 gap-4">
 						{PROCESS_STEPS.map((step, i) => (
-							<Reveal key={step.step} delay={i * 0.1}>
+							<Reveal key={step.step} delay={i * 0.06}>
 								<div className="flex flex-col items-center text-center">
 									{/* 번호 원 */}
 									<div className="gradient-brand relative z-10 mb-5 flex h-12 w-12 items-center justify-center rounded-full font-bold text-base text-white shadow-[0_4px_16px_rgba(124,58,237,0.3)]">
@@ -49,7 +49,7 @@ export default function ProcessTimeline() {
 
 					<div className="flex flex-col gap-8">
 						{PROCESS_STEPS.map((step, i) => (
-							<Reveal key={step.step} delay={i * 0.08}>
+							<Reveal key={step.step} delay={i * 0.06}>
 								<div className="relative flex gap-6">
 									<div className="gradient-brand relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full font-bold text-sm text-white shadow-[0_4px_12px_rgba(124,58,237,0.3)]">
 										{step.step}

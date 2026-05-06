@@ -1,0 +1,7 @@
+{
+  "tool_name": "Bash",
+  "tool_input_preview": "{\"command\":\"cd /Users/minishtech/workspace/dohyun/homepage && pnpm lint 2>&1\",\"description\":\"Run lint check\"}",
+  "error": "Exit code 1\n\n> growthwave@0.1.0 lint /Users/minishtech/workspace/dohyun/homepage\n> biome check . && eslint\n\npublic/images/.omc/state/last-tool-error.json format ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n  × Formatter would have printed the following content:\n  \n    1 1 │   {\n    2   │ - ··\"tool_name\":·\"Bash\",\n    3   │ - ··\"tool_input_preview\":·\"{\\\"command\\\":\\\"cd·/Users/minishtech/workspace/dohyun/homepage·&&·pnpm·lint·2>&1\\\",\\\"description\\\":\\\"Run·lint·check\\\",\\\"run_in_background\\\":false}...",
+  "timestamp": "2026-05-06T00:35:43.283Z",
+  "retry_count": 2
+}
