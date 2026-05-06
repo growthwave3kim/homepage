@@ -19,7 +19,7 @@ export default function HomePage() {
 			<Cases />
 			<Testimonials />
 			<WhyUsBold />
-		<TeamPreview />
+			<TeamPreview />
 			<FAQPreview />
 			<FinalCTA />
 		</>

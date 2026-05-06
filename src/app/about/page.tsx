@@ -47,10 +47,7 @@ export default function AboutPage() {
 			<WhyUs />
 			<TeamPreview />
 			<Comparison />
-			<CTACard
-				headline="무료 상담으로 시작하세요"
-				sub="첫 상담 무료 · 계약 압박 없음 · 영업일 1일 내 회신"
-			/>
+			<CTACard headline="무료 상담으로 시작하세요" sub="24시간 안으로 답변드립니다." />
 		</>
 	);
 }

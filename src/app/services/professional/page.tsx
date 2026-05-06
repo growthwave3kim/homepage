@@ -9,7 +9,6 @@ import Testimonials from "@/components/sections/Testimonials";
 import WhyUs from "@/components/sections/WhyUs";
 import CTACard from "@/components/shared/CTACard";
 import PageHero from "@/components/shared/PageHero";
-import ProfessionStrip from "@/components/shared/ProfessionStrip";
 
 export const metadata: Metadata = {
 	title: "전문직 마케팅 | Growth Wave",
@@ -29,9 +28,8 @@ export default function ProfessionalServicePage() {
 				ctaHref="/contact"
 				secondaryText="자주 묻는 질문"
 				secondaryHref="/faq"
-			>
-				<ProfessionStrip label="함께한 전문직" />
-			</PageHero>
+			/>
+
 			<PainPoints />
 			<WhyUs />
 			<AdRegulationGuide />
@@ -40,10 +38,7 @@ export default function ProfessionalServicePage() {
 			<Cases />
 			<Testimonials />
 			<PricingNote />
-			<CTACard
-				headline="무료 상담으로 시작하세요"
-				sub="첫 상담 무료 · 계약 압박 없음 · 영업일 1일 내 회신"
-			/>
+			<CTACard headline="무료 상담으로 시작하세요" sub="24시간 안으로 답변드립니다." />
 		</>
 	);
 }

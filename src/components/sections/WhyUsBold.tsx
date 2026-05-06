@@ -20,9 +20,7 @@ export default function WhyUsBold() {
 						<h2 className="font-bold text-3xl text-foreground leading-tight tracking-tight md:text-4xl">
 							대행사 절반은 노출 수만 보고합니다.
 						</h2>
-						<p className="mt-4 text-lg text-muted-foreground">
-							그로스웨이브는 실제 전환된 수치만 봅니다.
-						</p>
+						<p className="mt-4 text-lg text-muted-foreground">노출이 아닌, 의뢰로 평가합니다.</p>
 					</div>
 				</Reveal>
 
@@ -42,7 +40,7 @@ export default function WhyUsBold() {
 									<p className="mb-4 text-muted-foreground text-sm leading-relaxed">
 										{card.description}
 									</p>
-									<div className="mt-auto rounded-xl bg-[#7c3aed]/5 px-4 py-3">
+									<div className="mt-auto flex min-h-[3.25rem] items-center rounded-xl bg-[#7c3aed]/5 px-4 py-3">
 										<span className="font-bold text-[#7c3aed] text-sm">{card.stat}</span>
 									</div>
 								</div>
@@ -62,7 +60,7 @@ export default function WhyUsBold() {
 								</div>
 								<p className="font-semibold text-slate-500 text-sm">일반 대행사</p>
 							</div>
-							<div className="gradient-brand flex items-center gap-2.5 px-8 py-5">
+							<div className="gradient-brand flex items-center gap-2.5 border-white/30 border-l-2 px-8 py-5">
 								<div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-white/25">
 									<Check className="h-3 w-3 text-white" />
 								</div>
@@ -78,7 +76,7 @@ export default function WhyUsBold() {
 								<div className="bg-slate-50 px-8 py-5">
 									<p className="text-slate-400 text-sm">{card.before}</p>
 								</div>
-								<div className="bg-[#7c3aed]/5 px-8 py-5">
+								<div className="border-[#7c3aed]/40 border-l-2 bg-[#7c3aed]/5 px-8 py-5">
 									<p className="font-semibold text-foreground text-sm">{card.after}</p>
 								</div>
 							</div>

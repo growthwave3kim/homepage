@@ -1,3 +1,4 @@
+import { MessageCircle } from "lucide-react";
 import Logo from "@/components/shared/Logo";
 import WaveDivider from "@/components/shared/WaveDivider";
 import { siteConfig } from "@/config/site";
@@ -20,34 +21,24 @@ export default function Footer() {
 							의뢰인이 먼저 찾아오는 구조를 만듭니다.
 						</p>
 						<div className="mt-5 flex gap-3">
-							<button
-								type="button"
-								aria-label="네이버 블로그"
+							<a
+								href={siteConfig.contact.naverBlog}
+								target="_blank"
+								rel="noopener noreferrer"
 								className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-white text-xs transition-colors hover:bg-white/20"
 							>
+								<span className="sr-only">네이버 블로그</span>
 								<span aria-hidden="true">N</span>
-							</button>
-							<button
-								type="button"
-								aria-label="인스타그램"
-								className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-white text-xs transition-colors hover:bg-white/20"
+							</a>
+							<a
+								href={siteConfig.contact.kakaoOpenChat}
+								target="_blank"
+								rel="noopener noreferrer"
+								className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20"
 							>
-								<span aria-hidden="true">IG</span>
-							</button>
-							<button
-								type="button"
-								aria-label="유튜브"
-								className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-white text-xs transition-colors hover:bg-white/20"
-							>
-								<span aria-hidden="true">YT</span>
-							</button>
-							<button
-								type="button"
-								aria-label="카카오톡"
-								className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-white text-xs transition-colors hover:bg-white/20"
-							>
-								<span aria-hidden="true">KT</span>
-							</button>
+								<span className="sr-only">카카오톡 채널</span>
+								<MessageCircle className="h-4 w-4" aria-hidden="true" />
+							</a>
 						</div>
 					</div>
 

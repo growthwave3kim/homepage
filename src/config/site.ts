@@ -32,10 +32,12 @@ export const siteConfig = {
 	creator: "Growth Wave",
 	contact: {
 		tel: "02-000-0000",
-		email: "contact@growthwave.kr",
+		email: "growthwave.3kim@gmail.com",
 		address: "서울특별시 강남구",
 		businessName: "그로스웨이브",
 		businessNumber: "000-00-00000",
+		kakaoOpenChat: "https://open.kakao.com/o/sgn3wFti",
+		naverBlog: "https://blog.naver.com/growthwave-",
 	},
 	nav: [
 		{ label: "회사소개", href: "/about" },

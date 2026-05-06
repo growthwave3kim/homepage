@@ -51,18 +51,6 @@ export default function ProfessionRotator() {
 				<p className="mb-10 text-lg text-muted-foreground leading-relaxed md:text-xl">
 					전문직 마케팅만 합니다. 그래서 가장 잘 합니다.
 				</p>
-
-				{/* 직군 dot 인디케이터 */}
-				<div className="mt-6 flex items-center justify-center gap-2">
-					{labels.map((label, i) => (
-						<div
-							key={label}
-							className={`h-1.5 rounded-full transition-all duration-300 ${
-								i === index ? "w-6 bg-[#7c3aed]" : "w-1.5 bg-slate-300"
-							}`}
-						/>
-					))}
-				</div>
 			</div>
 		</section>
 	);

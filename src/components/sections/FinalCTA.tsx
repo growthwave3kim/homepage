@@ -1,5 +1,7 @@
+import { MessageCircle } from "lucide-react";
 import Link from "next/link";
 import Reveal from "@/components/shared/Reveal";
+import { siteConfig } from "@/config/site";
 
 export default function FinalCTA() {
 	return (
@@ -24,7 +26,8 @@ export default function FinalCTA() {
 					</h2>
 					<p className="mb-10 text-[#94a3b8] text-lg leading-relaxed">
 						3분이면 상담 신청이 끝납니다.
-						<br />첫 상담 무료 · 진행 의무 없음 · 영업일 1일 내 회신
+						<br />
+						24시간 안으로 답변드립니다.
 					</p>
 					<div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
 						<Link
@@ -33,12 +36,15 @@ export default function FinalCTA() {
 						>
 							무료 상담 신청
 						</Link>
-						<Link
-							href="/contact"
-							className="w-full rounded-full border border-white/20 px-8 py-3.5 font-semibold text-base text-white/80 transition-colors hover:border-white/40 hover:text-white sm:w-auto"
+						<a
+							href={siteConfig.contact.kakaoOpenChat}
+							target="_blank"
+							rel="noopener noreferrer"
+							className="flex w-full items-center justify-center gap-2 rounded-full border border-white/20 px-8 py-3.5 font-semibold text-base text-white/80 transition-colors hover:border-white/40 hover:text-white sm:w-auto"
 						>
+							<MessageCircle className="h-4 w-4" />
 							카카오톡 1:1 문의
-						</Link>
+						</a>
 					</div>
 				</Reveal>
 			</div>

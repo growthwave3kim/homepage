@@ -30,7 +30,7 @@ export const WHY_US_BOLD_CARDS: WhyUsBoldCard[] = [
 	},
 	{
 		icon: "Target",
-		title: "실제 전환된 수치만 봅니다.",
+		title: "노출 말고, 의뢰입니다.",
 		description:
 			"노출 수가 아닌 상담·의뢰 전환을 목표로 합니다. 매월 전환 데이터를 기준으로 전략을 개선합니다.",
 		stat: "월별 수임 전환 데이터 보고",

@@ -103,10 +103,7 @@ export default function ShortformServicePage() {
 			</section>
 
 			<Cases />
-			<CTACard
-				headline="터지는 숏폼, 지금 시작하세요"
-				sub="첫 상담 무료 · 계약 압박 없음 · 영업일 1일 내 회신"
-			/>
+			<CTACard headline="터지는 숏폼, 지금 시작하세요" sub="24시간 안으로 답변드립니다." />
 		</>
 	);
 }
