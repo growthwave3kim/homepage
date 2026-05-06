@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Team from "@/components/sections/Team";
+import TeamCrews from "@/components/sections/TeamCrews";
 import TeamValues from "@/components/sections/TeamValues";
 import CTACard from "@/components/shared/CTACard";
 import PageHero from "@/components/shared/PageHero";
@@ -24,6 +25,7 @@ export default function TeamPage() {
 				secondaryHref="/services/professional"
 			/>
 			<Team />
+			<TeamCrews />
 			<TeamValues />
 			<CTACard
 				headline="이 팀과 함께 시작하세요"
