@@ -182,7 +182,7 @@ export default function BlogServicePage() {
 							{/* Header */}
 							<div className="grid grid-cols-3">
 								<div className="bg-slate-100 px-3 py-3 md:px-6 md:py-4">
-									<span className="font-semibold text-slate-400 text-[10px] uppercase tracking-wider md:text-xs">
+									<span className="font-semibold text-[10px] text-slate-400 uppercase tracking-wider md:text-xs">
 										항목
 									</span>
 								</div>
@@ -190,7 +190,7 @@ export default function BlogServicePage() {
 									<div className="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-slate-300 md:h-5 md:w-5">
 										<X className="h-2.5 w-2.5 text-white md:h-3 md:w-3" />
 									</div>
-									<span className="font-semibold text-slate-500 text-[10px] uppercase tracking-wider md:text-xs">
+									<span className="font-semibold text-[10px] text-slate-500 uppercase tracking-wider md:text-xs">
 										일반 대행사
 									</span>
 								</div>
@@ -207,13 +207,17 @@ export default function BlogServicePage() {
 							{BLOG_COMPARISON.map((row) => (
 								<div key={row.label} className="grid grid-cols-3 border-slate-100 border-t">
 									<div className="bg-white px-3 py-3 md:px-6 md:py-4">
-										<span className="font-medium text-foreground text-xs md:text-sm">{row.label}</span>
+										<span className="font-medium text-foreground text-xs md:text-sm">
+											{row.label}
+										</span>
 									</div>
 									<div className="bg-slate-50 px-3 py-3 md:px-6 md:py-4">
 										<span className="text-slate-400 text-xs md:text-sm">{row.general}</span>
 									</div>
 									<div className="bg-[#7c3aed]/5 px-3 py-3 md:px-6 md:py-4">
-										<span className="font-semibold text-[#7c3aed] text-xs md:text-sm">{row.us}</span>
+										<span className="font-semibold text-[#7c3aed] text-xs md:text-sm">
+											{row.us}
+										</span>
 									</div>
 								</div>
 							))}
