@@ -50,7 +50,7 @@ function LeadCard() {
 	return (
 		<div className="gradient-brand rounded-2xl p-6 shadow-[0_8px_30px_rgba(124,58,237,0.20)]">
 			<p className="font-bold text-base text-white">대표</p>
-			<p className="mt-1 text-xs text-white/65 leading-relaxed">전문직 마케팅 전략 총괄</p>
+			<p className="mt-1 text-white/65 text-xs leading-relaxed">전문직 마케팅 전략 총괄</p>
 		</div>
 	);
 }
@@ -58,17 +58,17 @@ function LeadCard() {
 function DeptCard({ name, desc }: { name: string; desc: string }) {
 	return (
 		<div className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-shadow duration-200 hover:shadow-md">
-			<p className="text-sm font-bold text-foreground">{name}</p>
-			<p className="mt-1 text-xs leading-relaxed text-muted-foreground">{desc}</p>
+			<p className="font-bold text-foreground text-sm">{name}</p>
+			<p className="mt-1 text-muted-foreground text-xs leading-relaxed">{desc}</p>
 		</div>
 	);
 }
 
 function SubCard({ name, desc }: { name: string; desc: string }) {
 	return (
-		<div className="rounded-xl border border-dashed border-slate-200 bg-slate-50 p-4">
-			<p className="text-xs font-semibold text-foreground">{name}</p>
-			<p className="mt-0.5 text-xs leading-relaxed text-muted-foreground">{desc}</p>
+		<div className="rounded-xl border border-slate-200 border-dashed bg-slate-50 p-4">
+			<p className="font-semibold text-foreground text-xs">{name}</p>
+			<p className="mt-0.5 text-muted-foreground text-xs leading-relaxed">{desc}</p>
 		</div>
 	);
 }

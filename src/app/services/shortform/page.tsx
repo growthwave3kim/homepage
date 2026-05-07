@@ -8,8 +8,7 @@ import { SERVICES } from "@/data/services";
 
 export const metadata: Metadata = {
 	title: "숏폼 마케팅 | Growth Wave",
-	description:
-		"전문직을 위한 릴스·쇼츠·틱톡 숏폼 마케팅. 꾸준한 콘텐츠로 전문가 채널을 키웁니다.",
+	description: "전문직을 위한 릴스·쇼츠·틱톡 숏폼 마케팅. 꾸준한 콘텐츠로 전문가 채널을 키웁니다.",
 };
 
 const SHORTFORM_BENEFITS = [
@@ -50,13 +49,11 @@ const SHORTFORM_CHANNELS = [
 const SHORTFORM_CONTENT_TYPES = [
 	{
 		type: "케이스 토크",
-		description:
-			"실제 의뢰·치료·상담 사례를 1분 이내로 정리합니다. 직군 신뢰의 핵심 콘텐츠입니다.",
+		description: "실제 의뢰·치료·상담 사례를 1분 이내로 정리합니다. 직군 신뢰의 핵심 콘텐츠입니다.",
 	},
 	{
 		type: "Q&A형",
-		description:
-			"의뢰인이 자주 묻는 질문에 짧게 답합니다. 검색 의도와 직접 연결되는 형식입니다.",
+		description: "의뢰인이 자주 묻는 질문에 짧게 답합니다. 검색 의도와 직접 연결되는 형식입니다.",
 	},
 	{
 		type: "지식·이슈",

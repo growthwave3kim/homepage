@@ -51,7 +51,10 @@ export default function AboutCEOTimeline() {
 
 				<div className="relative">
 					{/* Vertical line */}
-					<div className="absolute top-0 bottom-0 left-[88px] w-px bg-slate-200 md:left-[104px]" aria-hidden="true" />
+					<div
+						className="absolute top-0 bottom-0 left-[88px] w-px bg-slate-200 md:left-[104px]"
+						aria-hidden="true"
+					/>
 
 					<div className="space-y-8">
 						{MILESTONES.map((m, i) => (
@@ -67,9 +70,7 @@ export default function AboutCEOTimeline() {
 										<div
 											className={cn(
 												"h-3.5 w-3.5 rounded-full border-2",
-												m.done
-													? "border-[#7c3aed] bg-[#7c3aed]"
-													: "border-[#7c3aed] bg-white",
+												m.done ? "border-[#7c3aed] bg-[#7c3aed]" : "border-[#7c3aed] bg-white",
 											)}
 										/>
 									</div>
@@ -77,9 +78,7 @@ export default function AboutCEOTimeline() {
 									{/* Content */}
 									<div className="pb-2">
 										<p className="font-semibold text-foreground">{m.title}</p>
-										<p className="mt-0.5 text-muted-foreground text-sm leading-relaxed">
-											{m.desc}
-										</p>
+										<p className="mt-0.5 text-muted-foreground text-sm leading-relaxed">{m.desc}</p>
 									</div>
 								</div>
 							</Reveal>

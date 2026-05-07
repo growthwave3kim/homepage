@@ -10,7 +10,7 @@ export default function AESlogan() {
 						광고 규정을 모르는 콘텐츠는 발행하지 않습니다.
 					</p>
 				</div>
-				<p className="mt-10 font-medium text-white/25 text-xs tracking-[0.2em] uppercase">
+				<p className="mt-10 font-medium text-white/25 text-xs uppercase tracking-[0.2em]">
 					Growth Wave / Since 2026
 				</p>
 			</div>

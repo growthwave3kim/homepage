@@ -82,12 +82,12 @@ export default function AdRegulationGuide({ preview = false }: AdRegulationGuide
 				</Reveal>
 
 				<Reveal>
-					<div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-{preview ? '2' : '3'}">
+					<div className="? '2' : '3'} grid gap-4 sm:grid-cols-2 lg:grid-cols-{preview">
 						<div
 							className={
 								preview
-									? "grid gap-4 sm:grid-cols-2 col-span-full"
-									: "grid gap-4 sm:grid-cols-2 lg:grid-cols-3 col-span-full"
+									? "col-span-full grid gap-4 sm:grid-cols-2"
+									: "col-span-full grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
 							}
 						>
 							{items.map((r) => (
@@ -125,7 +125,9 @@ export default function AdRegulationGuide({ preview = false }: AdRegulationGuide
 												{r.prohibited.map((p) => (
 													<li key={p} className="flex items-start gap-1.5">
 														<span className="mt-0.5 text-red-400 text-xs">✕</span>
-														<span className="text-muted-foreground text-xs leading-relaxed">{p}</span>
+														<span className="text-muted-foreground text-xs leading-relaxed">
+															{p}
+														</span>
 													</li>
 												))}
 											</ul>
