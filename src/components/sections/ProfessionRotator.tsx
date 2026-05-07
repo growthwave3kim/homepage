@@ -49,7 +49,7 @@ export default function ProfessionRotator() {
 
 				{/* 서브 */}
 				<p className="mb-10 text-lg text-muted-foreground leading-relaxed md:text-xl">
-					전문직 마케팅만 합니다. 그래서 가장 잘 합니다.
+					전문직 마케팅만 합니다. 다른 일은 받지 않습니다.
 				</p>
 			</div>
 		</section>

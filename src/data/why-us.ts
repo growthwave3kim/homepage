@@ -12,7 +12,7 @@ export interface WhyUsBoldCard {
 export const WHY_US_BOLD_CARDS: WhyUsBoldCard[] = [
 	{
 		icon: "ShieldCheck",
-		title: "광고 규정 완벽 준수",
+		title: "광고 규정 사전 검토",
 		description:
 			"변호사·의사·한의사 등 광고 규정이 까다로운 전문직에 특화된 콘텐츠를 설계합니다. 규정 검토 후 전 콘텐츠를 발행합니다.",
 		stat: "모든 콘텐츠는 심의 규정을 준수하여 발행합니다.",
@@ -42,7 +42,7 @@ export const WHY_US_BOLD_CARDS: WhyUsBoldCard[] = [
 export const WHY_US_CARDS: WhyUsCard[] = [
 	{
 		icon: "ShieldCheck",
-		title: "전문직 광고 규정 완벽 이해",
+		title: "전문직 광고 규정 직접 검토",
 		description:
 			"변호사·의사·한의사 등 광고 규정이 까다로운 전문직에 특화된 콘텐츠를 기획합니다. 규정 검토 후 전 콘텐츠를 발행합니다.",
 	},
@@ -60,8 +60,8 @@ export const WHY_US_CARDS: WhyUsCard[] = [
 	},
 	{
 		icon: "User",
-		title: "전문가 개인 브랜드 빌딩",
+		title: "전문가 채널 성장",
 		description:
-			"숏폼과 블로그로 전문가의 신뢰도를 자연스럽게 쌓습니다. 고객이 먼저 찾아오는 퍼스널 브랜드를 구축합니다.",
+			"숏폼과 블로그로 전문가의 신뢰도를 콘텐츠로 쌓습니다. 고객이 먼저 찾아오는 채널 구조를 만듭니다.",
 	},
 ];

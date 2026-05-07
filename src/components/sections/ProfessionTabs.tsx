@@ -13,7 +13,7 @@ export default function ProfessionTabs() {
 					Profession
 				</p>
 				<h2 className="mb-12 text-center font-bold text-3xl text-foreground leading-tight tracking-tight md:text-4xl">
-					직군별 맞춤 접근법
+					직군별로 다르게 접근합니다
 				</h2>
 
 				<Tabs defaultValue="lawyer">
@@ -87,9 +87,9 @@ export default function ProfessionTabs() {
 										) : (
 											<div className="flex items-center justify-center rounded-2xl bg-white p-8 text-center shadow-sm">
 												<p className="text-muted-foreground text-sm">
-													{p.label} 사례를 준비 중입니다.
+													{p.label} 사례는 상담에서 직접 보여드립니다.
 													<br />
-													문의하시면 유사 사례를 안내드립니다.
+													유사 사례를 직군별로 정리해 안내합니다.
 												</p>
 											</div>
 										)}

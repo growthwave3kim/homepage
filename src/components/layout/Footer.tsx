@@ -3,9 +3,6 @@ import Logo from "@/components/shared/Logo";
 import WaveDivider from "@/components/shared/WaveDivider";
 import { siteConfig } from "@/config/site";
 
-const isDummyTel = siteConfig.contact.tel === "02-000-0000";
-const isDummyBizNum = siteConfig.contact.businessNumber === "000-00-00000";
-
 export default function Footer() {
 	return (
 		<footer className="bg-[#0f172a] text-white">
@@ -47,20 +44,17 @@ export default function Footer() {
 						<p>
 							<span className="text-slate-300">회사명</span> {siteConfig.contact.businessName}
 						</p>
-						{!isDummyBizNum && (
-							<p>
-								<span className="text-slate-300">사업자등록번호</span>{" "}
-								{siteConfig.contact.businessNumber}
-							</p>
-						)}
 						<p>
-							<span className="text-slate-300">주소</span> {siteConfig.contact.address}
+							<span className="text-slate-300">사업자등록번호</span>{" "}
+							{siteConfig.contact.businessNumber}
 						</p>
-						{!isDummyTel && (
-							<p>
-								<span className="text-slate-300">TEL</span> {siteConfig.contact.tel}
-							</p>
-						)}
+						<div className="pt-1 leading-relaxed">
+							<p className="text-slate-300">주소</p>
+							<p className="whitespace-pre-line">{siteConfig.contact.address}</p>
+						</div>
+						<p className="pt-1">
+							<span className="text-slate-300">TEL</span> {siteConfig.contact.tel}
+						</p>
 						<p>
 							<span className="text-slate-300">EMAIL</span> {siteConfig.contact.email}
 						</p>

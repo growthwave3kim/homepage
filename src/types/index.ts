@@ -57,6 +57,7 @@ export interface TeamMember {
 	bio: string;
 	quote?: string;
 	careers?: string[];
+	photo?: string;
 }
 
 export interface FaqItem {

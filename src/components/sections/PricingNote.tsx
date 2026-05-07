@@ -49,10 +49,14 @@ export default function PricingNote() {
 				</Reveal>
 
 				<Reveal>
-					<p className="mt-8 text-center text-muted-foreground text-sm">
-						상담 전 가격이 궁금하다면? 첫 상담에서 명확하게 안내드립니다.{" "}
-						<span className="text-slate-400">진행 의무 없음.</span>
-					</p>
+					<div className="mt-8 flex flex-col items-center justify-center gap-2 rounded-2xl border border-[#7c3aed]/15 bg-[#7c3aed]/5 px-8 py-6 text-center sm:flex-row sm:gap-8">
+						{["초기 진단 무료", "견적서 영업일 1주 내 발송", "계약 압박 없음"].map((item) => (
+							<div key={item} className="flex items-center gap-2">
+								<span className="h-1.5 w-1.5 rounded-full bg-[#7c3aed]" />
+								<span className="font-semibold text-[#7c3aed] text-sm">{item}</span>
+							</div>
+						))}
+					</div>
 				</Reveal>
 			</div>
 		</section>

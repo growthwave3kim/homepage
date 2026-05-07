@@ -91,7 +91,7 @@ export default function TeamCrews() {
 						icon={<Clapperboard className="h-5 w-5 text-white" aria-hidden="true" />}
 						label="영상팀"
 						heading="현장에서 인터뷰부터 컷 구성까지"
-						body="의뢰인이 카메라 앞에서 가장 자연스러운 모습이 되도록 촬영팀이 직접 현장에 갑니다. 조명·사운드·디렉팅을 한 팀이 책임집니다."
+						body="의뢰인이 카메라 앞에서 편안하게 말할 수 있도록 촬영팀이 직접 현장에 갑니다. 조명·사운드·디렉팅을 한 팀이 책임집니다."
 						photos={VIDEO_PHOTOS}
 					/>
 					<CrewBlock

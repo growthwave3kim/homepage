@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import AboutTeamLeads from "@/components/sections/AboutTeamLeads";
+import AboutCEOMessage from "@/components/sections/AboutCEOMessage";
+import AboutCEOTimeline from "@/components/sections/AboutCEOTimeline";
+import AESlogan from "@/components/sections/AESlogan";
 import Comparison from "@/components/sections/Comparison";
 import OrgChart from "@/components/sections/OrgChart";
-import TeamPreview from "@/components/sections/TeamPreview";
-import WhyUs from "@/components/sections/WhyUs";
 import CTACard from "@/components/shared/CTACard";
 import PageHero from "@/components/shared/PageHero";
 
@@ -23,19 +23,22 @@ export default function AboutPage() {
 				sub="광고 규정·신뢰·검색 의도가 까다로운 전문직의 마케팅은 다릅니다. 규정을 알고, 직군을 알고, 의뢰 구조를 이해하는 팀이 필요합니다."
 				ctaText="무료 상담 신청"
 				ctaHref="/contact"
-				secondaryText="회사소개서 다운로드"
-				secondaryHref="/downloads/growthwave-company.pdf"
-				secondaryDownload
+				secondaryText="회사소개서 요청"
+				secondaryHref="/contact?subject=회사소개서"
 			/>
 
+			<AESlogan />
+			<AboutCEOMessage />
+			<AboutCEOTimeline />
+
 			{/* Mission */}
-			<section className="bg-slate-50 px-4 py-16">
+			<section className="bg-white px-4 py-16">
 				<div className="mx-auto max-w-3xl text-center">
 					<p className="mb-3 font-semibold text-[#7c3aed] text-sm uppercase tracking-[0.25em]">
 						Mission
 					</p>
 					<h2 className="mb-6 font-bold text-2xl text-foreground leading-tight tracking-tight md:text-3xl">
-						전문직 광고 규정을 이해하는 단 하나의 마케팅 팀
+						전문직 광고 규정을 직접 검토하는 마케팅 팀
 					</h2>
 					<p className="text-muted-foreground leading-relaxed">
 						대부분의 마케팅 대행사는 전문직 광고 규정을 모릅니다. 그 결과 광고비는 나가지만 의뢰는
@@ -47,10 +50,7 @@ export default function AboutPage() {
 				</div>
 			</section>
 
-			<AboutTeamLeads />
 			<OrgChart />
-			<WhyUs />
-			<TeamPreview />
 			<Comparison />
 			<CTACard headline="무료 상담으로 시작하세요" sub="24시간 안으로 답변드립니다." />
 		</>

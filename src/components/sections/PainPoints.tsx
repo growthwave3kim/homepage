@@ -36,7 +36,7 @@ export default function PainPoints() {
 				<Reveal delay={PAIN_POINTS.length * 0.08}>
 					<div className="gradient-brand mt-6 flex flex-col items-center justify-center gap-3 rounded-2xl p-8 text-center text-white sm:flex-row sm:gap-6 sm:p-10">
 						<p className="font-bold text-xl leading-snug">
-							그로스웨이브는 그 문제를 알고 있습니다.
+							그로스웨이브는 그 자리에서 시작합니다.
 						</p>
 						<p className="text-sm text-white/80 leading-relaxed sm:border-white/30 sm:border-l sm:pl-6">
 							전문직 마케팅에 특화된 팀이 의뢰·수임으로 이어지는 콘텐츠를 직접 설계합니다.

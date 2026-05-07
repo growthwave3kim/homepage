@@ -11,7 +11,7 @@ export default function ProcessTimeline() {
 							Process
 						</p>
 						<h2 className="font-bold text-3xl text-foreground leading-tight tracking-tight md:text-4xl">
-							어떻게 일하는가.
+							5단계로 진행합니다.
 						</h2>
 					</div>
 				</Reveal>

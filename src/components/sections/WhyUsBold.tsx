@@ -10,17 +10,17 @@ const ICON_MAP: Record<string, React.ComponentType<{ className?: string }>> = {
 
 export default function WhyUsBold() {
 	return (
-		<section className="bg-slate-50 px-4 py-20 md:py-24">
+		<section className="bg-[#0b1220] px-4 py-20 md:py-24">
 			<div className="mx-auto max-w-6xl">
 				<Reveal>
 					<div className="mb-12 text-center">
-						<p className="mb-3 font-semibold text-[#7c3aed] text-sm uppercase tracking-[0.25em]">
+						<p className="mb-3 font-semibold text-[#a78bfa] text-sm uppercase tracking-[0.25em]">
 							Why Us
 						</p>
-						<h2 className="font-bold text-3xl text-foreground leading-tight tracking-tight md:text-4xl">
-							대행사 절반은 노출 수만 보고합니다.
+						<h2 className="font-bold text-3xl text-white leading-tight tracking-tight md:text-4xl">
+							대부분의 대행사는 노출 수만 보고합니다.
 						</h2>
-						<p className="mt-4 text-lg text-muted-foreground">노출이 아닌, 의뢰로 평가합니다.</p>
+						<p className="mt-4 text-lg text-white/60">노출이 아닌, 의뢰로 평가합니다.</p>
 					</div>
 				</Reveal>
 
@@ -51,16 +51,16 @@ export default function WhyUsBold() {
 
 				{/* Before / After 비교 */}
 				<Reveal>
-					<div className="overflow-hidden rounded-2xl shadow-sm">
+					<div className="overflow-hidden rounded-2xl border border-white/10">
 						{/* Header */}
 						<div className="grid grid-cols-2">
-							<div className="flex items-center gap-2.5 bg-slate-100 px-8 py-5">
-								<div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-slate-300">
-									<X className="h-3 w-3 text-white" />
+							<div className="flex items-center gap-2.5 bg-white/6 px-8 py-5">
+								<div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-white/20">
+									<X className="h-3 w-3 text-white/60" />
 								</div>
-								<p className="font-semibold text-slate-500 text-sm">일반 대행사</p>
+								<p className="font-semibold text-sm text-white/40">일반 대행사</p>
 							</div>
-							<div className="gradient-brand flex items-center gap-2.5 border-white/30 border-l-2 px-8 py-5">
+							<div className="gradient-brand flex items-center gap-2.5 border-white/20 border-l px-8 py-5">
 								<div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-white/25">
 									<Check className="h-3 w-3 text-white" />
 								</div>
@@ -71,13 +71,13 @@ export default function WhyUsBold() {
 						{WHY_US_BOLD_CARDS.map((card) => (
 							<div
 								key={`compare-${card.title}`}
-								className="grid grid-cols-2 border-slate-100 border-t"
+								className="grid grid-cols-2 border-white/[0.07] border-t"
 							>
-								<div className="bg-slate-50 px-8 py-5">
-									<p className="text-slate-400 text-sm">{card.before}</p>
+								<div className="bg-white/3 px-8 py-5">
+									<p className="text-sm text-white/30">{card.before}</p>
 								</div>
-								<div className="border-[#7c3aed]/40 border-l-2 bg-[#7c3aed]/5 px-8 py-5">
-									<p className="font-semibold text-foreground text-sm">{card.after}</p>
+								<div className="border-[#7c3aed]/50 border-l bg-[#7c3aed]/10 px-8 py-5">
+									<p className="font-semibold text-sm text-white">{card.after}</p>
 								</div>
 							</div>
 						))}

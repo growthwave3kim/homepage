@@ -23,7 +23,7 @@ export default function ContactPage() {
 					상담은 언제나, 당연히 무료입니다.
 				</h1>
 				<p className="text-lg text-muted-foreground">
-					부담없이 연락 주시면 1일 내로 빠르게 연락드리겠습니다.
+					무엇이든 적어 보내주세요. 영업일 1일 내 회신드립니다.
 				</p>
 			</div>
 

@@ -15,7 +15,7 @@ const VALUES = [
 	{
 		icon: Layers,
 		title: "직군에 산다",
-		description: "6개 직군만 다룹니다. 그래서 깊습니다. 넓게 하지 않아서 잘 합니다.",
+		description: "6개 직군만 다룹니다. 다른 일은 받지 않습니다. 넓게 하지 않습니다.",
 	},
 ] as const;
 
