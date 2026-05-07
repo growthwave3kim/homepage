@@ -66,7 +66,7 @@ export default function MobileMenu() {
 												{item.label}
 											</AccordionTrigger>
 											<AccordionContent className="pb-0">
-												<div className="ml-4 flex flex-col gap-0.5 border-slate-100 border-l pl-3">
+												<div className="ml-4 flex flex-col gap-0.5 border-slate-100 border-l pl-4">
 													{item.children.map((child) => {
 														const isChildActive =
 															pathname === child.href || pathname.startsWith(`${child.href}/`);
@@ -76,7 +76,7 @@ export default function MobileMenu() {
 																href={child.href}
 																onClick={() => setOpen(false)}
 																className={cn(
-																	"rounded-lg px-3 py-2.5 text-sm transition-colors hover:bg-slate-50",
+																	"rounded-lg px-3 py-3 text-sm transition-colors hover:bg-slate-50",
 																	isChildActive
 																		? "bg-[#7c3aed]/10 font-semibold text-[#7c3aed]"
 																		: "text-slate-600",

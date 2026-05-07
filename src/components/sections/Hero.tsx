@@ -6,7 +6,7 @@ import WaveDivider from "@/components/shared/WaveDivider";
 
 export default function Hero() {
 	return (
-		<section className="relative flex min-h-[640px] items-center justify-center overflow-hidden bg-white pt-16 md:min-h-screen md:pt-20">
+		<section className="relative flex min-h-[520px] items-center justify-center overflow-hidden bg-white pt-16 md:min-h-screen md:pt-20">
 			{/* Background video (converted from GIF for performance) */}
 			<video
 				autoPlay

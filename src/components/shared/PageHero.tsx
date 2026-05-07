@@ -38,11 +38,11 @@ export default function PageHero({
 		>
 			{/* Background blobs */}
 			<div
-				className="pointer-events-none absolute top-[-5%] right-[-10%] h-[400px] w-[400px] rounded-full bg-[#7c3aed]/8 blur-3xl"
+				className="pointer-events-none absolute top-[-5%] right-[-10%] h-[260px] w-[260px] rounded-full bg-[#7c3aed]/8 blur-3xl md:h-[400px] md:w-[400px]"
 				aria-hidden="true"
 			/>
 			<div
-				className="pointer-events-none absolute bottom-[-5%] left-[-10%] h-[350px] w-[350px] rounded-full bg-[#1e3a8a]/8 blur-3xl"
+				className="pointer-events-none absolute bottom-[-5%] left-[-10%] h-[220px] w-[220px] rounded-full bg-[#1e3a8a]/8 blur-3xl md:h-[350px] md:w-[350px]"
 				aria-hidden="true"
 			/>
 

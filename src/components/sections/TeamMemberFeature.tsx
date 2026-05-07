@@ -14,14 +14,14 @@ export default function TeamMemberFeature() {
 						return (
 							<Reveal key={member.nameEn} delay={0.05}>
 								<div
-									className={`flex flex-col items-start gap-12 md:flex-row md:gap-16 ${
+									className={`flex flex-col items-start gap-6 md:flex-row md:gap-16 ${
 										!isEven ? "md:flex-row-reverse" : ""
 									}`}
 								>
 									{/* Photo */}
 									{member.photo && (
 										<div className="shrink-0">
-											<div className="relative h-72 w-56 overflow-hidden rounded-3xl shadow-[0_8px_32px_rgba(0,0,0,0.10)] md:h-96 md:w-72">
+											<div className="relative h-56 w-44 overflow-hidden rounded-3xl shadow-[0_8px_32px_rgba(0,0,0,0.10)] md:h-96 md:w-72">
 												<Image
 													src={member.photo}
 													alt={member.nameKo}

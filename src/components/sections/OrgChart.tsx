@@ -139,7 +139,7 @@ export default function OrgChart() {
 				<Reveal delay={0.1}>
 					{/* CEO */}
 					<div className="flex justify-center">
-						<div className="w-60">
+						<div className="w-full max-w-[240px] md:w-60">
 							<LeadCard />
 						</div>
 					</div>

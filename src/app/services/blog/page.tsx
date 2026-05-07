@@ -177,28 +177,28 @@ export default function BlogServicePage() {
 							className="mb-12"
 						/>
 					</Reveal>
-					<Reveal delay={0.1} className="overflow-x-auto">
-						<div className="min-w-[500px] overflow-hidden rounded-2xl shadow-sm">
+					<Reveal delay={0.1}>
+						<div className="overflow-hidden rounded-2xl shadow-sm">
 							{/* Header */}
 							<div className="grid grid-cols-3">
-								<div className="bg-slate-100 px-6 py-4">
-									<span className="font-semibold text-slate-400 text-xs uppercase tracking-wider">
+								<div className="bg-slate-100 px-3 py-3 md:px-6 md:py-4">
+									<span className="font-semibold text-slate-400 text-[10px] uppercase tracking-wider md:text-xs">
 										항목
 									</span>
 								</div>
-								<div className="flex items-center gap-2 bg-slate-100 px-6 py-4">
-									<div className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-slate-300">
-										<X className="h-3 w-3 text-white" />
+								<div className="flex items-center gap-1.5 bg-slate-100 px-3 py-3 md:gap-2 md:px-6 md:py-4">
+									<div className="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-slate-300 md:h-5 md:w-5">
+										<X className="h-2.5 w-2.5 text-white md:h-3 md:w-3" />
 									</div>
-									<span className="font-semibold text-slate-500 text-xs uppercase tracking-wider">
+									<span className="font-semibold text-slate-500 text-[10px] uppercase tracking-wider md:text-xs">
 										일반 대행사
 									</span>
 								</div>
-								<div className="gradient-brand flex items-center gap-2 px-6 py-4">
-									<div className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-white/25">
-										<Check className="h-3 w-3 text-white" />
+								<div className="gradient-brand flex items-center gap-1.5 px-3 py-3 md:gap-2 md:px-6 md:py-4">
+									<div className="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-white/25 md:h-5 md:w-5">
+										<Check className="h-2.5 w-2.5 text-white md:h-3 md:w-3" />
 									</div>
-									<span className="font-semibold text-sm text-white uppercase tracking-wider">
+									<span className="font-semibold text-[10px] text-white uppercase tracking-wider md:text-sm">
 										그로스웨이브
 									</span>
 								</div>
@@ -206,14 +206,14 @@ export default function BlogServicePage() {
 							{/* Rows */}
 							{BLOG_COMPARISON.map((row) => (
 								<div key={row.label} className="grid grid-cols-3 border-slate-100 border-t">
-									<div className="bg-white px-6 py-4">
-										<span className="font-medium text-foreground text-sm">{row.label}</span>
+									<div className="bg-white px-3 py-3 md:px-6 md:py-4">
+										<span className="font-medium text-foreground text-xs md:text-sm">{row.label}</span>
 									</div>
-									<div className="bg-slate-50 px-6 py-4">
-										<span className="text-slate-400 text-sm">{row.general}</span>
+									<div className="bg-slate-50 px-3 py-3 md:px-6 md:py-4">
+										<span className="text-slate-400 text-xs md:text-sm">{row.general}</span>
 									</div>
-									<div className="bg-[#7c3aed]/5 px-6 py-4">
-										<span className="font-semibold text-[#7c3aed] text-sm">{row.us}</span>
+									<div className="bg-[#7c3aed]/5 px-3 py-3 md:px-6 md:py-4">
+										<span className="font-semibold text-[#7c3aed] text-xs md:text-sm">{row.us}</span>
 									</div>
 								</div>
 							))}

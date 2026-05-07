@@ -47,10 +47,10 @@ export default function ProcessTimeline() {
 					{/* 세로선 */}
 					<div className="absolute top-6 bottom-6 left-5 w-[2px] bg-slate-100" />
 
-					<div className="flex flex-col gap-8">
+					<div className="flex flex-col gap-6">
 						{PROCESS_STEPS.map((step, i) => (
 							<Reveal key={step.step} delay={i * 0.06}>
-								<div className="relative flex gap-6">
+								<div className="relative flex gap-5">
 									<div className="gradient-brand relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full font-bold text-sm text-white shadow-[0_4px_12px_rgba(124,58,237,0.3)]">
 										{step.step}
 									</div>

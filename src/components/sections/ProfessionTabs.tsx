@@ -39,7 +39,7 @@ export default function ProfessionTabs() {
 							<TabsContent key={p.slug} value={p.slug} className="mt-0">
 								<div className="grid gap-8 md:grid-cols-2">
 									{/* Key points */}
-									<div className="rounded-2xl bg-white p-8 shadow-sm">
+									<div className="rounded-2xl bg-white p-6 shadow-sm md:p-8">
 										<h3 className="mb-2 font-bold text-foreground text-xl">{p.label} 마케팅</h3>
 										<p className="mb-6 text-muted-foreground text-sm leading-relaxed">
 											{p.description}

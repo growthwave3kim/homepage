@@ -27,7 +27,7 @@ export default function ProfessionRotator() {
 					</p>
 					<h2 className="font-extrabold text-[26px] text-foreground leading-[1.15] tracking-tight sm:text-[36px] md:text-[52px] lg:text-[68px]">
 						오직 <span className="text-[#7c3aed]">[</span>
-						<span className="inline-block w-[3em] overflow-visible text-center">
+						<span className="inline-block w-[2.6em] overflow-visible text-center sm:w-[3em]">
 							<AnimatePresence mode="popLayout" initial={false}>
 								<motion.span
 									key={labels[index]}

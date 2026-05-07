@@ -86,7 +86,7 @@ export default function TeamCrews() {
 					/>
 				</Reveal>
 
-				<div className="flex flex-col gap-16">
+				<div className="flex flex-col gap-10 lg:gap-16">
 					<CrewBlock
 						icon={<Clapperboard className="h-5 w-5 text-white" aria-hidden="true" />}
 						label="영상팀"

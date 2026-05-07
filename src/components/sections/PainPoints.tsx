@@ -18,7 +18,7 @@ export default function PainPoints() {
 				<div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
 					{PAIN_POINTS.map((point, i) => (
 						<Reveal key={point.id} delay={i * 0.08}>
-							<div className="card-hover flex h-full flex-col gap-4 rounded-2xl border border-slate-200 bg-white p-6">
+							<div className="card-hover flex h-full flex-col gap-4 rounded-2xl border border-slate-200 bg-white p-5 md:p-6">
 								<div
 									className="gradient-brand flex h-8 w-8 shrink-0 items-center justify-center rounded-lg"
 									aria-hidden="true"

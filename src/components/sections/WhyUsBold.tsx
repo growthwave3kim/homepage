@@ -54,13 +54,13 @@ export default function WhyUsBold() {
 					<div className="overflow-hidden rounded-2xl border border-white/10">
 						{/* Header */}
 						<div className="grid grid-cols-2">
-							<div className="flex items-center gap-2.5 bg-white/6 px-8 py-5">
+							<div className="flex items-center gap-2.5 bg-white/6 px-4 py-3 md:px-8 md:py-5">
 								<div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-white/20">
 									<X className="h-3 w-3 text-white/60" />
 								</div>
 								<p className="font-semibold text-sm text-white/40">일반 대행사</p>
 							</div>
-							<div className="gradient-brand flex items-center gap-2.5 border-white/20 border-l px-8 py-5">
+							<div className="gradient-brand flex items-center gap-2.5 border-white/20 border-l px-4 py-3 md:px-8 md:py-5">
 								<div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-white/25">
 									<Check className="h-3 w-3 text-white" />
 								</div>
@@ -73,10 +73,10 @@ export default function WhyUsBold() {
 								key={`compare-${card.title}`}
 								className="grid grid-cols-2 border-white/[0.07] border-t"
 							>
-								<div className="bg-white/3 px-8 py-5">
+								<div className="bg-white/3 px-4 py-3 md:px-8 md:py-5">
 									<p className="text-sm text-white/30">{card.before}</p>
 								</div>
-								<div className="border-[#7c3aed]/50 border-l bg-[#7c3aed]/10 px-8 py-5">
+								<div className="border-[#7c3aed]/50 border-l bg-[#7c3aed]/10 px-4 py-3 md:px-8 md:py-5">
 									<p className="font-semibold text-sm text-white">{card.after}</p>
 								</div>
 							</div>

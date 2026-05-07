@@ -42,7 +42,7 @@ export default function ServiceCards() {
 							<Link
 								key={card.href}
 								href={card.href}
-								className="group flex flex-col rounded-2xl border border-slate-200 bg-white p-8 shadow-sm transition-all hover:-translate-y-1 hover:shadow-[0_8px_32px_rgba(124,58,237,0.12)]"
+								className="group flex flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-[0_8px_32px_rgba(124,58,237,0.12)] md:p-8"
 							>
 								<div className="mb-5 flex h-11 w-11 items-center justify-center rounded-xl bg-[#7c3aed]/10">
 									<Icon className="h-5 w-5 text-[#7c3aed]" />

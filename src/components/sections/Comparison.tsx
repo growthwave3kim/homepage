@@ -14,7 +14,7 @@ export default function Comparison() {
 				<Reveal delay={0.1}>
 					<div className="grid gap-4 md:grid-cols-2">
 						{/* General */}
-						<div className="rounded-2xl border border-slate-200 bg-white p-7">
+						<div className="rounded-2xl border border-slate-200 bg-white p-5 md:p-7">
 							<p className="mb-6 font-semibold text-base text-slate-400">일반 대행사</p>
 							<ul className="space-y-3">
 								{COMPARISON_ROWS.map((row) => (

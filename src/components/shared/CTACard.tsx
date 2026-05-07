@@ -14,14 +14,14 @@ export default function CTACard({
 	return (
 		<section className="px-4 py-24">
 			<div className="mx-auto max-w-3xl text-center">
-				<div className="rounded-3xl bg-gradient-to-br from-[#7c3aed]/8 via-[#4338ca]/6 to-[#1e3a8a]/8 p-8 ring-1 ring-[#7c3aed]/15 sm:p-12">
+				<div className="rounded-3xl bg-gradient-to-br from-[#7c3aed]/8 via-[#4338ca]/6 to-[#1e3a8a]/8 p-6 ring-1 ring-[#7c3aed]/15 sm:p-12">
 					<h2 className="mb-3 font-bold text-3xl text-foreground leading-tight tracking-tight md:text-4xl">
 						{headline}
 					</h2>
 					<p className="mb-8 text-muted-foreground">{sub}</p>
 					<Link
 						href="/contact"
-						className="gradient-brand inline-block rounded-full px-8 py-3.5 font-semibold text-base text-white shadow-[0_8px_24px_rgba(124,58,237,0.3)] transition-opacity hover:opacity-90"
+						className="gradient-brand block rounded-full px-8 py-3.5 font-semibold text-base text-white shadow-[0_8px_24px_rgba(124,58,237,0.3)] transition-opacity hover:opacity-90 sm:inline-block"
 					>
 						{buttonText}
 					</Link>

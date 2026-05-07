@@ -73,7 +73,7 @@ export default function ContactForm() {
 	}
 
 	return (
-		<div className="rounded-2xl border border-slate-100 bg-white p-8 shadow-[0_8px_40px_rgba(0,0,0,0.07)]">
+		<div className="rounded-2xl border border-slate-100 bg-white p-6 shadow-[0_8px_40px_rgba(0,0,0,0.07)] md:p-8">
 			<p className="mb-1 font-semibold text-[#7c3aed] text-sm uppercase tracking-widest">
 				상세 문의
 			</p>
