@@ -4,8 +4,8 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
-import PageTransition from "@/components/shared/PageTransition";
 import FloatingActions from "@/components/shared/FloatingActions";
+import PageTransition from "@/components/shared/PageTransition";
 import StickyCTA from "@/components/shared/StickyCTA";
 import { siteConfig } from "@/config/site";
 

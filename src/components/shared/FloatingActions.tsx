@@ -25,7 +25,9 @@ export default function FloatingActions() {
 				className="flex h-11 w-11 items-center justify-center rounded-full bg-[#03c75a] text-white shadow-lg transition-all duration-300 hover:scale-110"
 			>
 				<span className="sr-only">네이버 블로그</span>
-				<span className="font-bold text-sm" aria-hidden="true">N</span>
+				<span className="font-bold text-sm" aria-hidden="true">
+					N
+				</span>
 			</a>
 			<a
 				href={siteConfig.contact.kakaoOpenChat}

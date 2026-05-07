@@ -152,12 +152,13 @@ export default function Header() {
 
 				{/* Right */}
 				<div className="flex items-center gap-2">
-					<Link
-						href="/contact?subject=회사소개서"
+					<a
+						href="/growthwave-brochure.pdf"
+						download="Growth Wave 회사소개서.pdf"
 						className="hidden rounded-full border border-slate-200 px-4 py-2.5 font-semibold text-foreground text-sm transition-colors hover:bg-slate-50 lg:block"
 					>
 						회사소개서
-					</Link>
+					</a>
 					<Link
 						href="/contact"
 						className="gradient-brand hidden rounded-full px-5 py-2.5 font-semibold text-sm text-white shadow-[0_4px_16px_rgba(124,58,237,0.25)] transition-opacity hover:opacity-90 lg:block"
