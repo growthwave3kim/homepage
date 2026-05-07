@@ -37,13 +37,13 @@ export const metadata: Metadata = {
 		siteName: siteConfig.name,
 		title: siteConfig.title,
 		description: siteConfig.description,
-		images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: siteConfig.name }],
+		images: [{ url: "/og-image.png", width: 1200, height: 1200, alt: siteConfig.name }],
 	},
 	twitter: {
 		card: "summary_large_image",
 		title: siteConfig.title,
 		description: siteConfig.description,
-		images: ["/opengraph-image"],
+		images: ["/og-image.png"],
 	},
 	robots: {
 		index: true,

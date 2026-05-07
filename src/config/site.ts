@@ -26,7 +26,7 @@ export const siteConfig = {
 		"수임 마케팅",
 	],
 	url,
-	ogImage: `${url}/opengraph-image`,
+	ogImage: `${url}/og-image.png`,
 	locale: "ko_KR",
 	authors: [{ name: "Growth Wave", url }],
 	creator: "Growth Wave",
