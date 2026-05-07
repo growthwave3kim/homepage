@@ -50,3 +50,7 @@ next-env.d.ts
 .omc/sessions/
 .omc/state/
 .omc/project-memory.json
+**/.omc/
+
+# team photo originals (Korean filenames, English copies are tracked)
+public/images/team/김*.png
