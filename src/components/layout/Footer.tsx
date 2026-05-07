@@ -48,11 +48,10 @@ export default function Footer() {
 							<span className="text-slate-300">사업자등록번호</span>{" "}
 							{siteConfig.contact.businessNumber}
 						</p>
-						<div className="pt-1 leading-relaxed">
-							<p className="text-slate-300">주소</p>
-							<p className="whitespace-pre-line">{siteConfig.contact.address}</p>
-						</div>
-						<p className="pt-1">
+						<p>
+							<span className="text-slate-300">주소</span> {siteConfig.contact.address}
+						</p>
+						<p>
 							<span className="text-slate-300">TEL</span> {siteConfig.contact.tel}
 						</p>
 						<p>

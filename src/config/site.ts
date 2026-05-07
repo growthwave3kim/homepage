@@ -33,7 +33,7 @@ export const siteConfig = {
 	contact: {
 		tel: "010-4048-6460",
 		email: "growthwave.3kim@gmail.com",
-		address: "경기도 화성시 동탄구 동탄중심상가1길 36,\n8층 801-117A호 (반송동, 원영빌딩)",
+		address: "경기도 화성시 동탄구 동탄중심상가1길 36, 8층",
 		businessName: "그로스웨이브",
 		businessNumber: "112-31-25690",
 		kakaoOpenChat: "https://open.kakao.com/o/sgn3wFti",

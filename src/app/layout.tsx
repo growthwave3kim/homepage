@@ -5,6 +5,7 @@ import "./globals.css";
 import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
 import PageTransition from "@/components/shared/PageTransition";
+import FloatingActions from "@/components/shared/FloatingActions";
 import StickyCTA from "@/components/shared/StickyCTA";
 import { siteConfig } from "@/config/site";
 
@@ -97,6 +98,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 				</main>
 				<Footer />
 				<StickyCTA />
+				<FloatingActions />
 			</body>
 		</html>
 	);
