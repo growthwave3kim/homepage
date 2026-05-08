@@ -22,7 +22,10 @@ export default function Hero() {
 				<source src="/hero-bg.mp4" type="video/mp4" />
 			</video>
 			{/* Readability overlay */}
-			<div className="pointer-events-none absolute inset-0 bg-white/35" aria-hidden="true" />
+			<div
+				className="pointer-events-none absolute inset-0 bg-linear-to-b from-white/25 via-white/55 to-white/35"
+				aria-hidden="true"
+			/>
 
 			<div className="relative z-10 mx-auto max-w-4xl px-4 py-16 text-center md:py-24">
 				{/* Eyebrow */}
@@ -32,7 +35,7 @@ export default function Hero() {
 					transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
 					className="mb-6 font-semibold text-[#7c3aed] text-sm uppercase tracking-[0.25em]"
 				>
-					전문직 마케팅 전문
+					6개 전문직 · 광고 규정 직접 검토
 				</motion.p>
 
 				{/* Headline */}
@@ -58,7 +61,7 @@ export default function Hero() {
 				>
 					변호사·의사·한의사·수의사·노무사·세무사.
 					<br />
-					6개 직군의 광고 규정과 검색 의도를 직접 검토합니다.
+					광고 규정과 검색 의도를 한 팀이 검토합니다.
 				</motion.p>
 
 				{/* CTAs */}
@@ -77,14 +80,14 @@ export default function Hero() {
 					<div className="flex items-center gap-5">
 						<Link
 							href="/services/blog"
-							className="font-medium text-slate-600 text-sm transition-colors hover:text-[#7c3aed]"
+							className="font-medium text-slate-700 text-sm transition-colors hover:text-[#7c3aed]"
 						>
 							읽히는 블로그란? →
 						</Link>
-						<span className="text-slate-300 text-sm">|</span>
+						<span className="text-slate-400 text-sm">|</span>
 						<Link
 							href="/services/shortform"
-							className="font-medium text-slate-600 text-sm transition-colors hover:text-[#7c3aed]"
+							className="font-medium text-slate-700 text-sm transition-colors hover:text-[#7c3aed]"
 						>
 							터지는 숏폼이란? →
 						</Link>
@@ -96,7 +99,7 @@ export default function Hero() {
 					initial={{ opacity: 0 }}
 					animate={{ opacity: 1 }}
 					transition={{ duration: 0.6, delay: 0.55 }}
-					className="mt-8 font-medium text-[13px] text-slate-600 tracking-wide"
+					className="mt-8 font-medium text-[13px] text-slate-700 tracking-wide"
 				>
 					첫 상담 무료 · 영업일 1일 내 회신
 				</motion.p>

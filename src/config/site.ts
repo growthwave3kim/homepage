@@ -1,6 +1,6 @@
 import type { NavItem } from "@/types";
 
-const rawUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://growthwave.kr";
+const rawUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://growthwave.co.kr";
 const url = rawUrl.replace(/\/$/, "");
 
 export const siteConfig = {
