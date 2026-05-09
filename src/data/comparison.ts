@@ -10,7 +10,7 @@ export const COMPARISON_ROWS: ComparisonRow[] = [
 		growthwave: "직군별 광고 규정 사전 검토 후 제작",
 	},
 	{
-		general: "노출 수 위주 보고",
+		general: "노출 수에 집착",
 		growthwave: "상담 전환 단위 KPI 보고",
 	},
 	{

@@ -66,8 +66,8 @@ export const Header = () => {
 									<button
 										type="button"
 										className={cn(
-											"flex items-center gap-1 rounded-lg px-4 py-2 font-medium text-sm transition-colors hover:bg-slate-50",
-											isActive ? "text-[#7c3aed]" : "text-slate-600 hover:text-foreground",
+											"flex items-center gap-1 rounded-lg px-4 py-2 font-semibold text-[15px] transition-colors hover:bg-slate-50",
+											isActive ? "text-[#0a0a0a]" : "text-slate-700 hover:text-[#0a0a0a]",
 										)}
 									>
 										{item.label}
@@ -99,12 +99,12 @@ export const Header = () => {
 														onClick={() => setOpenMenu(null)}
 														className={cn(
 															"flex items-center gap-4 rounded-xl px-3 py-3 transition-colors hover:bg-slate-50",
-															isChildActive && "bg-[#7c3aed]/6 text-[#7c3aed]",
+															isChildActive && "bg-[#0a0a0a]/6 text-[#0a0a0a]",
 														)}
 													>
-														<div className="gradient-brand flex h-10 w-10 shrink-0 items-center justify-center rounded-full">
+														<div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-slate-100">
 															{ChildIcon && (
-																<ChildIcon className="h-4 w-4 text-white" aria-hidden="true" />
+																<ChildIcon className="h-4 w-4 text-[#0a0a0a]" aria-hidden="true" />
 															)}
 														</div>
 														<div className="min-w-0 flex-1">
@@ -112,7 +112,7 @@ export const Header = () => {
 																<span
 																	className={cn(
 																		"font-semibold text-sm",
-																		isChildActive ? "text-[#7c3aed]" : "text-foreground",
+																		isChildActive ? "text-[#0a0a0a]" : "text-foreground",
 																	)}
 																>
 																	{child.label}
@@ -138,10 +138,10 @@ export const Header = () => {
 								key={item.href}
 								href={item.href}
 								className={cn(
-									"relative rounded-lg px-4 py-2 font-medium text-sm transition-colors hover:bg-slate-50 hover:text-foreground",
+									"relative rounded-lg px-4 py-2 font-semibold text-[15px] transition-colors hover:bg-slate-50 hover:text-foreground",
 									isActive
 										? "text-[#7c3aed] after:absolute after:inset-x-2 after:-bottom-0.5 after:h-0.5 after:rounded-full after:bg-[#7c3aed] after:content-['']"
-										: "text-slate-600",
+										: "text-slate-700",
 								)}
 							>
 								{item.label}
@@ -155,15 +155,15 @@ export const Header = () => {
 					<a
 						href="/growthwave-brochure.pdf"
 						download="Growth Wave 회사소개서.pdf"
-						className="hidden rounded-full border border-slate-200 px-4 py-2.5 font-semibold text-foreground text-sm transition-colors hover:bg-slate-50 lg:block"
+						className="hidden rounded-md border border-slate-200 px-4 py-2.5 font-semibold text-foreground text-sm transition-colors hover:bg-slate-50 lg:block"
 					>
 						회사소개서
 					</a>
 					<Link
 						href="/contact"
-						className="gradient-brand hidden rounded-full px-5 py-2.5 font-semibold text-sm text-white shadow-[0_4px_16px_rgba(124,58,237,0.25)] transition-opacity hover:opacity-90 lg:block"
+						className="hidden rounded-md bg-[#0a0a0a] px-5 py-2.5 font-semibold text-sm text-white transition-opacity hover:opacity-80 lg:block"
 					>
-						무료 상담 신청
+						상담 신청
 					</Link>
 					<MobileMenu />
 				</div>

@@ -1,35 +1,42 @@
 import Link from "next/link";
 import { Reveal } from "@/components/shared/Reveal";
-import { SectionHeading } from "@/components/shared/SectionHeading";
 import { TeamCard } from "@/components/shared/TeamCard";
 import { TEAM_MEMBERS } from "@/data/team";
 
 export const TeamPreview = () => {
 	return (
-		<section className="bg-slate-50 px-4 py-20 md:py-24">
+		<section className="bg-white px-4 py-28 md:py-32">
 			<div className="mx-auto max-w-6xl">
 				<Reveal>
-					<SectionHeading
-						eyebrow="Team"
-						title="규정을 아는 사람들이 직접 만듭니다."
-						sub="운영팀이 아니라 기획자가 콘텐츠를 씁니다."
-						className="mb-12"
-					/>
+					<div className="mb-12 text-center">
+						<p className="mb-2 font-mono font-semibold text-[#a78bfa] text-[13px] uppercase tracking-[0.25em] md:mb-3">
+							Team
+						</p>
+						<h2 className="font-bold text-3xl text-foreground leading-tight tracking-tight md:text-4xl lg:text-[48px]">
+							규정을 아는 사람들이 직접 만듭니다.
+						</h2>
+						<p className="mx-auto mt-3 max-w-2xl text-base text-muted-foreground leading-relaxed md:mt-4 md:text-lg">
+							운영팀이 아니라 기획자가 콘텐츠를 씁니다.
+						</p>
+					</div>
 				</Reveal>
 
 				<div className="grid gap-6 md:grid-cols-3">
-					{TEAM_MEMBERS.map((member, i) => (
-						<Reveal key={member.nameEn} delay={i * 0.08}>
-							<TeamCard member={member} />
-						</Reveal>
-					))}
+					{TEAM_MEMBERS.map((member, i) => {
+						const directions = ["scale", "up", "scale"] as const;
+						return (
+							<Reveal key={member.nameEn} delay={i * 0.08} direction={directions[i % 3]}>
+								<TeamCard member={member} />
+							</Reveal>
+						);
+					})}
 				</div>
 
 				<Reveal>
 					<div className="mt-10 text-center">
 						<Link
 							href="/team"
-							className="inline-flex items-center gap-2 font-semibold text-[#7c3aed] text-sm hover:underline"
+							className="inline-flex items-center gap-2 border-current border-b pb-0.5 font-semibold text-[#0a0a0a] text-sm hover:opacity-70"
 						>
 							팀 전체 보기 →
 						</Link>

@@ -1,6 +1,6 @@
 "use client";
 
-import { ChevronUp, MessageCircle } from "lucide-react";
+import { ChevronUp } from "lucide-react";
 import { useEffect, useState } from "react";
 import { siteConfig } from "@/config/site";
 
@@ -16,37 +16,44 @@ export const FloatingActions = () => {
 	const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
 	return (
-		<div className="fixed right-5 bottom-20 z-50 flex flex-col items-center gap-2.5 md:right-8 md:bottom-8">
+		<div className="fixed top-1/2 right-6 z-40 flex -translate-y-1/2 flex-col items-center gap-3 md:right-8">
+			{/* 네이버 블로그 */}
 			<a
 				href={siteConfig.contact.naverBlog}
 				target="_blank"
 				rel="noopener noreferrer"
 				aria-label="네이버 블로그"
-				className="flex h-11 w-11 items-center justify-center rounded-full bg-[#03c75a] text-white shadow-lg transition-all duration-300 hover:scale-110"
+				className="flex h-14 w-14 items-center justify-center rounded-full bg-[#03c75a] shadow-lg transition-transform duration-300 hover:scale-110"
 			>
 				<span className="sr-only">네이버 블로그</span>
-				<span className="font-bold text-sm" aria-hidden="true">
-					N
+				<span className="font-bold text-sm text-white" aria-hidden="true">
+					blog
 				</span>
 			</a>
+
+			{/* 카카오톡 */}
 			<a
 				href={siteConfig.contact.kakaoOpenChat}
 				target="_blank"
 				rel="noopener noreferrer"
 				aria-label="카카오톡 채널"
-				className="flex h-11 w-11 items-center justify-center rounded-full bg-[#fee500] text-[#3c1e1e] shadow-lg transition-all duration-300 hover:scale-110"
+				className="flex h-14 w-14 items-center justify-center rounded-full bg-[#fee500] shadow-lg transition-transform duration-300 hover:scale-110"
 			>
 				<span className="sr-only">카카오톡 채널</span>
-				<MessageCircle className="h-5 w-5" aria-hidden="true" />
+				<span className="font-bold text-[#3c1e1e] text-sm" aria-hidden="true">
+					TALK
+				</span>
 			</a>
+
+			{/* 위로가기 */}
 			{showScrollTop && (
 				<button
 					type="button"
 					onClick={scrollToTop}
 					aria-label="맨 위로 이동"
-					className="flex h-11 w-11 items-center justify-center rounded-full bg-[#7c3aed] text-white shadow-lg transition-all duration-300 hover:scale-110 hover:bg-[#6d28d9]"
+					className="flex h-14 w-14 items-center justify-center rounded-full bg-slate-900 text-white shadow-lg transition-transform duration-300 hover:scale-110"
 				>
-					<ChevronUp className="h-5 w-5" />
+					<ChevronUp className="h-6 w-6" />
 				</button>
 			)}
 		</div>

@@ -36,11 +36,11 @@ const MILESTONES = [
 
 export const AboutCEOTimeline = () => {
 	return (
-		<section className="bg-slate-50 px-4 py-20 md:py-24">
+		<section className="bg-white px-4 py-24 md:py-28">
 			<div className="mx-auto max-w-3xl">
 				<Reveal>
 					<div className="mb-12 text-center">
-						<p className="mb-3 font-semibold text-[#7c3aed] text-sm uppercase tracking-[0.25em]">
+						<p className="mb-3 font-semibold text-[#a78bfa] text-sm uppercase tracking-[0.25em]">
 							Career
 						</p>
 						<h2 className="font-bold text-2xl text-foreground leading-tight tracking-tight md:text-3xl">
@@ -62,7 +62,7 @@ export const AboutCEOTimeline = () => {
 								<div className="flex items-start gap-6 md:gap-8">
 									{/* Year */}
 									<div className="w-20 shrink-0 pt-1 text-right md:w-24">
-										<span className="font-bold text-[#7c3aed] text-sm">{m.year}</span>
+										<span className="font-bold text-[#0a0a0a] text-sm">{m.year}</span>
 									</div>
 
 									{/* Dot */}
@@ -88,4 +88,4 @@ export const AboutCEOTimeline = () => {
 			</div>
 		</section>
 	);
-}
+};

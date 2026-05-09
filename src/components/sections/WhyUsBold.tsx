@@ -10,7 +10,14 @@ const ICON_MAP: Record<string, React.ComponentType<{ className?: string }>> = {
 
 export const WhyUsBold = () => {
 	return (
-		<section className="bg-[#0b1220] px-4 py-20 md:py-24">
+		<section className="relative bg-[#0a0e2e] px-4 py-20 md:py-24">
+			<div
+				className="pointer-events-none absolute inset-x-0 top-0 h-[400px]"
+				aria-hidden="true"
+				style={{
+					background: "radial-gradient(50% 100% at 50% 0%, rgba(124,58,237,0.14), transparent 70%)",
+				}}
+			/>
 			<div className="mx-auto max-w-6xl">
 				<Reveal>
 					<div className="mb-12 text-center">
@@ -18,9 +25,9 @@ export const WhyUsBold = () => {
 							Why Us
 						</p>
 						<h2 className="font-bold text-3xl text-white leading-tight tracking-tight md:text-4xl">
-							대부분의 대행사는 노출 수만 보고합니다.
+							대부분의 대행사는 노출 수에 집착합니다.
 						</h2>
-						<p className="mt-4 text-lg text-white/60">노출이 아닌, 의뢰로 평가합니다.</p>
+						<p className="mt-4 text-lg text-white/60">수임 전환, 그것만 봅니다.</p>
 					</div>
 				</Reveal>
 
@@ -28,20 +35,22 @@ export const WhyUsBold = () => {
 				<div className="mb-12 grid gap-6 md:grid-cols-3">
 					{WHY_US_BOLD_CARDS.map((card, i) => {
 						const Icon = ICON_MAP[card.icon] ?? ShieldCheck;
+						const directions = ["left", "up", "right"] as const;
 						return (
-							<Reveal key={card.title} delay={i * 0.1} className="h-full">
-								<div className="flex h-full flex-col rounded-2xl bg-white p-8 shadow-sm">
-									<div className="gradient-brand mb-5 flex h-12 w-12 items-center justify-center rounded-full">
-										<Icon className="h-5 w-5 text-white" aria-hidden="true" />
-									</div>
+							<Reveal key={card.title} delay={i * 0.1} direction={directions[i]} className="h-full">
+								<div className="flex h-full flex-col rounded-md bg-white p-8">
+									<span className="mb-5 block font-mono text-[#0a0a0a]/30 text-[11px] tracking-[0.2em]">
+										{String(i + 1).padStart(2, "0")}
+									</span>
+									<Icon className="mb-4 h-5 w-5 text-[#7c3aed]" aria-hidden="true" />
 									<div className="mb-2 flex items-center gap-3">
 										<h3 className="font-bold text-foreground text-lg">{card.title}</h3>
 									</div>
 									<p className="mb-4 text-muted-foreground text-sm leading-relaxed">
 										{card.description}
 									</p>
-									<div className="mt-auto flex min-h-[3.25rem] items-center rounded-xl bg-[#7c3aed]/5 px-4 py-3">
-										<span className="font-bold text-[#7c3aed] text-sm">{card.stat}</span>
+									<div className="mt-auto flex min-h-[3.25rem] items-center rounded-md bg-[#7c3aed]/[0.08] px-4 py-3">
+										<span className="font-semibold text-[#7c3aed] text-sm">{card.stat}</span>
 									</div>
 								</div>
 							</Reveal>
@@ -51,7 +60,7 @@ export const WhyUsBold = () => {
 
 				{/* Before / After 비교 */}
 				<Reveal>
-					<div className="overflow-hidden rounded-2xl border border-white/10">
+					<div className="overflow-hidden rounded-md border border-white/[0.12]">
 						{/* Header */}
 						<div className="grid grid-cols-2">
 							<div className="flex items-center gap-2.5 bg-white/6 px-4 py-3 md:px-8 md:py-5">
@@ -74,7 +83,7 @@ export const WhyUsBold = () => {
 								className="grid grid-cols-2 border-white/[0.07] border-t"
 							>
 								<div className="bg-white/3 px-4 py-3 md:px-8 md:py-5">
-									<p className="text-sm text-white/30">{card.before}</p>
+									<p className="text-sm text-white/40">{card.before}</p>
 								</div>
 								<div className="border-[#7c3aed]/50 border-l bg-[#7c3aed]/10 px-4 py-3 md:px-8 md:py-5">
 									<p className="font-semibold text-sm text-white">{card.after}</p>
@@ -86,4 +95,4 @@ export const WhyUsBold = () => {
 			</div>
 		</section>
 	);
-}
+};

@@ -1,11 +1,11 @@
 import { Reveal } from "@/components/shared/Reveal";
 import { SectionHeading } from "@/components/shared/SectionHeading";
-import { cn } from "@/lib/utils";
 import { DEPARTMENTS } from "@/data/org-structure";
+import { cn } from "@/lib/utils";
 
 const LeadCard = () => {
 	return (
-		<div className="gradient-brand rounded-2xl p-6 shadow-[0_8px_30px_rgba(124,58,237,0.20)]">
+		<div className="rounded-md bg-[#0a0a0a] p-6">
 			<p className="font-bold text-base text-white">대표</p>
 			<p className="mt-1 text-white/65 text-xs leading-relaxed">전문직 마케팅 전략 총괄</p>
 		</div>
@@ -34,7 +34,7 @@ const VDash = ({ height = "h-5" }: { height?: string }) => {
 	return (
 		<div className="flex justify-center" aria-hidden="true">
 			<div
-				className={cn("w-px border-[#7c3aed]/30 border-dashed", height)}
+				className={cn("w-px border-slate-200 border-dashed", height)}
 				style={{ borderLeftWidth: "1.5px" }}
 			/>
 		</div>
@@ -48,27 +48,27 @@ const HBar = () => {
 				<div key={i} className="relative">
 					{i === 0 && (
 						<>
-							<div className="absolute top-0 right-0 left-1/2 border-[#7c3aed]/25 border-t border-dashed" />
+							<div className="absolute top-0 right-0 left-1/2 border-slate-200 border-t border-dashed" />
 							<div
-								className="absolute top-0 left-1/2 h-full border-[#7c3aed]/25 border-l border-dashed"
+								className="absolute top-0 left-1/2 h-full border-slate-200 border-l border-dashed"
 								style={{ borderLeftWidth: "1.5px" }}
 							/>
 						</>
 					)}
 					{i === 1 && (
 						<>
-							<div className="absolute inset-x-0 top-0 border-[#7c3aed]/25 border-t border-dashed" />
+							<div className="absolute inset-x-0 top-0 border-slate-200 border-t border-dashed" />
 							<div
-								className="absolute top-0 left-1/2 h-full border-[#7c3aed]/25 border-l border-dashed"
+								className="absolute top-0 left-1/2 h-full border-slate-200 border-l border-dashed"
 								style={{ borderLeftWidth: "1.5px" }}
 							/>
 						</>
 					)}
 					{i === 2 && (
 						<>
-							<div className="absolute top-0 right-1/2 left-0 border-[#7c3aed]/25 border-t border-dashed" />
+							<div className="absolute top-0 right-1/2 left-0 border-slate-200 border-t border-dashed" />
 							<div
-								className="absolute top-0 left-1/2 h-full border-[#7c3aed]/25 border-l border-dashed"
+								className="absolute top-0 left-1/2 h-full border-slate-200 border-l border-dashed"
 								style={{ borderLeftWidth: "1.5px" }}
 							/>
 						</>
@@ -81,7 +81,7 @@ const HBar = () => {
 
 export const OrgChart = () => {
 	return (
-		<section className="relative overflow-hidden bg-slate-50 px-4 py-20 md:py-24">
+		<section className="relative overflow-hidden bg-white px-4 py-24 md:py-28">
 			<div className="gradient-soft pointer-events-none absolute inset-0" aria-hidden="true" />
 
 			<div className="relative mx-auto max-w-4xl">

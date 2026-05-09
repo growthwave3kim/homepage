@@ -12,7 +12,7 @@ const ICON_MAP: Record<string, React.ElementType> = {
 
 export const WhyUs = () => {
 	return (
-		<section id="about" className="bg-white px-4 py-20 md:py-24">
+		<section id="about" className="bg-white px-4 py-24 md:py-28">
 			<div className="mx-auto max-w-6xl">
 				<Reveal>
 					<SectionHeading
@@ -28,10 +28,8 @@ export const WhyUs = () => {
 						const Icon = ICON_MAP[card.icon] ?? ShieldCheck;
 						return (
 							<Reveal key={card.title} delay={i * 0.1}>
-								<div className="card-hover flex h-full gap-5 rounded-2xl border border-slate-200 bg-white p-7">
-									<div className="gradient-brand flex h-12 w-12 shrink-0 items-center justify-center rounded-full">
-										<Icon className="h-5 w-5 text-white" aria-hidden="true" />
-									</div>
+								<div className="card-hover flex h-full gap-5 rounded-md border border-slate-200 bg-white p-7">
+									<Icon className="h-5 w-5 shrink-0 text-[#0a0a0a]" aria-hidden="true" />
 									<div>
 										<h3 className="mb-2 font-bold text-[17px] text-foreground">{card.title}</h3>
 										<p className="text-muted-foreground text-sm leading-relaxed">
@@ -46,4 +44,4 @@ export const WhyUs = () => {
 			</div>
 		</section>
 	);
-}
+};

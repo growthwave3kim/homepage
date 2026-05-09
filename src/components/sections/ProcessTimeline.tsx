@@ -3,11 +3,11 @@ import { PROCESS_STEPS } from "@/data/process";
 
 export const ProcessTimeline = () => {
 	return (
-		<section className="bg-white px-4 py-20 md:py-24">
+		<section className="bg-white px-4 py-24 md:py-28">
 			<div className="mx-auto max-w-6xl">
 				<Reveal>
 					<div className="mb-16 text-center">
-						<p className="mb-3 font-semibold text-[#7c3aed] text-sm uppercase tracking-[0.25em]">
+						<p className="mb-3 font-semibold text-[#0a0a0a] text-sm uppercase tracking-[0.25em]">
 							Process
 						</p>
 						<h2 className="font-bold text-3xl text-foreground leading-tight tracking-tight md:text-4xl">
@@ -29,7 +29,7 @@ export const ProcessTimeline = () => {
 							<Reveal key={step.step} delay={i * 0.06}>
 								<div className="flex flex-col items-center text-center">
 									{/* 번호 원 */}
-									<div className="gradient-brand relative z-10 mb-5 flex h-12 w-12 items-center justify-center rounded-full font-bold text-base text-white shadow-[0_4px_16px_rgba(124,58,237,0.3)]">
+									<div className="relative z-10 mb-5 flex h-12 w-12 items-center justify-center rounded-full bg-[#0a0a0a] font-bold text-base text-white">
 										{step.step}
 									</div>
 									<h3 className="mb-2 font-bold text-base text-foreground">{step.title}</h3>
@@ -51,7 +51,7 @@ export const ProcessTimeline = () => {
 						{PROCESS_STEPS.map((step, i) => (
 							<Reveal key={step.step} delay={i * 0.06}>
 								<div className="relative flex gap-5">
-									<div className="gradient-brand relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full font-bold text-sm text-white shadow-[0_4px_12px_rgba(124,58,237,0.3)]">
+									<div className="relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#0a0a0a] font-bold text-sm text-white">
 										{step.step}
 									</div>
 									<div className="pt-1.5">

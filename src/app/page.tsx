@@ -1,14 +1,12 @@
-import { AdRegulationGuide } from "@/components/sections/AdRegulationGuide";
-import { Cases } from "@/components/sections/Cases";
-import { FAQPreview } from "@/components/sections/FAQPreview";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 import { Hero } from "@/components/sections/Hero";
 import { PainPoints } from "@/components/sections/PainPoints";
-import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
+import { ProcessSteps } from "@/components/sections/ProcessSteps";
 import { ProfessionRotator } from "@/components/sections/ProfessionRotator";
+import { RealReviews } from "@/components/sections/RealReviews";
 import { ServiceCards } from "@/components/sections/ServiceCards";
+import { StatBlock } from "@/components/sections/StatBlock";
 import { TeamPreview } from "@/components/sections/TeamPreview";
-import { Testimonials } from "@/components/sections/Testimonials";
 import { WhyUsBold } from "@/components/sections/WhyUsBold";
 
 export const HomePage = () => {
@@ -16,18 +14,16 @@ export const HomePage = () => {
 		<>
 			<Hero />
 			<ProfessionRotator />
+			<StatBlock />
+			<ProcessSteps />
 			<PainPoints />
 			<WhyUsBold />
+			<RealReviews />
 			<ServiceCards />
-			<AdRegulationGuide preview />
-			<ProcessTimeline />
-			<Cases />
-			<Testimonials />
 			<TeamPreview />
-			<FAQPreview />
 			<FinalCTA />
 		</>
 	);
-}
+};
 
 export default HomePage;

@@ -27,7 +27,7 @@ export const RegulationPage = () => {
 				title="직군별 광고 규정을"
 				titleHighlight="직접 검토합니다"
 				sub="변호사법·의료법·세무사법 등 6개 직군 광고 규정을 직접 검토하여 정리했습니다. 모든 콘텐츠는 발행 전 해당 규정을 확인하고 제작합니다."
-				ctaText="무료 상담 신청"
+				ctaText="상담 신청"
 				ctaHref="/contact"
 				secondaryText="서비스 살펴보기"
 				secondaryHref="/services/professional"
@@ -41,6 +41,6 @@ export const RegulationPage = () => {
 			/>
 		</>
 	);
-}
+};
 
 export default RegulationPage;

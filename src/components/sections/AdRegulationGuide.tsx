@@ -11,11 +11,11 @@ export const AdRegulationGuide = ({ preview = false }: AdRegulationGuideProps) =
 	const items = preview ? REGULATIONS.slice(0, 4) : REGULATIONS;
 
 	return (
-		<section className="bg-slate-50 px-4 py-20 md:py-24">
+		<section className="bg-white px-4 py-24 md:py-28">
 			<div className="mx-auto max-w-6xl">
 				<Reveal>
 					<div className="mb-12 text-center">
-						<p className="mb-3 font-semibold text-[#7c3aed] text-sm uppercase tracking-[0.25em]">
+						<p className="mb-3 font-semibold text-[#0a0a0a] text-sm uppercase tracking-[0.25em]">
 							Regulation
 						</p>
 						<h2 className="font-bold text-3xl text-foreground leading-tight tracking-tight md:text-4xl">
@@ -34,14 +34,14 @@ export const AdRegulationGuide = ({ preview = false }: AdRegulationGuideProps) =
 						}
 					>
 						{items.map((r) => (
-							<div key={r.slug} className="rounded-2xl border border-slate-200 bg-white p-6">
+							<div key={r.slug} className="rounded-md border border-slate-200 bg-white p-6">
 								<div className="mb-4 flex items-center gap-3">
-									<div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#7c3aed]/10">
-										<BookText className="h-4 w-4 text-[#7c3aed]" aria-hidden="true" />
+									<div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-slate-100">
+										<BookText className="h-4 w-4 text-[#0a0a0a]" aria-hidden="true" />
 									</div>
 									<div>
 										<p className="font-bold text-foreground">{r.profession}</p>
-										<p className="text-[#7c3aed] text-xs">
+										<p className="text-slate-500 text-xs">
 											{r.law} · {r.rule}
 										</p>
 									</div>
@@ -68,9 +68,7 @@ export const AdRegulationGuide = ({ preview = false }: AdRegulationGuideProps) =
 											{r.prohibited.map((p) => (
 												<li key={p} className="flex items-start gap-1.5">
 													<span className="mt-0.5 text-red-400 text-xs">✕</span>
-													<span className="text-muted-foreground text-xs leading-relaxed">
-														{p}
-													</span>
+													<span className="text-muted-foreground text-xs leading-relaxed">{p}</span>
 												</li>
 											))}
 										</ul>
@@ -86,7 +84,7 @@ export const AdRegulationGuide = ({ preview = false }: AdRegulationGuideProps) =
 						<div className="mt-8 text-center">
 							<Link
 								href="/regulation"
-								className="inline-flex items-center gap-2 font-semibold text-[#7c3aed] text-sm transition-gap hover:gap-3"
+								className="inline-flex items-center gap-2 font-semibold text-[#0a0a0a] text-sm transition-gap hover:gap-3"
 							>
 								6개 직군 전체 광고 규정 가이드 보기
 								<ArrowRight className="h-4 w-4" />

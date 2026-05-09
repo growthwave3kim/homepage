@@ -3,7 +3,7 @@ import type { PainPoint } from "@/types";
 export const PAIN_POINTS: PainPoint[] = [
 	{
 		id: "1",
-		text: "보고서엔 노출 수만 가득한데 정작 상담 문의는 없어요.",
+		text: "노출 수는 많은데, 정작 상담 문의는 없어요.",
 	},
 	{
 		id: "2",
@@ -11,7 +11,7 @@ export const PAIN_POINTS: PainPoint[] = [
 	},
 	{
 		id: "3",
-		text: "전문 용어를 콘텐츠로 풀지 못하는 작가와 계속 일해요.",
+		text: "제 의뢰인 입장에서 쓴 글이 아닌 것 같아요.",
 	},
 	{
 		id: "4",
@@ -19,10 +19,10 @@ export const PAIN_POINTS: PainPoint[] = [
 	},
 	{
 		id: "5",
-		text: "담당자가 또 바뀌었어요. 처음부터 다시 설명해야 해요.",
+		text: "담당자가 바뀔 때마다 처음으로 돌아가요.",
 	},
 	{
 		id: "6",
-		text: "계획서는 그럴싸한데, 실제 발행은 월 2~3개뿐이에요.",
+		text: "계획서는 그럴싸한데, 막상 진행하면 얘기가 달라져요.",
 	},
 ];

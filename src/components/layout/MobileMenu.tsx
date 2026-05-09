@@ -43,9 +43,9 @@ export const MobileMenu = () => {
 						<Link
 							href="/contact"
 							onClick={() => setOpen(false)}
-							className="gradient-brand block w-full rounded-full py-3 text-center font-semibold text-sm text-white transition-opacity hover:opacity-90"
+							className="block w-full rounded-md bg-[#0a0a0a] py-3 text-center font-semibold text-sm text-white transition-opacity hover:opacity-80"
 						>
-							무료 상담 신청
+							상담 신청
 						</Link>
 					</div>
 
@@ -60,7 +60,7 @@ export const MobileMenu = () => {
 											<AccordionTrigger
 												className={cn(
 													"rounded-lg px-4 py-3 font-medium text-[15px] hover:bg-slate-50 hover:no-underline",
-													isParentActive ? "text-[#7c3aed]" : "text-foreground",
+													isParentActive ? "text-[#0a0a0a]" : "text-foreground",
 												)}
 											>
 												{item.label}
@@ -78,7 +78,7 @@ export const MobileMenu = () => {
 																className={cn(
 																	"rounded-lg px-3 py-3 text-sm transition-colors hover:bg-slate-50",
 																	isChildActive
-																		? "bg-[#7c3aed]/10 font-semibold text-[#7c3aed]"
+																		? "bg-[#0a0a0a]/8 font-semibold text-[#0a0a0a]"
 																		: "text-slate-600",
 																)}
 															>
@@ -101,7 +101,7 @@ export const MobileMenu = () => {
 									onClick={() => setOpen(false)}
 									className={cn(
 										"rounded-lg px-4 py-3 font-medium text-[15px] transition-colors hover:bg-slate-50",
-										isActive ? "text-[#7c3aed]" : "text-foreground",
+										isActive ? "text-[#0a0a0a]" : "text-foreground",
 									)}
 								>
 									{item.label}
@@ -115,9 +115,9 @@ export const MobileMenu = () => {
 						<Link
 							href="/contact"
 							onClick={() => setOpen(false)}
-							className="gradient-brand block w-full rounded-full py-3.5 text-center font-semibold text-sm text-white transition-opacity hover:opacity-90"
+							className="block w-full rounded-md bg-[#0a0a0a] py-3.5 text-center font-semibold text-sm text-white transition-opacity hover:opacity-80"
 						>
-							무료 상담 신청
+							상담 신청
 						</Link>
 					</div>
 				</div>

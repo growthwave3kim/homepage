@@ -3,11 +3,11 @@ import { PRICING_FACTORS } from "@/data/pricing";
 
 export const PricingNote = () => {
 	return (
-		<section className="bg-white px-4 py-20 md:py-24">
+		<section className="bg-white px-4 py-24 md:py-28">
 			<div className="mx-auto max-w-4xl">
 				<Reveal>
 					<div className="mb-10 text-center">
-						<p className="mb-3 font-semibold text-[#7c3aed] text-sm uppercase tracking-[0.25em]">
+						<p className="mb-3 font-semibold text-[#0a0a0a] text-sm uppercase tracking-[0.25em]">
 							Pricing
 						</p>
 						<h2 className="font-bold text-3xl text-foreground leading-tight tracking-tight md:text-4xl">
@@ -24,7 +24,7 @@ export const PricingNote = () => {
 				<Reveal>
 					<div className="grid gap-4 sm:grid-cols-3">
 						{PRICING_FACTORS.map((f) => (
-							<div key={f.title} className="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+							<div key={f.title} className="rounded-md border border-slate-200 bg-white p-6">
 								<p className="mb-2 font-bold text-foreground">{f.title}</p>
 								<p className="text-muted-foreground text-sm leading-relaxed">{f.description}</p>
 							</div>
@@ -33,11 +33,11 @@ export const PricingNote = () => {
 				</Reveal>
 
 				<Reveal>
-					<div className="mt-8 flex flex-col items-center justify-center gap-2 rounded-2xl border border-[#7c3aed]/15 bg-[#7c3aed]/5 px-8 py-6 text-center sm:flex-row sm:gap-8">
+					<div className="mt-8 flex flex-col items-center justify-center gap-2 rounded-md border border-slate-200 bg-slate-50 px-8 py-6 text-center sm:flex-row sm:gap-8">
 						{["초기 진단 무료", "견적서 영업일 1주 내 발송", "계약 압박 없음"].map((item) => (
 							<div key={item} className="flex items-center gap-2">
-								<span className="h-1.5 w-1.5 rounded-full bg-[#7c3aed]" />
-								<span className="font-semibold text-[#7c3aed] text-sm">{item}</span>
+								<span className="h-1.5 w-1.5 rounded-full bg-[#0a0a0a]" />
+								<span className="font-semibold text-[#0a0a0a] text-sm">{item}</span>
 							</div>
 						))}
 					</div>

@@ -4,13 +4,13 @@ import { EXPERTISE, MESSAGE_PARAGRAPHS } from "@/data/ceo-message";
 
 export const AboutCEOMessage = () => {
 	return (
-		<section className="bg-white px-4 py-20 md:py-24">
+		<section className="bg-white px-4 py-24 md:py-28">
 			<div className="mx-auto max-w-5xl">
 				<Reveal>
 					<div className="flex flex-col items-start gap-6 md:flex-row md:gap-16">
 						{/* Photo */}
 						<div className="shrink-0">
-							<div className="relative h-48 w-40 overflow-hidden rounded-3xl shadow-[0_8px_32px_rgba(0,0,0,0.12)] md:h-80 md:w-64">
+							<div className="relative h-48 w-40 overflow-hidden rounded-md shadow-[0_8px_32px_rgba(0,0,0,0.12)] md:h-80 md:w-64">
 								<Image
 									src="/images/team/taehoon-kim.png"
 									alt="김태훈 대표"
@@ -23,7 +23,7 @@ export const AboutCEOMessage = () => {
 
 						{/* Message */}
 						<div className="flex flex-col">
-							<p className="mb-3 font-semibold text-[#7c3aed] text-sm uppercase tracking-[0.25em]">
+							<p className="mb-3 font-semibold text-[#a78bfa] text-sm uppercase tracking-[0.25em]">
 								CEO Message
 							</p>
 							<h2 className="mb-6 font-bold text-2xl text-foreground leading-tight tracking-tight md:text-3xl">
@@ -33,7 +33,7 @@ export const AboutCEOMessage = () => {
 								{EXPERTISE.map((tag) => (
 									<span
 										key={tag}
-										className="rounded-full border border-[#7c3aed]/20 bg-[#7c3aed]/8 px-3 py-1 font-semibold text-[#7c3aed] text-xs"
+										className="rounded-md border border-slate-200 bg-slate-50 px-3 py-1 font-semibold text-slate-600 text-xs"
 									>
 										{tag}
 									</span>

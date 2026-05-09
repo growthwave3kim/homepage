@@ -24,7 +24,7 @@ export const ProfessionalServicePage = () => {
 				title="전문직 마케팅은"
 				titleHighlight="다릅니다"
 				sub="광고 규정·신뢰·검색 의도가 모두 까다롭습니다. 규정을 알고 직군을 이해하는 팀이 콘텐츠를 설계합니다."
-				ctaText="무료 상담 신청"
+				ctaText="상담 신청"
 				ctaHref="/contact"
 				secondaryText="자주 묻는 질문"
 				secondaryHref="/faq"
@@ -38,9 +38,9 @@ export const ProfessionalServicePage = () => {
 			<Cases />
 			<Testimonials />
 			<PricingNote />
-			<CTACard headline="무료 상담으로 시작하세요" sub="24시간 안으로 답변드립니다." />
+			<CTACard headline="상담으로 시작하세요" sub="영업일 1일 내 회신드립니다." />
 		</>
 	);
-}
+};
 
 export default ProfessionalServicePage;

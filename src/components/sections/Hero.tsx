@@ -2,7 +2,6 @@
 
 import { motion } from "motion/react";
 import Link from "next/link";
-import { WaveDivider } from "@/components/shared/WaveDivider";
 
 export const Hero = () => {
 	return (
@@ -23,7 +22,7 @@ export const Hero = () => {
 			</video>
 			{/* Readability overlay */}
 			<div
-				className="pointer-events-none absolute inset-0 bg-linear-to-b from-white/25 via-white/55 to-white/35"
+				className="pointer-events-none absolute inset-0 bg-linear-to-b from-white/40 via-white/65 to-white/45"
 				aria-hidden="true"
 			/>
 
@@ -35,7 +34,7 @@ export const Hero = () => {
 					transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
 					className="mb-6 font-semibold text-[#7c3aed] text-sm uppercase tracking-[0.25em]"
 				>
-					6개 전문직 · 광고 규정 직접 검토
+					징계 없는 마케팅
 				</motion.p>
 
 				{/* Headline */}
@@ -45,10 +44,10 @@ export const Hero = () => {
 					transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
 					className="mb-6 leading-[1.2] tracking-tight md:leading-[1.12]"
 				>
-					<span className="gradient-text font-bold text-[32px] sm:text-[44px] md:text-[68px] lg:text-[80px]">
+					<span className="font-bold text-[#0a0a0a] text-[32px] tracking-[-0.04em] sm:text-[44px] md:text-[68px] lg:text-[80px]">
 						전문직 마케팅은
 						<br />
-						달라야 합니다.
+						<span className="gradient-text">달라야</span> 합니다
 					</span>
 				</motion.h1>
 
@@ -59,9 +58,9 @@ export const Hero = () => {
 					transition={{ duration: 0.6, delay: 0.22, ease: [0.22, 1, 0.36, 1] }}
 					className="mb-10 text-pretty font-medium text-lg text-slate-800 leading-relaxed md:text-xl"
 				>
-					변호사·의사·한의사·수의사·노무사·세무사.
-					<br />
-					광고 규정과 검색 의도를 한 팀이 검토합니다.
+					검색에는 걸리고, 규정에는 걸리지 않는
+					<br className="hidden md:block" />
+					전문직 콘텐츠 마케팅
 				</motion.p>
 
 				{/* CTAs */}
@@ -73,21 +72,21 @@ export const Hero = () => {
 				>
 					<Link
 						href="/contact"
-						className="gradient-brand rounded-full px-10 py-4 font-semibold text-base text-white shadow-[0_8px_24px_rgba(124,58,237,0.3)] transition-opacity hover:opacity-90"
+						className="gradient-brand rounded-md px-12 py-4 font-semibold text-base text-white transition-opacity hover:opacity-85"
 					>
-						무료 상담 신청
+						상담 신청
 					</Link>
 					<div className="flex items-center gap-5">
 						<Link
 							href="/services/blog"
-							className="font-medium text-slate-700 text-sm transition-colors hover:text-[#7c3aed]"
+							className="font-medium text-slate-700 text-sm transition-colors hover:text-[#7c3aed] hover:opacity-70"
 						>
 							읽히는 블로그란? →
 						</Link>
 						<span className="text-slate-400 text-sm">|</span>
 						<Link
 							href="/services/shortform"
-							className="font-medium text-slate-700 text-sm transition-colors hover:text-[#7c3aed]"
+							className="font-medium text-slate-700 text-sm transition-colors hover:text-[#7c3aed] hover:opacity-70"
 						>
 							터지는 숏폼이란? →
 						</Link>
@@ -99,16 +98,11 @@ export const Hero = () => {
 					initial={{ opacity: 0 }}
 					animate={{ opacity: 1 }}
 					transition={{ duration: 0.6, delay: 0.55 }}
-					className="mt-8 font-medium text-[13px] text-slate-700 tracking-wide"
+					className="mt-8 font-medium text-[#0a0a0a]/50 text-[13px] tracking-wide"
 				>
-					첫 상담 무료 · 영업일 1일 내 회신
+					영업일 1일 내 회신
 				</motion.p>
-			</div>
-
-			{/* Wave bottom */}
-			<div className="absolute right-0 bottom-0 left-0">
-				<WaveDivider fillColor="#f8fafc" height={60} />
 			</div>
 		</section>
 	);
-}
+};

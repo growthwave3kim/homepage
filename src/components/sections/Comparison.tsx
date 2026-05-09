@@ -14,7 +14,7 @@ export const Comparison = () => {
 				<Reveal delay={0.1}>
 					<div className="grid gap-4 md:grid-cols-2">
 						{/* General */}
-						<div className="rounded-2xl border border-slate-200 bg-white p-5 md:p-7">
+						<div className="rounded-md border border-slate-200 bg-white p-5 md:p-7">
 							<p className="mb-6 font-semibold text-base text-slate-400">일반 대행사</p>
 							<ul className="space-y-3">
 								{COMPARISON_ROWS.map((row) => (
@@ -29,12 +29,12 @@ export const Comparison = () => {
 						</div>
 
 						{/* Growth Wave */}
-						<div className="rounded-2xl border-2 border-[#7c3aed]/30 bg-white p-7 shadow-[0_4px_24px_rgba(124,58,237,0.08)]">
-							<p className="gradient-text mb-6 font-semibold text-base">그로스웨이브</p>
+						<div className="rounded-md border border-slate-200 bg-white p-7">
+							<p className="mb-6 font-semibold text-[#0a0a0a] text-base">그로스웨이브</p>
 							<ul className="space-y-3">
 								{COMPARISON_ROWS.map((row) => (
 									<li key={row.growthwave} className="flex items-start gap-3">
-										<div className="gradient-brand mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full">
+										<div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#0a0a0a]">
 											<CheckIcon className="h-3 w-3 text-white" />
 										</div>
 										<span className="font-medium text-foreground text-sm">{row.growthwave}</span>
@@ -47,7 +47,7 @@ export const Comparison = () => {
 
 				{/* Selection message */}
 				<Reveal delay={0.2}>
-					<div className="mt-6 rounded-2xl border border-slate-200 bg-white p-6 text-center">
+					<div className="mt-6 rounded-md border border-slate-200 bg-white p-6 text-center">
 						<p className="mb-1.5 font-semibold text-foreground text-sm">
 							이런 분들은 정중히 거절하고 있습니다
 						</p>

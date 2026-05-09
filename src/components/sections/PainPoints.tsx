@@ -1,46 +1,48 @@
-import { Quote } from "lucide-react";
+"use client";
+
 import { Reveal } from "@/components/shared/Reveal";
-import { SectionHeading } from "@/components/shared/SectionHeading";
 import { PAIN_POINTS } from "@/data/pain-points";
 
 export const PainPoints = () => {
 	return (
-		<section className="bg-slate-50 px-4 py-20 md:py-24">
-			<div className="mx-auto max-w-7xl">
+		<section className="bg-white px-4 py-28 md:py-36">
+			<div className="mx-auto max-w-5xl">
 				<Reveal>
-					<SectionHeading
-						eyebrow="혹시 이런 경험"
-						title="마케팅 회사에 맡겨봤지만, 결국 같은 자리"
-						className="mb-16"
-					/>
-				</Reveal>
-
-				<div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-					{PAIN_POINTS.map((point, i) => (
-						<Reveal key={point.id} delay={i * 0.08}>
-							<div className="card-hover flex h-full flex-col gap-4 rounded-2xl border border-slate-200 bg-white p-5 md:p-6">
-								<div
-									className="gradient-brand flex h-8 w-8 shrink-0 items-center justify-center rounded-lg"
-									aria-hidden="true"
-								>
-									<Quote className="h-4 w-4 text-white" />
-								</div>
-								<p className="font-medium text-[15px] text-foreground leading-relaxed">
-									{point.text}
-								</p>
-							</div>
-						</Reveal>
-					))}
-				</div>
-
-				<Reveal delay={PAIN_POINTS.length * 0.08}>
-					<div className="gradient-brand mt-6 flex flex-col items-center justify-center gap-3 rounded-2xl p-8 text-center text-white sm:flex-row sm:gap-6 sm:p-10">
-						<p className="font-bold text-xl leading-snug">그로스웨이브는 그 자리에서 시작합니다.</p>
-						<p className="text-sm text-white/80 leading-relaxed sm:border-white/30 sm:border-l sm:pl-6">
-							전문직 마케팅에 특화된 팀이 의뢰·수임으로 이어지는 콘텐츠를 직접 설계합니다.
+					<div className="mb-16">
+						<p className="mb-4 font-mono text-[#0a0a0a]/40 text-[11px] uppercase tracking-[0.25em]">
+							혹시 이런 경험
 						</p>
+						<h2 className="font-bold text-3xl text-[#0a0a0a] leading-tight tracking-tight md:text-4xl lg:text-[48px]">
+							<span className="gradient-text">마케팅 회사</span>에 맡겨봤지만...
+						</h2>
 					</div>
 				</Reveal>
+
+				<div className="grid gap-4 md:grid-cols-2 md:gap-5">
+					{PAIN_POINTS.map((point, i) => {
+						const rotateClass = i % 2 === 0 ? "rotate-[0.4deg]" : "-rotate-[0.4deg]";
+						return (
+							<Reveal key={point.id} delay={i * 0.08} direction={i % 2 === 0 ? "left" : "right"}>
+								<div
+									className={`group relative flex flex-col rounded-md border border-slate-100 bg-white p-6 transition-all duration-300 hover:rotate-0 hover:border-[#7c3aed]/20 hover:shadow-[0_4px_20px_rgba(124,58,237,0.07)] ${rotateClass}`}
+								>
+									<span className="mb-4 font-mono text-[#7c3aed]/40 text-[11px] tracking-[0.15em]">
+										{String(i + 1).padStart(2, "0")}
+									</span>
+									<span
+										className="pointer-events-none absolute top-3 right-4 select-none font-serif text-5xl text-[#7c3aed]/10 leading-none"
+										aria-hidden="true"
+									>
+										{"“"}
+									</span>
+									<p className="font-medium text-[#0a0a0a]/80 text-lg leading-snug md:text-xl">
+										{point.text}
+									</p>
+								</div>
+							</Reveal>
+						);
+					})}
+				</div>
 			</div>
 		</section>
 	);

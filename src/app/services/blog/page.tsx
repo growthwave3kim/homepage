@@ -101,7 +101,7 @@ export const BlogServicePage = () => {
 				title="읽히는 블로그가"
 				titleHighlight="의뢰로 이어집니다"
 				sub="고객은 문제를 마주쳤을 때 먼저 검색합니다. 그 순간 당신의 블로그가 보여야 합니다."
-				ctaText="무료 상담 신청"
+				ctaText="상담 신청"
 				ctaHref="/contact"
 				secondaryText="전문직 마케팅 보기"
 				secondaryHref="/services/professional"
@@ -120,8 +120,8 @@ export const BlogServicePage = () => {
 					<div className="grid gap-6 md:grid-cols-3">
 						{BLOG_WHY.map((b, i) => (
 							<Reveal key={b.title} delay={i * 0.1}>
-								<div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
-									<div className="gradient-brand mb-4 flex h-10 w-10 items-center justify-center rounded-xl">
+								<div className="rounded-md border border-slate-200 bg-white p-8">
+									<div className="mb-4 flex h-10 w-10 items-center justify-center rounded-md bg-[#0a0a0a]">
 										<span className="font-bold text-sm text-white">0{i + 1}</span>
 									</div>
 									<h3 className="mb-3 font-bold text-foreground text-lg">{b.title}</h3>
@@ -147,9 +147,9 @@ export const BlogServicePage = () => {
 					<div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
 						{KEYWORD_EXAMPLES.map((k, i) => (
 							<Reveal key={k.profession} delay={i * 0.06}>
-								<div className="h-full rounded-2xl border border-slate-200 bg-white p-6">
+								<div className="h-full rounded-md border border-slate-200 bg-white p-6">
 									<p className="mb-1 font-bold text-foreground text-lg">{k.profession}</p>
-									<p className="mb-4 text-[#7c3aed] text-sm">{k.intent}</p>
+									<p className="mb-4 text-[#0a0a0a] text-sm">{k.intent}</p>
 									<ul className="flex flex-col gap-2">
 										{k.examples.map((ex) => (
 											<li
@@ -178,7 +178,7 @@ export const BlogServicePage = () => {
 						/>
 					</Reveal>
 					<Reveal delay={0.1}>
-						<div className="overflow-hidden rounded-2xl shadow-sm">
+						<div className="overflow-hidden rounded-md">
 							{/* Header */}
 							<div className="grid grid-cols-3">
 								<div className="bg-slate-100 px-3 py-3 md:px-6 md:py-4">
@@ -194,7 +194,7 @@ export const BlogServicePage = () => {
 										일반 대행사
 									</span>
 								</div>
-								<div className="gradient-brand flex items-center gap-1.5 px-3 py-3 md:gap-2 md:px-6 md:py-4">
+								<div className="flex items-center gap-1.5 bg-[#0a0a0a] px-3 py-3 md:gap-2 md:px-6 md:py-4">
 									<div className="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-white/25 md:h-5 md:w-5">
 										<Check className="h-2.5 w-2.5 text-white md:h-3 md:w-3" />
 									</div>
@@ -214,8 +214,8 @@ export const BlogServicePage = () => {
 									<div className="bg-slate-50 px-3 py-3 md:px-6 md:py-4">
 										<span className="text-slate-400 text-xs md:text-sm">{row.general}</span>
 									</div>
-									<div className="bg-[#7c3aed]/5 px-3 py-3 md:px-6 md:py-4">
-										<span className="font-semibold text-[#7c3aed] text-xs md:text-sm">
+									<div className="bg-[#0a0a0a]/5 px-3 py-3 md:px-6 md:py-4">
+										<span className="font-semibold text-[#0a0a0a] text-xs md:text-sm">
 											{row.us}
 										</span>
 									</div>
@@ -242,7 +242,7 @@ export const BlogServicePage = () => {
 							{service.steps.map((step, si) => (
 								<li key={step.step} className="flex items-center gap-3">
 									<div className="flex flex-col items-center gap-2 text-center">
-										<span className="gradient-brand flex h-12 w-12 items-center justify-center rounded-full font-bold text-lg text-white shadow-[0_4px_12px_rgba(124,58,237,0.3)]">
+										<span className="flex h-12 w-12 items-center justify-center rounded-full bg-[#0a0a0a] font-bold text-lg text-white">
 											{step.step}
 										</span>
 										<span className="font-medium text-foreground text-sm">{step.label}</span>
@@ -270,8 +270,8 @@ export const BlogServicePage = () => {
 					<div className="grid gap-4 sm:grid-cols-2">
 						{BLOG_DELIVERABLES.map((d, i) => (
 							<Reveal key={d.title} delay={i * 0.08}>
-								<div className="flex h-full items-start gap-4 rounded-2xl border border-slate-200 bg-white p-6">
-									<div className="gradient-brand flex h-10 w-10 shrink-0 items-center justify-center rounded-xl font-bold text-sm text-white">
+								<div className="flex h-full items-start gap-4 rounded-md border border-slate-200 bg-white p-6">
+									<div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-[#0a0a0a] font-bold text-sm text-white">
 										0{i + 1}
 									</div>
 									<div>
@@ -289,6 +289,6 @@ export const BlogServicePage = () => {
 			<CTACard headline="읽히는 블로그, 지금 시작하세요" sub="24시간 안으로 답변드립니다." />
 		</>
 	);
-}
+};
 
 export default BlogServicePage;

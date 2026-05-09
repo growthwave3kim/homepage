@@ -2,8 +2,8 @@ import { Clapperboard, MonitorPlay } from "lucide-react";
 import Image from "next/image";
 import { Reveal } from "@/components/shared/Reveal";
 import { SectionHeading } from "@/components/shared/SectionHeading";
-import { EDIT_PHOTOS, VIDEO_PHOTOS } from "@/data/team-photos";
 import type { TeamPhoto } from "@/data/team-photos";
+import { EDIT_PHOTOS, VIDEO_PHOTOS } from "@/data/team-photos";
 
 type CrewBlockProps = {
 	icon: React.ReactNode;
@@ -29,11 +29,11 @@ const CrewBlock = ({
 			className={`flex flex-col gap-8 lg:flex-row lg:items-start lg:gap-12 ${reverse ? "lg:flex-row-reverse" : ""}`}
 		>
 			<Reveal className="w-full lg:w-80 lg:shrink-0" direction={reverse ? "right" : "left"}>
-				<div className="rounded-2xl border border-slate-100 bg-white p-8 shadow-sm">
-					<div className="gradient-brand mb-5 flex h-12 w-12 items-center justify-center rounded-full">
+				<div className="rounded-md border border-slate-100 bg-white p-8 shadow-sm">
+					<div className="mb-5 flex h-12 w-12 items-center justify-center rounded-md bg-[#0a0a0a]">
 						{icon}
 					</div>
-					<p className="mb-1 font-semibold text-[#7c3aed] text-xs uppercase tracking-[0.2em]">
+					<p className="mb-1 font-semibold text-[#0a0a0a] text-xs uppercase tracking-[0.2em]">
 						{label}
 					</p>
 					<h3 className="mb-3 font-bold text-foreground text-xl leading-snug">{heading}</h3>
@@ -62,7 +62,7 @@ const CrewBlock = ({
 
 export const TeamCrews = () => {
 	return (
-		<section className="bg-slate-50 px-4 py-20 md:py-24">
+		<section className="bg-white px-4 py-24 md:py-28">
 			<div className="mx-auto max-w-7xl">
 				<Reveal>
 					<SectionHeading

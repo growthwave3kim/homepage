@@ -15,21 +15,15 @@ export const SectionHeading = ({
 	sub,
 	className,
 	align = "center",
-	gradientTitle = false,
 }: SectionHeadingProps) => {
 	return (
 		<div className={cn(align === "center" ? "text-center" : "text-left", className)}>
 			{eyebrow && (
-				<p className="mb-2 font-semibold text-[#7c3aed] text-[13px] uppercase tracking-[0.25em] md:mb-3">
+				<p className="mb-2 font-mono font-semibold text-[#a78bfa] text-[13px] uppercase tracking-[0.25em] md:mb-3">
 					{eyebrow}
 				</p>
 			)}
-			<h2
-				className={cn(
-					"font-bold text-3xl leading-tight tracking-tight md:text-4xl lg:text-[48px]",
-					gradientTitle ? "gradient-text" : "text-foreground",
-				)}
-			>
+			<h2 className="font-bold text-3xl text-foreground leading-tight tracking-tight md:text-4xl lg:text-[48px]">
 				{title}
 			</h2>
 			{sub && (

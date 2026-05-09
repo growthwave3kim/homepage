@@ -21,6 +21,6 @@ export const sitemap = (): MetadataRoute.Sitemap => {
 		changeFrequency,
 		priority,
 	}));
-}
+};
 
 export default sitemap;

@@ -15,8 +15,8 @@ export const Testimonials = () => {
 				{TESTIMONIALS.length === 0 ? (
 					<Reveal>
 						<div className="flex justify-center">
-							<div className="w-full max-w-lg rounded-2xl border border-slate-300 border-dashed bg-white p-10 text-center">
-								<span className="mb-4 inline-block rounded-full bg-slate-100 px-3 py-1 font-semibold text-slate-500 text-xs">
+							<div className="w-full max-w-lg rounded-md border border-slate-200 border-dashed bg-white p-10 text-center">
+								<span className="mb-4 inline-block rounded-md bg-slate-100 px-3 py-1 font-semibold text-slate-500 text-xs">
 									Coming soon
 								</span>
 								<h3 className="mb-3 font-bold text-foreground text-lg">
@@ -41,9 +41,9 @@ export const Testimonials = () => {
 					<div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
 						{TESTIMONIALS.map((t, i) => (
 							<Reveal key={t.author} delay={i * 0.08}>
-								<div className="card-hover flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-7">
+								<div className="card-hover flex h-full flex-col rounded-md border border-slate-200 bg-white p-7">
 									<div
-										className="gradient-brand mb-4 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg"
+										className="mb-4 flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-[#0a0a0a]"
 										aria-hidden="true"
 									>
 										<Quote className="h-4 w-4 text-white" />
@@ -61,4 +61,4 @@ export const Testimonials = () => {
 			</div>
 		</section>
 	);
-}
+};

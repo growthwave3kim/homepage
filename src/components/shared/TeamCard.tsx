@@ -3,7 +3,7 @@ import type { TeamMember } from "@/types";
 
 export const TeamCard = ({ member }: { member: TeamMember }) => {
 	return (
-		<div className="card-hover flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white">
+		<div className="card-hover flex h-full flex-col overflow-hidden rounded-md border border-slate-200 bg-white">
 			<div className="relative aspect-square w-full overflow-hidden bg-gradient-to-br from-slate-100 to-slate-200">
 				{member.photo ? (
 					<Image
@@ -15,7 +15,7 @@ export const TeamCard = ({ member }: { member: TeamMember }) => {
 					/>
 				) : (
 					<div className="flex h-full w-full items-center justify-center">
-						<div className="gradient-brand flex h-16 w-16 items-center justify-center rounded-full font-bold text-2xl text-white">
+						<div className="flex h-16 w-16 items-center justify-center rounded-md bg-[#0a0a0a] font-bold text-2xl text-white">
 							{member.nameKo.charAt(0)}
 						</div>
 					</div>
@@ -26,8 +26,18 @@ export const TeamCard = ({ member }: { member: TeamMember }) => {
 					{member.nameKo}{" "}
 					<span className="font-normal text-muted-foreground text-sm">{member.nameEn}</span>
 				</p>
-				<p className="gradient-text mt-0.5 font-medium text-sm">{member.role}</p>
+				<p className="mt-0.5 font-medium text-[#0a0a0a]/60 text-sm">{member.role}</p>
 				<p className="mt-2 text-muted-foreground text-xs leading-relaxed">{member.bio}</p>
+				{member.careers && member.careers.length > 0 && (
+					<ul className="mt-3 space-y-1 border-slate-100 border-t pt-3">
+						{member.careers.map((career) => (
+							<li key={career} className="flex items-start gap-1.5 text-slate-500 text-xs">
+								<span className="mt-0.5 shrink-0 text-[#7c3aed]/50">—</span>
+								<span className="leading-snug">{career}</span>
+							</li>
+						))}
+					</ul>
+				)}
 			</div>
 		</div>
 	);

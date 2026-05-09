@@ -25,7 +25,7 @@ export const ProfessionTabs = () => {
 							<TabsTrigger key={p.slug} value={p.slug} className="rounded-none pb-3 text-sm">
 								{p.label}
 								{p.adRule && (
-									<span className="ml-1.5 rounded-full bg-amber-100 px-1.5 py-0.5 font-medium text-[10px] text-amber-600">
+									<span className="ml-1.5 rounded-md bg-amber-100 px-1.5 py-0.5 font-medium text-[10px] text-amber-600">
 										규정
 									</span>
 								)}
@@ -39,7 +39,7 @@ export const ProfessionTabs = () => {
 							<TabsContent key={p.slug} value={p.slug} className="mt-0">
 								<div className="grid gap-8 md:grid-cols-2">
 									{/* Key points */}
-									<div className="rounded-2xl bg-white p-6 shadow-sm md:p-8">
+									<div className="rounded-md border border-slate-100 bg-white p-6 md:p-8">
 										<h3 className="mb-2 font-bold text-foreground text-xl">{p.label} 마케팅</h3>
 										<p className="mb-6 text-muted-foreground text-sm leading-relaxed">
 											{p.description}
@@ -47,7 +47,7 @@ export const ProfessionTabs = () => {
 										<ul className="space-y-3">
 											{p.keyPoints.map((kp) => (
 												<li key={kp} className="flex items-start gap-3">
-													<CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-[#7c3aed]" />
+													<CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-[#0a0a0a]" />
 													<span className="text-foreground text-sm">{kp}</span>
 												</li>
 											))}
@@ -68,13 +68,13 @@ export const ProfessionTabs = () => {
 											professionCases.map((c) => (
 												<div
 													key={`${c.anonymous}-${c.field}`}
-													className="rounded-2xl bg-white p-6 shadow-sm"
+													className="rounded-md border border-slate-100 bg-white p-6"
 												>
 													<div className="mb-3 flex items-center justify-between">
-														<span className="rounded-full bg-[#7c3aed]/10 px-3 py-1 font-medium text-[#7c3aed] text-xs">
+														<span className="rounded-md bg-[#0a0a0a]/5 px-3 py-1 font-medium text-[#0a0a0a] text-xs">
 															{c.field}
 														</span>
-														<span className="font-bold text-[#7c3aed] text-lg">{c.metric}</span>
+														<span className="font-bold text-[#0a0a0a] text-lg">{c.metric}</span>
 													</div>
 													<p className="mb-2 text-foreground text-sm leading-relaxed">
 														&ldquo;{c.quote}&rdquo;
@@ -85,7 +85,7 @@ export const ProfessionTabs = () => {
 												</div>
 											))
 										) : (
-											<div className="flex items-center justify-center rounded-2xl bg-white p-8 text-center shadow-sm">
+											<div className="flex items-center justify-center rounded-md border border-slate-100 bg-white p-8 text-center">
 												<p className="text-muted-foreground text-sm">
 													{p.label} 사례는 상담에서 직접 보여드립니다.
 													<br />
@@ -102,4 +102,4 @@ export const ProfessionTabs = () => {
 			</div>
 		</section>
 	);
-}
+};

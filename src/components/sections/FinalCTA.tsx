@@ -5,26 +5,16 @@ import { siteConfig } from "@/config/site";
 
 export const FinalCTA = () => {
 	return (
-		<section className="relative overflow-hidden bg-[#0f172a] px-4 py-24 md:py-28">
-			{/* 보라 radial glow */}
-			<div
-				className="pointer-events-none absolute inset-0"
-				style={{
-					background:
-						"radial-gradient(ellipse 80% 60% at 50% 100%, rgba(124,58,237,0.35) 0%, transparent 70%)",
-				}}
-				aria-hidden="true"
-			/>
-
+		<section className="gradient-brand relative overflow-hidden px-4 py-24 md:py-28">
 			<div className="relative mx-auto max-w-3xl text-center">
 				<Reveal>
-					<p className="mb-4 font-semibold text-[#a78bfa] text-sm uppercase tracking-[0.25em]">
-						무료 상담
+					<p className="mb-4 font-semibold text-sm text-white/80 uppercase tracking-[0.25em]">
+						상담 신청
 					</p>
-					<h2 className="mb-4 font-extrabold text-[40px] text-white leading-[1.1] tracking-tight md:text-[56px]">
+					<h2 className="mb-4 font-extrabold text-[44px] text-white leading-[1.1] tracking-tight md:text-[64px]">
 						광고비, 더 태우기 전에.
 					</h2>
-					<p className="mb-10 text-[#94a3b8] text-lg leading-relaxed">
+					<p className="mb-10 text-lg text-white/60 leading-relaxed">
 						3분이면 상담 신청이 끝납니다.
 						<br />
 						24시간 안으로 답변드립니다.
@@ -32,15 +22,15 @@ export const FinalCTA = () => {
 					<div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
 						<Link
 							href="/contact"
-							className="gradient-brand w-full rounded-full px-8 py-3.5 font-semibold text-base text-white shadow-[0_8px_24px_rgba(124,58,237,0.3)] transition-opacity hover:opacity-90 sm:w-auto"
+							className="w-full rounded-md bg-white px-8 py-3.5 font-semibold text-[#0a0a0a] text-base transition-opacity hover:opacity-90 sm:w-auto"
 						>
-							무료 상담 신청
+							상담 신청
 						</Link>
 						<a
 							href={siteConfig.contact.kakaoOpenChat}
 							target="_blank"
 							rel="noopener noreferrer"
-							className="flex w-full items-center justify-center gap-2 rounded-full border border-white/20 px-8 py-3.5 font-semibold text-base text-white/80 transition-colors hover:border-white/40 hover:text-white sm:w-auto"
+							className="flex w-full items-center justify-center gap-2 rounded-md border border-white/40 px-8 py-3.5 font-semibold text-base text-white/80 transition-colors hover:border-white/60 hover:text-white sm:w-auto"
 						>
 							<MessageCircle className="h-4 w-4" />
 							카카오톡 1:1 문의

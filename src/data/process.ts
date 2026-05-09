@@ -7,7 +7,7 @@ export type ProcessStep = {
 export const PROCESS_STEPS: ProcessStep[] = [
 	{
 		step: "01",
-		title: "무료 상담",
+		title: "상담",
 		description: "현재 운영 현황과 목표를 파악합니다. 직군별 맞춤 전략 방향을 제시합니다.",
 	},
 	{

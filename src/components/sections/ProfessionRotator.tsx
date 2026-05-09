@@ -18,15 +18,15 @@ export const ProfessionRotator = () => {
 	}, [prefersReducedMotion]);
 
 	return (
-		<section className="bg-gradient-to-b from-white via-slate-50 to-white px-4 py-20 md:py-24">
+		<section className="bg-white px-4 py-28 md:py-36">
 			<div className="mx-auto max-w-6xl text-center">
 				{/* 헤드라인 */}
 				<div className="mb-6 flex flex-col items-center gap-2">
-					<p className="mb-4 font-semibold text-[#7c3aed] text-sm uppercase tracking-[0.25em]">
+					<p className="mb-4 font-semibold text-[#a78bfa] text-sm uppercase tracking-[0.25em]">
 						Specialized
 					</p>
 					<h2 className="font-extrabold text-[26px] text-foreground leading-[1.15] tracking-tight sm:text-[36px] md:text-[52px] lg:text-[68px]">
-						오직 <span className="text-[#7c3aed]">[</span>
+						오직 <span className="text-[#7c3aed]/30">[</span>
 						<span className="inline-block w-[2.6em] overflow-visible text-center sm:w-[3em]">
 							<AnimatePresence mode="popLayout" initial={false}>
 								<motion.span
@@ -41,7 +41,7 @@ export const ProfessionRotator = () => {
 								</motion.span>
 							</AnimatePresence>
 						</span>
-						<span className="text-[#7c3aed]">]</span>를 위해
+						<span className="text-[#7c3aed]/30">]</span>를 위해
 						<br />
 						만들어졌습니다.
 					</h2>
@@ -49,9 +49,9 @@ export const ProfessionRotator = () => {
 
 				{/* 서브 */}
 				<p className="mb-10 text-lg text-muted-foreground leading-relaxed md:text-xl">
-					전문직 마케팅만 합니다. 다른 일은 받지 않습니다.
+					전문직 마케팅에 집중합니다. 직군의 언어와 광고 규정을 알고 시작합니다.
 				</p>
 			</div>
 		</section>
 	);
-}
+};

@@ -5,11 +5,10 @@ import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
 	title: "문의하기 | Growth Wave",
-	description:
-		"그로스웨이브에 전문직 마케팅을 문의하세요. 첫 상담 무료, 영업일 1일 내 회신드립니다.",
+	description: "그로스웨이브에 전문직 마케팅을 문의하세요. 영업일 1일 내 회신드립니다.",
 };
 
-const TRUST_BADGES = ["첫 상담 무료", "계약 압박 없음", "영업일 1일 내 회신"] as const;
+const TRUST_BADGES = ["계약 압박 없음", "영업일 1일 내 회신", "직접 검토"] as const;
 
 export const ContactPage = () => {
 	return (
@@ -20,7 +19,7 @@ export const ContactPage = () => {
 					문의하기
 				</p>
 				<h1 className="mb-4 font-bold text-4xl text-foreground leading-tight tracking-tight md:text-5xl">
-					상담은 언제나, 당연히 무료입니다.
+					어떤 의뢰 흐름을 원하시는지부터 듣겠습니다.
 				</h1>
 				<p className="text-lg text-muted-foreground">
 					무엇이든 적어 보내주세요. 영업일 1일 내 회신드립니다.
@@ -55,6 +54,6 @@ export const ContactPage = () => {
 			</section>
 		</main>
 	);
-}
+};
 
 export default ContactPage;

@@ -4,7 +4,7 @@ import { TEAM_MEMBERS } from "@/data/team";
 
 export const TeamMemberFeature = () => {
 	return (
-		<section className="bg-white px-4 py-20 md:py-24">
+		<section className="bg-white px-4 py-24 md:py-28">
 			<div className="mx-auto max-w-5xl">
 				<div className="space-y-24">
 					{TEAM_MEMBERS.map((member, i) => {
@@ -21,7 +21,7 @@ export const TeamMemberFeature = () => {
 									{/* Photo */}
 									{member.photo && (
 										<div className="shrink-0">
-											<div className="relative h-56 w-44 overflow-hidden rounded-3xl shadow-[0_8px_32px_rgba(0,0,0,0.10)] md:h-96 md:w-72">
+											<div className="relative h-56 w-44 overflow-hidden rounded-md shadow-[0_8px_32px_rgba(0,0,0,0.10)] md:h-96 md:w-72">
 												<Image
 													src={member.photo}
 													alt={member.nameKo}
@@ -47,8 +47,8 @@ export const TeamMemberFeature = () => {
 
 										{/* Quote */}
 										{member.quote && (
-											<blockquote className="mb-8 border-[#7c3aed]/20 border-l-4 pl-5">
-												<p className="gradient-text font-bold text-xl leading-snug md:text-2xl">
+											<blockquote className="mb-8 border-slate-200 border-l-4 pl-5">
+												<p className="font-bold text-[#0a0a0a] text-xl leading-snug md:text-2xl">
 													&ldquo;{member.quote}&rdquo;
 												</p>
 											</blockquote>
@@ -72,7 +72,7 @@ export const TeamMemberFeature = () => {
 												<ul className="space-y-2">
 													{member.careers.map((c) => (
 														<li key={c} className="flex items-start gap-2 text-slate-600 text-sm">
-															<span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#7c3aed]" />
+															<span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#0a0a0a]" />
 															{c}
 														</li>
 													))}

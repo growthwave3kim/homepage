@@ -21,7 +21,7 @@ export const PageHero = ({
 	title,
 	titleHighlight,
 	sub,
-	ctaText = "무료 상담 신청",
+	ctaText = "상담 신청",
 	ctaHref = "/contact",
 	secondaryText,
 	secondaryHref,
@@ -30,24 +30,9 @@ export const PageHero = ({
 	className,
 }: PageHeroProps) => {
 	return (
-		<section
-			className={cn(
-				"relative overflow-hidden bg-white px-4 py-20 pt-28 text-center md:py-28 md:pt-32",
-				className,
-			)}
-		>
-			{/* Background blobs */}
-			<div
-				className="pointer-events-none absolute top-[-5%] right-[-10%] h-[260px] w-[260px] rounded-full bg-[#7c3aed]/8 blur-3xl md:h-[400px] md:w-[400px]"
-				aria-hidden="true"
-			/>
-			<div
-				className="pointer-events-none absolute bottom-[-5%] left-[-10%] h-[220px] w-[220px] rounded-full bg-[#1e3a8a]/8 blur-3xl md:h-[350px] md:w-[350px]"
-				aria-hidden="true"
-			/>
-
-			<div className="relative z-10 mx-auto max-w-4xl">
-				<p className="mb-5 font-semibold text-[#7c3aed] text-sm uppercase tracking-[0.25em]">
+		<section className={cn("bg-white px-4 py-24 pt-32 text-center md:py-32 md:pt-40", className)}>
+			<div className="mx-auto max-w-4xl">
+				<p className="mb-5 font-mono font-semibold text-[#a78bfa] text-sm uppercase tracking-[0.25em]">
 					{eyebrow}
 				</p>
 				<h1 className="mb-5 font-bold text-[28px] text-foreground leading-[1.2] tracking-tight sm:text-[34px] md:text-[56px] md:leading-[1.12] lg:text-[68px]">
@@ -55,7 +40,7 @@ export const PageHero = ({
 						<>
 							{title}
 							<br />
-							<span className="gradient-text">{titleHighlight}</span>
+							<span className="text-[#0a0a0a]">{titleHighlight}</span>
 						</>
 					) : (
 						title
@@ -66,7 +51,7 @@ export const PageHero = ({
 				<div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
 					<Link
 						href={ctaHref}
-						className="gradient-brand rounded-full px-8 py-3.5 font-semibold text-base text-white shadow-[0_8px_24px_rgba(124,58,237,0.3)] transition-opacity hover:opacity-90"
+						className="gradient-brand rounded-md px-8 py-3.5 font-semibold text-base text-white transition-opacity hover:opacity-80"
 					>
 						{ctaText}
 					</Link>
@@ -76,7 +61,7 @@ export const PageHero = ({
 							<a
 								href={secondaryHref}
 								download
-								className="flex items-center gap-2 rounded-full border border-slate-200 px-8 py-3.5 font-semibold text-base text-foreground transition-colors hover:border-slate-300 hover:bg-slate-50"
+								className="flex items-center gap-2 rounded-md border border-slate-200 px-8 py-3.5 font-semibold text-base text-foreground transition-colors hover:border-slate-300 hover:bg-slate-50"
 							>
 								<Download className="h-4 w-4" aria-hidden="true" />
 								{secondaryText}
@@ -84,7 +69,7 @@ export const PageHero = ({
 						) : (
 							<Link
 								href={secondaryHref}
-								className="rounded-full border border-slate-200 px-8 py-3.5 font-semibold text-base text-foreground transition-colors hover:border-slate-300 hover:bg-slate-50"
+								className="rounded-md border border-slate-200 px-8 py-3.5 font-semibold text-base text-foreground transition-colors hover:border-slate-300 hover:bg-slate-50"
 							>
 								{secondaryText}
 							</Link>

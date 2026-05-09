@@ -8,7 +8,7 @@ import { SERVICES } from "@/data/services";
 
 const BlogMockup = () => {
 	return (
-		<div className="mx-auto w-full max-w-sm rounded-2xl border border-slate-200 bg-slate-50 p-4 shadow-sm">
+		<div className="mx-auto w-full max-w-sm rounded-md border border-slate-200 bg-slate-50 p-4">
 			<div className="mb-3 flex items-center gap-2">
 				<div className="h-2.5 w-2.5 rounded-full bg-red-400" />
 				<div className="h-2.5 w-2.5 rounded-full bg-yellow-400" />
@@ -20,9 +20,9 @@ const BlogMockup = () => {
 			<div className="space-y-2">
 				{["이혼 변호사 선임 비용", "상속 소송 절차", "형사 합의금 기준"].map((kw) => (
 					<div key={kw} className="flex items-center gap-2 rounded-lg bg-white px-3 py-2 shadow-xs">
-						<div className="gradient-brand h-4 w-4 rounded" />
+						<div className="h-4 w-4 rounded bg-[#0a0a0a]" />
 						<span className="text-[11px] text-slate-600">{kw}</span>
-						<span className="gradient-text ml-auto font-bold text-[10px]">1위</span>
+						<span className="ml-auto font-bold text-[#0a0a0a] text-[10px]">1위</span>
 					</div>
 				))}
 			</div>
@@ -48,7 +48,7 @@ const PhoneMockup = () => {
 					/>
 				) : (
 					<div className="gradient-soft flex h-full w-full flex-col items-center justify-center gap-2">
-						<div className="gradient-brand h-10 w-10 rounded-full opacity-60" />
+						<div className="h-10 w-10 rounded-full bg-[#0a0a0a] opacity-20" />
 						<span className="px-3 text-center text-[10px] text-slate-500">
 							릴스 영상
 							<br />
@@ -86,13 +86,13 @@ export const Services = () => {
 									}`}
 								>
 									{/* Visual */}
-									<div className="flex items-center justify-center rounded-2xl bg-slate-50 px-8 py-12">
+									<div className="flex items-center justify-center rounded-md bg-slate-50 px-8 py-12">
 										{visual}
 									</div>
 
 									{/* Text */}
 									<div>
-										<p className="mb-3 font-semibold text-[#7c3aed] text-xs uppercase tracking-[0.25em]">
+										<p className="mb-3 font-semibold text-[#0a0a0a] text-xs uppercase tracking-[0.25em]">
 											{service.index} / {service.category}
 										</p>
 										<h3 className="mb-4 font-bold text-2xl text-foreground leading-snug md:text-3xl">
@@ -106,7 +106,7 @@ export const Services = () => {
 										<ol className="flex flex-wrap gap-2">
 											{service.steps.map((step, si) => (
 												<li key={step.step} className="flex items-center gap-2">
-													<span className="gradient-brand flex h-7 w-7 items-center justify-center rounded-full font-bold text-[11px] text-white">
+													<span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#0a0a0a] font-bold text-[11px] text-white">
 														{step.step}
 													</span>
 													<span className="font-medium text-foreground text-sm">{step.label}</span>

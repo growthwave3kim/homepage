@@ -72,8 +72,8 @@ export const ContactForm = () => {
 	};
 
 	return (
-		<div className="rounded-2xl border border-slate-100 bg-white p-6 shadow-[0_8px_40px_rgba(0,0,0,0.07)] md:p-8">
-			<p className="mb-1 font-semibold text-[#7c3aed] text-sm uppercase tracking-widest">
+		<div className="rounded-md border border-slate-100 bg-white p-6 shadow-[0_8px_40px_rgba(0,0,0,0.07)] md:p-8">
+			<p className="mb-1 font-semibold text-[#0a0a0a] text-sm uppercase tracking-widest">
 				상세 문의
 			</p>
 			<h2 className="mb-6 font-bold text-foreground text-xl">자세히 알려주세요</h2>
@@ -85,7 +85,7 @@ export const ContactForm = () => {
 						animate={{ opacity: 1, scale: 1 }}
 						className="flex flex-col items-center gap-3 py-12 text-center"
 					>
-						<div className="gradient-brand mx-auto mb-2 flex h-16 w-16 items-center justify-center rounded-full">
+						<div className="mx-auto mb-2 flex h-16 w-16 items-center justify-center rounded-md bg-[#0a0a0a]">
 							<CheckCircle2 className="h-8 w-8 text-white" />
 						</div>
 						<h2 className="font-bold text-foreground text-xl">신청이 완료되었습니다</h2>
@@ -141,7 +141,7 @@ export const ContactForm = () => {
 												animate={{ opacity: 1, y: 0 }}
 												exit={{ opacity: 0, y: -6 }}
 												transition={{ duration: 0.15, ease: [0.22, 1, 0.36, 1] }}
-												className="absolute top-full right-0 left-0 z-50 mt-1 overflow-hidden rounded-xl border border-slate-200 bg-white py-1 shadow-[0_8px_30px_rgba(0,0,0,0.12)]"
+												className="absolute top-full right-0 left-0 z-50 mt-1 overflow-hidden rounded-md border border-slate-200 bg-white py-1 shadow-[0_8px_30px_rgba(0,0,0,0.12)]"
 											>
 												{PROFESSION_OPTIONS.map((opt) => (
 													<li key={opt.id}>
@@ -154,13 +154,13 @@ export const ContactForm = () => {
 															className={cn(
 																"flex w-full items-center gap-2 px-3 py-2.5 text-left text-sm transition-colors hover:bg-slate-50",
 																profession === opt.label
-																	? "font-semibold text-[#7c3aed]"
+																	? "font-semibold text-[#0a0a0a]"
 																	: "text-foreground",
 															)}
 														>
 															<span className="flex h-4 w-4 shrink-0 items-center justify-center">
 																{profession === opt.label && (
-																	<CheckIcon className="h-3.5 w-3.5 text-[#7c3aed]" />
+																	<CheckIcon className="h-3.5 w-3.5 text-[#0a0a0a]" />
 																)}
 															</span>
 															{opt.label}
@@ -209,10 +209,10 @@ export const ContactForm = () => {
 										type="button"
 										onClick={() => setSource(opt.label)}
 										className={cn(
-											"flex items-center gap-1.5 rounded-full border px-4 py-2 font-medium text-sm transition-all",
+											"flex items-center gap-1.5 rounded-md border px-4 py-2 font-medium text-sm transition-all",
 											source === opt.label
-												? "gradient-brand border-transparent text-white"
-												: "border-slate-200 text-slate-500 hover:border-[#7c3aed]/40 hover:text-[#7c3aed]",
+												? "border-[#0a0a0a] bg-[#0a0a0a] text-white"
+												: "border-slate-200 text-slate-500 hover:border-slate-400 hover:text-foreground",
 										)}
 									>
 										{source === opt.label && <CheckIcon className="h-3.5 w-3.5" />}
@@ -238,7 +238,7 @@ export const ContactForm = () => {
 								name="privacy"
 								type="checkbox"
 								required
-								className="mt-0.5 h-4 w-4 shrink-0 cursor-pointer accent-[#7c3aed]"
+								className="mt-0.5 h-4 w-4 shrink-0 cursor-pointer accent-[#0a0a0a]"
 							/>
 							<label
 								htmlFor="privacy"
@@ -251,9 +251,9 @@ export const ContactForm = () => {
 
 						<button
 							type="submit"
-							className="gradient-brand w-full rounded-2xl py-3.5 font-semibold text-base text-white shadow-[0_4px_20px_rgba(124,58,237,0.25)] transition-opacity hover:opacity-90"
+							className="gradient-brand w-full rounded-md py-3.5 font-semibold text-base text-white transition-opacity hover:opacity-90"
 						>
-							무료 상담 신청
+							상담 신청
 						</button>
 					</motion.form>
 				)}

@@ -1,68 +1,62 @@
-import { ArrowRight } from "lucide-react";
-import Link from "next/link";
+"use client";
+
 import { Reveal } from "@/components/shared/Reveal";
-import { SectionHeading } from "@/components/shared/SectionHeading";
 import { CASES } from "@/data/cases";
 
 export const Cases = () => {
 	return (
-		<section className="bg-slate-50 px-4 py-20 md:py-24">
-			<div className="mx-auto max-w-7xl">
+		<section className="bg-[#FAF8FF] px-4 py-24 md:py-28">
+			<div className="mx-auto max-w-6xl">
 				<Reveal>
-					<SectionHeading
-						eyebrow="Success Stories"
-						title="의뢰·수임으로 이어진 사례"
-						className="mb-16"
-					/>
+					<div className="mb-16">
+						<p className="mb-4 font-semibold text-[#a78bfa] text-sm uppercase tracking-[0.25em]">
+							Cases
+						</p>
+						<h2 className="font-bold text-3xl text-foreground leading-tight tracking-tight md:text-4xl">
+							직군마다, 다른 결과.
+						</h2>
+					</div>
 				</Reveal>
 
-				{CASES.length === 0 ? (
-					<Reveal>
-						<div className="flex justify-center">
-							<div className="w-full max-w-lg rounded-2xl border border-slate-300 border-dashed bg-white p-10 text-center">
-								<span className="mb-4 inline-block rounded-full bg-slate-100 px-3 py-1 font-semibold text-slate-500 text-xs">
-									Coming soon
-								</span>
-								<h3 className="mb-3 font-bold text-foreground text-lg">
-									사례는 준비되는 대로 공개합니다.
-								</h3>
-								<p className="mb-6 text-muted-foreground text-sm leading-relaxed">
-									수임·의뢰로 이어진 사례를 직군별로 정리해 공개할 예정입니다.
-									<br className="hidden sm:block" />
-									먼저 확인하고 싶다면 상담에서 직접 보여드립니다.
-								</p>
-								<Link
-									href="/contact"
-									className="inline-flex items-center gap-1.5 font-semibold text-[#7c3aed] text-sm transition-gap hover:gap-2.5"
-								>
-									상담에서 사례 받아보기
-									<ArrowRight className="h-4 w-4" />
-								</Link>
-							</div>
-						</div>
-					</Reveal>
-				) : (
-					<div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-						{CASES.map((c, i) => (
-							<Reveal key={c.anonymous} delay={i * 0.08}>
-								<div className="card-hover flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-6">
-									<span className="gradient-brand mb-4 inline-block rounded-full px-3 py-1 font-semibold text-[11px] text-white">
-										{c.field}
-									</span>
-									<p className="mb-4 flex-1 text-foreground text-sm leading-relaxed">
-										&ldquo;{c.quote}&rdquo;
-									</p>
-									<div className="border-slate-100 border-t pt-4">
-										<p className="gradient-text font-bold text-2xl">{c.metric}</p>
-										<p className="mt-0.5 text-muted-foreground text-xs">
-											{c.anonymous} · {c.period}
+				<div className="divide-y divide-slate-200">
+					{CASES.map((c, i) => {
+						const num = String(i + 1).padStart(2, "0");
+						return (
+							<Reveal key={c.anonymous} delay={i * 0.07} direction="left">
+								<div className="flex flex-col gap-6 py-10 md:flex-row md:items-center md:gap-16">
+									{/* Number + badge */}
+									<div className="flex items-center gap-5 md:w-52 md:shrink-0 md:flex-col md:items-start md:gap-3">
+										<span className="select-none font-black text-7xl text-[#0a0a0a] leading-none opacity-[0.05] md:text-8xl">
+											{num}
+										</span>
+										<span className="badge-purple">{c.field}</span>
+									</div>
+
+									{/* Metric + quote */}
+									<div className="flex-1">
+										<p className="mb-3 font-bold text-2xl text-[#7c3aed] leading-tight md:text-3xl">
+											{c.metric}
 										</p>
+										<p className="max-w-lg text-muted-foreground leading-relaxed">
+											&ldquo;{c.quote}&rdquo;
+										</p>
+									</div>
+
+									{/* Period */}
+									<div className="shrink-0">
+										<span className="font-mono text-slate-400 text-sm">{c.period}</span>
 									</div>
 								</div>
 							</Reveal>
-						))}
-					</div>
-				)}
+						);
+					})}
+				</div>
+
+				<Reveal>
+					<p className="mt-10 border-slate-200 border-t pt-8 text-slate-400 text-xs">
+						* 구체적인 수치와 사례는 상담 시 상세히 공유드립니다.
+					</p>
+				</Reveal>
 			</div>
 		</section>
 	);

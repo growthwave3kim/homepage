@@ -90,7 +90,7 @@ export const ShortformServicePage = () => {
 				title="전문가 신뢰를"
 				titleHighlight="숏폼으로 쌓습니다"
 				sub="릴스·쇼츠·틱톡으로 전문가의 신뢰도를 콘텐츠로 쌓습니다. 꾸준한 콘텐츠는 먼저 찾아오는 구조를 만듭니다."
-				ctaText="무료 상담 신청"
+				ctaText="상담 신청"
 				ctaHref="/contact"
 				secondaryText="블로그 마케팅 보기"
 				secondaryHref="/services/blog"
@@ -109,8 +109,8 @@ export const ShortformServicePage = () => {
 					<div className="grid gap-6 md:grid-cols-3">
 						{SHORTFORM_BENEFITS.map((b, i) => (
 							<Reveal key={b.title} delay={i * 0.1}>
-								<div className="rounded-2xl bg-white p-8 shadow-sm">
-									<div className="gradient-brand mb-4 flex h-10 w-10 items-center justify-center rounded-xl">
+								<div className="rounded-md border border-slate-100 bg-white p-8">
+									<div className="mb-4 flex h-10 w-10 items-center justify-center rounded-md bg-[#0a0a0a]">
 										<span className="font-bold text-sm text-white">0{i + 1}</span>
 									</div>
 									<h3 className="mb-3 font-bold text-foreground text-lg">{b.title}</h3>
@@ -136,9 +136,9 @@ export const ShortformServicePage = () => {
 					<div className="grid gap-4 md:grid-cols-3">
 						{SHORTFORM_CHANNELS.map((c, i) => (
 							<Reveal key={c.name} delay={i * 0.1}>
-								<div className="h-full rounded-2xl border border-slate-200 bg-white p-6">
+								<div className="h-full rounded-md border border-slate-200 bg-white p-6">
 									<p className="mb-1 font-bold text-foreground text-lg">{c.name}</p>
-									<p className="mb-4 font-medium text-[#7c3aed] text-sm">{c.intent}</p>
+									<p className="mb-4 font-medium text-[#0a0a0a] text-sm">{c.intent}</p>
 									<p className="text-muted-foreground text-sm leading-relaxed">{c.fit}</p>
 								</div>
 							</Reveal>
@@ -160,7 +160,7 @@ export const ShortformServicePage = () => {
 					<div className="grid gap-4 md:grid-cols-3">
 						{SHORTFORM_CONTENT_TYPES.map((t, i) => (
 							<Reveal key={t.type} delay={i * 0.1}>
-								<div className="h-full rounded-2xl border border-slate-200 bg-white p-6">
+								<div className="h-full rounded-md border border-slate-200 bg-white p-6">
 									<p className="mb-3 font-bold text-foreground text-lg">{t.type}</p>
 									<p className="text-muted-foreground text-sm leading-relaxed">{t.description}</p>
 								</div>
@@ -186,7 +186,7 @@ export const ShortformServicePage = () => {
 							{service.steps.map((step, si) => (
 								<li key={step.step} className="flex items-center gap-3">
 									<div className="flex flex-col items-center gap-2 text-center">
-										<span className="gradient-brand flex h-12 w-12 items-center justify-center rounded-full font-bold text-lg text-white shadow-[0_4px_12px_rgba(124,58,237,0.3)]">
+										<span className="flex h-12 w-12 items-center justify-center rounded-full bg-[#0a0a0a] font-bold text-lg text-white">
 											{step.step}
 										</span>
 										<span className="font-medium text-foreground text-sm">{step.label}</span>
@@ -214,8 +214,8 @@ export const ShortformServicePage = () => {
 					<div className="grid gap-4 sm:grid-cols-2">
 						{SHORTFORM_DELIVERABLES.map((d, i) => (
 							<Reveal key={d.title} delay={i * 0.08}>
-								<div className="flex h-full items-start gap-4 rounded-2xl border border-slate-200 bg-white p-6">
-									<div className="gradient-brand flex h-10 w-10 shrink-0 items-center justify-center rounded-xl font-bold text-sm text-white">
+								<div className="flex h-full items-start gap-4 rounded-md border border-slate-200 bg-white p-6">
+									<div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-[#0a0a0a] font-bold text-sm text-white">
 										0{i + 1}
 									</div>
 									<div>
@@ -233,6 +233,6 @@ export const ShortformServicePage = () => {
 			<CTACard headline="터지는 숏폼, 지금 시작하세요" sub="24시간 안으로 답변드립니다." />
 		</>
 	);
-}
+};
 
 export default ShortformServicePage;
