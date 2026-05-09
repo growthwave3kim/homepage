@@ -1,5 +1,5 @@
 import { BarChart3, BookText, Layers } from "lucide-react";
-import Reveal from "@/components/shared/Reveal";
+import { Reveal } from "@/components/shared/Reveal";
 
 const VALUES = [
 	{
@@ -19,7 +19,7 @@ const VALUES = [
 	},
 ] as const;
 
-export default function TeamValues() {
+export const TeamValues = () => {
 	return (
 		<section className="bg-white px-4 py-20 md:py-24">
 			<div className="mx-auto max-w-6xl">

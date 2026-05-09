@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Reveal from "@/components/shared/Reveal";
+import { Reveal } from "@/components/shared/Reveal";
 import {
 	Accordion,
 	AccordionContent,
@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/accordion";
 import { FAQ_ITEMS } from "@/data/faq";
 
-export default function FAQPreview() {
+export const FAQPreview = () => {
 	const previewItems = FAQ_ITEMS.slice(0, 4);
 
 	return (
@@ -56,4 +56,4 @@ export default function FAQPreview() {
 			</div>
 		</section>
 	);
-}
+};

@@ -1,16 +1,16 @@
 import Link from "next/link";
 
-interface CTACardProps {
+type CTACardProps = {
 	headline?: string;
 	sub?: string;
 	buttonText?: string;
-}
+};
 
-export default function CTACard({
+export const CTACard = ({
 	headline = "무료 상담으로 시작하세요",
 	sub = "첫 상담 무료 · 진행 의무 없음 · 영업일 1일 내 회신",
 	buttonText = "무료 상담 신청",
-}: CTACardProps) {
+}: CTACardProps) => {
 	return (
 		<section className="px-4 py-24">
 			<div className="mx-auto max-w-3xl text-center">
@@ -29,4 +29,4 @@ export default function CTACard({
 			</div>
 		</section>
 	);
-}
+};

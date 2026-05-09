@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 
-export default function PageTransition({ children }: { children: React.ReactNode }) {
+export const PageTransition = ({ children }: { children: React.ReactNode }) => {
 	const pathname = usePathname();
 
 	// biome-ignore lint/correctness/useExhaustiveDependencies: pathname is the trigger, not consumed
@@ -22,4 +22,4 @@ export default function PageTransition({ children }: { children: React.ReactNode
 			{children}
 		</motion.div>
 	);
-}
+};

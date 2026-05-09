@@ -1,7 +1,7 @@
-import Reveal from "@/components/shared/Reveal";
+import { Reveal } from "@/components/shared/Reveal";
 import { PROCESS_STEPS } from "@/data/process";
 
-export default function ProcessTimeline() {
+export const ProcessTimeline = () => {
 	return (
 		<section className="bg-white px-4 py-20 md:py-24">
 			<div className="mx-auto max-w-6xl">
@@ -68,4 +68,4 @@ export default function ProcessTimeline() {
 			</div>
 		</section>
 	);
-}
+};

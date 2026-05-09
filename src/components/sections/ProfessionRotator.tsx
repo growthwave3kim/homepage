@@ -7,7 +7,7 @@ import { PROFESSIONS } from "@/data/professions";
 const labels = PROFESSIONS.map((p) => p.label);
 const INTERVAL = 2400;
 
-export default function ProfessionRotator() {
+export const ProfessionRotator = () => {
 	const [index, tick] = useReducer((i: number) => (i + 1) % labels.length, 0);
 	const prefersReducedMotion = useReducedMotion();
 

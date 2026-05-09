@@ -4,7 +4,7 @@ import { ChevronUp, MessageCircle } from "lucide-react";
 import { useEffect, useState } from "react";
 import { siteConfig } from "@/config/site";
 
-export default function FloatingActions() {
+export const FloatingActions = () => {
 	const [showScrollTop, setShowScrollTop] = useState(false);
 
 	useEffect(() => {
@@ -51,4 +51,4 @@ export default function FloatingActions() {
 			)}
 		</div>
 	);
-}
+};

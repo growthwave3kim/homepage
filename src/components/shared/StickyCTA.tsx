@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
-export default function StickyCTA() {
+export const StickyCTA = () => {
 	const [visible, setVisible] = useState(false);
 	const pathname = usePathname();
 
@@ -41,4 +41,4 @@ export default function StickyCTA() {
 			)}
 		</AnimatePresence>
 	);
-}
+};

@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import TeamCrews from "@/components/sections/TeamCrews";
-import TeamMemberFeature from "@/components/sections/TeamMemberFeature";
-import TeamValues from "@/components/sections/TeamValues";
-import CTACard from "@/components/shared/CTACard";
-import PageHero from "@/components/shared/PageHero";
+import { TeamCrews } from "@/components/sections/TeamCrews";
+import { TeamMemberFeature } from "@/components/sections/TeamMemberFeature";
+import { TeamValues } from "@/components/sections/TeamValues";
+import { CTACard } from "@/components/shared/CTACard";
+import { PageHero } from "@/components/shared/PageHero";
 
 export const metadata: Metadata = {
 	title: "팀 | Growth Wave",
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 		"그로스웨이브 팀. 전문직 광고 규정과 검색 의도를 이해하는 사람들이 직접 콘텐츠를 만듭니다.",
 };
 
-export default function TeamPage() {
+export const TeamPage = () => {
 	return (
 		<>
 			<PageHero
@@ -34,3 +34,5 @@ export default function TeamPage() {
 		</>
 	);
 }
+
+export default TeamPage;

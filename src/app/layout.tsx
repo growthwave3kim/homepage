@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
-import Footer from "@/components/layout/Footer";
-import Header from "@/components/layout/Header";
-import FloatingActions from "@/components/shared/FloatingActions";
-import PageTransition from "@/components/shared/PageTransition";
-import StickyCTA from "@/components/shared/StickyCTA";
+import { Footer } from "@/components/layout/Footer";
+import { Header } from "@/components/layout/Header";
+import { FloatingActions } from "@/components/shared/FloatingActions";
+import { PageTransition } from "@/components/shared/PageTransition";
+import { StickyCTA } from "@/components/shared/StickyCTA";
 import { siteConfig } from "@/config/site";
 
 const pretendard = localFont({
@@ -86,7 +86,7 @@ const jsonLd = {
 	],
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export const RootLayout = ({ children }: { children: React.ReactNode }) => {
 	return (
 		<html
 			lang="ko"
@@ -109,3 +109,5 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 		</html>
 	);
 }
+
+export default RootLayout;

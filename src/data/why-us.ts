@@ -1,13 +1,13 @@
 import type { WhyUsCard } from "@/types";
 
-export interface WhyUsBoldCard {
+export type WhyUsBoldCard = {
 	icon: string;
 	title: string;
 	description: string;
 	stat: string;
 	before: string;
 	after: string;
-}
+};
 
 export const WHY_US_BOLD_CARDS: WhyUsBoldCard[] = [
 	{

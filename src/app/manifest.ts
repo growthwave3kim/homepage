@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { siteConfig } from "@/config/site";
 
-export default function manifest(): MetadataRoute.Manifest {
+export const manifest = (): MetadataRoute.Manifest => {
 	return {
 		name: siteConfig.name,
 		short_name: siteConfig.name,
@@ -13,3 +13,5 @@ export default function manifest(): MetadataRoute.Manifest {
 		icons: [{ src: "/favicon.ico", sizes: "any", type: "image/x-icon" }],
 	};
 }
+
+export default manifest;

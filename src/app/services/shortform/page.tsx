@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import Cases from "@/components/sections/Cases";
-import CTACard from "@/components/shared/CTACard";
-import PageHero from "@/components/shared/PageHero";
-import Reveal from "@/components/shared/Reveal";
-import SectionHeading from "@/components/shared/SectionHeading";
+import { Cases } from "@/components/sections/Cases";
+import { CTACard } from "@/components/shared/CTACard";
+import { PageHero } from "@/components/shared/PageHero";
+import { Reveal } from "@/components/shared/Reveal";
+import { SectionHeading } from "@/components/shared/SectionHeading";
 import { SERVICES } from "@/data/services";
 
 export const metadata: Metadata = {
@@ -82,7 +82,7 @@ const SHORTFORM_DELIVERABLES = [
 
 const service = SERVICES.find((s) => s.index === "02") ?? SERVICES[1];
 
-export default function ShortformServicePage() {
+export const ShortformServicePage = () => {
 	return (
 		<>
 			<PageHero
@@ -234,3 +234,5 @@ export default function ShortformServicePage() {
 		</>
 	);
 }
+
+export default ShortformServicePage;

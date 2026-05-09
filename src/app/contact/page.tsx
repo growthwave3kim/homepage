@@ -1,6 +1,6 @@
 import { CheckCircle2, Mail } from "lucide-react";
 import type { Metadata } from "next";
-import ContactForm from "@/components/sections/ContactForm";
+import { ContactForm } from "@/components/sections/ContactForm";
 import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 const TRUST_BADGES = ["첫 상담 무료", "계약 압박 없음", "영업일 1일 내 회신"] as const;
 
-export default function ContactPage() {
+export const ContactPage = () => {
 	return (
 		<main className="min-h-screen bg-white pt-20">
 			{/* Page header */}
@@ -56,3 +56,5 @@ export default function ContactPage() {
 		</main>
 	);
 }
+
+export default ContactPage;

@@ -1,10 +1,10 @@
 import { ArrowRight, Quote } from "lucide-react";
 import Link from "next/link";
-import Reveal from "@/components/shared/Reveal";
-import SectionHeading from "@/components/shared/SectionHeading";
+import { Reveal } from "@/components/shared/Reveal";
+import { SectionHeading } from "@/components/shared/SectionHeading";
 import { TESTIMONIALS } from "@/data/testimonials";
 
-export default function Testimonials() {
+export const Testimonials = () => {
 	return (
 		<section className="bg-white px-4 py-20 md:py-24">
 			<div className="mx-auto max-w-7xl">

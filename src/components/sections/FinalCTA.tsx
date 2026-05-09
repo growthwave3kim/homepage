@@ -1,9 +1,9 @@
 import { MessageCircle } from "lucide-react";
 import Link from "next/link";
-import Reveal from "@/components/shared/Reveal";
+import { Reveal } from "@/components/shared/Reveal";
 import { siteConfig } from "@/config/site";
 
-export default function FinalCTA() {
+export const FinalCTA = () => {
 	return (
 		<section className="relative overflow-hidden bg-[#0f172a] px-4 py-24 md:py-28">
 			{/* 보라 radial glow */}
@@ -50,4 +50,4 @@ export default function FinalCTA() {
 			</div>
 		</section>
 	);
-}
+};

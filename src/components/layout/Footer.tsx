@@ -1,9 +1,9 @@
 import { MessageCircle } from "lucide-react";
-import Logo from "@/components/shared/Logo";
-import WaveDivider from "@/components/shared/WaveDivider";
+import { Logo } from "@/components/shared/Logo";
+import { WaveDivider } from "@/components/shared/WaveDivider";
 import { siteConfig } from "@/config/site";
 
-export default function Footer() {
+export const Footer = () => {
 	return (
 		<footer className="bg-[#0f172a] text-white">
 			<WaveDivider fillColor="#0f172a" />
@@ -66,4 +66,4 @@ export default function Footer() {
 			</div>
 		</footer>
 	);
-}
+};

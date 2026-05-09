@@ -3,21 +3,21 @@
 import { motion, useInView, useReducedMotion } from "motion/react";
 import { useRef } from "react";
 
-interface RevealProps {
+type RevealProps = {
 	children: React.ReactNode;
 	className?: string;
 	delay?: number;
 	direction?: "up" | "down" | "left" | "right" | "none";
 	duration?: number;
-}
+};
 
-export default function Reveal({
+export const Reveal = ({
 	children,
 	className = "",
 	delay = 0,
 	direction = "up",
 	duration = 0.6,
-}: RevealProps) {
+}: RevealProps) => {
 	const ref = useRef<HTMLDivElement>(null);
 	const isInView = useInView(ref, { once: true, margin: "-80px" });
 	const prefersReducedMotion = useReducedMotion();
@@ -51,4 +51,4 @@ export default function Reveal({
 			{children}
 		</motion.div>
 	);
-}
+};

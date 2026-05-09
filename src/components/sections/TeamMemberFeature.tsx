@@ -1,8 +1,8 @@
 import Image from "next/image";
-import Reveal from "@/components/shared/Reveal";
+import { Reveal } from "@/components/shared/Reveal";
 import { TEAM_MEMBERS } from "@/data/team";
 
-export default function TeamMemberFeature() {
+export const TeamMemberFeature = () => {
 	return (
 		<section className="bg-white px-4 py-20 md:py-24">
 			<div className="mx-auto max-w-5xl">
@@ -88,4 +88,4 @@ export default function TeamMemberFeature() {
 			</div>
 		</section>
 	);
-}
+};

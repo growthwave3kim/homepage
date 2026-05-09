@@ -4,10 +4,10 @@ import { ChevronDown, Clapperboard, Crown, FileText } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import Logo from "@/components/shared/Logo";
+import { Logo } from "@/components/shared/Logo";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
-import MobileMenu from "./MobileMenu";
+import { MobileMenu } from "./MobileMenu";
 
 const CHILD_ICON_MAP: Record<string, React.ComponentType<{ className?: string }>> = {
 	Clapperboard,
@@ -15,7 +15,7 @@ const CHILD_ICON_MAP: Record<string, React.ComponentType<{ className?: string }>
 	FileText,
 };
 
-export default function Header() {
+export const Header = () => {
 	const [scrolled, setScrolled] = useState(false);
 	const [openMenu, setOpenMenu] = useState<string | null>(null);
 	const pathname = usePathname();
@@ -170,4 +170,4 @@ export default function Header() {
 			</div>
 		</header>
 	);
-}
+};

@@ -1,56 +1,49 @@
-export interface Stat {
-	value: number;
-	suffix: string;
-	decimals?: number;
-	label: string;
-}
-
-export interface PainPoint {
+export type PainPoint = {
 	id: string;
 	text: string;
-}
+};
 
-export interface WhyUsCard {
+export type WhyUsCard = {
 	icon: string;
 	title: string;
 	description: string;
-}
+};
 
-export interface ComparisonRow {
+export type ComparisonRow = {
 	general: string;
 	growthwave: string;
-}
+};
 
-export interface ServiceStep {
+export type ServiceStep = {
 	step: number;
 	label: string;
-}
+};
 
-export interface Service {
+export type Service = {
 	index: string;
 	category: string;
 	title: string;
 	description: string;
 	steps: ServiceStep[];
-}
+};
 
-export interface Case {
+export type Case = {
 	field: string;
 	quote: string;
 	metric: string;
 	period: string;
 	anonymous: string;
 	profession?: string;
-}
+};
 
-export interface Testimonial {
+export type Testimonial = {
 	text: string;
 	author: string;
 	role: string;
 	profession?: string;
-}
+};
 
-export interface TeamMember {
+export type TeamMember = {
 	nameEn: string;
 	nameKo: string;
 	role: string;
@@ -58,20 +51,20 @@ export interface TeamMember {
 	quote?: string;
 	careers?: string[];
 	photo?: string;
-}
+};
 
-export interface FaqItem {
+export type FaqItem = {
 	question: string;
 	answer: string;
-}
+};
 
-export interface NavChild {
+export type NavChild = {
 	label: string;
 	href: string;
 	description: string;
 	icon: string;
 	flagship?: boolean;
-}
+};
 
 export type NavItem =
 	| { label: string; href: string; children?: undefined }

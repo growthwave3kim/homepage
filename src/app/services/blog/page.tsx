@@ -1,10 +1,10 @@
 import { Check, X } from "lucide-react";
 import type { Metadata } from "next";
-import Cases from "@/components/sections/Cases";
-import CTACard from "@/components/shared/CTACard";
-import PageHero from "@/components/shared/PageHero";
-import Reveal from "@/components/shared/Reveal";
-import SectionHeading from "@/components/shared/SectionHeading";
+import { Cases } from "@/components/sections/Cases";
+import { CTACard } from "@/components/shared/CTACard";
+import { PageHero } from "@/components/shared/PageHero";
+import { Reveal } from "@/components/shared/Reveal";
+import { SectionHeading } from "@/components/shared/SectionHeading";
 import { SERVICES } from "@/data/services";
 
 export const metadata: Metadata = {
@@ -93,7 +93,7 @@ const BLOG_DELIVERABLES = [
 
 const service = SERVICES[0];
 
-export default function BlogServicePage() {
+export const BlogServicePage = () => {
 	return (
 		<>
 			<PageHero
@@ -290,3 +290,5 @@ export default function BlogServicePage() {
 		</>
 	);
 }
+
+export default BlogServicePage;

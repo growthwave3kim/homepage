@@ -1,5 +1,5 @@
 import { Check, Database, ShieldCheck, Target, X } from "lucide-react";
-import Reveal from "@/components/shared/Reveal";
+import { Reveal } from "@/components/shared/Reveal";
 import { WHY_US_BOLD_CARDS } from "@/data/why-us";
 
 const ICON_MAP: Record<string, React.ComponentType<{ className?: string }>> = {
@@ -8,7 +8,7 @@ const ICON_MAP: Record<string, React.ComponentType<{ className?: string }>> = {
 	Target,
 };
 
-export default function WhyUsBold() {
+export const WhyUsBold = () => {
 	return (
 		<section className="bg-[#0b1220] px-4 py-20 md:py-24">
 			<div className="mx-auto max-w-6xl">

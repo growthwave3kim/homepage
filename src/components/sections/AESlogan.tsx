@@ -1,4 +1,4 @@
-export default function AESlogan() {
+export const AESlogan = () => {
 	return (
 		<section className="bg-[#0b1220] px-4 py-16 md:py-20">
 			<div className="mx-auto max-w-4xl">
@@ -16,4 +16,4 @@ export default function AESlogan() {
 			</div>
 		</section>
 	);
-}
+};

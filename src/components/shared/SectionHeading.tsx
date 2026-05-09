@@ -1,22 +1,22 @@
 import { cn } from "@/lib/utils";
 
-interface SectionHeadingProps {
+type SectionHeadingProps = {
 	eyebrow?: string;
 	title: string;
 	sub?: string;
 	className?: string;
 	align?: "left" | "center";
 	gradientTitle?: boolean;
-}
+};
 
-export default function SectionHeading({
+export const SectionHeading = ({
 	eyebrow,
 	title,
 	sub,
 	className,
 	align = "center",
 	gradientTitle = false,
-}: SectionHeadingProps) {
+}: SectionHeadingProps) => {
 	return (
 		<div className={cn(align === "center" ? "text-center" : "text-left", className)}>
 			{eyebrow && (
@@ -39,4 +39,4 @@ export default function SectionHeading({
 			)}
 		</div>
 	);
-}
+};

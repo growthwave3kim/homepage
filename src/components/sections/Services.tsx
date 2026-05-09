@@ -2,11 +2,11 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import Reveal from "@/components/shared/Reveal";
-import SectionHeading from "@/components/shared/SectionHeading";
+import { Reveal } from "@/components/shared/Reveal";
+import { SectionHeading } from "@/components/shared/SectionHeading";
 import { SERVICES } from "@/data/services";
 
-function BlogMockup() {
+const BlogMockup = () => {
 	return (
 		<div className="mx-auto w-full max-w-sm rounded-2xl border border-slate-200 bg-slate-50 p-4 shadow-sm">
 			<div className="mb-3 flex items-center gap-2">
@@ -28,9 +28,9 @@ function BlogMockup() {
 			</div>
 		</div>
 	);
-}
+};
 
-function PhoneMockup() {
+const PhoneMockup = () => {
 	const [gifFailed, setGifFailed] = useState(false);
 
 	return (
@@ -59,9 +59,9 @@ function PhoneMockup() {
 			</div>
 		</div>
 	);
-}
+};
 
-export default function Services() {
+export const Services = () => {
 	return (
 		<section id="services" className="bg-white px-4 py-20 md:py-24">
 			<div className="mx-auto max-w-7xl">
@@ -125,4 +125,4 @@ export default function Services() {
 			</div>
 		</section>
 	);
-}
+};

@@ -1,6 +1,6 @@
 export type ProfessionSlug = "lawyer" | "doctor" | "oriental" | "vet" | "labor" | "tax";
 
-export interface Profession {
+export type Profession = {
 	slug: ProfessionSlug;
 	label: string;
 	icon: string;
@@ -9,7 +9,7 @@ export interface Profession {
 	keyPoints: string[];
 	strength: string;
 	tag: string;
-}
+};
 
 export const PROFESSIONS: Profession[] = [
 	{

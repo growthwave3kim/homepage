@@ -2,7 +2,7 @@ import { Download } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
-interface PageHeroProps {
+type PageHeroProps = {
 	eyebrow: string;
 	title: string;
 	titleHighlight?: string;
@@ -14,9 +14,9 @@ interface PageHeroProps {
 	secondaryDownload?: boolean;
 	children?: React.ReactNode;
 	className?: string;
-}
+};
 
-export default function PageHero({
+export const PageHero = ({
 	eyebrow,
 	title,
 	titleHighlight,
@@ -28,7 +28,7 @@ export default function PageHero({
 	secondaryDownload = false,
 	children,
 	className,
-}: PageHeroProps) {
+}: PageHeroProps) => {
 	return (
 		<section
 			className={cn(
@@ -95,4 +95,4 @@ export default function PageHero({
 			</div>
 		</section>
 	);
-}
+};

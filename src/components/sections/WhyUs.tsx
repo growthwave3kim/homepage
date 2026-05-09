@@ -1,6 +1,6 @@
 import { Database, Search, ShieldCheck, User } from "lucide-react";
-import Reveal from "@/components/shared/Reveal";
-import SectionHeading from "@/components/shared/SectionHeading";
+import { Reveal } from "@/components/shared/Reveal";
+import { SectionHeading } from "@/components/shared/SectionHeading";
 import { WHY_US_CARDS } from "@/data/why-us";
 
 const ICON_MAP: Record<string, React.ElementType> = {
@@ -10,7 +10,7 @@ const ICON_MAP: Record<string, React.ElementType> = {
 	User,
 };
 
-export default function WhyUs() {
+export const WhyUs = () => {
 	return (
 		<section id="about" className="bg-white px-4 py-20 md:py-24">
 			<div className="mx-auto max-w-6xl">

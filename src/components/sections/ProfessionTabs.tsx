@@ -5,7 +5,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { CASES } from "@/data/cases";
 import { PROFESSIONS } from "@/data/professions";
 
-export default function ProfessionTabs() {
+export const ProfessionTabs = () => {
 	return (
 		<section className="bg-slate-50 px-4 py-20 md:py-24">
 			<div className="mx-auto max-w-6xl">

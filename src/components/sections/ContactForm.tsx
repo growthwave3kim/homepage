@@ -24,11 +24,10 @@ const PROFESSION_OPTIONS = [
 	{ id: "vet", label: "수의사" },
 	{ id: "labor", label: "노무사" },
 	{ id: "tax", label: "세무사" },
-
 	{ id: "other", label: "기타" },
 ] as const;
 
-export default function ContactForm() {
+export const ContactForm = () => {
 	const [source, setSource] = useState("");
 	const [sent, setSent] = useState(false);
 	const [profession, setProfession] = useState("");
@@ -36,22 +35,22 @@ export default function ContactForm() {
 	const professionRef = useRef<HTMLDivElement>(null);
 
 	useEffect(() => {
-		function handleOutside(e: MouseEvent) {
+		const handleOutside = (e: MouseEvent) => {
 			if (professionRef.current && !professionRef.current.contains(e.target as Node)) {
 				setProfessionOpen(false);
 			}
-		}
+		};
 		if (professionOpen) document.addEventListener("mousedown", handleOutside);
 		return () => document.removeEventListener("mousedown", handleOutside);
 	}, [professionOpen]);
 
-	function handleKeyDown(e: React.KeyboardEvent<HTMLFormElement>) {
+	const handleKeyDown = (e: React.KeyboardEvent<HTMLFormElement>) => {
 		if (e.key === "Enter" && (e.target as HTMLElement).tagName !== "TEXTAREA") {
 			e.preventDefault();
 		}
-	}
+	};
 
-	function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+	const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 		const fd = new FormData(e.currentTarget);
 		const subject = encodeURIComponent(
@@ -70,7 +69,7 @@ export default function ContactForm() {
 		);
 		window.location.href = `mailto:${siteConfig.contact.email}?subject=${subject}&body=${body}`;
 		setSent(true);
-	}
+	};
 
 	return (
 		<div className="rounded-2xl border border-slate-100 bg-white p-6 shadow-[0_8px_40px_rgba(0,0,0,0.07)] md:p-8">
@@ -201,7 +200,6 @@ export default function ContactForm() {
 							<Input id="contact-email" name="email" type="email" placeholder="name@example.com" />
 						</div>
 
-						{/* Source selection pills */}
 						<div className="space-y-2">
 							<Label>유입 경로</Label>
 							<div className="flex flex-wrap gap-2">
@@ -262,4 +260,4 @@ export default function ContactForm() {
 			</AnimatePresence>
 		</div>
 	);
-}
+};

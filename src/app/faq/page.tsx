@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import FAQ from "@/components/sections/FAQ";
-import CTACard from "@/components/shared/CTACard";
-import PageHero from "@/components/shared/PageHero";
+import { FAQ } from "@/components/sections/FAQ";
+import { CTACard } from "@/components/shared/CTACard";
+import { PageHero } from "@/components/shared/PageHero";
 
 export const metadata: Metadata = {
 	title: "FAQ | Growth Wave",
@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 		"그로스웨이브 전문직 마케팅에 대한 자주 묻는 질문. 비용, 진행 방식, 광고 규정, 성과 측정 등을 정리했습니다.",
 };
 
-export default function FAQPage() {
+export const FAQPage = () => {
 	return (
 		<>
 			<PageHero
@@ -31,3 +31,5 @@ export default function FAQPage() {
 		</>
 	);
 }
+
+export default FAQPage;

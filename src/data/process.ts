@@ -1,8 +1,8 @@
-export interface ProcessStep {
+export type ProcessStep = {
 	step: string;
 	title: string;
 	description: string;
-}
+};
 
 export const PROCESS_STEPS: ProcessStep[] = [
 	{

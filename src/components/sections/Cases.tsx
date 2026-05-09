@@ -1,10 +1,10 @@
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
-import Reveal from "@/components/shared/Reveal";
-import SectionHeading from "@/components/shared/SectionHeading";
+import { Reveal } from "@/components/shared/Reveal";
+import { SectionHeading } from "@/components/shared/SectionHeading";
 import { CASES } from "@/data/cases";
 
-export default function Cases() {
+export const Cases = () => {
 	return (
 		<section className="bg-slate-50 px-4 py-20 md:py-24">
 			<div className="mx-auto max-w-7xl">
@@ -66,4 +66,4 @@ export default function Cases() {
 			</div>
 		</section>
 	);
-}
+};

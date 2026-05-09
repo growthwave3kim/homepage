@@ -4,7 +4,7 @@ import { MenuIcon } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import Logo from "@/components/shared/Logo";
+import { Logo } from "@/components/shared/Logo";
 import {
 	Accordion,
 	AccordionContent,
@@ -15,7 +15,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 
-export default function MobileMenu() {
+export const MobileMenu = () => {
 	const [open, setOpen] = useState(false);
 	const pathname = usePathname();
 
@@ -124,4 +124,4 @@ export default function MobileMenu() {
 			</SheetContent>
 		</Sheet>
 	);
-}
+};

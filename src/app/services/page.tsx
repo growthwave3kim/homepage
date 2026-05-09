@@ -1,5 +1,7 @@
 import { redirect } from "next/navigation";
 
-export default function ServicesPage() {
+export const ServicesPage = () => {
 	redirect("/services/professional");
 }
+
+export default ServicesPage;

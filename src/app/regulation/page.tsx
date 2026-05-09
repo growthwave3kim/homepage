@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import AdRegulationGuide from "@/components/sections/AdRegulationGuide";
-import CTACard from "@/components/shared/CTACard";
-import PageHero from "@/components/shared/PageHero";
+import { AdRegulationGuide } from "@/components/sections/AdRegulationGuide";
+import { CTACard } from "@/components/shared/CTACard";
+import { PageHero } from "@/components/shared/PageHero";
 
 export const metadata: Metadata = {
 	title: "전문직 광고 규정 가이드 | Growth Wave",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 	],
 };
 
-export default function RegulationPage() {
+export const RegulationPage = () => {
 	return (
 		<>
 			<PageHero
@@ -42,3 +42,5 @@ export default function RegulationPage() {
 		</>
 	);
 }
+
+export default RegulationPage;

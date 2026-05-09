@@ -1,7 +1,7 @@
 import Image from "next/image";
 import type { TeamMember } from "@/types";
 
-export default function TeamCard({ member }: { member: TeamMember }) {
+export const TeamCard = ({ member }: { member: TeamMember }) => {
 	return (
 		<div className="card-hover flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white">
 			<div className="relative aspect-square w-full overflow-hidden bg-gradient-to-br from-slate-100 to-slate-200">
@@ -31,4 +31,4 @@ export default function TeamCard({ member }: { member: TeamMember }) {
 			</div>
 		</div>
 	);
-}
+};

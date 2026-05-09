@@ -1,6 +1,6 @@
 "use client";
 
-import Reveal from "@/components/shared/Reveal";
+import { Reveal } from "@/components/shared/Reveal";
 import {
 	Accordion,
 	AccordionContent,
@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/accordion";
 import { FAQ_ITEMS } from "@/data/faq";
 
-export default function FAQ() {
+export const FAQ = () => {
 	return (
 		<section id="faq" className="bg-white px-4 py-20 md:py-24">
 			<div className="mx-auto max-w-3xl">
@@ -31,4 +31,4 @@ export default function FAQ() {
 			</div>
 		</section>
 	);
-}
+};

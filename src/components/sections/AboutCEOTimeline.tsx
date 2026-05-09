@@ -1,4 +1,4 @@
-import Reveal from "@/components/shared/Reveal";
+import { Reveal } from "@/components/shared/Reveal";
 import { cn } from "@/lib/utils";
 
 const MILESTONES = [
@@ -34,7 +34,7 @@ const MILESTONES = [
 	},
 ];
 
-export default function AboutCEOTimeline() {
+export const AboutCEOTimeline = () => {
 	return (
 		<section className="bg-slate-50 px-4 py-20 md:py-24">
 			<div className="mx-auto max-w-3xl">

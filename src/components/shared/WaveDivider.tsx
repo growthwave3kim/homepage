@@ -1,16 +1,16 @@
-interface WaveDividerProps {
+type WaveDividerProps = {
 	className?: string;
 	fillColor?: string;
 	flip?: boolean;
 	height?: number;
-}
+};
 
-export default function WaveDivider({
+export const WaveDivider = ({
 	className = "",
 	fillColor = "#ffffff",
 	flip = false,
 	height = 60,
-}: WaveDividerProps) {
+}: WaveDividerProps) => {
 	return (
 		<div
 			className={`w-full overflow-hidden leading-none ${flip ? "rotate-180" : ""} ${className}`}
@@ -31,4 +31,4 @@ export default function WaveDivider({
 			</svg>
 		</div>
 	);
-}
+};

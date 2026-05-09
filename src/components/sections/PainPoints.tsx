@@ -1,9 +1,9 @@
 import { Quote } from "lucide-react";
-import Reveal from "@/components/shared/Reveal";
-import SectionHeading from "@/components/shared/SectionHeading";
+import { Reveal } from "@/components/shared/Reveal";
+import { SectionHeading } from "@/components/shared/SectionHeading";
 import { PAIN_POINTS } from "@/data/pain-points";
 
-export default function PainPoints() {
+export const PainPoints = () => {
 	return (
 		<section className="bg-slate-50 px-4 py-20 md:py-24">
 			<div className="mx-auto max-w-7xl">
@@ -44,4 +44,4 @@ export default function PainPoints() {
 			</div>
 		</section>
 	);
-}
+};

@@ -14,7 +14,7 @@ const routes = [
 	{ path: "/contact", priority: 0.8, changeFrequency: "monthly" as const },
 ];
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export const sitemap = (): MetadataRoute.Sitemap => {
 	return routes.map(({ path, priority, changeFrequency }) => ({
 		url: `${siteConfig.url}${path}`,
 		lastModified: new Date(),
@@ -22,3 +22,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
 		priority,
 	}));
 }
+
+export default sitemap;

@@ -1,9 +1,9 @@
-interface LogoProps {
+type LogoProps = {
 	variant?: "dark" | "light";
 	className?: string;
-}
+};
 
-export default function Logo({ variant = "dark", className = "" }: LogoProps) {
+export const Logo = ({ variant = "dark", className = "" }: LogoProps) => {
 	return (
 		<span
 			className={`font-bold text-[19px] tracking-tight ${
@@ -13,4 +13,4 @@ export default function Logo({ variant = "dark", className = "" }: LogoProps) {
 			Growth Wave
 		</span>
 	);
-}
+};

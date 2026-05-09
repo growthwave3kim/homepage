@@ -1,9 +1,9 @@
 import { CheckIcon, XIcon } from "lucide-react";
-import Reveal from "@/components/shared/Reveal";
-import SectionHeading from "@/components/shared/SectionHeading";
+import { Reveal } from "@/components/shared/Reveal";
+import { SectionHeading } from "@/components/shared/SectionHeading";
 import { COMPARISON_ROWS } from "@/data/comparison";
 
-export default function Comparison() {
+export const Comparison = () => {
 	return (
 		<section className="bg-slate-50 px-4 py-20 md:py-24">
 			<div className="mx-auto max-w-5xl">
@@ -59,4 +59,4 @@ export default function Comparison() {
 			</div>
 		</section>
 	);
-}
+};

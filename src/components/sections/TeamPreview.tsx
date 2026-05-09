@@ -1,10 +1,10 @@
 import Link from "next/link";
-import Reveal from "@/components/shared/Reveal";
-import SectionHeading from "@/components/shared/SectionHeading";
-import TeamCard from "@/components/shared/TeamCard";
+import { Reveal } from "@/components/shared/Reveal";
+import { SectionHeading } from "@/components/shared/SectionHeading";
+import { TeamCard } from "@/components/shared/TeamCard";
 import { TEAM_MEMBERS } from "@/data/team";
 
-export default function TeamPreview() {
+export const TeamPreview = () => {
 	return (
 		<section className="bg-slate-50 px-4 py-20 md:py-24">
 			<div className="mx-auto max-w-6xl">
@@ -38,4 +38,4 @@ export default function TeamPreview() {
 			</div>
 		</section>
 	);
-}
+};
