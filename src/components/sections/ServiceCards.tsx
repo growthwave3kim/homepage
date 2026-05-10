@@ -1,5 +1,9 @@
+"use client";
+
 import { ArrowRight, BookOpen, Clapperboard, Users } from "lucide-react";
+import { motion, useInView, useReducedMotion } from "motion/react";
 import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
 import { Reveal } from "@/components/shared/Reveal";
 import { SERVICE_CARDS } from "@/data/service-cards";
 
@@ -7,6 +11,57 @@ const ICON_MAP: Record<string, React.ElementType> = {
 	Users,
 	BookOpen,
 	Clapperboard,
+};
+
+type FlipCardProps = {
+	children: React.ReactNode;
+	delay: number;
+};
+
+const FlipCard = ({ children, delay }: FlipCardProps) => {
+	const ref = useRef<HTMLDivElement>(null);
+	const scrollDirRef = useRef<"down" | "up">("down");
+	const isInView = useInView(ref, { once: false, margin: "-200px" });
+	const prefersReducedMotion = useReducedMotion();
+	const [visible, setVisible] = useState(false);
+
+	useEffect(() => {
+		let lastY = window.scrollY;
+		const onScroll = () => {
+			const y = window.scrollY;
+			scrollDirRef.current = y > lastY ? "down" : "up";
+			lastY = y;
+		};
+		window.addEventListener("scroll", onScroll, { passive: true });
+		return () => window.removeEventListener("scroll", onScroll);
+	}, []);
+
+	useEffect(() => {
+		if (isInView) {
+			setVisible(true);
+		} else if (scrollDirRef.current === "up") {
+			setVisible(false);
+		}
+	}, [isInView]);
+
+	const initial = prefersReducedMotion
+		? { opacity: 0, rotateY: 0 }
+		: { opacity: 0, rotateY: -90 };
+
+	const animate = visible ? { opacity: 1, rotateY: 0 } : initial;
+
+	const shouldAnimate = visible && scrollDirRef.current === "down" && !prefersReducedMotion;
+	const transition = shouldAnimate
+		? { duration: 1.6, delay, ease: [0.16, 1, 0.3, 1] as const }
+		: { duration: 0, delay: 0 };
+
+	return (
+		<div style={{ perspective: "800px" }}>
+			<motion.div ref={ref} initial={initial} animate={animate} transition={transition} style={{ transformOrigin: "center" }}>
+				{children}
+			</motion.div>
+		</div>
+	);
 };
 
 export const ServiceCards = () => {
@@ -28,7 +83,7 @@ export const ServiceCards = () => {
 					{SERVICE_CARDS.map((card, i) => {
 						const Icon = ICON_MAP[card.icon] ?? Users;
 						return (
-							<Reveal key={card.href} delay={i * 0.1}>
+							<FlipCard key={card.href} delay={i * 0.12}>
 								<Link
 									href={card.href}
 									className="group flex h-full flex-col rounded-xl border border-slate-200 bg-white p-8 transition-all duration-300 hover:-translate-y-1 hover:border-[#7c3aed]/40 hover:shadow-[0_8px_32px_rgba(124,58,237,0.08)]"
@@ -69,7 +124,7 @@ export const ServiceCards = () => {
 										/>
 									</span>
 								</Link>
-							</Reveal>
+							</FlipCard>
 						);
 					})}
 				</div>
