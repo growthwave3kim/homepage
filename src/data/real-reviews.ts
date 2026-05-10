@@ -44,13 +44,13 @@ export const REAL_REVIEWS_ROW1: RealReview[] = [
 		authorLabel: "원장 D",
 		fieldLabel: "한의원",
 		imageUrl: "https://placehold.co/300x180/FEE500/0a0a0a?text=Review",
-		excerpt: "변호사 입장이 아닌 의뢰인 입장에서 쓴 글이라는 게 차이가 컸습니다.",
+		excerpt: "의사 입장이 아닌 환자 입장에서 쓴 글이라는 게 차이가 컸어요.",
 	},
 	{
 		id: "r1-5",
 		type: "bubble",
-		authorLabel: "변호사 E",
-		fieldLabel: "형사",
+		authorLabel: "세무사 E",
+		fieldLabel: "법인세무",
 		bubbles: [
 			{ side: "them", text: "재계약 진행하겠습니다. 잘 부탁드려요" },
 			{ side: "me", text: "감사합니다, 다음 달 일정 조율할게요" },
@@ -89,11 +89,11 @@ export const REAL_REVIEWS_ROW2: RealReview[] = [
 	{
 		id: "r2-6",
 		type: "bubble",
-		authorLabel: "변호사 O",
-		fieldLabel: "노동",
+		authorLabel: "노무사 O",
+		fieldLabel: "노동·인사",
 		bubbles: [
 			{ side: "them", text: "전 대행사보다 콘텐츠 톤이 훨씬 정확해요" },
-			{ side: "me", text: "의뢰인 검색 의도에 맞춘 덕분인 것 같아요" },
+			{ side: "me", text: "실제로 검색하는 분들 의도에 맞춰 쓰거든요" },
 		],
 	},
 ];

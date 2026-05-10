@@ -49,7 +49,7 @@ export const Header = () => {
 				</Link>
 
 				{/* Desktop nav */}
-				<nav className="hidden items-center gap-1 lg:flex" aria-label="주요 메뉴">
+				<nav className="hidden items-center gap-1.5 lg:flex" aria-label="주요 메뉴">
 					{siteConfig.nav.map((item) => {
 						if (item.children) {
 							const isActive = !!item.matchPrefix && pathname.startsWith(item.matchPrefix);
@@ -67,7 +67,7 @@ export const Header = () => {
 										type="button"
 										className={cn(
 											"flex items-center gap-1 rounded-lg px-4 py-2 font-semibold text-[15px] transition-colors hover:bg-slate-50",
-											isActive ? "text-[#0a0a0a]" : "text-slate-700 hover:text-[#0a0a0a]",
+											isActive ? "text-[#7c3aed]" : "text-slate-600 hover:text-[#0a0a0a]",
 										)}
 									>
 										{item.label}
@@ -140,8 +140,8 @@ export const Header = () => {
 								className={cn(
 									"relative rounded-lg px-4 py-2 font-semibold text-[15px] transition-colors hover:bg-slate-50 hover:text-foreground",
 									isActive
-										? "text-[#7c3aed] after:absolute after:inset-x-2 after:-bottom-0.5 after:h-0.5 after:rounded-full after:bg-[#7c3aed] after:content-['']"
-										: "text-slate-700",
+										? "text-[#7c3aed] after:absolute after:inset-x-2 after:-bottom-[3px] after:h-0.5 after:rounded-full after:bg-[#7c3aed] after:content-['']"
+										: "text-slate-600",
 								)}
 							>
 								{item.label}
@@ -155,13 +155,13 @@ export const Header = () => {
 					<a
 						href="/growthwave-brochure.pdf"
 						download="Growth Wave 회사소개서.pdf"
-						className="hidden rounded-md border border-slate-200 px-4 py-2.5 font-semibold text-foreground text-sm transition-colors hover:bg-slate-50 lg:block"
+						className="hidden rounded-md border border-slate-300 px-4 py-2.5 font-semibold text-foreground text-sm transition-colors hover:bg-slate-50 lg:block"
 					>
 						회사소개서
 					</a>
 					<Link
 						href="/contact"
-						className="hidden rounded-md bg-[#0a0a0a] px-5 py-2.5 font-semibold text-sm text-white transition-opacity hover:opacity-80 lg:block"
+						className="hidden rounded-md bg-linear-to-r from-[#7c3aed] to-[#4338ca] px-5 py-2.5 font-semibold text-sm text-white shadow-sm transition-opacity hover:opacity-90 lg:block"
 					>
 						상담 신청
 					</Link>

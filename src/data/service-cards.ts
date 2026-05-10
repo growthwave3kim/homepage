@@ -17,23 +17,25 @@ export const SERVICE_CARDS: ServiceCard[] = [
 		description:
 			"전문직 키워드 DB 기반으로 검색 상위 노출을 설계합니다. 규정 검토 후 발행, 광고 위반 0건.",
 		cta: "블로그 전략 보기",
+		// PLACEHOLDER: 실데이터 교체 필요
 		kpi: "평균 8주 내 검색 상위 노출",
 	},
 	{
 		href: "/services/shortform",
 		icon: "Clapperboard",
 		eyebrow: "숏폼 마케팅",
-		title: "의뢰인이 먼저\n찾아오는 채널",
+		title: "고객이 먼저\n찾아오는 채널",
 		description:
 			"릴스·쇼츠·틱톡으로 전문가 신뢰를 콘텐츠로 쌓습니다. 팔로워가 아닌 상담 전환을 목표합니다.",
 		cta: "숏폼 사례 보기",
+		// PLACEHOLDER: 실데이터 교체 필요
 		kpi: "첫 달 평균 조회수 3만+",
 	},
 	{
 		href: "/services/professional",
 		icon: "Users",
 		eyebrow: "전문직 특화 — 12개 직군",
-		title: "규정 안에서만\n마케팅합니다",
+		title: "전문직 규정을\n이미 알고 시작합니다",
 		description:
 			"변호사·의사·세무사·노무사 등 광고 규정이 까다로운 분야를 전담합니다. 규정 검토 후 전 콘텐츠를 발행합니다.",
 		cta: "담당 직군 확인",

@@ -5,7 +5,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
 		nameEn: "Taehoon Kim",
 		nameKo: "김태훈",
 		role: "대표 · Founder",
-		bio: "6개 직군의 광고 규정을 직접 검토합니다. 보고는 노출 수가 아니라 상담 신청 수로 합니다.",
+		bio: "12개 직군의 광고 규정을 직접 검토합니다. 보고는 노출 수가 아니라 상담 신청 수로 합니다.",
 		quote: "노출보다 의뢰. 데이터로 증명합니다.",
 		careers: [
 			"변호사·의료광고 규정 검토 8년",

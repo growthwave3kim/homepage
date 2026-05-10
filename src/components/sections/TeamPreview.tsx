@@ -9,7 +9,7 @@ export const TeamPreview = () => {
 			<div className="mx-auto max-w-6xl">
 				<Reveal>
 					<div className="mb-12 text-center">
-						<p className="mb-2 font-mono font-semibold text-[#a78bfa] text-[13px] uppercase tracking-[0.25em] md:mb-3">
+						<p className="mb-2 font-semibold text-[#7c3aed] text-sm uppercase tracking-[0.25em] md:mb-3">
 							Team
 						</p>
 						<h2 className="font-bold text-3xl text-foreground leading-tight tracking-tight md:text-4xl lg:text-[48px]">

@@ -39,7 +39,7 @@ export const ProcessSteps = () => {
 			<div className="mx-auto max-w-[1440px]">
 				<Reveal>
 					<div className="mb-14 text-center md:mb-16">
-						<p className="mb-4 font-mono font-semibold text-[#a78bfa] text-base uppercase tracking-[0.25em]">
+						<p className="mb-4 font-semibold text-[#7c3aed] text-sm uppercase tracking-[0.25em]">
 							Process
 						</p>
 						<h2 className="font-bold text-5xl text-foreground leading-tight tracking-tight md:text-6xl lg:text-7xl">

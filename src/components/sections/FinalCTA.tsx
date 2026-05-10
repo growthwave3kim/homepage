@@ -36,6 +36,9 @@ export const FinalCTA = () => {
 							카카오톡 1:1 문의
 						</a>
 					</div>
+					<p className="mt-6 text-sm text-white/40">
+						무료 30분 진단 · 광고 규정 위반 항목 즉시 확인
+					</p>
 				</Reveal>
 			</div>
 		</section>
