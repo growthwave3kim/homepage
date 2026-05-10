@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "motion/react";
-import Link from "next/link";
 
 export const Hero = () => {
 	return (
@@ -34,7 +33,7 @@ export const Hero = () => {
 					transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
 					className="mb-6 font-semibold text-[#7c3aed] text-sm uppercase tracking-[0.25em]"
 				>
-					징계 없는 마케팅
+					고객이 먼저 찾아옵니다
 				</motion.p>
 
 				{/* Headline */}
@@ -58,49 +57,7 @@ export const Hero = () => {
 					transition={{ duration: 0.6, delay: 0.22, ease: [0.22, 1, 0.36, 1] }}
 					className="mb-10 text-pretty font-medium text-lg text-slate-800 leading-relaxed md:text-xl"
 				>
-					검색에는 걸리고, 규정에는 걸리지 않는
-					<br className="hidden md:block" />
-					전문직 콘텐츠 마케팅
-				</motion.p>
-
-				{/* CTAs */}
-				<motion.div
-					initial={{ y: 20 }}
-					animate={{ opacity: 1, y: 0 }}
-					transition={{ duration: 0.6, delay: 0.34, ease: [0.22, 1, 0.36, 1] }}
-					className="flex flex-col items-center gap-4"
-				>
-					<Link
-						href="/contact"
-						className="gradient-brand rounded-md px-12 py-4 font-semibold text-base text-white transition-opacity hover:opacity-85"
-					>
-						상담 신청
-					</Link>
-					<div className="flex items-center gap-5">
-						<Link
-							href="/services/blog"
-							className="font-medium text-slate-700 text-sm transition-colors hover:text-[#7c3aed] hover:opacity-70"
-						>
-							읽히는 블로그란? →
-						</Link>
-						<span className="text-slate-400 text-sm">|</span>
-						<Link
-							href="/services/shortform"
-							className="font-medium text-slate-700 text-sm transition-colors hover:text-[#7c3aed] hover:opacity-70"
-						>
-							터지는 숏폼이란? →
-						</Link>
-					</div>
-				</motion.div>
-
-				{/* Trust copy */}
-				<motion.p
-					initial={{ opacity: 0 }}
-					animate={{ opacity: 1 }}
-					transition={{ duration: 0.6, delay: 0.55 }}
-					className="mt-8 font-medium text-[#0a0a0a]/50 text-[13px] tracking-wide"
-				>
-					영업일 1일 내 회신
+					상담 문의가 늘고, 광고 걱정이 사라집니다
 				</motion.p>
 			</div>
 		</section>

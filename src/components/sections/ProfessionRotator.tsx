@@ -18,7 +18,7 @@ export const ProfessionRotator = () => {
 	}, [prefersReducedMotion]);
 
 	return (
-		<section className="bg-white px-4 py-28 md:py-36">
+		<section className="bg-slate-50 px-4 py-28 md:py-36">
 			<div className="mx-auto max-w-6xl text-center">
 				{/* 헤드라인 */}
 				<div className="mb-6 flex flex-col items-center gap-2">
@@ -27,20 +27,18 @@ export const ProfessionRotator = () => {
 					</p>
 					<h2 className="font-extrabold text-[26px] text-foreground leading-[1.15] tracking-tight sm:text-[36px] md:text-[52px] lg:text-[68px]">
 						오직 <span className="text-[#7c3aed]/30">[</span>
-						<span className="inline-block w-[2.6em] overflow-visible text-center sm:w-[3em]">
-							<AnimatePresence mode="popLayout" initial={false}>
-								<motion.span
-									key={labels[index]}
-									initial={{ y: 24, opacity: 0 }}
-									animate={{ y: 0, opacity: 1 }}
-									exit={{ y: -24, opacity: 0 }}
-									transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-									className="gradient-text inline-block"
-								>
-									{labels[index]}
-								</motion.span>
-							</AnimatePresence>
-						</span>
+						<AnimatePresence mode="wait" initial={false}>
+							<motion.span
+								key={labels[index]}
+								initial={{ y: 24, opacity: 0 }}
+								animate={{ y: 0, opacity: 1 }}
+								exit={{ y: -24, opacity: 0 }}
+								transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+								className="gradient-text inline-block"
+							>
+								{labels[index]}
+							</motion.span>
+						</AnimatePresence>
 						<span className="text-[#7c3aed]/30">]</span>를 위해
 						<br />
 						만들어졌습니다.

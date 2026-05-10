@@ -13,13 +13,13 @@ export const HomePage = () => {
 	return (
 		<>
 			<Hero />
-			<ProfessionRotator />
-			<StatBlock />
-			<ProcessSteps />
 			<PainPoints />
+			<ProfessionRotator />
 			<WhyUsBold />
-			<RealReviews />
 			<ServiceCards />
+			<ProcessSteps />
+			<StatBlock />
+			<RealReviews />
 			<TeamPreview />
 			<FinalCTA />
 		</>

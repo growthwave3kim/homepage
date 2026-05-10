@@ -11,7 +11,7 @@ export const PAIN_POINTS: PainPoint[] = [
 	},
 	{
 		id: "3",
-		text: "제 의뢰인 입장에서 쓴 글이 아닌 것 같아요.",
+		text: "매달 비슷한 글만 반복해서 올라와요.",
 	},
 	{
 		id: "4",
