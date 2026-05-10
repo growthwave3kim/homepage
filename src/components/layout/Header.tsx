@@ -77,7 +77,8 @@ export const Header = () => {
 											isLight
 												? "text-white/80 hover:bg-white/10 hover:text-white"
 												: "hover:bg-slate-50",
-											!isLight && (isActive ? "text-[#7c3aed]" : "text-slate-600 hover:text-[#0a0a0a]"),
+											!isLight &&
+												(isActive ? "text-[#7c3aed]" : "text-slate-600 hover:text-[#0a0a0a]"),
 										)}
 									>
 										{item.label}

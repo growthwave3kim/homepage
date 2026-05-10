@@ -1,9 +1,12 @@
 "use client";
 
 import { motion } from "motion/react";
+import Image from "next/image";
 import { CountUp } from "@/components/shared/CountUp";
 import { Reveal } from "@/components/shared/Reveal";
 import { FOUNDING_STORY } from "@/data/founding-story";
+
+const TEAM_PHOTO_READY = false; // /public/images/about/team-work.jpg 준비 시 true로 변경
 
 export const AboutFoundingStory = () => {
 	return (
@@ -52,8 +55,21 @@ export const AboutFoundingStory = () => {
 						</blockquote>
 					</Reveal>
 
-					{/* 우측: 핵심 숫자 3개 */}
+					{/* 우측: 팀 사진 + 핵심 숫자 3개 */}
 					<div className="flex flex-col justify-center gap-5 md:col-span-5">
+						{/* 팀 사진 — 준비 시 노출 */}
+						{TEAM_PHOTO_READY && (
+							<div className="relative hidden aspect-video overflow-hidden rounded-2xl md:block">
+								<Image
+									src="/images/about/team-work.jpg"
+									alt="팀 작업 모습"
+									fill
+									className="object-cover"
+									sizes="(max-width: 768px) 0vw, 40vw"
+								/>
+							</div>
+						)}
+
 						{FOUNDING_STORY.stats.map((stat, i) => (
 							<Reveal key={stat.id} delay={i * 0.12} direction="right">
 								<div className="rounded-2xl bg-white p-6 shadow-[0_2px_16px_rgba(15,23,42,0.06)]">

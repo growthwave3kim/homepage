@@ -1,10 +1,31 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Reveal } from "@/components/shared/Reveal";
 
+const DESK_PHOTO_READY = false; // /public/images/about/desk.jpg 준비 시 true로 변경
+
 export const AboutMidCTA = () => {
 	return (
-		<section className="bg-[#0a0e2e] px-4 py-20 md:py-24">
-			<div className="mx-auto max-w-4xl text-center">
+		<section className="relative overflow-hidden bg-[#0a0e2e] px-4 py-20 md:py-24">
+			{DESK_PHOTO_READY && (
+				<>
+					<Image
+						src="/images/about/desk.jpg"
+						alt="그로스웨이브 업무 환경"
+						fill
+						className="object-cover object-center"
+					/>
+					<div className="absolute inset-0 bg-[#0a0e2e]/85" />
+					<div
+						className="pointer-events-none absolute inset-0"
+						style={{
+							background:
+								"linear-gradient(135deg, #3b0764/30 0%, transparent 60%)",
+						}}
+					/>
+				</>
+			)}
+			<div className="relative z-10 mx-auto max-w-4xl text-center">
 				<Reveal>
 					<p className="mb-4 font-semibold text-[#a78bfa] text-sm uppercase tracking-[0.25em]">
 						Direct Contact

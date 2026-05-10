@@ -12,11 +12,9 @@ export const AboutMission = () => {
 						전문직 광고 규정을 직접 검토하는 마케팅 팀
 					</h2>
 					<p className="break-keep text-muted-foreground leading-relaxed">
-						대부분의 마케팅 대행사는 전문직 광고 규정을 모릅니다. 그 결과 광고비는 나가지만 의뢰는
-						늘지 않습니다.
+						변호사·의사·세무사 등 12개 직군 각각의 광고 허용 범위를 직접 검토합니다.
 						<br className="hidden sm:block" />
-						그로스웨이브는 변호사법·의료법·세무사법 등 직군별 광고 규정을 직접 검토하고, 의뢰인이
-						찾아오는 콘텐츠를 설계합니다.
+						규정을 통과한 콘텐츠로, 의뢰인이 먼저 찾아오는 구조를 만듭니다.
 					</p>
 				</Reveal>
 			</div>

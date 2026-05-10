@@ -28,7 +28,7 @@ export const AboutClientStrip = () => {
 				</Reveal>
 			</div>
 
-			<Marquee speed={40} gradient={false} >
+			<Marquee speed={40} gradient={false}>
 				{CLIENT_DISCIPLINES.map((d) => (
 					<DisciplineChip key={d.name} name={d.name} caption={d.caption} />
 				))}

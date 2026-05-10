@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 import { AboutCEOMessage } from "@/components/sections/AboutCEOMessage";
 import { AboutCEOTimeline } from "@/components/sections/AboutCEOTimeline";
+import { AboutCaseHighlight } from "@/components/sections/AboutCaseHighlight";
 import { AboutClientStrip } from "@/components/sections/AboutClientStrip";
 import { AboutFoundingStory } from "@/components/sections/AboutFoundingStory";
 import { AboutHero } from "@/components/sections/AboutHero";
+import { AboutHowWeWork } from "@/components/sections/AboutHowWeWork";
 import { AboutMidCTA } from "@/components/sections/AboutMidCTA";
 import { AboutMission } from "@/components/sections/AboutMission";
-import { AboutPhotoGrid } from "@/components/sections/AboutPhotoGrid";
+import { AboutSignature } from "@/components/sections/AboutSignature";
 import { AboutTrustCounter } from "@/components/sections/AboutTrustCounter";
 import { AESlogan } from "@/components/sections/AESlogan";
 import { Comparison } from "@/components/sections/Comparison";
@@ -25,40 +27,46 @@ export const AboutPage = () => {
 			{/* 1. 풀스크린 다크 Hero */}
 			<AboutHero />
 
-			{/* 2. 창업 스토리 */}
+			{/* 2. 창업 스토리 + 팀 사진 */}
 			<AboutFoundingStory />
 
-			{/* 3. 신뢰 카운터 (adresult 차용 — 4축 숫자) */}
+			{/* 3. 신뢰 카운터 — 4축 숫자 */}
 			<AboutTrustCounter />
 
-			{/* 4. 직군 Marquee */}
+			{/* 4. 5단계 프로세스 */}
+			<AboutHowWeWork />
+
+			{/* 5. 직군 Marquee */}
 			<AboutClientStrip />
 
-			{/* 5. 슬로건 (다크) */}
+			{/* 6. 슬로건 (다크) */}
 			<AESlogan />
 
-			{/* 6. CEO 메시지 */}
+			{/* 7. 시그니처 방법론 */}
+			<AboutSignature />
+
+			{/* 8. 직군별 성과 케이스 */}
+			<AboutCaseHighlight />
+
+			{/* 9. CEO 메시지 */}
 			<AboutCEOMessage />
 
-			{/* 7. CEO 타임라인 */}
+			{/* 10. CEO 타임라인 */}
 			<AboutCEOTimeline />
 
-			{/* 8. 팀·사무실 포토 그리드 */}
-			<AboutPhotoGrid />
-
-			{/* 9. 미션 */}
+			{/* 11. 미션 */}
 			<AboutMission />
 
-			{/* 9. 조직도 */}
+			{/* 12. 조직도 */}
 			<OrgChart />
 
-			{/* 10. 비교 */}
+			{/* 13. 비교 */}
 			<Comparison />
 
-			{/* 11. 중간 CTA (다채널) */}
+			{/* 14. 중간 CTA (다채널) */}
 			<AboutMidCTA />
 
-			{/* 12. 최종 CTA */}
+			{/* 15. 최종 CTA */}
 			<CTACard
 				variant="gradient"
 				headline="전문직 마케팅, 우리에게 맡기세요."

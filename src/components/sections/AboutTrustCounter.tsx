@@ -1,7 +1,7 @@
 "use client";
 
-import { Reveal } from "@/components/shared/Reveal";
 import { CountUp } from "@/components/shared/CountUp";
+import { Reveal } from "@/components/shared/Reveal";
 import { ABOUT_TRUST } from "@/data/about-trust";
 
 export const AboutTrustCounter = () => {
@@ -17,10 +17,10 @@ export const AboutTrustCounter = () => {
 					</h2>
 				</Reveal>
 
-				<div className="grid grid-cols-2 gap-px bg-slate-100 md:grid-cols-4">
+				<div className="grid grid-cols-2 divide-x divide-y divide-slate-100 border border-slate-100 md:grid-cols-4">
 					{ABOUT_TRUST.map((item) => (
 						<Reveal key={item.label}>
-							<div className="flex flex-col bg-white px-8 py-10">
+							<div className="flex flex-col px-8 py-10">
 								<p className="mb-2 font-bold text-[56px] leading-none tracking-tight md:text-[64px]">
 									{item.value === 0 ? (
 										<span className="text-[#0a0a0a]">

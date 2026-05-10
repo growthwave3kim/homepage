@@ -27,7 +27,7 @@ export const FOUNDING_STORY = {
 			value: 12,
 			suffix: "개",
 			label: "전문직 직군",
-			description: "직군별 허용·금지 항목 전담 데이터베이스",
+			description: "12개 직군 광고 규정·검색 의도 직접 학습",
 		},
 		{
 			id: "violations",
