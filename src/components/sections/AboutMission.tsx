@@ -4,7 +4,7 @@ export const AboutMission = () => {
 	return (
 		<section className="bg-white px-4 py-16">
 			<div className="mx-auto max-w-3xl text-center">
-				<Reveal>
+				<Reveal direction="scale">
 					<p className="mb-3 font-semibold text-[#7c3aed] text-sm uppercase tracking-[0.25em]">
 						Mission
 					</p>

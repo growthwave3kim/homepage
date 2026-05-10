@@ -58,7 +58,7 @@ export const AboutCEOTimeline = () => {
 
 					<div className="space-y-8">
 						{MILESTONES.map((m, i) => (
-							<Reveal key={m.year} delay={i * 0.08}>
+							<Reveal key={m.year} delay={i * 0.08} direction={i % 2 === 0 ? "left" : "right"}>
 								<div className="flex items-start gap-6 md:gap-8">
 									{/* Year */}
 									<div className="w-20 shrink-0 pt-1 text-right md:w-24">

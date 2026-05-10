@@ -1,5 +1,10 @@
+"use client";
+
+import { motion } from "motion/react";
 import { Reveal } from "@/components/shared/Reveal";
 import { SIGNATURE_POINTS } from "@/data/signature-points";
+
+const dirs = ["left", "up", "up", "right"] as const;
 
 export const AboutSignature = () => {
 	return (
@@ -19,14 +24,22 @@ export const AboutSignature = () => {
 
 				<div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
 					{SIGNATURE_POINTS.map((pt, i) => (
-						<Reveal key={pt.num} delay={i * 0.1}>
-							<div className="group rounded-2xl border border-slate-200 p-6 transition-colors duration-200 hover:border-[#7c3aed]/40 hover:bg-[#7c3aed]/2">
+						<Reveal key={pt.num} delay={i * 0.1} direction={dirs[i]}>
+							<motion.div
+								className="cursor-default rounded-2xl border border-slate-200 p-6"
+								whileHover={{
+									y: -10,
+									boxShadow: "0 28px 56px rgba(124,58,237,0.14)",
+									borderColor: "rgba(124,58,237,0.45)",
+								}}
+								transition={{ type: "spring", stiffness: 260, damping: 20 }}
+							>
 								<p className="mb-4 select-none font-black text-5xl text-[#7c3aed]/30 leading-none">
 									{pt.num}
 								</p>
 								<p className="mb-2 font-bold text-[#0a0a0a] text-base">{pt.title}</p>
 								<p className="break-keep text-slate-600 text-sm leading-relaxed">{pt.body}</p>
-							</div>
+							</motion.div>
 						</Reveal>
 					))}
 				</div>

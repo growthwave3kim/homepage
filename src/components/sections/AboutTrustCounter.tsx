@@ -18,8 +18,8 @@ export const AboutTrustCounter = () => {
 				</Reveal>
 
 				<div className="grid grid-cols-2 divide-x divide-y divide-slate-100 border border-slate-100 md:grid-cols-4">
-					{ABOUT_TRUST.map((item) => (
-						<Reveal key={item.label}>
+					{ABOUT_TRUST.map((item, i) => (
+						<Reveal key={item.label} direction={(["left", "scale", "scale", "right"] as const)[i]} delay={i * 0.12}>
 							<div className="flex flex-col px-8 py-10">
 								<p className="mb-2 font-bold text-[56px] leading-none tracking-tight md:text-[64px]">
 									{item.value === 0 ? (

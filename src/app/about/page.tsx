@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
+import { AboutCaseHighlight } from "@/components/sections/AboutCaseHighlight";
 import { AboutCEOMessage } from "@/components/sections/AboutCEOMessage";
 import { AboutCEOTimeline } from "@/components/sections/AboutCEOTimeline";
-import { AboutCaseHighlight } from "@/components/sections/AboutCaseHighlight";
 import { AboutClientStrip } from "@/components/sections/AboutClientStrip";
 import { AboutFoundingStory } from "@/components/sections/AboutFoundingStory";
 import { AboutHero } from "@/components/sections/AboutHero";

@@ -26,10 +26,10 @@ export const AboutFoundingStory = () => {
 					<Reveal direction="left" className="md:col-span-7">
 						<motion.div
 							className="mb-6 select-none font-serif text-[#7c3aed]/15 text-[96px] leading-none"
-							initial={{ opacity: 0, scale: 0.6 }}
-							whileInView={{ opacity: 1, scale: 1 }}
-							viewport={{ once: true }}
-							transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+							initial={{ opacity: 0, scale: 0.4, rotate: -40 }}
+							whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
+							viewport={{ once: false, margin: "-80px" }}
+							transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
 						>
 							&ldquo;
 						</motion.div>

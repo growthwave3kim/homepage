@@ -52,6 +52,22 @@ export const AboutHero = () => {
 				)}
 			</div>
 
+			{/* Floating gradient orbs */}
+			<motion.div
+				aria-hidden="true"
+				className="pointer-events-none absolute h-[600px] w-[600px] rounded-full bg-[#7c3aed] opacity-[0.18] blur-[130px]"
+				style={{ top: "-200px", left: "-200px" }}
+				animate={{ x: [0, 60, -30, 0], y: [0, -50, 80, 0] }}
+				transition={{ duration: 15, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
+			/>
+			<motion.div
+				aria-hidden="true"
+				className="pointer-events-none absolute h-[500px] w-[500px] rounded-full bg-[#a855f7] opacity-[0.10] blur-[110px]"
+				style={{ bottom: "-100px", right: "-100px" }}
+				animate={{ x: [0, -50, 30, 0], y: [0, 40, -60, 0] }}
+				transition={{ duration: 20, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut", delay: 4 }}
+			/>
+
 			{/* 대각선 보라 오버레이 (isanghan 대각 분할 패턴) */}
 			<div
 				className="pointer-events-none absolute inset-0"
