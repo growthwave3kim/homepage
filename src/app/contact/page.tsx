@@ -1,58 +1,44 @@
-import { CheckCircle2, Mail } from "lucide-react";
 import type { Metadata } from "next";
+import { ContactFAQ } from "@/components/sections/ContactFAQ";
 import { ContactForm } from "@/components/sections/ContactForm";
-import { siteConfig } from "@/config/site";
+import { ContactProcess } from "@/components/sections/ContactProcess";
+import { ContactTrust } from "@/components/sections/ContactTrust";
+import { CTACard } from "@/components/shared/CTACard";
+import { PageHero } from "@/components/shared/PageHero";
 
 export const metadata: Metadata = {
-	title: "문의하기 | Growth Wave",
-	description: "그로스웨이브에 전문직 마케팅을 문의하세요. 영업일 1일 내 회신드립니다.",
+	title: "상담 신청 | Growth Wave",
+	description:
+		"그로스웨이브에 전문직 마케팅을 문의하세요. 30분 무료 진단 · 영업일 1일 내 회신드립니다.",
 };
-
-const TRUST_BADGES = ["계약 압박 없음", "영업일 1일 내 회신", "직접 검토"] as const;
 
 export const ContactPage = () => {
 	return (
-		<main className="min-h-screen bg-white pt-20">
-			{/* Page header */}
-			<div className="px-4 py-16 text-center">
-				<p className="mb-3 font-semibold text-[#7c3aed] text-sm uppercase tracking-[0.25em]">
-					문의하기
-				</p>
-				<h1 className="mb-4 font-bold text-4xl text-foreground leading-tight tracking-tight md:text-5xl">
-					어떤 의뢰 흐름을 원하시는지부터 듣겠습니다.
-				</h1>
-				<p className="text-lg text-muted-foreground">
-					무엇이든 적어 보내주세요. 영업일 1일 내 회신드립니다.
-				</p>
-			</div>
+		<>
+			<PageHero
+				eyebrow="상담 신청"
+				title="어떤 의뢰 흐름을 원하시는지"
+				titleHighlight="부터 듣겠습니다"
+				sub="30분 무료 · 영업일 1일 내 회신 · 계약 압박 없음"
+				ctaText="폼 바로 작성"
+				ctaHref="#contact-form"
+			/>
 
-			<section className="px-4 pb-24">
+			<ContactProcess />
+
+			{/* 폼 */}
+			<section id="contact-form" className="bg-white px-4 py-16 md:py-20">
 				<div className="mx-auto max-w-2xl">
-					{/* Trust badges */}
-					<div className="mb-10 flex flex-wrap items-center justify-center gap-6">
-						{TRUST_BADGES.map((badge) => (
-							<div key={badge} className="flex items-center gap-2">
-								<CheckCircle2 className="h-5 w-5 text-[#7c3aed]" />
-								<span className="font-medium text-foreground text-sm">{badge}</span>
-							</div>
-						))}
-					</div>
-
-					<ContactForm />
-
-					{/* Direct contact */}
-					<div className="mt-6 flex items-center justify-center gap-2 text-muted-foreground text-sm">
-						<Mail className="h-4 w-4 text-[#7c3aed]" />
-						<a
-							href={`mailto:${siteConfig.contact.email}`}
-							className="transition-colors hover:text-foreground"
-						>
-							{siteConfig.contact.email}
-						</a>
+					<div className="rounded-2xl border border-slate-100 bg-white p-6 shadow-[0_4px_32px_rgba(15,23,42,0.08)] sm:p-10">
+						<ContactForm />
 					</div>
 				</div>
 			</section>
-		</main>
+
+			<ContactTrust />
+			<ContactFAQ />
+			<CTACard headline="아직 고민되신다면." sub="계약 압박 없음 · 영업일 1일 내 회신" />
+		</>
 	);
 };
 

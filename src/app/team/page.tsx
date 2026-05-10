@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { TeamCrews } from "@/components/sections/TeamCrews";
 import { TeamMemberFeature } from "@/components/sections/TeamMemberFeature";
+import { TeamPhilosophy } from "@/components/sections/TeamPhilosophy";
 import { TeamValues } from "@/components/sections/TeamValues";
 import { CTACard } from "@/components/shared/CTACard";
 import { PageHero } from "@/components/shared/PageHero";
@@ -23,11 +24,22 @@ export const TeamPage = () => {
 				ctaHref="/contact"
 				secondaryText="서비스 살펴보기"
 				secondaryHref="/services/professional"
-			/>
+			>
+				<p className="font-mono text-slate-400 text-xs tracking-[0.2em]">
+					12개 직군 전담 · 위반 0건 · 외주 없는 인하우스 팀
+				</p>
+			</PageHero>
+
 			<TeamMemberFeature />
+			<TeamPhilosophy />
 			<TeamCrews />
 			<TeamValues />
-			<CTACard headline="이 팀과 함께 시작하세요" sub="계약 압박 없음 · 영업일 1일 내 회신" />
+			<CTACard
+				variant="gradient"
+				headline="이 팀과 함께 시작하세요."
+				sub="30분 무료 진단 · 영업일 1일 내 회신"
+				buttonText="상담 신청"
+			/>
 		</>
 	);
 };

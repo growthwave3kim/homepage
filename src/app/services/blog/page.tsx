@@ -1,6 +1,7 @@
 import { Check, X } from "lucide-react";
 import type { Metadata } from "next";
 import { Cases } from "@/components/sections/Cases";
+import { ServiceSelectionPolicy } from "@/components/sections/ServiceSelectionPolicy";
 import { CTACard } from "@/components/shared/CTACard";
 import { PageHero } from "@/components/shared/PageHero";
 import { Reveal } from "@/components/shared/Reveal";
@@ -286,7 +287,13 @@ export const BlogServicePage = () => {
 			</section>
 
 			<Cases />
-			<CTACard headline="읽히는 블로그, 지금 시작하세요" sub="24시간 안으로 답변드립니다." />
+			<ServiceSelectionPolicy />
+			<CTACard
+				variant="gradient"
+				headline="읽히는 블로그, 지금 시작하세요."
+				sub="30분 무료 진단 · 광고 규정 위반 항목 즉시 확인"
+				buttonText="무료 진단 신청"
+			/>
 		</>
 	);
 };

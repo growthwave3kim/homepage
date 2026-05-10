@@ -23,7 +23,7 @@ export const AboutCEOMessage = () => {
 
 						{/* Message */}
 						<div className="flex flex-col">
-							<p className="mb-3 font-semibold text-[#a78bfa] text-sm uppercase tracking-[0.25em]">
+							<p className="mb-3 font-semibold text-[#7c3aed] text-sm uppercase tracking-[0.25em]">
 								CEO Message
 							</p>
 							<h2 className="mb-6 font-bold text-2xl text-foreground leading-tight tracking-tight md:text-3xl">

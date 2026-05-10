@@ -3,15 +3,16 @@ import { cn } from "@/lib/utils";
 type SectionHeadingProps = {
 	eyebrow?: string;
 	title: string;
+	highlight?: string;
 	sub?: string;
 	className?: string;
 	align?: "left" | "center";
-	gradientTitle?: boolean;
 };
 
 export const SectionHeading = ({
 	eyebrow,
 	title,
+	highlight,
 	sub,
 	className,
 	align = "center",
@@ -19,15 +20,16 @@ export const SectionHeading = ({
 	return (
 		<div className={cn(align === "center" ? "text-center" : "text-left", className)}>
 			{eyebrow && (
-				<p className="mb-2 font-mono font-semibold text-[#a78bfa] text-[13px] uppercase tracking-[0.25em] md:mb-3">
+				<p className="mb-3 font-semibold text-[#7c3aed] text-sm uppercase tracking-[0.25em]">
 					{eyebrow}
 				</p>
 			)}
-			<h2 className="font-bold text-3xl text-foreground leading-tight tracking-tight md:text-4xl lg:text-[48px]">
+			<h2 className="font-bold text-3xl text-foreground leading-tight tracking-tight md:text-5xl">
 				{title}
+				{highlight && <span className="gradient-text"> {highlight}</span>}
 			</h2>
 			{sub && (
-				<p className="mx-auto mt-3 max-w-2xl text-base text-muted-foreground leading-relaxed md:mt-4 md:text-lg">
+				<p className="mx-auto mt-4 max-w-2xl break-keep text-base text-muted-foreground leading-relaxed md:text-lg">
 					{sub}
 				</p>
 			)}

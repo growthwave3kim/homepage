@@ -40,7 +40,7 @@ export const AboutCEOTimeline = () => {
 			<div className="mx-auto max-w-3xl">
 				<Reveal>
 					<div className="mb-12 text-center">
-						<p className="mb-3 font-semibold text-[#a78bfa] text-sm uppercase tracking-[0.25em]">
+						<p className="mb-3 font-semibold text-[#7c3aed] text-sm uppercase tracking-[0.25em]">
 							Career
 						</p>
 						<h2 className="font-bold text-2xl text-foreground leading-tight tracking-tight md:text-3xl">

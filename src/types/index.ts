@@ -53,9 +53,12 @@ export type TeamMember = {
 	photo?: string;
 };
 
+export type FaqCategory = "비용" | "기간·계약" | "규정" | "성과" | "채널";
+
 export type FaqItem = {
 	question: string;
 	answer: string;
+	category: FaqCategory;
 };
 
 export type NavChild = {

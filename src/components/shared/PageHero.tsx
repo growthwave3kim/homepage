@@ -1,4 +1,7 @@
+"use client";
+
 import { Download } from "lucide-react";
+import { motion } from "motion/react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
@@ -16,6 +19,8 @@ type PageHeroProps = {
 	className?: string;
 };
 
+const ease = [0.22, 1, 0.36, 1] as const;
+
 export const PageHero = ({
 	eyebrow,
 	title,
@@ -30,25 +35,54 @@ export const PageHero = ({
 	className,
 }: PageHeroProps) => {
 	return (
-		<section className={cn("bg-white px-4 py-24 pt-32 text-center md:py-32 md:pt-40", className)}>
+		<section
+			className={cn(
+				"bg-[radial-gradient(ellipse_at_top_right,rgba(124,58,237,0.06),transparent_60%)] px-4 py-24 pt-32 text-center md:py-32 md:pt-40",
+				className,
+			)}
+		>
 			<div className="mx-auto max-w-4xl">
-				<p className="mb-5 font-mono font-semibold text-[#a78bfa] text-sm uppercase tracking-[0.25em]">
+				<motion.p
+					className="mb-5 font-semibold text-[#7c3aed] text-sm uppercase tracking-[0.25em]"
+					initial={{ opacity: 0, y: 16 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.6, ease }}
+				>
 					{eyebrow}
-				</p>
-				<h1 className="mb-5 font-bold text-[28px] text-foreground leading-[1.2] tracking-tight sm:text-[34px] md:text-[56px] md:leading-[1.12] lg:text-[68px]">
+				</motion.p>
+
+				<motion.h1
+					className="mb-5 font-bold text-[32px] text-foreground leading-[1.2] tracking-tight sm:text-[44px] md:text-[68px] md:leading-[1.12] lg:text-[88px]"
+					initial={{ opacity: 0, y: 28 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.75, delay: 0.1, ease }}
+				>
 					{titleHighlight ? (
 						<>
 							{title}
 							<br />
-							<span className="text-[#0a0a0a]">{titleHighlight}</span>
+							<span className="gradient-text">{titleHighlight}</span>
 						</>
 					) : (
 						title
 					)}
-				</h1>
-				<p className="mb-10 text-lg text-muted-foreground leading-relaxed md:text-xl">{sub}</p>
+				</motion.h1>
 
-				<div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+				<motion.p
+					className="mb-10 break-keep text-lg text-muted-foreground leading-relaxed md:text-xl"
+					initial={{ opacity: 0, y: 20 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.65, delay: 0.2, ease }}
+				>
+					{sub}
+				</motion.p>
+
+				<motion.div
+					className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center"
+					initial={{ opacity: 0, y: 16 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.6, delay: 0.3, ease }}
+				>
 					<Link
 						href={ctaHref}
 						className="gradient-brand rounded-md px-8 py-3.5 font-semibold text-base text-white transition-opacity hover:opacity-80"
@@ -74,9 +108,18 @@ export const PageHero = ({
 								{secondaryText}
 							</Link>
 						))}
-				</div>
+				</motion.div>
 
-				{children && <div className="mt-12">{children}</div>}
+				{children && (
+					<motion.div
+						className="mt-12"
+						initial={{ opacity: 0, y: 12 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.5, delay: 0.4, ease }}
+					>
+						{children}
+					</motion.div>
+				)}
 			</div>
 		</section>
 	);

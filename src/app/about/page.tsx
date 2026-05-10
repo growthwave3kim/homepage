@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { AboutCEOMessage } from "@/components/sections/AboutCEOMessage";
 import { AboutCEOTimeline } from "@/components/sections/AboutCEOTimeline";
+import { AboutFoundingStory } from "@/components/sections/AboutFoundingStory";
 import { AESlogan } from "@/components/sections/AESlogan";
 import { Comparison } from "@/components/sections/Comparison";
 import { OrgChart } from "@/components/sections/OrgChart";
@@ -20,13 +21,18 @@ export const AboutPage = () => {
 				eyebrow="회사소개"
 				title="전문직 마케팅만"
 				titleHighlight="집중합니다"
-				sub="광고 규정·신뢰·검색 의도가 까다로운 전문직의 마케팅은 다릅니다. 규정을 알고, 직군을 알고, 의뢰 구조를 이해하는 팀이 필요합니다."
+				sub="광고 규정·신뢰·검색 의도가 다른 직군은, 같은 톤으로 마케팅할 수 없습니다."
 				ctaText="상담 신청"
 				ctaHref="/contact"
 				secondaryText="회사소개서 요청"
 				secondaryHref="/contact?subject=회사소개서"
-			/>
+			>
+				<p className="font-mono text-slate-400 text-xs tracking-[0.2em]">
+					전문직 12개 직군 · 광고 위반 0건 · 재계약율 90%+
+				</p>
+			</PageHero>
 
+			<AboutFoundingStory />
 			<AESlogan />
 			<AboutCEOMessage />
 			<AboutCEOTimeline />
@@ -40,7 +46,7 @@ export const AboutPage = () => {
 					<h2 className="mb-6 font-bold text-2xl text-foreground leading-tight tracking-tight md:text-3xl">
 						전문직 광고 규정을 직접 검토하는 마케팅 팀
 					</h2>
-					<p className="text-muted-foreground leading-relaxed">
+					<p className="break-keep text-muted-foreground leading-relaxed">
 						대부분의 마케팅 대행사는 전문직 광고 규정을 모릅니다. 그 결과 광고비는 나가지만 의뢰는
 						늘지 않습니다.
 						<br className="hidden sm:block" />
@@ -52,7 +58,12 @@ export const AboutPage = () => {
 
 			<OrgChart />
 			<Comparison />
-			<CTACard headline="상담으로 시작하세요" sub="영업일 1일 내 회신드립니다." />
+			<CTACard
+				variant="gradient"
+				headline="전문직 마케팅, 우리에게 맡기세요."
+				sub="30분 무료 진단 · 광고 규정 위반 항목 즉시 확인"
+				buttonText="상담 신청"
+			/>
 		</>
 	);
 };

@@ -4,6 +4,7 @@ import { Cases } from "@/components/sections/Cases";
 import { PainPoints } from "@/components/sections/PainPoints";
 import { PricingNote } from "@/components/sections/PricingNote";
 import { ProfessionTabs } from "@/components/sections/ProfessionTabs";
+import { ServiceSelectionPolicy } from "@/components/sections/ServiceSelectionPolicy";
 import { Services } from "@/components/sections/Services";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { WhyUs } from "@/components/sections/WhyUs";
@@ -38,7 +39,13 @@ export const ProfessionalServicePage = () => {
 			<Cases />
 			<Testimonials />
 			<PricingNote />
-			<CTACard headline="상담으로 시작하세요" sub="영업일 1일 내 회신드립니다." />
+			<ServiceSelectionPolicy />
+			<CTACard
+				variant="gradient"
+				headline="전문직 마케팅, 우리에게 맡기세요."
+				sub="30분 무료 진단 · 광고 규정 위반 항목 즉시 확인"
+				buttonText="무료 진단 신청"
+			/>
 		</>
 	);
 };

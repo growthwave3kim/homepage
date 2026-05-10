@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { FAQ } from "@/components/sections/FAQ";
+import { FAQCategoryNav } from "@/components/sections/FAQCategoryNav";
+import { FAQContact } from "@/components/sections/FAQContact";
 import { CTACard } from "@/components/shared/CTACard";
 import { PageHero } from "@/components/shared/PageHero";
 
@@ -14,20 +16,16 @@ export const FAQPage = () => {
 		<>
 			<PageHero
 				eyebrow="자주 묻는 질문"
-				title="궁금한 점을"
-				titleHighlight="모두 정리했습니다"
-				sub="비용·기간·광고 규정·진행 방식까지 정리했습니다."
+				title="비용·기간·규정·성과,"
+				titleHighlight="여기서 정리"
+				sub="전문직 대표분들이 실제로 가장 많이 물어보신 질문들입니다."
 				ctaText="상담 신청"
 				ctaHref="/contact"
-				secondaryText="전문직 마케팅 보기"
-				secondaryHref="/services/professional"
 			/>
+			<FAQCategoryNav />
 			<FAQ />
-			<CTACard
-				headline="답을 못 찾으셨나요?"
-				sub="계약 압박 없음 · 영업일 1일 내 회신"
-				buttonText="상담 신청"
-			/>
+			<FAQContact />
+			<CTACard headline="아직 고민되신다면." sub="계약 압박 없음 · 영업일 1일 내 회신" />
 		</>
 	);
 };
