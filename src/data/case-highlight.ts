@@ -8,7 +8,8 @@ export const CASE_HIGHLIGHT = {
 	beforeLabel: "월 상담 (시작 전)",
 	afterLabel: "월 상담 (6개월 후)",
 	multiplier: 6,
-	quote: "광고비 줄이면서 상담이 늘 수 있다는 게 처음엔 이해가 안 됐어요. 근데 지금은 설명이 되네요.",
+	quote:
+		"광고비 줄이면서 상담이 늘 수 있다는 게 처음엔 이해가 안 됐어요. 근데 지금은 설명이 되네요.",
 	quoteAuthor: "K 법무법인 대표",
 	chartData: [3, 5, 8, 11, 15, 18] as number[],
 	chartLabels: ["1월", "2월", "3월", "4월", "5월", "6월"],

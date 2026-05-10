@@ -56,7 +56,9 @@ export const KPIShowcase = () => {
 		<section className="bg-white py-20 md:py-28">
 			<div className="mx-auto max-w-7xl px-4 md:px-8">
 				<Reveal className="mb-12 text-center">
-					<p className="mb-3 font-semibold text-[#7c3aed] text-sm uppercase tracking-[0.25em]">운영 데이터</p>
+					<p className="mb-3 font-semibold text-[#7c3aed] text-sm uppercase tracking-[0.25em]">
+						운영 데이터
+					</p>
 					<h2 className="font-bold text-4xl text-[#0a0a0a] tracking-tight md:text-5xl">
 						숫자가 증명합니다.
 					</h2>

@@ -226,7 +226,9 @@ export const CaseHighlight = () => {
 			<div className="mx-auto max-w-6xl px-4 md:px-8">
 				{/* 섹션 헤더 */}
 				<Reveal className="mb-12">
-					<p className="mb-3 font-semibold text-[#7c3aed] text-sm uppercase tracking-[0.25em]">성공 사례</p>
+					<p className="mb-3 font-semibold text-[#7c3aed] text-sm uppercase tracking-[0.25em]">
+						성공 사례
+					</p>
 					<h2 className="break-keep font-bold text-4xl text-[#0a0a0a] tracking-tight md:text-5xl">
 						직군별 실제 운영 결과입니다.
 					</h2>
