@@ -1,40 +1,9 @@
 "use client";
 
-import { animate, motion, useInView } from "motion/react";
-import { useEffect, useRef, useState } from "react";
+import { motion } from "motion/react";
+import { CountUp } from "@/components/shared/CountUp";
 import { Reveal } from "@/components/shared/Reveal";
 import { FOUNDING_STORY } from "@/data/founding-story";
-
-const CountUp = ({
-	to,
-	suffix,
-	duration = 1.4,
-}: {
-	to: number;
-	suffix: string;
-	duration?: number;
-}) => {
-	const [val, setVal] = useState(to === 0 ? 0 : 0);
-	const ref = useRef<HTMLSpanElement>(null);
-	const isInView = useInView(ref, { once: true });
-
-	useEffect(() => {
-		if (!isInView || to === 0) return;
-		const controls = animate(0, to, {
-			duration,
-			ease: "easeOut",
-			onUpdate: (v) => setVal(Math.round(v)),
-		});
-		return () => controls.stop();
-	}, [isInView, to, duration]);
-
-	return (
-		<span ref={ref}>
-			{val}
-			{suffix}
-		</span>
-	);
-};
 
 export const AboutFoundingStory = () => {
 	return (

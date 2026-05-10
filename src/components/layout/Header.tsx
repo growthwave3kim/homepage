@@ -15,13 +15,20 @@ const CHILD_ICON_MAP: Record<string, React.ComponentType<{ className?: string }>
 	FileText,
 };
 
+// 상단이 투명해야 하는 페이지 (다크 풀스크린 Hero)
+const TRANSPARENT_HERO_PATHS = ["/about"];
+
 export const Header = () => {
 	const [scrolled, setScrolled] = useState(false);
 	const [openMenu, setOpenMenu] = useState<string | null>(null);
 	const pathname = usePathname();
 
+	const isTransparentPage = TRANSPARENT_HERO_PATHS.includes(pathname);
+	const isLight = isTransparentPage && !scrolled;
+
 	useEffect(() => {
 		const handleScroll = () => setScrolled(window.scrollY > 8);
+		handleScroll(); // 마운트 시 즉시 체크 (브라우저 스크롤 위치 복원 대응)
 		window.addEventListener("scroll", handleScroll, { passive: true });
 		return () => window.removeEventListener("scroll", handleScroll);
 	}, []);
@@ -29,10 +36,10 @@ export const Header = () => {
 	return (
 		<header
 			className={cn(
-				"fixed top-0 right-0 left-0 z-50 h-16 border-b transition-all duration-300 md:h-20",
+				"fixed top-0 right-0 left-0 z-50 h-16 border-b transition-all duration-500 md:h-20",
 				scrolled
 					? "border-slate-200 bg-white/95 shadow-[0_1px_12px_rgba(0,0,0,0.06)] backdrop-blur-sm"
-					: "border-transparent bg-white",
+					: "border-transparent bg-transparent",
 			)}
 		>
 			<div className="mx-auto flex h-full max-w-7xl items-center justify-between px-4 lg:px-8">
@@ -45,7 +52,7 @@ export const Header = () => {
 						if (pathname === "/") window.scrollTo({ top: 0, behavior: "instant" });
 					}}
 				>
-					<Logo />
+					<Logo variant={isLight ? "light" : "dark"} />
 				</Link>
 
 				{/* Desktop nav */}
@@ -66,8 +73,11 @@ export const Header = () => {
 									<button
 										type="button"
 										className={cn(
-											"flex items-center gap-1 rounded-lg px-4 py-2 font-semibold text-[15px] transition-colors hover:bg-slate-50",
-											isActive ? "text-[#7c3aed]" : "text-slate-600 hover:text-[#0a0a0a]",
+											"flex items-center gap-1 rounded-lg px-4 py-2 font-semibold text-[15px] transition-colors",
+											isLight
+												? "text-white/80 hover:bg-white/10 hover:text-white"
+												: "hover:bg-slate-50",
+											!isLight && (isActive ? "text-[#7c3aed]" : "text-slate-600 hover:text-[#0a0a0a]"),
 										)}
 									>
 										{item.label}
@@ -138,10 +148,15 @@ export const Header = () => {
 								key={item.href}
 								href={item.href}
 								className={cn(
-									"relative rounded-lg px-4 py-2 font-semibold text-[15px] transition-colors hover:bg-slate-50 hover:text-foreground",
-									isActive
-										? "text-[#7c3aed] after:absolute after:inset-x-2 after:-bottom-[3px] after:h-0.5 after:rounded-full after:bg-[#7c3aed] after:content-['']"
-										: "text-slate-600",
+									"relative rounded-lg px-4 py-2 font-semibold text-[15px] transition-colors",
+									isLight
+										? "text-white/80 hover:bg-white/10 hover:text-white"
+										: cn(
+												"hover:bg-slate-50 hover:text-foreground",
+												isActive
+													? "text-[#7c3aed] after:absolute after:inset-x-2 after:-bottom-[3px] after:h-0.5 after:rounded-full after:bg-[#7c3aed] after:content-['']"
+													: "text-slate-600",
+											),
 								)}
 							>
 								{item.label}
@@ -155,13 +170,23 @@ export const Header = () => {
 					<a
 						href="/growthwave-brochure.pdf"
 						download="Growth Wave 회사소개서.pdf"
-						className="hidden rounded-md border border-slate-300 px-4 py-2.5 font-semibold text-foreground text-sm transition-colors hover:bg-slate-50 lg:block"
+						className={cn(
+							"hidden rounded-md px-4 py-2.5 font-semibold text-sm transition-colors lg:block",
+							isLight
+								? "border border-white/40 text-white hover:bg-white/10"
+								: "border border-slate-300 text-foreground hover:bg-slate-50",
+						)}
 					>
 						회사소개서
 					</a>
 					<Link
 						href="/contact"
-						className="hidden rounded-md bg-linear-to-r from-[#7c3aed] to-[#4338ca] px-5 py-2.5 font-semibold text-sm text-white shadow-sm transition-opacity hover:opacity-90 lg:block"
+						className={cn(
+							"hidden rounded-md px-5 py-2.5 font-semibold text-sm shadow-sm transition-opacity hover:opacity-90 lg:block",
+							isLight
+								? "bg-white text-[#7c3aed]"
+								: "bg-linear-to-r from-[#7c3aed] to-[#4338ca] text-white",
+						)}
 					>
 						상담 신청
 					</Link>

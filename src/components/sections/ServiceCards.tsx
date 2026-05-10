@@ -44,9 +44,7 @@ const FlipCard = ({ children, delay }: FlipCardProps) => {
 		}
 	}, [isInView]);
 
-	const initial = prefersReducedMotion
-		? { opacity: 0, rotateY: 0 }
-		: { opacity: 0, rotateY: -90 };
+	const initial = prefersReducedMotion ? { opacity: 0, rotateY: 0 } : { opacity: 0, rotateY: -90 };
 
 	const animate = visible ? { opacity: 1, rotateY: 0 } : initial;
 
@@ -57,7 +55,13 @@ const FlipCard = ({ children, delay }: FlipCardProps) => {
 
 	return (
 		<div style={{ perspective: "800px" }}>
-			<motion.div ref={ref} initial={initial} animate={animate} transition={transition} style={{ transformOrigin: "center" }}>
+			<motion.div
+				ref={ref}
+				initial={initial}
+				animate={animate}
+				transition={transition}
+				style={{ transformOrigin: "center" }}
+			>
 				{children}
 			</motion.div>
 		</div>

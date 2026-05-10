@@ -14,15 +14,13 @@ export const ServiceSelectionPolicy = () => {
 						<h2 className="mb-4 font-bold text-3xl text-white tracking-tight md:text-4xl">
 							{SELECTION_POLICY.title}
 						</h2>
-						<p className="mb-8 break-keep text-white/50 leading-relaxed">
-							{SELECTION_POLICY.sub}
-						</p>
+						<p className="mb-8 break-keep text-white/50 leading-relaxed">{SELECTION_POLICY.sub}</p>
 						<div className="inline-flex items-baseline gap-2">
-							<span className="font-extrabold text-[52px] leading-none tracking-tighter text-white">
+							<span className="font-extrabold text-[52px] text-white leading-none tracking-tighter">
 								{SELECTION_POLICY.rechurnRate}
 							</span>
 							<span className="font-bold text-2xl text-white/70">%+</span>
-							<span className="ml-1 font-medium text-white/40 text-sm">재계약율</span>
+							<span className="ml-1 font-medium text-sm text-white/40">재계약율</span>
 						</div>
 					</Reveal>
 
@@ -35,9 +33,9 @@ export const ServiceSelectionPolicy = () => {
 										<span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#7c3aed] font-bold text-white text-xs">
 											{i + 1}
 										</span>
-										<p className="font-semibold text-white text-sm">{c.title}</p>
+										<p className="font-semibold text-sm text-white">{c.title}</p>
 									</div>
-									<p className="break-keep text-white/50 text-sm leading-relaxed">{c.desc}</p>
+									<p className="break-keep text-sm text-white/50 leading-relaxed">{c.desc}</p>
 								</div>
 							</Reveal>
 						))}

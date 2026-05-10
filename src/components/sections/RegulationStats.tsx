@@ -55,9 +55,7 @@ export const RegulationStats = () => {
 							<Reveal key={item.id} delay={i * 0.1} direction="up" className={meta.borderClass}>
 								<div className="flex flex-col px-5 py-8 md:px-8 md:py-10">
 									<p className="font-extrabold leading-none tracking-tighter">
-										<span
-											className={`text-[52px] sm:text-[60px] md:text-[68px] ${meta.numClass}`}
-										>
+										<span className={`text-[52px] sm:text-[60px] md:text-[68px] ${meta.numClass}`}>
 											{item.id === "law2" ? (
 												<span ref={undefined}>
 													<CountUp to={item.value} />
@@ -74,7 +72,7 @@ export const RegulationStats = () => {
 									<h3 className="mt-3 break-keep font-bold text-[#0a0a0a] text-base tracking-tight md:text-lg">
 										{item.label}
 									</h3>
-									<p className="mt-1.5 font-mono text-slate-400 text-[10px] tracking-[0.15em]">
+									<p className="mt-1.5 font-mono text-[10px] text-slate-400 tracking-[0.15em]">
 										출처: {item.source}
 									</p>
 								</div>

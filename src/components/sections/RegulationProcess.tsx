@@ -49,7 +49,7 @@ export const RegulationProcess = () => {
 									/>
 								)}
 
-								<span className="mb-4 font-mono font-bold text-[#7c3aed] text-xl">{step.num}</span>
+								<span className="mb-4 font-bold font-mono text-[#7c3aed] text-xl">{step.num}</span>
 								<h3 className="mb-2 font-bold text-[#0a0a0a] text-base tracking-tight">
 									{step.title}
 								</h3>

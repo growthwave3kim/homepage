@@ -8,9 +8,7 @@ const ScoreDots = ({ score }: { score: number }) => (
 				// biome-ignore lint/suspicious/noArrayIndexKey: static list
 				key={i}
 				className={
-					i < score
-						? "h-2 w-2 rounded-full bg-[#7c3aed]"
-						: "h-2 w-2 rounded-full bg-slate-200"
+					i < score ? "h-2 w-2 rounded-full bg-[#7c3aed]" : "h-2 w-2 rounded-full bg-slate-200"
 				}
 			/>
 		))}

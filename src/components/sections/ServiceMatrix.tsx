@@ -39,7 +39,7 @@ export const ServiceMatrix = () => {
 										: "scale-[0.98] border-slate-100 opacity-40",
 								)}
 							>
-								<p className="mb-3 font-mono text-[10px] text-[#7c3aed] uppercase tracking-[0.3em]">
+								<p className="mb-3 font-mono text-[#7c3aed] text-[10px] uppercase tracking-[0.3em]">
 									{card.eyebrow}
 								</p>
 

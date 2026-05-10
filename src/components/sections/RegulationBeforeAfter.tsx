@@ -8,7 +8,7 @@ import { REGULATION_CASES } from "@/data/regulation-cases";
 const ArrowPath = ({ inView }: { inView: boolean }) => (
 	<svg
 		viewBox="0 0 40 24"
-		className="mx-auto my-1 hidden w-8 sm:block md:my-0 md:mx-0 md:w-6"
+		className="mx-auto my-1 hidden w-8 sm:block md:mx-0 md:my-0 md:w-6"
 		aria-hidden="true"
 	>
 		<motion.path
