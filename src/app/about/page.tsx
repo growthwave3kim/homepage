@@ -6,6 +6,7 @@ import { AboutFoundingStory } from "@/components/sections/AboutFoundingStory";
 import { AboutHero } from "@/components/sections/AboutHero";
 import { AboutMidCTA } from "@/components/sections/AboutMidCTA";
 import { AboutMission } from "@/components/sections/AboutMission";
+import { AboutPhotoGrid } from "@/components/sections/AboutPhotoGrid";
 import { AboutTrustCounter } from "@/components/sections/AboutTrustCounter";
 import { AESlogan } from "@/components/sections/AESlogan";
 import { Comparison } from "@/components/sections/Comparison";
@@ -42,7 +43,10 @@ export const AboutPage = () => {
 			{/* 7. CEO 타임라인 */}
 			<AboutCEOTimeline />
 
-			{/* 8. 미션 */}
+			{/* 8. 팀·사무실 포토 그리드 */}
+			<AboutPhotoGrid />
+
+			{/* 9. 미션 */}
 			<AboutMission />
 
 			{/* 9. 조직도 */}

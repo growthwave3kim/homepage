@@ -5,9 +5,9 @@ import { Reveal } from "@/components/shared/Reveal";
 import { CLIENT_DISCIPLINES } from "@/data/client-disciplines";
 
 const DisciplineChip = ({ name, caption }: { name: string; caption: string }) => (
-	<div className="mx-3 flex flex-col items-center gap-1 rounded-2xl border border-slate-200 bg-white px-6 py-4 transition-all duration-200 hover:scale-105 hover:border-[#7c3aed]/40 hover:shadow-[0_4px_16px_rgba(124,58,237,0.1)]">
-		<span className="font-bold text-[#0a0a0a] text-base">{name}</span>
-		<span className="font-mono text-slate-400 text-[10px] tracking-wide">{caption}</span>
+	<div className="mx-4 flex flex-col items-center gap-1.5 rounded-2xl border border-slate-200 bg-white px-10 py-6 transition-colors duration-200 hover:border-[#7c3aed]/50 hover:bg-[#7c3aed]/[0.03]">
+		<span className="font-bold text-[#0a0a0a] text-lg">{name}</span>
+		<span className="font-mono text-[11px] text-slate-400 tracking-wide">{caption}</span>
 	</div>
 );
 
@@ -28,7 +28,7 @@ export const AboutClientStrip = () => {
 				</Reveal>
 			</div>
 
-			<Marquee speed={40} gradient={false} pauseOnHover>
+			<Marquee speed={40} gradient={false} >
 				{CLIENT_DISCIPLINES.map((d) => (
 					<DisciplineChip key={d.name} name={d.name} caption={d.caption} />
 				))}

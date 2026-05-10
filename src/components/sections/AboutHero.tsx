@@ -12,18 +12,28 @@ export const AboutHero = () => {
 
 	return (
 		<section className="relative flex min-h-screen items-center overflow-hidden">
-			{/* 배경 이미지 — 실제 사진으로 교체 시 아래 div를 <Image fill> 로 변경 */}
-			<div className="absolute inset-0 bg-slate-800">
-				{/*
-					import Image from "next/image";
-					<Image
-						src="/images/about-hero.jpg"
-						alt="그로스웨이브 팀"
-						fill
-						className="object-cover object-center"
-						priority
-					/>
+			{/* 배경 이미지 — /public/images/about/hero.jpg 교체 시 주석 해제 */}
+			<div className="absolute inset-0 bg-slate-900">
+				{/* 사진 준비 시:
+				import Image from "next/image";
+				<Image
+					src="/images/about/hero.jpg"
+					alt="그로스웨이브 팀"
+					fill
+					className="object-cover object-center"
+					priority
+				/>
 				*/}
+				{/* placeholder — 사진 교체 전 임시 */}
+				<div className="flex h-full w-full items-center justify-center opacity-10">
+					<div className="text-center text-white">
+						<svg className="mx-auto mb-3 h-12 w-12" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24" aria-hidden="true">
+							<path strokeLinecap="round" strokeLinejoin="round" d="M6.827 6.175A2.31 2.31 0 0 1 5.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 0 0-1.134-.175 2.31 2.31 0 0 1-1.64-1.055l-.822-1.316a2.192 2.192 0 0 0-1.736-1.039 48.774 48.774 0 0 0-5.232 0 2.192 2.192 0 0 0-1.736 1.039l-.821 1.316Z" />
+							<path strokeLinecap="round" strokeLinejoin="round" d="M16.5 12.75a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0ZM18.75 10.5h.008v.008h-.008V10.5Z" />
+						</svg>
+						<p className="font-mono text-xs tracking-widest">images/about/hero.jpg</p>
+					</div>
+				</div>
 			</div>
 
 			{/* 대각선 보라 오버레이 (isanghan 대각 분할 패턴) */}
@@ -42,7 +52,7 @@ export const AboutHero = () => {
 			<div className="relative z-10 mx-auto w-full max-w-6xl px-8 py-32 md:px-12">
 				<div className="max-w-xl">
 					<motion.p
-						className="mb-6 font-semibold text-white/70 text-sm uppercase tracking-[0.5em]"
+						className="mb-6 font-semibold text-sm text-white/70 uppercase tracking-[0.5em]"
 						initial={{ opacity: 0, y: 16 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.6, ease }}
@@ -51,7 +61,7 @@ export const AboutHero = () => {
 					</motion.p>
 
 					<motion.h1
-						className="mb-8 font-bold text-[52px] leading-[1.08] tracking-tight text-white md:text-[72px] lg:text-[88px]"
+						className="mb-8 font-bold text-[52px] text-white leading-[1.08] tracking-tight md:text-[72px] lg:text-[88px]"
 						initial={{ opacity: 0, y: 32 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.75, delay: 0.1, ease }}
