@@ -53,7 +53,8 @@ export const BLOG_CASES = [
 		before: "월 0건",
 		after: "2개월 내 5개 키워드 1페이지",
 		caption: "검색 의도 기반 콘텐츠 8편 발행",
-		testimonial: "올린 글이 의뢰로 이어지는 경험은 처음이었습니다. 키워드 방향이 달라지니 문의 질이 달라졌어요.", // TODO: 실제 후기로 교체
+		testimonial:
+			"올린 글이 의뢰로 이어지는 경험은 처음이었습니다. 키워드 방향이 달라지니 문의 질이 달라졌어요.", // TODO: 실제 후기로 교체
 		author: "변호사 H",
 	},
 	{
@@ -71,7 +72,8 @@ export const BLOG_CASES = [
 		before: "월 8건",
 		after: "4개월간 +210%",
 		caption: "기장·신고 분리 키워드 전략",
-		testimonial: "기장 의뢰와 신고 의뢰가 분리되니 훨씬 일하기 편해졌습니다. 의뢰 수도 많이 늘었고요.", // TODO: 실제 후기로 교체
+		testimonial:
+			"기장 의뢰와 신고 의뢰가 분리되니 훨씬 일하기 편해졌습니다. 의뢰 수도 많이 늘었고요.", // TODO: 실제 후기로 교체
 		author: "세무사 C",
 	},
 ] as const;

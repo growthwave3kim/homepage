@@ -8,12 +8,7 @@ import { ServiceEngagementPolicy } from "@/components/sections/ServiceEngagement
 import { ServiceProcess } from "@/components/sections/ServiceProcess";
 import { ServiceProofStrip } from "@/components/sections/ServiceProofStrip";
 import { ServiceWhatWeDo } from "@/components/sections/ServiceWhatWeDo";
-import {
-	BLOG_CASES,
-	BLOG_PILLARS,
-	BLOG_PROCESS,
-	BLOG_PROOF,
-} from "@/data/service-blog";
+import { BLOG_CASES, BLOG_PILLARS, BLOG_PROCESS, BLOG_PROOF } from "@/data/service-blog";
 
 export const metadata: Metadata = {
 	title: "블로그 마케팅 | Growth Wave",

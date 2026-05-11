@@ -38,11 +38,10 @@ export const ProfessionalHero = () => {
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.6, delay: 0.1 }}
 					>
-						전문직 마케팅으로{" "}
-						<span className="gradient-text">의뢰</span>가 옵니다.
+						전문직 마케팅으로 <span className="gradient-text">의뢰</span>가 옵니다.
 					</motion.h1>
 					<motion.p
-						className="mb-8 max-w-xl break-keep text-white/60 text-base leading-relaxed"
+						className="mb-8 max-w-xl break-keep text-base text-white/60 leading-relaxed"
 						initial={{ opacity: 0, y: 20 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.6, delay: 0.2 }}

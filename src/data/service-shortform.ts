@@ -54,7 +54,8 @@ export const SHORTFORM_CASES = [
 		before: "채널 0개",
 		after: "3개월 5편 누적 1만 조회",
 		caption: "법률 Q&A 시리즈 — 의뢰 직접 연결",
-		testimonial: "촬영이 어색할 줄 알았는데 디렉팅이 있으니 자연스럽게 됐습니다. 영상에서 의뢰가 직접 들어옵니다.", // TODO: 실제 후기로 교체
+		testimonial:
+			"촬영이 어색할 줄 알았는데 디렉팅이 있으니 자연스럽게 됐습니다. 영상에서 의뢰가 직접 들어옵니다.", // TODO: 실제 후기로 교체
 		author: "변호사 S",
 	},
 	{

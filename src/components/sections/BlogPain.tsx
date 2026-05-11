@@ -54,10 +54,7 @@ export const BlogPain = () => {
 									<span className="text-slate-500 text-sm">{item.keyword}</span>
 								</div>
 								{/* 화살표 */}
-								<span
-									className="hidden text-slate-300 text-sm sm:block"
-									aria-hidden="true"
-								>
+								<span className="hidden text-slate-300 text-sm sm:block" aria-hidden="true">
 									→
 								</span>
 								{/* 결과 */}

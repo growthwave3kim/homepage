@@ -121,7 +121,7 @@ export const RegulationHero = () => {
 						걸리지 않습니다.
 					</motion.h1>
 					<motion.p
-						className="mb-10 max-w-sm break-keep text-white/75 text-base leading-relaxed"
+						className="mb-10 max-w-sm break-keep text-base text-white/75 leading-relaxed"
 						initial={{ opacity: 0, y: 20 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.6, delay: 0.2 }}
@@ -139,8 +139,8 @@ export const RegulationHero = () => {
 						{STATS.map((s, i) => (
 							<div key={s.label} className="flex items-center gap-6">
 								<div>
-									<p className="font-bold text-xl text-white leading-none">{s.value}</p>
-									<p className="mt-0.5 font-mono text-xs text-white/65 tracking-[0.12em]">
+									<p className="font-bold text-white text-xl leading-none">{s.value}</p>
+									<p className="mt-0.5 font-mono text-white/65 text-xs tracking-[0.12em]">
 										{s.label}
 									</p>
 								</div>
@@ -174,7 +174,7 @@ export const RegulationHero = () => {
 								<div className={`h-1 w-full ${doc.accentBar}`} />
 
 								{/* 헤더 */}
-								<div className="border-b border-white/[0.07] px-4 py-3">
+								<div className="border-white/[0.07] border-b px-4 py-3">
 									<div className="mb-1.5 h-1.5 w-16 rounded-full bg-white/20" />
 									<p className="font-mono text-[10px] text-white/55 tracking-[0.12em]">
 										{doc.lawLabel}

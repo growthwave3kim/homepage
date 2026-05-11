@@ -8,8 +8,7 @@ import { PageHero } from "@/components/shared/PageHero";
 
 export const metadata: Metadata = {
 	title: "상담 신청 | Growth Wave",
-	description:
-		"그로스웨이브에 전문직 마케팅을 문의하세요. 영업일 1일 내 회신드립니다.",
+	description: "그로스웨이브에 전문직 마케팅을 문의하세요. 영업일 1일 내 회신드립니다.",
 };
 
 export const ContactPage = () => {

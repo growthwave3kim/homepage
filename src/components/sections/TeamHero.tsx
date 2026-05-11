@@ -129,7 +129,7 @@ export const TeamHero = () => {
 						{STATS.map((s, i) => (
 							<div key={s.label} className="flex items-center gap-6">
 								<div>
-									<p className="font-bold text-xl text-white leading-none">{s.value}</p>
+									<p className="font-bold text-white text-xl leading-none">{s.value}</p>
 									<p className="mt-0.5 font-mono text-white/70 text-xs tracking-[0.12em]">
 										{s.label}
 									</p>
@@ -178,7 +178,7 @@ export const TeamHero = () => {
 								)}
 
 								{/* 하단 정보 */}
-								<div className="border-t border-white/[0.07] px-4 py-3">
+								<div className="border-white/[0.07] border-t px-4 py-3">
 									<p className="font-bold text-sm text-white">{card.nameKo}</p>
 									<p className="mt-1 font-mono text-[10px] text-white/70 tracking-[0.12em]">
 										{card.roleLabel}

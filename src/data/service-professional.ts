@@ -38,7 +38,8 @@ export const PROFESSIONAL_CASES = [
 		before: "월 0건",
 		after: "2개월 내 5개 키워드 1페이지",
 		caption: "사건 분야 3개 직접 수임 연결",
-		testimonial: "담당자가 바뀌지 않아서 콘텐츠 톤이 일관됩니다. 보고서에 수임 수치가 직접 들어와 있어요.", // TODO: 실제 후기로 교체
+		testimonial:
+			"담당자가 바뀌지 않아서 콘텐츠 톤이 일관됩니다. 보고서에 수임 수치가 직접 들어와 있어요.", // TODO: 실제 후기로 교체
 		author: "변호사 K",
 	},
 	{
@@ -47,7 +48,8 @@ export const PROFESSIONAL_CASES = [
 		before: "월 12건",
 		after: "3개월간 +175%",
 		caption: "의료광고 사전심의 통과 콘텐츠 12편",
-		testimonial: "의료광고 규정 걱정 없이 발행했습니다. 내원이 실제로 늘어서 지금도 계속 운영 중입니다.", // TODO: 실제 후기로 교체
+		testimonial:
+			"의료광고 규정 걱정 없이 발행했습니다. 내원이 실제로 늘어서 지금도 계속 운영 중입니다.", // TODO: 실제 후기로 교체
 		author: "치과 원장 P",
 	},
 	{

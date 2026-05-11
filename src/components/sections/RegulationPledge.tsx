@@ -16,7 +16,7 @@ export const RegulationPledge = () => {
 					<div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-16">
 						{/* 좌측 */}
 						<div>
-							<p className="mb-4 font-mono text-7xl leading-none text-[#7c3aed] select-none">
+							<p className="mb-4 select-none font-mono text-7xl text-[#7c3aed] leading-none">
 								&ldquo;
 							</p>
 							<h2 className="font-bold text-3xl text-white tracking-tight md:text-4xl">
@@ -25,7 +25,7 @@ export const RegulationPledge = () => {
 							<p className="mt-4 font-semibold text-[#a78bfa] text-sm tracking-[0.15em]">
 								Growth Wave 약속
 							</p>
-							<p className="mt-8 font-mono text-xs text-white/60 tracking-[0.15em]">
+							<p className="mt-8 font-mono text-white/60 text-xs tracking-[0.15em]">
 								대표 검수 — 김도현
 							</p>
 						</div>
@@ -35,9 +35,9 @@ export const RegulationPledge = () => {
 							{PLEDGES.map((pledge, i) => (
 								<div
 									key={pledge}
-									className="flex items-start gap-5 border-b border-white/10 py-5 last:border-0"
+									className="flex items-start gap-5 border-white/10 border-b py-5 last:border-0"
 								>
-									<span className="shrink-0 font-mono text-sm text-[#a78bfa] tracking-[0.12em]">
+									<span className="shrink-0 font-mono text-[#a78bfa] text-sm tracking-[0.12em]">
 										{String(i + 1).padStart(2, "0")}
 									</span>
 									<p className="break-keep text-base text-white/90 leading-relaxed">{pledge}</p>

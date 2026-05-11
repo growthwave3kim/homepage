@@ -49,10 +49,7 @@ export const ServiceProcess = ({ steps, footnote }: Props) => {
 					</div>
 				</Reveal>
 
-				<div
-					ref={gridRef}
-					className={`relative grid grid-cols-1 gap-10 md:gap-4 ${gridColsClass}`}
-				>
+				<div ref={gridRef} className={`relative grid grid-cols-1 gap-10 md:gap-4 ${gridColsClass}`}>
 					<motion.div
 						className="absolute top-10 hidden h-px bg-slate-200 md:block"
 						style={{ left: "10%", right: "10%", transformOrigin: "left" }}

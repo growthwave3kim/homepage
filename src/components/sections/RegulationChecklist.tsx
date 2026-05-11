@@ -30,7 +30,7 @@ export const RegulationChecklist = () => {
 					{/* 우측 헤더 (모바일에서는 위) */}
 					<div className="order-first md:order-last md:pt-4">
 						<Reveal>
-							<p className="mb-2 font-semibold text-xs text-slate-500 uppercase tracking-[0.2em]">
+							<p className="mb-2 font-semibold text-slate-500 text-xs uppercase tracking-[0.2em]">
 								Checklist
 							</p>
 							<h2 className="font-bold text-3xl text-[#0a0a0a] tracking-tight md:text-4xl">
@@ -47,8 +47,8 @@ export const RegulationChecklist = () => {
 						<Reveal>
 							<div className="relative">
 								{/* 클립 */}
-								<div className="absolute left-1/2 -top-4 z-10 -translate-x-1/2">
-									<div className="h-8 w-14 rounded-b-sm rounded-t-lg border-2 border-slate-300 bg-slate-200" />
+								<div className="absolute -top-4 left-1/2 z-10 -translate-x-1/2">
+									<div className="h-8 w-14 rounded-t-lg rounded-b-sm border-2 border-slate-300 bg-slate-200" />
 								</div>
 
 								<div
@@ -56,8 +56,8 @@ export const RegulationChecklist = () => {
 									className="rounded-2xl border border-slate-200 bg-white pt-10 pb-6 shadow-[0_8px_40px_rgba(15,23,42,0.08)]"
 								>
 									{/* 양식 메타 */}
-									<div className="mb-5 border-b border-slate-100 px-6 pb-5">
-										<div className="flex items-center gap-6 font-mono text-xs text-slate-500 tracking-[0.12em]">
+									<div className="mb-5 border-slate-100 border-b px-6 pb-5">
+										<div className="flex items-center gap-6 font-mono text-slate-500 text-xs tracking-[0.12em]">
 											<span>직군 _________</span>
 											<span>콘텐츠 유형 _________</span>
 											<span>채널 _________</span>
@@ -69,7 +69,7 @@ export const RegulationChecklist = () => {
 										{ITEMS.map((item, i) => (
 											<motion.li
 												key={item.text}
-												className="flex items-start gap-3 border-b border-slate-50 py-3 last:border-0"
+												className="flex items-start gap-3 border-slate-50 border-b py-3 last:border-0"
 												initial={{ opacity: 0, x: -10 }}
 												animate={inView ? { opacity: 1, x: 0 } : {}}
 												transition={{ delay: i * 0.06, duration: 0.35 }}
@@ -104,7 +104,7 @@ export const RegulationChecklist = () => {
 												</div>
 
 												{/* 법령 라벨 */}
-												<span className="hidden shrink-0 font-mono text-xs text-slate-400 tracking-[0.1em] sm:block">
+												<span className="hidden shrink-0 font-mono text-slate-400 text-xs tracking-[0.1em] sm:block">
 													{item.law}
 												</span>
 											</motion.li>
@@ -113,7 +113,7 @@ export const RegulationChecklist = () => {
 
 									{/* 하단 라벨 */}
 									<div className="mt-4 px-6 text-right">
-										<p className="font-mono text-xs text-slate-400 tracking-[0.12em]">
+										<p className="font-mono text-slate-400 text-xs tracking-[0.12em]">
 											Growth Wave 자체 체크리스트 — 직군별 항목 보강
 										</p>
 									</div>

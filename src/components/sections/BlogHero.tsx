@@ -13,8 +13,7 @@ export const BlogHero = () => {
 			<div
 				className="pointer-events-none absolute inset-0"
 				style={{
-					background:
-						"radial-gradient(ellipse at 20% 50%, #f3e8ff 0%, transparent 60%)",
+					background: "radial-gradient(ellipse at 20% 50%, #f3e8ff 0%, transparent 60%)",
 				}}
 			/>
 
@@ -34,11 +33,10 @@ export const BlogHero = () => {
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.6, delay: 0.1 }}
 					>
-						검색이{" "}
-						<span className="gradient-text">전화</span>가 됩니다.
+						검색이 <span className="gradient-text">전화</span>가 됩니다.
 					</motion.h1>
 					<motion.p
-						className="mb-8 max-w-xl break-keep text-slate-500 text-base leading-relaxed"
+						className="mb-8 max-w-xl break-keep text-base text-slate-500 leading-relaxed"
 						initial={{ opacity: 0, y: 20 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.6, delay: 0.2 }}
@@ -54,7 +52,7 @@ export const BlogHero = () => {
 					transition={{ duration: 0.7, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
 				>
 					<div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_24px_64px_rgba(0,0,0,0.08)]">
-						<div className="flex items-center gap-2 border-b border-slate-100 bg-slate-50 px-4 py-3">
+						<div className="flex items-center gap-2 border-slate-100 border-b bg-slate-50 px-4 py-3">
 							<span className="h-3 w-3 rounded-full bg-red-400" />
 							<span className="h-3 w-3 rounded-full bg-yellow-400" />
 							<span className="h-3 w-3 rounded-full bg-green-400" />
@@ -63,7 +61,7 @@ export const BlogHero = () => {
 							</div>
 						</div>
 
-						<div className="border-b border-slate-100 px-5 py-4">
+						<div className="border-slate-100 border-b px-5 py-4">
 							<div className="flex items-center gap-2 rounded-lg border border-[#7c3aed]/30 bg-[#f9f7ff] px-4 py-2.5">
 								<svg
 									className="h-4 w-4 shrink-0 text-[#7c3aed]"
@@ -114,10 +112,8 @@ export const BlogHero = () => {
 								>
 									<div className="mb-1 flex items-center gap-2">
 										<span
-											className={`rounded px-1.5 py-0.5 text-[10px] font-semibold ${
-												result.highlight
-													? "bg-[#7c3aed] text-white"
-													: "bg-slate-100 text-slate-500"
+											className={`rounded px-1.5 py-0.5 font-semibold text-[10px] ${
+												result.highlight ? "bg-[#7c3aed] text-white" : "bg-slate-100 text-slate-500"
 											}`}
 										>
 											블로그
@@ -125,9 +121,7 @@ export const BlogHero = () => {
 									</div>
 									<p
 										className={`text-sm leading-snug ${
-											result.highlight
-												? "font-semibold text-[#7c3aed]"
-												: "text-[#0a0a0a]"
+											result.highlight ? "font-semibold text-[#7c3aed]" : "text-[#0a0a0a]"
 										}`}
 									>
 										{result.title}
@@ -137,7 +131,7 @@ export const BlogHero = () => {
 						</div>
 
 						<motion.div
-							className="border-t border-slate-100 bg-[#f9f7ff] px-5 py-3"
+							className="border-slate-100 border-t bg-[#f9f7ff] px-5 py-3"
 							initial={{ opacity: 0 }}
 							animate={{ opacity: 1 }}
 							transition={{ delay: 1.1 }}

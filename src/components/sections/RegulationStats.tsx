@@ -67,7 +67,7 @@ export const RegulationStats = () => {
 									<h3 className="mt-3 break-keep font-bold text-base text-white tracking-tight md:text-lg">
 										{item.label}
 									</h3>
-									<p className="mt-1.5 font-mono text-xs text-white/50 tracking-[0.12em]">
+									<p className="mt-1.5 font-mono text-white/50 text-xs tracking-[0.12em]">
 										출처: {item.source}
 									</p>
 								</div>
@@ -84,7 +84,7 @@ export const RegulationStats = () => {
 								<p className="font-bold text-lg text-white tracking-tight">10년 새 25배 증가</p>
 								<p className="mt-0.5 text-sm text-white/70">위반 광고 적발 건수</p>
 							</div>
-							<p className="font-mono text-xs text-white/50 tracking-[0.12em]">
+							<p className="font-mono text-white/50 text-xs tracking-[0.12em]">
 								출처: {TREND_DATA.source}
 							</p>
 						</div>
@@ -114,15 +114,15 @@ export const RegulationStats = () => {
 											aria-label={`${bar.year}년 ${bar.value}건`}
 											role="img"
 										/>
-										<span className="font-mono text-xs text-white/60">{bar.year}</span>
+										<span className="font-mono text-white/60 text-xs">{bar.year}</span>
 									</div>
 								);
 							})}
 						</div>
 
 						<div className="mt-4 flex justify-between">
-							<span className="font-mono text-xs text-white/60">{TREND_DATA.startLabel}</span>
-							<span className="font-mono text-xs text-rose-400">{TREND_DATA.endLabel}</span>
+							<span className="font-mono text-white/60 text-xs">{TREND_DATA.startLabel}</span>
+							<span className="font-mono text-rose-400 text-xs">{TREND_DATA.endLabel}</span>
 						</div>
 					</div>
 				</Reveal>

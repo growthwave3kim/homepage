@@ -24,9 +24,7 @@ export const ServiceEngagementPolicy = () => {
 									<span className="mt-0.5 font-semibold text-[#7c3aed] text-lg leading-none">
 										—
 									</span>
-									<span className="break-keep text-[#0a0a0a] text-sm leading-relaxed">
-										{item}
-									</span>
+									<span className="break-keep text-[#0a0a0a] text-sm leading-relaxed">{item}</span>
 								</li>
 							))}
 						</ul>

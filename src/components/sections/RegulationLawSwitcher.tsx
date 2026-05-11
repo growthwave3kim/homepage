@@ -14,7 +14,7 @@ export const RegulationLawSwitcher = () => {
 			<div className="mx-auto max-w-6xl">
 				{/* 헤더 — 좌측 정렬 */}
 				<div className="mb-10">
-					<p className="mb-2 font-semibold text-xs text-slate-500 uppercase tracking-[0.2em]">
+					<p className="mb-2 font-semibold text-slate-500 text-xs uppercase tracking-[0.2em]">
 						Regulation
 					</p>
 					<h2 className="font-bold text-3xl text-[#0a0a0a] tracking-tight md:text-4xl">
@@ -34,7 +34,7 @@ export const RegulationLawSwitcher = () => {
 								key={r.slug}
 								type="button"
 								onClick={() => setSelected(i)}
-								className={`rounded-lg border px-4 py-2.5 text-left text-sm font-semibold transition-all ${
+								className={`rounded-lg border px-4 py-2.5 text-left font-semibold text-sm transition-all ${
 									selected === i
 										? "border-[#7c3aed] bg-[#7c3aed] text-white"
 										: "border-slate-200 text-slate-700 hover:border-slate-400 hover:bg-slate-50"
@@ -60,7 +60,7 @@ export const RegulationLawSwitcher = () => {
 								<div className="mb-6 flex items-center gap-3">
 									<div>
 										<p className="font-bold text-[#0a0a0a] text-lg">{reg.profession}</p>
-										<p className="mt-0.5 font-mono text-xs text-slate-500 tracking-[0.12em]">
+										<p className="mt-0.5 font-mono text-slate-500 text-xs tracking-[0.12em]">
 											{reg.law} · {reg.rule}
 										</p>
 									</div>
@@ -70,7 +70,7 @@ export const RegulationLawSwitcher = () => {
 								<div className="grid grid-cols-2 gap-4">
 									{/* 가능 */}
 									<div className="rounded-xl border border-emerald-200 bg-emerald-50 p-4">
-										<p className="mb-3 font-semibold text-xs text-emerald-700 uppercase tracking-[0.15em]">
+										<p className="mb-3 font-semibold text-emerald-700 text-xs uppercase tracking-[0.15em]">
 											✓ 가능한 표현
 										</p>
 										<ul className="space-y-2">
@@ -87,7 +87,7 @@ export const RegulationLawSwitcher = () => {
 
 									{/* 금지 */}
 									<div className="rounded-xl border border-rose-200 bg-rose-50 p-4">
-										<p className="mb-3 font-semibold text-xs text-rose-600 uppercase tracking-[0.15em]">
+										<p className="mb-3 font-semibold text-rose-600 text-xs uppercase tracking-[0.15em]">
 											✕ 금지된 표현
 										</p>
 										<ul className="space-y-2">
@@ -104,7 +104,7 @@ export const RegulationLawSwitcher = () => {
 								</div>
 
 								{/* 하단 라벨 */}
-								<p className="mt-5 text-right font-mono text-xs text-slate-500 tracking-[0.12em]">
+								<p className="mt-5 text-right font-mono text-slate-500 text-xs tracking-[0.12em]">
 									발행 전 직접 검토 — 위반 0건
 								</p>
 							</motion.div>
@@ -114,7 +114,7 @@ export const RegulationLawSwitcher = () => {
 
 				{/* 모바일: 아코디언 */}
 				<div className="divide-y divide-slate-100 md:hidden">
-					{REGULATIONS.map((r, i) => (
+					{REGULATIONS.map((r, _i) => (
 						<details key={r.slug} className="group">
 							<summary className="flex cursor-pointer list-none items-center justify-between py-4">
 								<div>

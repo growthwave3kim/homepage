@@ -49,7 +49,7 @@ export const TeamMemberFeature = () => {
 										{member.quote && (
 											<blockquote className="relative mb-8 pl-10">
 												<span
-													className="-top-2 absolute left-0 select-none font-mono text-4xl text-[#7c3aed] leading-none"
+													className="absolute -top-2 left-0 select-none font-mono text-4xl text-[#7c3aed] leading-none"
 													aria-hidden="true"
 												>
 													&ldquo;

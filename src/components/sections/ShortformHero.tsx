@@ -39,11 +39,10 @@ export const ShortformHero = () => {
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.6, delay: 0.1 }}
 					>
-						대본부터{" "}
-						<span className="gradient-text">손동작</span>까지 알려드립니다.
+						대본부터 <span className="gradient-text">손동작</span>까지 알려드립니다.
 					</motion.h1>
 					<motion.p
-						className="mb-8 max-w-xl break-keep text-white/60 text-base leading-relaxed"
+						className="mb-8 max-w-xl break-keep text-base text-white/60 leading-relaxed"
 						initial={{ opacity: 0, y: 20 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.6, delay: 0.2 }}
@@ -77,7 +76,7 @@ export const ShortformHero = () => {
 										className="flex h-12 w-12 items-center justify-center rounded-full"
 										style={{ backgroundColor: phone.color }}
 									>
-										<span className="font-bold text-white text-lg">▶</span>
+										<span className="font-bold text-lg text-white">▶</span>
 									</div>
 									<p className="font-semibold text-sm text-white">{phone.platform}</p>
 									<div className="mt-1 space-y-1.5">

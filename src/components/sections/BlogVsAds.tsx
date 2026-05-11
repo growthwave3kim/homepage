@@ -17,28 +17,28 @@ export const BlogVsAds = () => {
 				</Reveal>
 
 				<div className="overflow-hidden rounded-2xl border border-slate-200 bg-white">
-					<div className="grid grid-cols-3 border-b border-slate-100">
+					<div className="grid grid-cols-3 border-slate-100 border-b">
 						<div className="px-6 py-4" />
-						<div className="border-l border-slate-100 px-6 py-4 text-center">
+						<div className="border-slate-100 border-l px-6 py-4 text-center">
 							<span className="font-bold text-[#0a0a0a] text-base">광고</span>
 						</div>
-						<div className="border-l border-[#7c3aed]/20 bg-[#f9f7ff] px-6 py-4 text-center">
+						<div className="border-[#7c3aed]/20 border-l bg-[#f9f7ff] px-6 py-4 text-center">
 							<span className="font-bold text-[#7c3aed] text-base">블로그</span>
 						</div>
 					</div>
 
 					{BLOG_VS_ADS.map((row, i) => (
 						<Reveal key={row.axis} direction={i % 2 === 0 ? "left" : "right"} delay={i * 0.08}>
-							<div className="grid grid-cols-3 border-b border-slate-100 last:border-0">
+							<div className="grid grid-cols-3 border-slate-100 border-b last:border-0">
 								<div className="flex items-center px-6 py-4">
 									<span className="font-semibold text-[#0a0a0a] text-sm">{row.axis}</span>
 								</div>
-								<div className="flex items-center border-l border-slate-100 px-6 py-4">
+								<div className="flex items-center border-slate-100 border-l px-6 py-4">
 									<span className="break-keep text-slate-500 text-sm leading-relaxed">
 										{row.ads}
 									</span>
 								</div>
-								<div className="flex items-center border-l border-[#7c3aed]/20 bg-[#f9f7ff] px-6 py-4">
+								<div className="flex items-center border-[#7c3aed]/20 border-l bg-[#f9f7ff] px-6 py-4">
 									<span className="break-keep font-medium text-[#7c3aed] text-sm leading-relaxed">
 										{row.blog}
 									</span>

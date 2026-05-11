@@ -27,18 +27,12 @@ export const ShortformPain = () => {
 						<Reveal key={b.text} delay={i * 0.1} direction="up">
 							<div className="flex items-start gap-4">
 								<div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#7c3aed]/20">
-									<span className="font-bold text-[#a78bfa] text-sm">
-										{b.initial}
-									</span>
+									<span className="font-bold text-[#a78bfa] text-sm">{b.initial}</span>
 								</div>
 								<div>
-									<p className="mb-1.5 font-medium text-white/30 text-xs">
-										{b.role}
-									</p>
+									<p className="mb-1.5 font-medium text-white/30 text-xs">{b.role}</p>
 									<div className="rounded-2xl rounded-tl-none border border-white/[0.06] bg-[#1a1a1a] px-5 py-4">
-										<p className="break-keep text-white/75 text-sm leading-relaxed">
-											{b.text}
-										</p>
+										<p className="break-keep text-sm text-white/75 leading-relaxed">{b.text}</p>
 									</div>
 								</div>
 							</div>

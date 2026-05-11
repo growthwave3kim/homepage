@@ -19,9 +19,7 @@ type Props = {
 
 export const CaseTestimonial = ({ cases, dark = false }: Props) => {
 	return (
-		<section
-			className={`px-4 py-16 md:py-20 ${dark ? "bg-[#0a0a0a]" : "bg-slate-50"}`}
-		>
+		<section className={`px-4 py-16 md:py-20 ${dark ? "bg-[#0a0a0a]" : "bg-slate-50"}`}>
 			<div className="mx-auto max-w-6xl">
 				<Reveal className="mb-12 text-center">
 					<p
@@ -49,13 +47,9 @@ export const CaseTestimonial = ({ cases, dark = false }: Props) => {
 									</span>
 									<p className="mb-1 text-white/40 text-xs">{c.metric}</p>
 									<div className="flex items-baseline gap-2">
-										<span className="text-white/30 text-sm line-through">
-											{c.before}
-										</span>
+										<span className="text-sm text-white/30 line-through">{c.before}</span>
 										<span className="text-white/40 text-xs">→</span>
-										<span className="font-bold text-[#a78bfa] text-xl">
-											{c.after}
-										</span>
+										<span className="font-bold text-[#a78bfa] text-xl">{c.after}</span>
 									</div>
 									<p className="mt-2 text-white/30 text-xs">{c.caption}</p>
 								</div>
@@ -63,12 +57,12 @@ export const CaseTestimonial = ({ cases, dark = false }: Props) => {
 								{/* 하단: 후기 */}
 								<div className="flex flex-1 flex-col bg-white px-6 py-5">
 									<p className="flex-1 break-keep text-slate-600 text-sm leading-relaxed">
-										<span className="mr-1 font-bold text-[#7c3aed]/40 text-2xl leading-none">
+										<span className="mr-1 font-bold text-2xl text-[#7c3aed]/40 leading-none">
 											"
 										</span>
 										{c.testimonial}
 									</p>
-									<p className="mt-4 border-t border-slate-50 pt-4 font-medium text-slate-400 text-xs">
+									<p className="mt-4 border-slate-50 border-t pt-4 font-medium text-slate-400 text-xs">
 										— {c.author}
 									</p>
 								</div>

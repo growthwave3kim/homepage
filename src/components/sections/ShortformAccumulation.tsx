@@ -17,10 +17,9 @@ export const ShortformAccumulation = () => {
 						Accumulation
 					</p>
 					<h2 className="font-bold text-3xl text-white tracking-tight md:text-5xl">
-						광고는 멈추면 0,{" "}
-						<span className="gradient-text">숏폼은 누적됩니다</span>
+						광고는 멈추면 0, <span className="gradient-text">숏폼은 누적됩니다</span>
 					</h2>
-					<p className="mx-auto mt-4 max-w-md break-keep text-white/50 text-base leading-relaxed">
+					<p className="mx-auto mt-4 max-w-md break-keep text-base text-white/50 leading-relaxed">
 						한 편이 6-12개월 동안 검색에서 발견됩니다.
 					</p>
 				</Reveal>
@@ -29,11 +28,11 @@ export const ShortformAccumulation = () => {
 					<div className="mb-6 flex items-center gap-6">
 						<div className="flex items-center gap-2">
 							<div className="h-3 w-3 rounded-full bg-[#7c3aed]" />
-							<span className="text-white/60 text-sm">숏폼 누적 효과</span>
+							<span className="text-sm text-white/60">숏폼 누적 효과</span>
 						</div>
 						<div className="flex items-center gap-2">
 							<div className="h-3 w-3 rounded-full bg-slate-600" />
-							<span className="text-white/60 text-sm">광고 의존도</span>
+							<span className="text-sm text-white/60">광고 의존도</span>
 						</div>
 					</div>
 
@@ -45,18 +44,14 @@ export const ShortformAccumulation = () => {
 							animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
 							transition={{ delay: i * 0.1, duration: 0.5 }}
 						>
-							<span className="text-right font-mono text-sm text-white/50">
-								{item.period}
-							</span>
+							<span className="text-right font-mono text-sm text-white/50">{item.period}</span>
 							<div className="space-y-1.5">
 								<div className="flex items-center gap-3">
 									<div className="h-5 flex-1 overflow-hidden rounded-full bg-white/5">
 										<motion.div
 											className="h-full rounded-full bg-linear-to-r from-[#7c3aed] to-[#a78bfa]"
 											initial={{ width: "0%" }}
-											animate={
-												isInView ? { width: `${item.shortform}%` } : { width: "0%" }
-											}
+											animate={isInView ? { width: `${item.shortform}%` } : { width: "0%" }}
 											transition={{
 												delay: 0.3 + i * 0.1,
 												duration: 0.8,
@@ -73,9 +68,7 @@ export const ShortformAccumulation = () => {
 										<motion.div
 											className="h-full rounded-full bg-slate-600"
 											initial={{ width: "0%" }}
-											animate={
-												isInView ? { width: `${item.ads}%` } : { width: "0%" }
-											}
+											animate={isInView ? { width: `${item.ads}%` } : { width: "0%" }}
 											transition={{
 												delay: 0.35 + i * 0.1,
 												duration: 0.8,
