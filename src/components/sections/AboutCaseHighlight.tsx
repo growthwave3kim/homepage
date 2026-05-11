@@ -19,7 +19,11 @@ export const AboutCaseHighlight = () => {
 
 				<div className="grid grid-cols-1 gap-6 md:grid-cols-3">
 					{ABOUT_CASES.map((c, i) => (
-						<Reveal key={c.discipline} delay={i * 0.1} direction={(["left", "scale", "right"] as const)[i]}>
+						<Reveal
+							key={c.discipline}
+							delay={i * 0.1}
+							direction={(["left", "scale", "right"] as const)[i]}
+						>
 							<div className="rounded-2xl border border-slate-200 border-l-4 border-l-[#7c3aed] bg-white p-6">
 								<div className="mb-4 flex items-center gap-3">
 									<span className="rounded-full bg-[#7c3aed]/10 px-3 py-1 font-semibold text-[#7c3aed] text-xs">

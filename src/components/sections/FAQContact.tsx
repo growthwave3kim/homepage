@@ -70,7 +70,7 @@ export const FAQContact = () => {
 									</div>
 									<div>
 										<p className="font-semibold text-[#7c3aed] text-sm">상담 신청</p>
-										<p className="text-slate-500 text-xs">30분 무료 · 영업일 1일 내 회신</p>
+										<p className="text-slate-500 text-xs">영업일 1일 내 회신</p>
 									</div>
 								</div>
 								<ArrowRight className="h-4 w-4 text-[#7c3aed]/60 transition-transform group-hover:translate-x-0.5" />

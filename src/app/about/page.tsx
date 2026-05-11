@@ -70,7 +70,7 @@ export const AboutPage = () => {
 			<CTACard
 				variant="gradient"
 				headline="전문직 마케팅, 우리에게 맡기세요."
-				sub="30분 무료 진단 · 광고 규정 위반 항목 즉시 확인"
+				sub="광고 규정 위반 항목 즉시 확인"
 				buttonText="상담 신청"
 			/>
 		</>

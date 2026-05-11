@@ -35,8 +35,8 @@ export const ServicesPage = () => {
 			<CTACard
 				variant="gradient"
 				headline="어떤 채널이 맞는지 모르겠다면."
-				sub="30분 무료 진단으로 직군에 맞는 채널을 찾아드립니다."
-				buttonText="무료 진단 신청"
+				sub="직군에 맞는 채널을 찾아드립니다."
+				buttonText="상담 신청"
 			/>
 		</>
 	);

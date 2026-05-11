@@ -46,9 +46,9 @@ export const OrgChart = () => {
 									<div
 										className={cn(
 											"absolute top-0 h-px bg-slate-400",
-											i === 0 && "left-1/2 right-0",
+											i === 0 && "right-0 left-1/2",
 											i === 1 && "inset-x-0",
-											i === 2 && "left-0 right-1/2",
+											i === 2 && "right-1/2 left-0",
 										)}
 									/>
 									<div className="absolute inset-y-0 left-1/2 w-px -translate-x-px bg-slate-400" />
@@ -72,7 +72,7 @@ export const OrgChart = () => {
 									<div className="flex flex-col gap-2">
 										{dept.subs.map((sub, j) => (
 											<Reveal key={sub.name} direction="up" delay={0.5 + i * 0.1 + j * 0.08}>
-												<div className="rounded-xl border border-dashed border-slate-200 bg-slate-50 p-4 transition-colors duration-200 hover:border-[#7c3aed]/20 hover:bg-[#7c3aed]/2">
+												<div className="rounded-xl border border-slate-200 border-dashed bg-slate-50 p-4 transition-colors duration-200 hover:border-[#7c3aed]/20 hover:bg-[#7c3aed]/2">
 													<p className="font-semibold text-foreground text-xs">{sub.name}</p>
 													<p className="mt-0.5 text-muted-foreground text-xs leading-relaxed">
 														{sub.desc}

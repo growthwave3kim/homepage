@@ -34,7 +34,7 @@ export const AboutMidCTA = () => {
 						Direct Contact
 					</p>
 					<h2 className="mb-3 font-bold text-3xl text-white tracking-tight md:text-4xl">
-						30분 무료 진단
+						상담 신청
 					</h2>
 					<p className="mb-10 break-keep text-white/60 leading-relaxed">
 						광고비 더 태우기 전에, 위반 항목부터 점검하세요.

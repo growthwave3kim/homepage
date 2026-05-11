@@ -3,7 +3,7 @@ import { Reveal } from "@/components/shared/Reveal";
 const STEPS = [
 	{ num: "01", title: "폼 작성", desc: "3분이면 작성 완료. 현황·직군·목표만 간단히 적어주세요." },
 	{ num: "02", title: "영업일 1일 내 회신", desc: "담당자가 직접 확인하고 연락드립니다." },
-	{ num: "03", title: "30분 무료 진단", desc: "영상·전화·대면 중 편한 방식으로 진행합니다." },
+	{ num: "03", title: "무료 상담", desc: "영상·전화·대면 중 편한 방식으로 진행합니다." },
 	{
 		num: "04",
 		title: "규정 검토 리포트",

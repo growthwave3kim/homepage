@@ -1,9 +1,9 @@
 "use client";
 
-import { animate, useInView } from "motion/react";
+import { animate, motion, useInView } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 import { Reveal } from "@/components/shared/Reveal";
-import { REGULATION_STATS } from "@/data/regulation-stats";
+import { REGULATION_STATS, TREND_DATA } from "@/data/regulation-stats";
 
 const CountUp = ({ to, duration = 1.4 }: { to: number; duration?: number }) => {
 	const [val, setVal] = useState(0);
@@ -24,26 +24,28 @@ const CountUp = ({ to, duration = 1.4 }: { to: number; duration?: number }) => {
 };
 
 const CELL_META = [
-	{ numClass: "gradient-text", borderClass: "border-b border-slate-100 md:border-b-0" },
-	{
-		numClass: "text-rose-500",
-		borderClass: "border-l border-b border-slate-100 md:border-b-0",
-	},
-	{ numClass: "gradient-text", borderClass: "md:border-l md:border-slate-100" },
+	{ numClass: "text-[#a78bfa]", borderClass: "border-b border-white/10 md:border-b-0" },
+	{ numClass: "text-rose-400", borderClass: "border-l border-b border-white/10 md:border-b-0" },
+	{ numClass: "text-[#a78bfa]", borderClass: "md:border-l md:border-white/10" },
 ] as const;
 
+const maxVal = Math.max(...TREND_DATA.bars.map((b) => b.value));
+
 export const RegulationStats = () => {
+	const barRef = useRef<HTMLDivElement>(null);
+	const barsInView = useInView(barRef, { once: true, margin: "-60px" });
+
 	return (
-		<section className="bg-white py-20 md:py-28">
+		<section className="bg-slate-950 py-20 md:py-28">
 			<div className="mx-auto max-w-5xl px-4 md:px-8">
 				<Reveal className="mb-12 text-center">
-					<p className="mb-3 font-semibold text-[#7c3aed] text-sm uppercase tracking-[0.25em]">
+					<p className="mb-3 font-semibold text-[#a78bfa] text-sm uppercase tracking-[0.25em]">
 						Why it matters
 					</p>
-					<h2 className="font-bold text-3xl text-[#0a0a0a] tracking-tight md:text-5xl">
-						규정 위반, 생각보다 <span className="text-rose-500">가깝습니다</span>
+					<h2 className="font-bold text-3xl text-white tracking-tight md:text-5xl">
+						규정 위반, 생각보다 <span className="text-rose-400">가깝습니다</span>
 					</h2>
-					<p className="mx-auto mt-4 max-w-xl break-keep text-slate-500 leading-relaxed">
+					<p className="mx-auto mt-4 max-w-xl break-keep text-white/70 leading-relaxed">
 						광고 위반은 행정처분·징계·형사처벌로 이어집니다. 아래 수치는 모두 공식 출처입니다.
 					</p>
 				</Reveal>
@@ -56,23 +58,16 @@ export const RegulationStats = () => {
 								<div className="flex flex-col px-5 py-8 md:px-8 md:py-10">
 									<p className="font-extrabold leading-none tracking-tighter">
 										<span className={`text-[52px] sm:text-[60px] md:text-[68px] ${meta.numClass}`}>
-											{item.id === "law2" ? (
-												<span ref={undefined}>
-													<CountUp to={item.value} />
-												</span>
-											) : (
-												<CountUp to={item.value} />
-											)}
+											<CountUp to={item.value} />
 										</span>
 										<span className={`ml-0.5 align-top text-2xl ${meta.numClass}`}>
 											{item.suffix}
 										</span>
 									</p>
-
-									<h3 className="mt-3 break-keep font-bold text-[#0a0a0a] text-base tracking-tight md:text-lg">
+									<h3 className="mt-3 break-keep font-bold text-base text-white tracking-tight md:text-lg">
 										{item.label}
 									</h3>
-									<p className="mt-1.5 font-mono text-[10px] text-slate-400 tracking-[0.15em]">
+									<p className="mt-1.5 font-mono text-xs text-white/50 tracking-[0.12em]">
 										출처: {item.source}
 									</p>
 								</div>
@@ -80,6 +75,57 @@ export const RegulationStats = () => {
 						);
 					})}
 				</div>
+
+				{/* Trend Bar Chart */}
+				<Reveal className="mt-14">
+					<div className="rounded-2xl border border-white/10 bg-white/[0.03] px-6 py-8 md:px-10">
+						<div className="mb-6 flex items-start justify-between">
+							<div>
+								<p className="font-bold text-lg text-white tracking-tight">10년 새 25배 증가</p>
+								<p className="mt-0.5 text-sm text-white/70">위반 광고 적발 건수</p>
+							</div>
+							<p className="font-mono text-xs text-white/50 tracking-[0.12em]">
+								출처: {TREND_DATA.source}
+							</p>
+						</div>
+
+						<div ref={barRef} className="flex items-end gap-3 md:gap-6">
+							{TREND_DATA.bars.map((bar, i) => {
+								const heightPx = Math.round((bar.value / maxVal) * 96);
+								const isLast = i === TREND_DATA.bars.length - 1;
+								return (
+									<div key={bar.year} className="flex flex-1 flex-col items-center gap-2">
+										<motion.div
+											className="w-full rounded-t-md"
+											style={{
+												height: heightPx,
+												transformOrigin: "bottom",
+												background: isLast
+													? "rgb(248 113 113)"
+													: `rgba(248,113,113,${0.2 + i * 0.15})`,
+											}}
+											initial={{ scaleY: 0 }}
+											animate={barsInView ? { scaleY: 1 } : { scaleY: 0 }}
+											transition={{
+												delay: i * 0.1,
+												duration: 0.6,
+												ease: [0.22, 1, 0.36, 1],
+											}}
+											aria-label={`${bar.year}년 ${bar.value}건`}
+											role="img"
+										/>
+										<span className="font-mono text-xs text-white/60">{bar.year}</span>
+									</div>
+								);
+							})}
+						</div>
+
+						<div className="mt-4 flex justify-between">
+							<span className="font-mono text-xs text-white/60">{TREND_DATA.startLabel}</span>
+							<span className="font-mono text-xs text-rose-400">{TREND_DATA.endLabel}</span>
+						</div>
+					</div>
+				</Reveal>
 			</div>
 		</section>
 	);

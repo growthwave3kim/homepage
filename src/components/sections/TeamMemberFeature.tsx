@@ -26,7 +26,7 @@ export const TeamMemberFeature = () => {
 													src={member.photo}
 													alt={member.nameKo}
 													fill
-													className="object-cover object-top grayscale transition-[filter] duration-500 hover:grayscale-0"
+													className="object-cover object-top grayscale-[0.1] transition-[filter] duration-500 hover:grayscale-0"
 													sizes="(max-width: 768px) 224px, 288px"
 												/>
 											</div>
@@ -47,9 +47,15 @@ export const TeamMemberFeature = () => {
 
 										{/* Quote */}
 										{member.quote && (
-											<blockquote className="mb-8 border-slate-200 border-l-4 pl-5">
+											<blockquote className="relative mb-8 pl-10">
+												<span
+													className="-top-2 absolute left-0 select-none font-mono text-4xl text-[#7c3aed] leading-none"
+													aria-hidden="true"
+												>
+													&ldquo;
+												</span>
 												<p className="font-bold text-[#0a0a0a] text-xl leading-snug md:text-2xl">
-													&ldquo;{member.quote}&rdquo;
+													{member.quote}
 												</p>
 											</blockquote>
 										)}
@@ -66,8 +72,8 @@ export const TeamMemberFeature = () => {
 										{/* Career */}
 										{member.careers && member.careers.length > 0 && (
 											<div>
-												<p className="mb-3 font-semibold text-foreground text-xs uppercase tracking-widest">
-													경력
+												<p className="mb-3 font-mono font-semibold text-[#7c3aed] text-xs uppercase tracking-[0.2em]">
+													Careers
 												</p>
 												<ul className="space-y-2">
 													{member.careers.map((c) => (
