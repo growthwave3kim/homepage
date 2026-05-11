@@ -11,7 +11,8 @@ export const StickyCTA = () => {
 	const [open, setOpen] = useState(true);
 	const pathname = usePathname();
 
-	const isContactPage = pathname === "/contact";
+	const HIDE_PATHS = ["/contact"];
+	const isHidden = HIDE_PATHS.some((p) => pathname.startsWith(p));
 
 	useEffect(() => {
 		const onKey = (e: KeyboardEvent) => {
@@ -21,7 +22,7 @@ export const StickyCTA = () => {
 		return () => window.removeEventListener("keydown", onKey);
 	}, []);
 
-	if (isContactPage) return null;
+	if (isHidden) return null;
 
 	return (
 		<>
@@ -73,9 +74,7 @@ export const StickyCTA = () => {
 							<p className="mb-0.5 font-semibold text-[10px] text-white/60 uppercase tracking-[0.2em]">
 								{siteConfig.nameKo}
 							</p>
-							<p className="font-extrabold text-white text-xl leading-tight">
-								지금 바로 상담하세요
-							</p>
+							<p className="font-extrabold text-white text-xl leading-tight">마케팅 컨설팅 받기</p>
 							<p className="mt-2 flex items-center gap-1.5 text-white/75 text-xs">
 								<span className="inline-block h-1.5 w-1.5 rounded-full bg-green-400" />
 								영업일 1일 내 답변 보장
@@ -91,7 +90,7 @@ export const StickyCTA = () => {
 								className="gradient-brand mb-3 flex w-full items-center justify-center gap-2 rounded-xl py-3.5 font-bold text-sm text-white shadow-[0_4px_16px_rgba(124,58,237,0.4)] transition-opacity hover:opacity-90"
 							>
 								<MessageSquare className="h-4 w-4" aria-hidden="true" />
-								온라인 상담 신청
+								마케팅 컨설팅
 							</Link>
 
 							{/* 전화 */}

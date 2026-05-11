@@ -8,7 +8,7 @@ import { EDIT_PHOTOS, VIDEO_PHOTOS } from "@/data/team-photos";
 type CrewBlockProps = {
 	icon: React.ReactNode;
 	label: string;
-	heading: string;
+	heading: React.ReactNode;
 	body: string;
 	photos: TeamPhoto[];
 	reverse?: boolean;
@@ -77,14 +77,14 @@ export const TeamCrews = () => {
 					<CrewBlock
 						icon={<Clapperboard className="h-5 w-5 text-white" aria-hidden="true" />}
 						label="영상팀"
-						heading="현장에서 인터뷰부터 컷 구성까지"
+						heading={<>현장 촬영부터 편집까지<br />직접 갑니다</>}
 						body="의뢰인이 카메라 앞에서 편안하게 말할 수 있도록 촬영팀이 직접 현장에 갑니다. 조명·사운드·디렉팅을 한 팀이 책임집니다."
 						photos={VIDEO_PHOTOS}
 					/>
 					<CrewBlock
 						icon={<MonitorPlay className="h-5 w-5 text-white" aria-hidden="true" />}
 						label="편집팀"
-						heading="초안부터 발행본까지 한 손에서"
+						heading="초안부터 발행까지 한 팀에서"
 						body="숏폼·릴스의 호흡과 블로그 비주얼을 함께 책임지는 인하우스 편집팀이 컷·자막·썸네일을 일관된 톤으로 다듬습니다."
 						photos={EDIT_PHOTOS}
 						gridCols="grid-cols-2 sm:grid-cols-3"

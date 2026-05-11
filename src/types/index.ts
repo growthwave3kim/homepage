@@ -53,12 +53,13 @@ export type TeamMember = {
 	photo?: string;
 };
 
-export type FaqCategory = "비용" | "기간·계약" | "규정" | "성과" | "채널";
+export type FaqCategory = "비용" | "진행절차" | "광고규정" | "운영보고" | "성과" | "해지환불";
 
 export type FaqItem = {
 	question: string;
 	answer: string;
 	category: FaqCategory;
+	featured?: boolean;
 };
 
 export type NavChild = {

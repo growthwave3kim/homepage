@@ -9,13 +9,13 @@ export const FinalCTA = () => {
 			<div className="relative mx-auto max-w-3xl text-center">
 				<Reveal>
 					<p className="mb-4 font-semibold text-sm text-white/80 uppercase tracking-[0.25em]">
-						상담 신청
+						마케팅 컨설팅
 					</p>
 					<h2 className="mb-4 font-extrabold text-[44px] text-white leading-[1.1] tracking-tight md:text-[64px]">
 						광고비, 더 태우기 전에.
 					</h2>
 					<p className="mb-10 text-lg text-white/60 leading-relaxed">
-						3분이면 상담 신청이 끝납니다.
+						3분이면 컨설팅 요청이 끝납니다.
 						<br />
 						24시간 안으로 답변드립니다.
 					</p>
@@ -24,7 +24,7 @@ export const FinalCTA = () => {
 							href="/contact"
 							className="w-full rounded-md bg-white px-8 py-3.5 font-semibold text-[#0a0a0a] text-base transition-opacity hover:opacity-90 sm:w-auto"
 						>
-							상담 신청
+							마케팅 컨설팅
 						</Link>
 						<a
 							href={siteConfig.contact.kakaoOpenChat}

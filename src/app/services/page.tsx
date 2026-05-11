@@ -20,7 +20,7 @@ export const ServicesPage = () => {
 				title="원하는 결과부터"
 				titleHighlight="정해주세요"
 				sub="검색에서 발견되는 글, 신뢰가 쌓이는 영상, 직군에 맞춘 통합 운영. 채널마다 다릅니다."
-				ctaText="상담 신청"
+				ctaText="마케팅 컨설팅"
 				ctaHref="/contact"
 			>
 				<p className="font-mono text-slate-400 text-xs tracking-[0.2em]">
@@ -36,7 +36,7 @@ export const ServicesPage = () => {
 				variant="gradient"
 				headline="어떤 채널이 맞는지 모르겠다면."
 				sub="직군에 맞는 채널을 찾아드립니다."
-				buttonText="상담 신청"
+				buttonText="마케팅 컨설팅"
 			/>
 		</>
 	);

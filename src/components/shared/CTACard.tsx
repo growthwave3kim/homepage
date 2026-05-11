@@ -9,9 +9,9 @@ type CTACardProps = {
 };
 
 export const CTACard = ({
-	headline = "상담으로 시작하세요",
+	headline = "마케팅 컨설팅으로 시작하세요",
 	sub = "진행 의무 없음 · 영업일 1일 내 회신",
-	buttonText = "상담 신청",
+	buttonText = "마케팅 컨설팅",
 	variant = "dark",
 }: CTACardProps) => {
 	if (variant === "gradient") {

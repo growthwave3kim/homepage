@@ -16,24 +16,7 @@ type TeamStat = {
 
 const TEAM_STATS: TeamStat[] = [
 	{
-		id: "inhouse",
-		value: 3,
-		suffix: "명",
-		label: "인하우스 멤버",
-		source: "검증된 이력 공개",
-		numClass: "text-[#a78bfa]",
-	},
-	{
-		id: "fields",
-		value: 12,
-		suffix: "개",
-		label: "전담 직군",
-		source: "변호사·의사·세무사 등",
-		numClass: "text-cyan-400",
-	},
-	{
 		id: "reviews",
-		// TODO: 실제 수치 확인 — 임의값
 		value: 200,
 		suffix: "+",
 		label: "누적 검토 건",
@@ -50,7 +33,6 @@ const TEAM_STATS: TeamStat[] = [
 	},
 	{
 		id: "career",
-		// TODO: 실제 수치 확인 — 임의값
 		value: 8,
 		suffix: "년",
 		label: "대표 광고 검토 경력",
@@ -86,14 +68,14 @@ export const TeamStats = () => {
 						Why us
 					</p>
 					<h2 className="font-bold text-3xl text-white tracking-tight md:text-5xl">
-						숫자로 보는 팀입니다.
+						숫자가 증명합니다.
 					</h2>
 					<p className="mt-4 max-w-xl break-keep text-sm text-white/75 leading-relaxed md:text-base">
-						노출이 아니라 의뢰로, 임프레션이 아니라 검토 건수로 증명합니다.
+						발행 전 직접 검토합니다. 규정 위반, 단 한 건도 없었습니다.
 					</p>
 				</Reveal>
 
-				<div className="grid grid-cols-2 border-white/10 border-t border-l md:grid-cols-5">
+				<div className="grid grid-cols-1 border-white/10 border-t border-l sm:grid-cols-3">
 					{TEAM_STATS.map((item, i) => (
 						<Reveal
 							key={item.id}

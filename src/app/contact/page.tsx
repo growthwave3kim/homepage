@@ -7,7 +7,7 @@ import { CTACard } from "@/components/shared/CTACard";
 import { PageHero } from "@/components/shared/PageHero";
 
 export const metadata: Metadata = {
-	title: "상담 신청 | Growth Wave",
+	title: "마케팅 컨설팅 | Growth Wave",
 	description: "그로스웨이브에 전문직 마케팅을 문의하세요. 영업일 1일 내 회신드립니다.",
 };
 
@@ -15,7 +15,7 @@ export const ContactPage = () => {
 	return (
 		<>
 			<PageHero
-				eyebrow="상담 신청"
+				eyebrow="마케팅 컨설팅"
 				title="어떤 의뢰 흐름을 원하시는지"
 				titleHighlight="부터 듣겠습니다"
 				sub="영업일 1일 내 회신 · 계약 압박 없음"

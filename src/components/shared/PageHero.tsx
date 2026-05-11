@@ -26,7 +26,7 @@ export const PageHero = ({
 	title,
 	titleHighlight,
 	sub,
-	ctaText = "상담 신청",
+	ctaText = "마케팅 컨설팅",
 	ctaHref = "/contact",
 	secondaryText,
 	secondaryHref,

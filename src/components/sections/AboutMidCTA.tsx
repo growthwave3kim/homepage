@@ -34,7 +34,7 @@ export const AboutMidCTA = () => {
 						Direct Contact
 					</p>
 					<h2 className="mb-3 font-bold text-3xl text-white tracking-tight md:text-4xl">
-						상담 신청
+						마케팅 컨설팅
 					</h2>
 					<p className="mb-10 break-keep text-white/60 leading-relaxed">
 						광고비 더 태우기 전에, 위반 항목부터 점검하세요.
@@ -55,7 +55,7 @@ export const AboutMidCTA = () => {
 							href="/contact"
 							className="gradient-brand block w-full rounded-md px-8 py-4 font-semibold text-base text-white transition-opacity hover:opacity-90"
 						>
-							상담 신청
+							마케팅 컨설팅
 						</Link>
 					</motion.div>
 

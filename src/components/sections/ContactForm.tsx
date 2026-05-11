@@ -245,7 +245,7 @@ export const ContactForm = () => {
 								className="cursor-pointer text-muted-foreground text-xs leading-relaxed"
 							>
 								<span className="text-destructive">*</span> 개인정보 수집·이용에 동의합니다. 수집된
-								정보는 상담 목적으로만 사용됩니다.
+								정보는 컨설팅 목적으로만 사용됩니다.
 							</label>
 						</div>
 
@@ -253,7 +253,7 @@ export const ContactForm = () => {
 							type="submit"
 							className="gradient-brand w-full rounded-md py-3.5 font-semibold text-base text-white transition-opacity hover:opacity-90"
 						>
-							상담 신청
+							마케팅 컨설팅 신청
 						</button>
 					</motion.form>
 				)}

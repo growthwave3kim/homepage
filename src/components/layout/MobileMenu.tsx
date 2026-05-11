@@ -45,7 +45,7 @@ export const MobileMenu = () => {
 							onClick={() => setOpen(false)}
 							className="block w-full rounded-md bg-[#0a0a0a] py-3 text-center font-semibold text-sm text-white transition-opacity hover:opacity-80"
 						>
-							상담 신청
+							마케팅 컨설팅
 						</Link>
 					</div>
 
@@ -117,7 +117,7 @@ export const MobileMenu = () => {
 							onClick={() => setOpen(false)}
 							className="block w-full rounded-md bg-[#0a0a0a] py-3.5 text-center font-semibold text-sm text-white transition-opacity hover:opacity-80"
 						>
-							상담 신청
+							마케팅 컨설팅
 						</Link>
 					</div>
 				</div>

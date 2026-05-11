@@ -56,7 +56,7 @@ export const RealReviews = () => {
 					href="/contact"
 					className="inline-flex items-center gap-1.5 border-current border-b pb-0.5 font-semibold text-[#0a0a0a] text-sm transition-opacity hover:opacity-70"
 				>
-					지금 상담 신청하기 →
+					마케팅 컨설팅 받기 →
 				</Link>
 			</div>
 		</section>

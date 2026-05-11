@@ -7,11 +7,11 @@ export type ProcessStep = {
 
 export const PROCESS_STEPS: ProcessStep[] = [
 	{
-		title: "무료 상담",
+		title: "마케팅 컨설팅",
 		description:
 			"현재 운영 중인 채널(블로그·SNS 등)의 규정 위반 여부를 항목별로 확인합니다. 위반·보완 사항과 앞으로 취할 방향을 정리해드립니다.",
 		icon: "MessageSquare",
-		badge: "무료",
+		badge: "1:1",
 	},
 	{
 		title: "규정·키워드 전략 수립",
