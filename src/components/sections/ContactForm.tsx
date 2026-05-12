@@ -3,6 +3,7 @@
 import { CheckCircle2, CheckIcon, ChevronDown, MessageCircle } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useRef, useState } from "react";
+import { submitContact } from "@/app/actions/contact";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
@@ -30,6 +31,8 @@ const PROFESSION_OPTIONS = [
 export const ContactForm = () => {
 	const [source, setSource] = useState("");
 	const [sent, setSent] = useState(false);
+	const [loading, setLoading] = useState(false);
+	const [error, setError] = useState("");
 	const [profession, setProfession] = useState("");
 	const [professionOpen, setProfessionOpen] = useState(false);
 	const professionRef = useRef<HTMLDivElement>(null);
@@ -50,25 +53,27 @@ export const ContactForm = () => {
 		}
 	};
 
-	const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+	const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
+		setLoading(true);
+		setError("");
 		const fd = new FormData(e.currentTarget);
-		const subject = encodeURIComponent(
-			`[상담 신청] ${fd.get("company") ?? ""} · ${fd.get("name") ?? ""}`,
-		);
-		const body = encodeURIComponent(
-			[
-				`회사/소속명: ${fd.get("company") ?? ""}`,
-				`직군: ${fd.get("profession") ?? ""}`,
-				`담당자: ${fd.get("name") ?? ""}`,
-				`연락처: ${fd.get("tel") ?? ""}`,
-				`이메일: ${fd.get("email") ?? ""}`,
-				`유입 경로: ${source || "미선택"}`,
-				`\n문의 내용:\n${fd.get("message") ?? ""}`,
-			].join("\n"),
-		);
-		window.location.href = `mailto:${siteConfig.contact.email}?subject=${subject}&body=${body}`;
-		setSent(true);
+		try {
+			await submitContact({
+				company: (fd.get("company") as string) ?? "",
+				profession,
+				name: (fd.get("name") as string) ?? "",
+				tel: (fd.get("tel") as string) ?? "",
+				email: (fd.get("email") as string) ?? "",
+				source,
+				message: (fd.get("message") as string) ?? "",
+			});
+			setSent(true);
+		} catch {
+			setError("제출 중 오류가 발생했습니다. 잠시 후 다시 시도해주세요.");
+		} finally {
+			setLoading(false);
+		}
 	};
 
 	return (
@@ -76,24 +81,139 @@ export const ContactForm = () => {
 			{sent ? (
 				<motion.div
 					key="success"
-					initial={{ opacity: 0, scale: 0.96 }}
-					animate={{ opacity: 1, scale: 1 }}
-					className="flex flex-col items-center gap-4 py-16 text-center"
+					initial={{ opacity: 0 }}
+					animate={{ opacity: 1 }}
+					transition={{ duration: 0.35 }}
+					className="py-6"
 				>
-					<div className="gradient-brand mx-auto mb-2 flex h-16 w-16 items-center justify-center rounded-full shadow-[0_8px_24px_rgba(124,58,237,0.3)]">
-						<CheckCircle2 className="h-8 w-8 text-white" />
-					</div>
-					<h2 className="font-bold text-[#0a0a0a] text-xl tracking-tight">신청이 완료되었습니다</h2>
-					<p className="text-slate-500 text-sm">영업일 1일 내로 직접 연락드리겠습니다.</p>
-					<a
+					{/* 아이콘 */}
+					<motion.div
+						initial={{ scale: 0.6, opacity: 0 }}
+						animate={{ scale: 1, opacity: 1 }}
+						transition={{ delay: 0.05, duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+						className="relative mx-auto mb-6 flex h-20 w-20 items-center justify-center"
+					>
+						<div className="absolute inset-0 animate-ping rounded-full bg-[#7c3aed] opacity-[0.12]" />
+						<div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#7c3aed]/10 to-[#4338ca]/5" />
+						<div className="gradient-brand relative z-10 flex h-16 w-16 items-center justify-center rounded-full shadow-[0_8px_32px_rgba(124,58,237,0.35)]">
+							<CheckCircle2 className="h-8 w-8 text-white" />
+						</div>
+					</motion.div>
+
+					{/* 헤드라인 */}
+					<motion.div
+						initial={{ opacity: 0, y: 10 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{ delay: 0.18, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+						className="mb-1 text-center"
+					>
+						<p className="mb-1.5 font-mono text-[#7c3aed] text-[10px] uppercase tracking-[0.3em]">
+							Submitted
+						</p>
+						<h2 className="font-bold text-2xl text-[#0a0a0a] tracking-tight">
+							신청이 완료됐습니다
+						</h2>
+					</motion.div>
+					<motion.p
+						initial={{ opacity: 0, y: 8 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{ delay: 0.26, duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+						className="mb-7 text-center text-slate-400 text-sm"
+					>
+						담당자가 직접 확인하고 연락드립니다.
+					</motion.p>
+
+					{/* 다음 단계 */}
+					<motion.div
+						initial={{ opacity: 0, y: 10 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{ delay: 0.32, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+						className="mb-5 rounded-xl border border-slate-100 bg-slate-50 p-5"
+					>
+						<p className="mb-4 font-semibold text-[10px] text-slate-400 uppercase tracking-[0.12em]">
+							다음 단계
+						</p>
+						<div className="space-y-3.5">
+							{(
+								[
+									{ label: "접수 확인", desc: "담당자가 문의를 확인합니다", time: "즉시" },
+									{
+										label: "직접 연락",
+										desc: "전화 또는 이메일로 회신드립니다",
+										time: "영업일 1일 내",
+									},
+									{
+										label: "마케팅 컨설팅",
+										desc: "광고 규정 검토부터 함께합니다",
+										time: "일정 조율 후",
+									},
+								] as const
+							).map((item, i) => (
+								<motion.div
+									key={item.label}
+									initial={{ opacity: 0, x: -6 }}
+									animate={{ opacity: 1, x: 0 }}
+									transition={{
+										delay: 0.4 + i * 0.08,
+										duration: 0.4,
+										ease: [0.22, 1, 0.36, 1],
+									}}
+									className="flex items-center gap-3"
+								>
+									<span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#7c3aed]/10 font-bold font-mono text-[#7c3aed] text-[10px]">
+										{i + 1}
+									</span>
+									<div className="flex min-w-0 flex-1 items-center justify-between gap-2">
+										<div className="min-w-0">
+											<p className="font-semibold text-[#0a0a0a] text-sm">{item.label}</p>
+											<p className="text-slate-400 text-xs">{item.desc}</p>
+										</div>
+										<span className="shrink-0 rounded-full border border-slate-200 bg-white px-2.5 py-0.5 font-medium text-[10px] text-slate-500">
+											{item.time}
+										</span>
+									</div>
+								</motion.div>
+							))}
+						</div>
+					</motion.div>
+
+					{/* 신뢰 지표 */}
+					<motion.div
+						initial={{ opacity: 0 }}
+						animate={{ opacity: 1 }}
+						transition={{ delay: 0.65, duration: 0.4 }}
+						className="mb-5 grid grid-cols-3 gap-2.5"
+					>
+						{(
+							[
+								{ value: "0원", label: "컨설팅 비용" },
+								{ value: "1일", label: "영업일 내 회신" },
+								{ value: "없음", label: "계약 의무" },
+							] as const
+						).map((stat) => (
+							<div
+								key={stat.label}
+								className="rounded-lg border border-[#e9d5ff]/60 bg-[#faf8ff] p-3 text-center"
+							>
+								<p className="font-bold text-[#7c3aed] text-lg leading-none">{stat.value}</p>
+								<p className="mt-1 text-[10px] text-slate-400">{stat.label}</p>
+							</div>
+						))}
+					</motion.div>
+
+					{/* 카카오 CTA */}
+					<motion.a
+						initial={{ opacity: 0, y: 6 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{ delay: 0.75, duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
 						href={siteConfig.contact.kakaoOpenChat}
 						target="_blank"
 						rel="noopener noreferrer"
-						className="mt-2 inline-flex items-center gap-2 rounded-full bg-[#FEE500] px-5 py-2.5 font-semibold text-[#0a0a0a] text-sm transition-opacity hover:opacity-80"
+						className="flex w-full items-center justify-center gap-2 rounded-xl bg-[#FEE500] py-3.5 font-semibold text-[#0a0a0a] text-sm transition-opacity hover:opacity-85"
 					>
 						<MessageCircle className="h-4 w-4" aria-hidden="true" />
 						카카오로 바로 연락하기
-					</a>
+					</motion.a>
 				</motion.div>
 			) : (
 				<motion.div key="form" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
@@ -103,9 +223,7 @@ export const ContactForm = () => {
 						<p className="mb-1.5 font-mono text-[#7c3aed] text-[10px] uppercase tracking-[0.3em]">
 							마케팅 컨설팅
 						</p>
-						<h2 className="font-bold text-[#0a0a0a] text-2xl tracking-tight">
-							자세히 알려주세요
-						</h2>
+						<h2 className="font-bold text-2xl text-[#0a0a0a] tracking-tight">자세히 알려주세요</h2>
 					</div>
 
 					<form onSubmit={handleSubmit} onKeyDown={handleKeyDown} className="space-y-6">
@@ -293,16 +411,21 @@ export const ContactForm = () => {
 								htmlFor="privacy"
 								className="cursor-pointer text-muted-foreground text-xs leading-relaxed"
 							>
-								<span className="text-destructive">*</span> 개인정보 수집·이용에 동의합니다.
-								수집된 정보는 컨설팅 목적으로만 사용됩니다.
+								<span className="text-destructive">*</span> 개인정보 수집·이용에 동의합니다. 수집된
+								정보는 컨설팅 목적으로만 사용됩니다.
 							</label>
 						</div>
 
+						{error && <p className="text-destructive text-sm">{error}</p>}
 						<button
 							type="submit"
-							className="gradient-brand w-full rounded-xl py-4 font-semibold text-base text-white shadow-[0_4px_20px_rgba(124,58,237,0.35)] transition-all hover:opacity-90 hover:shadow-[0_6px_28px_rgba(124,58,237,0.45)]"
+							disabled={loading}
+							className={cn(
+								"gradient-brand w-full rounded-xl py-4 font-semibold text-base text-white shadow-[0_4px_20px_rgba(124,58,237,0.35)] transition-all hover:opacity-90 hover:shadow-[0_6px_28px_rgba(124,58,237,0.45)]",
+								loading && "cursor-not-allowed opacity-60",
+							)}
 						>
-							마케팅 컨설팅 신청
+							{loading ? "제출 중..." : "마케팅 컨설팅 신청"}
 						</button>
 					</form>
 				</motion.div>

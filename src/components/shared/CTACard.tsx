@@ -1,5 +1,5 @@
-import type { ReactNode } from "react";
 import Link from "next/link";
+import type { ReactNode } from "react";
 import { Reveal } from "@/components/shared/Reveal";
 import { siteConfig } from "@/config/site";
 
@@ -56,10 +56,7 @@ export const CTACard = ({
 							numOctaves="2"
 							stitchTiles="stitch"
 						/>
-						<feColorMatrix
-							type="matrix"
-							values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.15 0"
-						/>
+						<feColorMatrix type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.15 0" />
 					</filter>
 					<rect width="100%" height="100%" filter="url(#cta-noise)" />
 				</svg>
@@ -67,7 +64,7 @@ export const CTACard = ({
 				<div className="relative z-10 mx-auto max-w-3xl text-center">
 					<Reveal>
 						{/* Eyebrow */}
-						<p className="mb-6 font-mono text-white/50 text-[10px] uppercase tracking-[0.4em]">
+						<p className="mb-6 font-mono text-[10px] text-white/50 uppercase tracking-[0.4em]">
 							{eyebrow ?? `${siteConfig.nameKo} · 마케팅 컨설팅`}
 						</p>
 
@@ -83,13 +80,9 @@ export const CTACard = ({
 						<div className="flex items-center justify-center border-white/15 border-t pt-10">
 							{TRUST_STATS.map((stat, i) => (
 								<div key={stat.label} className="flex items-center">
-									{i > 0 && (
-										<div className="mx-8 h-8 w-px bg-white/20" aria-hidden="true" />
-									)}
+									{i > 0 && <div className="mx-8 h-8 w-px bg-white/20" aria-hidden="true" />}
 									<div className="flex flex-col items-center gap-1.5">
-										<span className="font-bold text-white text-2xl sm:text-3xl">
-											{stat.value}
-										</span>
+										<span className="font-bold text-2xl text-white sm:text-3xl">{stat.value}</span>
 										<span className="font-mono text-[10px] text-white/45 uppercase tracking-[0.18em]">
 											{stat.label}
 										</span>
