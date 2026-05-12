@@ -1,6 +1,6 @@
 "use client";
 
-import { CheckCircle2, CheckIcon, ChevronDown } from "lucide-react";
+import { CheckCircle2, CheckIcon, ChevronDown, MessageCircle } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 import { Input } from "@/components/ui/input";
@@ -72,35 +72,49 @@ export const ContactForm = () => {
 	};
 
 	return (
-		<div className="rounded-md border border-slate-100 bg-white p-6 shadow-[0_8px_40px_rgba(0,0,0,0.07)] md:p-8">
-			<p className="mb-1 font-semibold text-[#0a0a0a] text-sm uppercase tracking-widest">
-				상세 문의
-			</p>
-			<h2 className="mb-6 font-bold text-foreground text-xl">자세히 알려주세요</h2>
-			<AnimatePresence mode="wait">
-				{sent ? (
-					<motion.div
-						key="success"
-						initial={{ opacity: 0, scale: 0.96 }}
-						animate={{ opacity: 1, scale: 1 }}
-						className="flex flex-col items-center gap-3 py-12 text-center"
+		<AnimatePresence mode="wait">
+			{sent ? (
+				<motion.div
+					key="success"
+					initial={{ opacity: 0, scale: 0.96 }}
+					animate={{ opacity: 1, scale: 1 }}
+					className="flex flex-col items-center gap-4 py-16 text-center"
+				>
+					<div className="gradient-brand mx-auto mb-2 flex h-16 w-16 items-center justify-center rounded-full shadow-[0_8px_24px_rgba(124,58,237,0.3)]">
+						<CheckCircle2 className="h-8 w-8 text-white" />
+					</div>
+					<h2 className="font-bold text-[#0a0a0a] text-xl tracking-tight">신청이 완료되었습니다</h2>
+					<p className="text-slate-500 text-sm">영업일 1일 내로 직접 연락드리겠습니다.</p>
+					<a
+						href={siteConfig.contact.kakaoOpenChat}
+						target="_blank"
+						rel="noopener noreferrer"
+						className="mt-2 inline-flex items-center gap-2 rounded-full bg-[#FEE500] px-5 py-2.5 font-semibold text-[#0a0a0a] text-sm transition-opacity hover:opacity-80"
 					>
-						<div className="mx-auto mb-2 flex h-16 w-16 items-center justify-center rounded-md bg-[#0a0a0a]">
-							<CheckCircle2 className="h-8 w-8 text-white" />
-						</div>
-						<h2 className="font-bold text-foreground text-xl">신청이 완료되었습니다</h2>
-						<p className="text-muted-foreground text-sm">영업일 1일 내로 직접 연락드리겠습니다.</p>
-					</motion.div>
-				) : (
-					<motion.form
-						key="form"
-						onSubmit={handleSubmit}
-						onKeyDown={handleKeyDown}
-						className="space-y-5"
-					>
-						<div className="grid gap-4 sm:grid-cols-2">
-							<div className="space-y-1.5">
-								<Label htmlFor="company">
+						<MessageCircle className="h-4 w-4" aria-hidden="true" />
+						카카오로 바로 연락하기
+					</a>
+				</motion.div>
+			) : (
+				<motion.div key="form" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+					{/* Header */}
+					<div className="mb-8">
+						<div className="mb-4 h-0.5 w-10 rounded-full bg-linear-to-r from-[#7c3aed] to-[#4338ca]" />
+						<p className="mb-1.5 font-mono text-[#7c3aed] text-[10px] uppercase tracking-[0.3em]">
+							마케팅 컨설팅
+						</p>
+						<h2 className="font-bold text-[#0a0a0a] text-2xl tracking-tight">
+							자세히 알려주세요
+						</h2>
+					</div>
+
+					<form onSubmit={handleSubmit} onKeyDown={handleKeyDown} className="space-y-6">
+						<div className="grid gap-5 sm:grid-cols-2">
+							<div className="space-y-2">
+								<Label
+									htmlFor="company"
+									className="font-semibold text-slate-700 text-xs uppercase tracking-[0.08em]"
+								>
 									회사/소속명 <span className="font-normal text-destructive">*</span>
 								</Label>
 								<Input
@@ -108,20 +122,23 @@ export const ContactForm = () => {
 									name="company"
 									placeholder="예: OO 한의원, 홍길동 변호사"
 									required
+									className="h-12 border-slate-200 text-sm focus-visible:border-[#7c3aed] focus-visible:ring-2 focus-visible:ring-[#7c3aed]/15"
 								/>
 							</div>
-							<div className="space-y-1.5">
-								<Label>직군</Label>
+							<div className="space-y-2">
+								<Label className="font-semibold text-slate-700 text-xs uppercase tracking-[0.08em]">
+									직군
+								</Label>
 								<div ref={professionRef} className="relative">
 									<input type="hidden" name="profession" value={profession} />
 									<button
 										type="button"
 										onClick={() => setProfessionOpen((v) => !v)}
 										className={cn(
-											"flex h-12 w-full items-center justify-between rounded-md border bg-background px-3 py-2 text-sm transition-colors",
+											"flex h-12 w-full items-center justify-between rounded-md border bg-background px-3 py-2 text-sm transition-all",
 											professionOpen
-												? "border-[#7c3aed] ring-2 ring-[#7c3aed]/20"
-												: "border-input hover:border-slate-400",
+												? "border-[#7c3aed] ring-2 ring-[#7c3aed]/15"
+												: "border-slate-200 hover:border-slate-300",
 											profession ? "text-foreground" : "text-muted-foreground",
 										)}
 									>
@@ -141,7 +158,7 @@ export const ContactForm = () => {
 												animate={{ opacity: 1, y: 0 }}
 												exit={{ opacity: 0, y: -6 }}
 												transition={{ duration: 0.15, ease: [0.22, 1, 0.36, 1] }}
-												className="absolute top-full right-0 left-0 z-50 mt-1 overflow-hidden rounded-md border border-slate-200 bg-white py-1 shadow-[0_8px_30px_rgba(0,0,0,0.12)]"
+												className="absolute top-full right-0 left-0 z-50 mt-1 overflow-hidden rounded-xl border border-slate-200 bg-white py-1.5 shadow-[0_12px_36px_rgba(0,0,0,0.1)]"
 											>
 												{PROFESSION_OPTIONS.map((opt) => (
 													<li key={opt.id}>
@@ -152,15 +169,15 @@ export const ContactForm = () => {
 																setProfessionOpen(false);
 															}}
 															className={cn(
-																"flex w-full items-center gap-2 px-3 py-2.5 text-left text-sm transition-colors hover:bg-slate-50",
+																"flex w-full items-center gap-2.5 px-3.5 py-2.5 text-left text-sm transition-colors hover:bg-slate-50",
 																profession === opt.label
-																	? "font-semibold text-[#0a0a0a]"
+																	? "font-semibold text-[#7c3aed]"
 																	: "text-foreground",
 															)}
 														>
 															<span className="flex h-4 w-4 shrink-0 items-center justify-center">
 																{profession === opt.label && (
-																	<CheckIcon className="h-3.5 w-3.5 text-[#0a0a0a]" />
+																	<CheckIcon className="h-3.5 w-3.5 text-[#7c3aed]" />
 																)}
 															</span>
 															{opt.label}
@@ -174,15 +191,27 @@ export const ContactForm = () => {
 							</div>
 						</div>
 
-						<div className="grid gap-4 sm:grid-cols-2">
-							<div className="space-y-1.5">
-								<Label htmlFor="name">
+						<div className="grid gap-5 sm:grid-cols-2">
+							<div className="space-y-2">
+								<Label
+									htmlFor="name"
+									className="font-semibold text-slate-700 text-xs uppercase tracking-[0.08em]"
+								>
 									담당자 이름 <span className="font-normal text-destructive">*</span>
 								</Label>
-								<Input id="name" name="name" placeholder="홍길동" required />
+								<Input
+									id="name"
+									name="name"
+									placeholder="홍길동"
+									required
+									className="h-12 border-slate-200 text-sm focus-visible:border-[#7c3aed] focus-visible:ring-2 focus-visible:ring-[#7c3aed]/15"
+								/>
 							</div>
-							<div className="space-y-1.5">
-								<Label htmlFor="contact-tel">
+							<div className="space-y-2">
+								<Label
+									htmlFor="contact-tel"
+									className="font-semibold text-slate-700 text-xs uppercase tracking-[0.08em]"
+								>
 									연락처 <span className="font-normal text-destructive">*</span>
 								</Label>
 								<Input
@@ -191,44 +220,64 @@ export const ContactForm = () => {
 									type="tel"
 									placeholder="010-0000-0000"
 									required
+									className="h-12 border-slate-200 text-sm focus-visible:border-[#7c3aed] focus-visible:ring-2 focus-visible:ring-[#7c3aed]/15"
 								/>
 							</div>
 						</div>
 
-						<div className="space-y-1.5">
-							<Label htmlFor="contact-email">이메일</Label>
-							<Input id="contact-email" name="email" type="email" placeholder="name@example.com" />
+						<div className="space-y-2">
+							<Label
+								htmlFor="contact-email"
+								className="font-semibold text-slate-700 text-xs uppercase tracking-[0.08em]"
+							>
+								이메일
+							</Label>
+							<Input
+								id="contact-email"
+								name="email"
+								type="email"
+								placeholder="name@example.com"
+								className="h-12 border-slate-200 text-sm focus-visible:border-[#7c3aed] focus-visible:ring-2 focus-visible:ring-[#7c3aed]/15"
+							/>
 						</div>
 
 						<div className="space-y-2">
-							<Label>유입 경로</Label>
+							<Label className="font-semibold text-slate-700 text-xs uppercase tracking-[0.08em]">
+								유입 경로
+							</Label>
 							<div className="flex flex-wrap gap-2">
 								{SOURCE_OPTIONS.map((opt) => (
 									<button
 										key={opt.id}
 										type="button"
-										onClick={() => setSource(opt.label)}
+										onClick={() => setSource(opt.id === source ? "" : opt.label)}
 										className={cn(
-											"flex items-center gap-1.5 rounded-md border px-4 py-2 font-medium text-sm transition-all",
+											"flex items-center gap-1.5 rounded-full px-4 py-2 font-medium text-sm transition-all duration-200",
 											source === opt.label
-												? "border-[#0a0a0a] bg-[#0a0a0a] text-white"
-												: "border-slate-200 text-slate-500 hover:border-slate-400 hover:text-foreground",
+												? "gradient-brand text-white shadow-[0_2px_12px_rgba(124,58,237,0.3)]"
+												: "border border-slate-200 text-slate-500 hover:border-slate-300 hover:text-slate-700",
 										)}
 									>
-										{source === opt.label && <CheckIcon className="h-3.5 w-3.5" />}
+										{source === opt.label && <CheckIcon className="h-3 w-3" />}
 										{opt.label}
 									</button>
 								))}
 							</div>
 						</div>
 
-						<div className="space-y-1.5">
-							<Label htmlFor="message">문의 내용</Label>
+						<div className="space-y-2">
+							<Label
+								htmlFor="message"
+								className="font-semibold text-slate-700 text-xs uppercase tracking-[0.08em]"
+							>
+								문의 내용
+							</Label>
 							<Textarea
 								id="message"
 								name="message"
-								rows={3}
+								rows={4}
 								placeholder="현재 마케팅 상황이나 궁금한 점을 자유롭게 적어주세요."
+								className="resize-none border-slate-200 text-sm focus-visible:border-[#7c3aed] focus-visible:ring-2 focus-visible:ring-[#7c3aed]/15"
 							/>
 						</div>
 
@@ -238,26 +287,26 @@ export const ContactForm = () => {
 								name="privacy"
 								type="checkbox"
 								required
-								className="mt-0.5 h-4 w-4 shrink-0 cursor-pointer accent-[#0a0a0a]"
+								className="mt-0.5 h-4 w-4 shrink-0 cursor-pointer accent-[#7c3aed]"
 							/>
 							<label
 								htmlFor="privacy"
 								className="cursor-pointer text-muted-foreground text-xs leading-relaxed"
 							>
-								<span className="text-destructive">*</span> 개인정보 수집·이용에 동의합니다. 수집된
-								정보는 컨설팅 목적으로만 사용됩니다.
+								<span className="text-destructive">*</span> 개인정보 수집·이용에 동의합니다.
+								수집된 정보는 컨설팅 목적으로만 사용됩니다.
 							</label>
 						</div>
 
 						<button
 							type="submit"
-							className="gradient-brand w-full rounded-md py-3.5 font-semibold text-base text-white transition-opacity hover:opacity-90"
+							className="gradient-brand w-full rounded-xl py-4 font-semibold text-base text-white shadow-[0_4px_20px_rgba(124,58,237,0.35)] transition-all hover:opacity-90 hover:shadow-[0_6px_28px_rgba(124,58,237,0.45)]"
 						>
 							마케팅 컨설팅 신청
 						</button>
-					</motion.form>
-				)}
-			</AnimatePresence>
-		</div>
+					</form>
+				</motion.div>
+			)}
+		</AnimatePresence>
 	);
 };

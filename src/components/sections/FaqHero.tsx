@@ -90,7 +90,7 @@ export const FaqHero = () => {
 				</motion.p>
 
 				<motion.h1
-					className="mb-6 font-bold text-[40px] text-slate-900 leading-[0.96] tracking-[-0.02em] sm:text-[56px] md:text-[72px] lg:text-[92px]"
+					className="mb-6 font-bold text-[40px] text-slate-900 leading-[1.08] tracking-[-0.02em] sm:text-[56px] md:text-[72px] lg:text-[92px]"
 					initial={{ opacity: 0, y: 28 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}

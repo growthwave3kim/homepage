@@ -1,6 +1,6 @@
 "use client";
 
-import { ChevronDown } from "lucide-react";
+import { ArrowDown, ChevronDown } from "lucide-react";
 import { motion } from "motion/react";
 import Image from "next/image";
 
@@ -32,7 +32,7 @@ export const TeamHero = () => {
 				</motion.p>
 
 				<motion.h1
-					className="mb-8 font-bold text-[42px] text-slate-900 leading-[0.96] tracking-[-0.02em] sm:text-[56px] md:text-[70px] lg:text-[84px] xl:text-[100px]"
+					className="mb-8 font-bold text-[42px] text-slate-900 leading-[1.08] tracking-[-0.02em] sm:text-[56px] md:text-[70px] lg:text-[84px] xl:text-[100px]"
 					initial={{ opacity: 0, y: 28 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
@@ -43,13 +43,25 @@ export const TeamHero = () => {
 				</motion.h1>
 
 				<motion.p
-					className="max-w-md break-keep text-base text-slate-600 leading-relaxed md:text-lg"
+					className="mb-10 max-w-md break-keep text-base text-slate-600 leading-relaxed md:text-lg"
 					initial={{ opacity: 0, y: 20 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.6, delay: 0.25 }}
 				>
 					규정 검수부터 발행까지, 외주 없이 한 공간에서.
 				</motion.p>
+
+				<motion.button
+					type="button"
+					onClick={scrollDown}
+					className="inline-flex items-center gap-2 rounded-xl border border-slate-300 bg-white/60 px-5 py-2.5 font-semibold text-slate-700 text-sm backdrop-blur-sm transition-all hover:border-[#7c3aed]/40 hover:bg-white hover:text-[#7c3aed]"
+					initial={{ opacity: 0, y: 16 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.6, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
+				>
+					팀 소개 보기
+					<ArrowDown className="h-4 w-4" aria-hidden="true" />
+				</motion.button>
 			</div>
 
 			{/* ── Right photo mosaic (desktop only) ── */}
