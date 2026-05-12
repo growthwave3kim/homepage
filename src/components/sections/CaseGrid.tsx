@@ -28,7 +28,15 @@ type CardBarChartProps = {
 	delay?: number;
 };
 
-const CardBarChart = ({ before, after, unit, multiplier, gradId, inView, delay = 0 }: CardBarChartProps) => {
+const CardBarChart = ({
+	before,
+	after,
+	unit,
+	multiplier,
+	gradId,
+	inView,
+	delay = 0,
+}: CardBarChartProps) => {
 	const beforeH = Math.max(10, Math.round((before / after) * BC.MAX_H));
 	const afterTopY = BC.BOTTOM - BC.MAX_H;
 
@@ -133,7 +141,14 @@ const CardBarChart = ({ before, after, unit, multiplier, gradId, inView, delay =
 			</motion.g>
 
 			{/* X축 라벨 */}
-			<text x={LEFT_CX} y={BC.BOTTOM + 18} textAnchor="middle" fontSize="11" fontWeight="600" fill="#64748b">
+			<text
+				x={LEFT_CX}
+				y={BC.BOTTOM + 18}
+				textAnchor="middle"
+				fontSize="11"
+				fontWeight="600"
+				fill="#64748b"
+			>
 				시작 전
 			</text>
 			<text
