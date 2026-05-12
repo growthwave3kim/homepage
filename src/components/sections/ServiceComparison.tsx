@@ -28,53 +28,51 @@ export const ServiceComparison = () => {
 					</h2>
 				</Reveal>
 
-				<Reveal>
-					<div className="overflow-x-auto rounded-2xl border border-slate-100 bg-white shadow-[0_2px_24px_rgba(15,23,42,0.06)]">
-						<table className="w-full min-w-[480px]">
-							<thead>
-								<tr className="border-slate-100 border-b">
-									<th className="px-6 py-5 text-left font-medium text-slate-400 text-sm">기준</th>
-									{COMPARISON_CHANNELS.map((ch) => (
-										<th
-											key={ch}
-											className="px-4 py-5 text-center font-bold text-[#0a0a0a] text-sm md:px-6"
+				<div className="overflow-x-auto rounded-2xl border border-slate-100 bg-white shadow-[0_2px_24px_rgba(15,23,42,0.06)]">
+					<table className="w-full min-w-[480px]">
+						<thead>
+							<tr className="border-slate-100 border-b">
+								<th className="px-6 py-5 text-left font-medium text-slate-400 text-sm">기준</th>
+								{COMPARISON_CHANNELS.map((ch) => (
+									<th
+										key={ch}
+										className="px-4 py-5 text-center font-bold text-[#0a0a0a] text-sm md:px-6"
+									>
+										{ch}
+									</th>
+								))}
+							</tr>
+						</thead>
+						<tbody>
+							{SERVICE_COMPARISON.map((row, i) => (
+								<tr
+									key={row.axis}
+									className={
+										i < SERVICE_COMPARISON.length - 1
+											? "border-slate-100 border-b transition-colors hover:bg-slate-50/60"
+											: "transition-colors hover:bg-slate-50/60"
+									}
+								>
+									<td className="px-6 py-5 font-medium text-[#0a0a0a] text-sm">{row.axis}</td>
+									{[row.blog, row.shortform, row.professional].map((cell, ci) => (
+										<td
+											// biome-ignore lint/suspicious/noArrayIndexKey: static channels
+											key={ci}
+											className="px-4 py-5 md:px-6"
 										>
-											{ch}
-										</th>
+											<div className="flex flex-col items-center gap-2">
+												<ScoreDots score={cell.score} />
+												<span className="hidden break-keep text-center text-slate-500 text-xs leading-snug md:block">
+													{cell.note}
+												</span>
+											</div>
+										</td>
 									))}
 								</tr>
-							</thead>
-							<tbody>
-								{SERVICE_COMPARISON.map((row, i) => (
-									<tr
-										key={row.axis}
-										className={
-											i < SERVICE_COMPARISON.length - 1
-												? "border-slate-100 border-b transition-colors hover:bg-slate-50/60"
-												: "transition-colors hover:bg-slate-50/60"
-										}
-									>
-										<td className="px-6 py-5 font-medium text-[#0a0a0a] text-sm">{row.axis}</td>
-										{[row.blog, row.shortform, row.professional].map((cell, ci) => (
-											<td
-												// biome-ignore lint/suspicious/noArrayIndexKey: static channels
-												key={ci}
-												className="px-4 py-5 md:px-6"
-											>
-												<div className="flex flex-col items-center gap-2">
-													<ScoreDots score={cell.score} />
-													<span className="hidden break-keep text-center text-slate-500 text-xs leading-snug md:block">
-														{cell.note}
-													</span>
-												</div>
-											</td>
-										))}
-									</tr>
-								))}
-							</tbody>
-						</table>
-					</div>
-				</Reveal>
+							))}
+						</tbody>
+					</table>
+				</div>
 			</div>
 		</section>
 	);

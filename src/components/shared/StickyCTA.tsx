@@ -11,8 +11,7 @@ export const StickyCTA = () => {
 	const [open, setOpen] = useState(true);
 	const pathname = usePathname();
 
-	const HIDE_PATHS = ["/contact"];
-	const isHidden = HIDE_PATHS.some((p) => pathname.startsWith(p));
+	const isHidden = pathname.startsWith("/contact");
 
 	useEffect(() => {
 		const onKey = (e: KeyboardEvent) => {

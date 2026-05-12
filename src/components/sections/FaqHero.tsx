@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 
 const CATEGORY_CHIPS = [
 	{ label: "비용", slug: "cost" },
-	{ label: "진행절차", slug: "process" },
+	{ label: "진행 안내", slug: "guide" },
 	{ label: "광고규정", slug: "regulation" },
 	{ label: "운영보고", slug: "operation" },
 	{ label: "성과", slug: "results" },
@@ -81,7 +81,7 @@ export const FaqHero = () => {
 			{/* Center content */}
 			<div className="relative z-10 mx-auto w-full max-w-4xl text-center">
 				<motion.p
-					className="mb-6 font-mono text-[#7c3aed] text-xs uppercase tracking-[0.35em]"
+					className="mb-6 font-semibold text-[#7c3aed] text-sm uppercase tracking-[0.25em]"
 					initial={{ opacity: 0, y: 16 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.6 }}
@@ -121,7 +121,7 @@ export const FaqHero = () => {
 							key={chip.slug}
 							type="button"
 							onClick={() => scrollToCategory(chip.slug)}
-							className="rounded-full border border-slate-200 bg-white px-4 py-1.5 font-mono text-slate-700 text-sm uppercase tracking-[0.12em] transition-all duration-200 hover:border-[#7c3aed] hover:text-[#7c3aed] hover:shadow-[0_4px_12px_rgba(124,58,237,0.12)]"
+							className="rounded-full border border-slate-200 bg-white px-4 py-1.5 font-medium text-slate-700 text-sm transition-all duration-200 hover:border-[#7c3aed] hover:text-[#7c3aed] hover:shadow-[0_4px_12px_rgba(124,58,237,0.12)]"
 							initial={{ opacity: 0, y: 6 }}
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.4, delay: 0.4 + i * 0.05 }}

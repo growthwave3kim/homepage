@@ -53,7 +53,7 @@ export type TeamMember = {
 	photo?: string;
 };
 
-export type FaqCategory = "비용" | "진행절차" | "광고규정" | "운영보고" | "성과" | "해지환불";
+export type FaqCategory = "비용" | "진행 안내" | "광고규정" | "운영보고" | "성과" | "해지환불";
 
 export type FaqItem = {
 	question: string;

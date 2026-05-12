@@ -18,7 +18,7 @@ type IconType = ComponentType<SVGProps<SVGSVGElement>>;
 
 const CATEGORY_SLUGS: Record<FaqCategory, string> = {
 	비용: "cost",
-	진행절차: "process",
+	"진행 안내": "guide",
 	광고규정: "regulation",
 	운영보고: "operation",
 	성과: "results",
@@ -27,7 +27,7 @@ const CATEGORY_SLUGS: Record<FaqCategory, string> = {
 
 const CATEGORY_ICONS: Record<FaqCategory, IconType> = {
 	비용: Wallet,
-	진행절차: ClipboardList,
+	"진행 안내": ClipboardList,
 	광고규정: ShieldCheck,
 	운영보고: BarChart3,
 	성과: Target,
@@ -128,9 +128,6 @@ export const FaqDirectory = () => {
 								);
 							})}
 						</nav>
-						<p className="mt-8 font-mono text-[10px] text-slate-400 uppercase tracking-[0.2em]">
-							LAST UPDATED — 2026.05
-						</p>
 					</aside>
 
 					{/* Q&A 리스트 */}

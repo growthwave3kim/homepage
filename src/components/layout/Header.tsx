@@ -21,7 +21,6 @@ const TRANSPARENT_HERO_PATHS = [
 	"/services/professional",
 	"/services/shortform",
 	"/regulation",
-	"/team",
 ];
 
 export const Header = () => {

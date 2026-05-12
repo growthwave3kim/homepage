@@ -16,7 +16,7 @@ export const FloatingActions = () => {
 	const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
 	return (
-		<div className="fixed top-1/2 right-6 z-40 flex -translate-y-1/2 flex-col items-center gap-3 md:right-8">
+		<div className="fixed top-1/2 right-6 z-40 hidden -translate-y-1/2 flex-col items-center gap-3 md:right-8 md:flex">
 			{/* 네이버 블로그 */}
 			<a
 				href={siteConfig.contact.naverBlog}

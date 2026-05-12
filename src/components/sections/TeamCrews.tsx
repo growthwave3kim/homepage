@@ -77,7 +77,13 @@ export const TeamCrews = () => {
 					<CrewBlock
 						icon={<Clapperboard className="h-5 w-5 text-white" aria-hidden="true" />}
 						label="영상팀"
-						heading={<>현장 촬영부터 편집까지<br />직접 갑니다</>}
+						heading={
+							<>
+								현장 촬영부터 편집까지
+								<br />
+								직접 갑니다
+							</>
+						}
 						body="의뢰인이 카메라 앞에서 편안하게 말할 수 있도록 촬영팀이 직접 현장에 갑니다. 조명·사운드·디렉팅을 한 팀이 책임집니다."
 						photos={VIDEO_PHOTOS}
 					/>

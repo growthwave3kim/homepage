@@ -151,7 +151,7 @@ export const RegulationHero = () => {
 				</div>
 
 				{/* 우측 문서 카드 */}
-				<div className="flex items-end justify-center py-8">
+				<div className="hidden items-end justify-center py-8 md:flex">
 					<div className="flex items-end">
 						{DOCS.map((doc) => (
 							<motion.div

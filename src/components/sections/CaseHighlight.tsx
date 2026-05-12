@@ -31,13 +31,13 @@ const CountUp = ({ to, duration = 1.4 }: { to: number; duration?: number }) => {
 // SVG 좌표 (viewBox 360 × 220)
 const BC = {
 	W: 360,
-	H: 220,
+	H: 280,
 	PL: 8,
 	PR: 8,
 	PT: 56, // 상단 annotation 공간
 	PB: 36, // X축 라벨 공간
 	BAR_W: 108,
-	BAR_MAX_H: 120,
+	BAR_MAX_H: 168,
 } as const;
 
 const BC_CW = BC.W - BC.PL - BC.PR; // 344

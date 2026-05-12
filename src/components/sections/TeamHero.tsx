@@ -19,11 +19,11 @@ export const TeamHero = () => {
 	};
 
 	return (
-		<section className="relative flex min-h-screen overflow-hidden bg-[#0a0a0a]">
+		<section className="relative flex min-h-screen overflow-hidden bg-[#eef2f7]">
 			{/* ── Left text area ── */}
 			<div className="relative z-10 flex w-full flex-col justify-center px-6 py-28 md:px-14 md:py-36 lg:w-[58%] lg:py-40 lg:pr-16 lg:pl-20 xl:pl-28">
 				<motion.p
-					className="mb-6 font-mono text-[#a78bfa] text-xs uppercase tracking-[0.35em]"
+					className="mb-6 font-mono text-[#7c3aed] text-xs uppercase tracking-[0.35em]"
 					initial={{ opacity: 0, y: 16 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.6 }}
@@ -32,7 +32,7 @@ export const TeamHero = () => {
 				</motion.p>
 
 				<motion.h1
-					className="mb-8 font-bold text-[42px] text-white leading-[0.96] tracking-[-0.02em] sm:text-[56px] md:text-[70px] lg:text-[84px] xl:text-[100px]"
+					className="mb-8 font-bold text-[42px] text-slate-900 leading-[0.96] tracking-[-0.02em] sm:text-[56px] md:text-[70px] lg:text-[84px] xl:text-[100px]"
 					initial={{ opacity: 0, y: 28 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
@@ -43,7 +43,7 @@ export const TeamHero = () => {
 				</motion.h1>
 
 				<motion.p
-					className="max-w-md break-keep text-base text-white/70 leading-relaxed md:text-lg"
+					className="max-w-md break-keep text-base text-slate-600 leading-relaxed md:text-lg"
 					initial={{ opacity: 0, y: 20 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.6, delay: 0.25 }}
@@ -59,23 +59,23 @@ export const TeamHero = () => {
 					className="pointer-events-none absolute inset-y-0 left-0 z-10 w-40"
 					style={{
 						background:
-							"linear-gradient(to right, #0a0a0a 0%, rgba(10,10,10,0.6) 50%, transparent 100%)",
+							"linear-gradient(to right, #eef2f7 0%, rgba(248,250,252,0.6) 50%, transparent 100%)",
 					}}
 				/>
 				{/* Top fade */}
 				<div
 					className="pointer-events-none absolute inset-x-0 top-0 z-10 h-28"
-					style={{ background: "linear-gradient(to bottom, #0a0a0a 0%, transparent 100%)" }}
+					style={{ background: "linear-gradient(to bottom, #eef2f7 0%, transparent 100%)" }}
 				/>
 				{/* Bottom fade */}
 				<div
 					className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-28"
-					style={{ background: "linear-gradient(to top, #0a0a0a 0%, transparent 100%)" }}
+					style={{ background: "linear-gradient(to top, #eef2f7 0%, transparent 100%)" }}
 				/>
 
 				{/* Subtle violet orb */}
 				<div
-					className="pointer-events-none absolute top-0 right-0 h-[400px] w-[400px] rounded-full bg-[#7c3aed] opacity-[0.1] blur-[130px]"
+					className="pointer-events-none absolute top-0 right-0 h-[400px] w-[400px] rounded-full bg-[#7c3aed] opacity-[0.06] blur-[130px]"
 					aria-hidden="true"
 				/>
 
@@ -93,7 +93,7 @@ export const TeamHero = () => {
 								src={photo.src}
 								alt={photo.alt}
 								fill
-								className="object-cover brightness-[0.55] grayscale-[0.35] transition-transform duration-700 hover:scale-[1.04]"
+								className="object-cover brightness-[0.75] grayscale-[0.2] transition-transform duration-700 hover:scale-[1.04]"
 								sizes="15vw"
 							/>
 						</motion.div>
@@ -105,7 +105,7 @@ export const TeamHero = () => {
 			<motion.button
 				type="button"
 				onClick={scrollDown}
-				className="absolute right-6 bottom-10 z-20 flex flex-col items-center gap-2 text-white/65 transition-colors hover:text-white/95 md:right-10"
+				className="absolute right-6 bottom-10 z-20 flex flex-col items-center gap-2 text-slate-400 transition-colors hover:text-slate-700 md:right-10"
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1 }}
 				transition={{ duration: 0.6, delay: 0.7 }}
@@ -113,7 +113,7 @@ export const TeamHero = () => {
 			>
 				<span className="font-mono text-[10px] uppercase tracking-[0.25em]">scroll</span>
 				<motion.div
-					className="flex h-10 w-10 items-center justify-center rounded-full border border-white/25"
+					className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-300"
 					animate={{ y: [0, 5, 0] }}
 					transition={{ duration: 1.8, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
 				>

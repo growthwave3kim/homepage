@@ -10,7 +10,7 @@ type IconType = ComponentType<SVGProps<SVGSVGElement>>;
 
 const CATEGORY_MAP: Record<FaqCategory, { slug: string; Icon: IconType }> = {
 	비용: { slug: "cost", Icon: Wallet },
-	진행절차: { slug: "process", Icon: ClipboardList },
+	"진행 안내": { slug: "guide", Icon: ClipboardList },
 	광고규정: { slug: "regulation", Icon: ShieldCheck },
 	운영보고: { slug: "operation", Icon: BarChart3 },
 	성과: { slug: "results", Icon: Target },
