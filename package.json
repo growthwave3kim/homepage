@@ -39,7 +39,6 @@
 		"@biomejs/biome": "^2.4.9",
 		"@commitlint/cli": "^19.8.0",
 		"@commitlint/config-conventional": "^19.8.0",
-		"@react-email/ui": "^6.1.1",
 		"@tailwindcss/postcss": "^4",
 		"@types/node": "^22",
 		"@types/react": "^19",
@@ -48,7 +47,6 @@
 		"eslint-config-next": "16.2.1",
 		"knip": "^6.7.0",
 		"lefthook": "^1.11.13",
-		"react-email": "^6.1.1",
 		"tailwindcss": "^4",
 		"typescript": "^5"
 	},

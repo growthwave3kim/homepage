@@ -124,8 +124,6 @@ export const ContactNotification = ({
 	</Html>
 );
 
-export default ContactNotification;
-
 /* ── 스타일 ── */
 
 const body: React.CSSProperties = {
