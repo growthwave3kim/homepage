@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { FloatingActions } from "@/components/shared/FloatingActions";
@@ -105,6 +106,7 @@ export const RootLayout = ({ children }: { children: React.ReactNode }) => {
 				<Footer />
 				<StickyCTA />
 				<FloatingActions />
+				<Analytics />
 			</body>
 		</html>
 	);
