@@ -23,7 +23,7 @@ export const ServicesPage = () => {
 				ctaText="마케팅 컨설팅"
 				ctaHref="/contact"
 			>
-				<p className="font-mono text-slate-400 text-xs tracking-[0.2em]">
+				<p className="font-mono text-slate-500 text-xs tracking-[0.2em]">
 					블로그 · 숏폼 · 전문직 통합 — 3가지 채널
 				</p>
 			</PageHero>

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useInView, useReducedMotion } from "motion/react";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Reveal } from "@/components/shared/Reveal";
 
 type Step = {
@@ -20,6 +20,7 @@ export const ServiceProcess = ({ steps, footnote }: Props) => {
 	const scrollDirRef = useRef<"down" | "up">("down");
 	const isInView = useInView(gridRef, { once: false, margin: "0px 0px -150px 0px" });
 	const prefersReducedMotion = useReducedMotion();
+	const [animState, setAnimState] = useState({ inView: false, shouldAnimate: false });
 
 	useEffect(() => {
 		let lastY = window.scrollY;
@@ -32,7 +33,15 @@ export const ServiceProcess = ({ steps, footnote }: Props) => {
 		return () => window.removeEventListener("scroll", onScroll);
 	}, []);
 
-	const shouldAnimate = isInView && scrollDirRef.current === "down" && !prefersReducedMotion;
+	useEffect(() => {
+		if (isInView) {
+			setAnimState({ inView: true, shouldAnimate: scrollDirRef.current === "down" });
+		} else if (scrollDirRef.current === "up") {
+			setAnimState({ inView: false, shouldAnimate: false });
+		}
+	}, [isInView]);
+
+	const shouldAnimate = animState.shouldAnimate && !prefersReducedMotion;
 	const gridColsClass = steps.length === 4 ? "md:grid-cols-4" : "md:grid-cols-5";
 
 	return (
@@ -54,7 +63,7 @@ export const ServiceProcess = ({ steps, footnote }: Props) => {
 						className="absolute top-10 hidden h-px bg-slate-200 md:block"
 						style={{ left: "10%", right: "10%", transformOrigin: "left" }}
 						initial={{ scaleX: 0 }}
-						animate={isInView ? { scaleX: 1 } : { scaleX: 0 }}
+						animate={animState.inView ? { scaleX: 1 } : { scaleX: 0 }}
 						transition={
 							shouldAnimate
 								? { duration: 0.8, ease: [0.22, 1, 0.36, 1] }
@@ -70,7 +79,7 @@ export const ServiceProcess = ({ steps, footnote }: Props) => {
 								key={item.step}
 								className="relative flex flex-col items-center text-center"
 								initial={{ opacity: 0, x: -30 }}
-								animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
+								animate={animState.inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
 								transition={
 									shouldAnimate
 										? { duration: 0.5, delay, ease: [0.22, 1, 0.36, 1] }
@@ -91,7 +100,7 @@ export const ServiceProcess = ({ steps, footnote }: Props) => {
 
 				{footnote && (
 					<Reveal className="mt-12 text-center">
-						<p className="font-mono text-slate-400 text-xs tracking-[0.2em]">{footnote}</p>
+						<p className="font-mono text-slate-500 text-xs tracking-[0.2em]">{footnote}</p>
 					</Reveal>
 				)}
 			</div>

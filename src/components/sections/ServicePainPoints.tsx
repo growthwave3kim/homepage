@@ -26,7 +26,7 @@ export const ServicePainPoints = ({ items }: Props) => {
 						<Reveal key={text} direction={DIRS[i]} delay={i * 0.1}>
 							<div className="flex items-start gap-4 rounded-xl border border-slate-200 bg-white px-6 py-5 shadow-[0_2px_8px_rgba(0,0,0,0.04)]">
 								<span className="mt-0.5 select-none font-bold text-4xl text-[#7c3aed]/30 leading-none">
-									"
+									{'"'}
 								</span>
 								<p className="break-keep text-[#0a0a0a] text-base leading-relaxed">{text}</p>
 							</div>

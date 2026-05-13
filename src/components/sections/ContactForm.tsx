@@ -166,7 +166,7 @@ export const ContactForm = () => {
 									<div className="flex min-w-0 flex-1 items-center justify-between gap-2">
 										<div className="min-w-0">
 											<p className="font-semibold text-[#0a0a0a] text-sm">{item.label}</p>
-											<p className="text-slate-400 text-xs">{item.desc}</p>
+											<p className="text-slate-500 text-xs">{item.desc}</p>
 										</div>
 										<span className="shrink-0 rounded-full border border-slate-200 bg-white px-2.5 py-0.5 font-medium text-[10px] text-slate-500">
 											{item.time}

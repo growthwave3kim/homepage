@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useInView, useReducedMotion } from "motion/react";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Reveal } from "@/components/shared/Reveal";
 import { WORK_PROCESS } from "@/data/work-process";
 
@@ -10,6 +10,7 @@ export const AboutHowWeWork = () => {
 	const scrollDirRef = useRef<"down" | "up">("down");
 	const isInView = useInView(gridRef, { once: false, margin: "0px 0px -150px 0px" });
 	const prefersReducedMotion = useReducedMotion();
+	const [animState, setAnimState] = useState({ inView: false, shouldAnimate: false });
 
 	useEffect(() => {
 		let lastY = window.scrollY;
@@ -22,7 +23,15 @@ export const AboutHowWeWork = () => {
 		return () => window.removeEventListener("scroll", onScroll);
 	}, []);
 
-	const shouldAnimate = isInView && scrollDirRef.current === "down" && !prefersReducedMotion;
+	useEffect(() => {
+		if (isInView) {
+			setAnimState({ inView: true, shouldAnimate: scrollDirRef.current === "down" });
+		} else if (scrollDirRef.current === "up") {
+			setAnimState({ inView: false, shouldAnimate: false });
+		}
+	}, [isInView]);
+
+	const shouldAnimate = animState.shouldAnimate && !prefersReducedMotion;
 
 	return (
 		<section className="bg-slate-50 px-6 py-20 md:px-10 md:py-24">
@@ -47,7 +56,7 @@ export const AboutHowWeWork = () => {
 						className="absolute top-10 hidden h-px bg-slate-200 md:block"
 						style={{ left: "10%", right: "10%", transformOrigin: "left" }}
 						initial={{ scaleX: 0 }}
-						animate={isInView ? { scaleX: 1 } : { scaleX: 0 }}
+						animate={animState.inView ? { scaleX: 1 } : { scaleX: 0 }}
 						transition={
 							shouldAnimate
 								? { duration: 0.8, ease: [0.22, 1, 0.36, 1] }
@@ -63,7 +72,7 @@ export const AboutHowWeWork = () => {
 								key={item.step}
 								className="relative flex flex-col items-center text-center"
 								initial={{ opacity: 0, x: -30 }}
-								animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
+								animate={animState.inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
 								transition={
 									shouldAnimate
 										? { duration: 0.5, delay, ease: [0.22, 1, 0.36, 1] }
@@ -83,7 +92,7 @@ export const AboutHowWeWork = () => {
 				</div>
 
 				<Reveal className="mt-12 text-center">
-					<p className="font-mono text-slate-400 text-xs tracking-[0.2em]">
+					<p className="font-mono text-slate-500 text-xs tracking-[0.2em]">
 						5단계 모두 대표가 직접 검수합니다.
 					</p>
 				</Reveal>

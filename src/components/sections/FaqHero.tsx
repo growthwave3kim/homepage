@@ -72,7 +72,7 @@ export const FaqHero = () => {
 			{/* Top hairline + mono credit */}
 			<div className="absolute top-24 right-0 left-0 z-10 mx-auto flex max-w-4xl items-center gap-3 px-6 md:top-28 md:px-10">
 				<div className="h-px flex-1 bg-slate-200" />
-				<p className="font-mono text-[10px] text-slate-400 uppercase tracking-[0.3em]">
+				<p className="font-mono text-[10px] text-slate-500 uppercase tracking-[0.3em]">
 					Growth Wave · Knowledge — 2026
 				</p>
 				<div className="h-px flex-1 bg-slate-200" />
@@ -140,7 +140,7 @@ export const FaqHero = () => {
 				transition={{ duration: 0.7, delay: 0.6 }}
 			>
 				<div className="h-px flex-1 bg-slate-200" />
-				<p className="font-mono text-[10px] text-slate-400 uppercase tracking-[0.3em]">
+				<p className="font-mono text-[10px] text-slate-500 uppercase tracking-[0.3em]">
 					6 Categories · 25 Q&amp;A
 				</p>
 				<div className="h-px flex-1 bg-slate-200" />
@@ -154,7 +154,7 @@ export const FaqHero = () => {
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1 }}
 				transition={{ duration: 0.6, delay: 0.8 }}
-				aria-label="아래로 스크롤"
+				aria-label="scroll"
 			>
 				<span className="font-mono text-[10px] uppercase tracking-[0.25em]">scroll</span>
 				<motion.div

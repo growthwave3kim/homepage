@@ -35,7 +35,7 @@ export const ReviewCardThumb = ({ review }: Props) => {
 					<path d="M14.017 21v-7.391C14.017 10.214 16.418 7.145 21 6l.39 1.5C18.44 8.5 17.017 10.5 17.017 13H21v8h-6.983zM3 21v-7.391C3 10.214 5.418 7.145 10 6l.39 1.5C7.44 8.5 6.017 10.5 6.017 13H9.983v8H3z" />
 				</svg>
 				<p className="flex-1 font-medium text-[#0a0a0a] text-sm leading-snug">{review.excerpt}</p>
-				<p className="mt-3 text-slate-400 text-xs">
+				<p className="mt-3 text-slate-500 text-xs">
 					{review.authorLabel} · {review.fieldLabel}
 				</p>
 			</div>

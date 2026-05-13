@@ -7,7 +7,7 @@ import { CLIENT_DISCIPLINES } from "@/data/client-disciplines";
 const DisciplineChip = ({ name, caption }: { name: string; caption: string }) => (
 	<div className="mx-4 flex flex-col items-center gap-1.5 rounded-2xl border border-slate-200 bg-white px-10 py-6 transition-colors duration-200 hover:border-[#7c3aed]/50 hover:bg-[#7c3aed]/[0.03]">
 		<span className="font-bold text-[#0a0a0a] text-lg">{name}</span>
-		<span className="font-mono text-[11px] text-slate-400 tracking-wide">{caption}</span>
+		<span className="font-mono text-[11px] text-slate-500 tracking-wide">{caption}</span>
 	</div>
 );
 

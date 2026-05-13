@@ -117,11 +117,11 @@ export const TeamHero = () => {
 			<motion.button
 				type="button"
 				onClick={scrollDown}
-				className="absolute right-6 bottom-10 z-20 flex flex-col items-center gap-2 text-slate-400 transition-colors hover:text-slate-700 md:right-10"
+				className="absolute right-6 bottom-10 z-20 flex flex-col items-center gap-2 text-slate-600 transition-colors hover:text-slate-700 md:right-10"
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1 }}
 				transition={{ duration: 0.6, delay: 0.7 }}
-				aria-label="아래로 스크롤"
+				aria-label="scroll"
 			>
 				<span className="font-mono text-[10px] uppercase tracking-[0.25em]">scroll</span>
 				<motion.div

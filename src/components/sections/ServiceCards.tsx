@@ -23,7 +23,10 @@ const FlipCard = ({ children, delay }: FlipCardProps) => {
 	const scrollDirRef = useRef<"down" | "up">("down");
 	const isInView = useInView(ref, { once: false, margin: "-200px" });
 	const prefersReducedMotion = useReducedMotion();
-	const [visible, setVisible] = useState(false);
+	const [{ visible, enteredDown }, setAnimState] = useState({
+		visible: false,
+		enteredDown: false,
+	});
 
 	useEffect(() => {
 		let lastY = window.scrollY;
@@ -38,17 +41,18 @@ const FlipCard = ({ children, delay }: FlipCardProps) => {
 
 	useEffect(() => {
 		if (isInView) {
-			setVisible(true);
+			setAnimState({ visible: true, enteredDown: scrollDirRef.current === "down" });
 		} else if (scrollDirRef.current === "up") {
-			setVisible(false);
+			setAnimState({ visible: false, enteredDown: false });
 		}
 	}, [isInView]);
+
+	const shouldAnimate = visible && enteredDown && !prefersReducedMotion;
 
 	const initial = prefersReducedMotion ? { opacity: 0, rotateY: 0 } : { opacity: 0, rotateY: -90 };
 
 	const animate = visible ? { opacity: 1, rotateY: 0 } : initial;
 
-	const shouldAnimate = visible && scrollDirRef.current === "down" && !prefersReducedMotion;
 	const transition = shouldAnimate
 		? { duration: 1.6, delay, ease: [0.16, 1, 0.3, 1] as const }
 		: { duration: 0, delay: 0 };

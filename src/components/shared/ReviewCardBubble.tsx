@@ -10,7 +10,7 @@ export const ReviewCardBubble = ({ review }: Props) => {
 		<div className="relative flex w-[280px] shrink-0 flex-col rounded-md border border-slate-200 bg-white p-5 shadow-none transition-all hover:-translate-y-1 hover:shadow-[0_8px_24px_rgba(124,58,237,0.10)] md:w-[320px]">
 			{/* Header meta */}
 			<div className="mb-4 flex items-center gap-2">
-				<div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-slate-100 font-bold text-slate-400 text-xs">
+				<div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-slate-100 font-bold text-slate-600 text-xs">
 					{review.authorLabel.slice(-1)}
 				</div>
 				<span className="font-semibold text-[#0a0a0a] text-xs">{review.authorLabel}</span>
@@ -38,7 +38,7 @@ export const ReviewCardBubble = ({ review }: Props) => {
 			</div>
 
 			{/* Footer */}
-			<p className="mt-4 text-slate-400 text-xs">
+			<p className="mt-4 text-slate-500 text-xs">
 				{review.fieldLabel} | {review.authorLabel.split(" ")[0]}
 			</p>
 		</div>

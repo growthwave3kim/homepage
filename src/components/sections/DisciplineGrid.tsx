@@ -36,7 +36,7 @@ export const DisciplineGrid = () => {
 							}}
 						>
 							<p className="font-bold text-[#0a0a0a] text-base">{d.name}</p>
-							<p className="mt-1 break-keep text-slate-400 text-xs">{d.caption}</p>
+							<p className="mt-1 break-keep text-slate-500 text-xs">{d.caption}</p>
 						</motion.div>
 					))}
 				</div>

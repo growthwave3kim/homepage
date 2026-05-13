@@ -51,6 +51,7 @@ export const StickyCTA = () => {
 						transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
 						aria-modal="true"
 						role="dialog"
+						aria-labelledby="sticky-cta-heading"
 						className="fixed right-6 bottom-[7.5rem] z-50 w-[calc(100vw-3rem)] max-w-[340px] overflow-hidden rounded-2xl bg-white shadow-[0_24px_60px_rgba(15,23,42,0.2)] md:right-8"
 					>
 						{/* 그라디언트 헤더 */}
@@ -73,7 +74,12 @@ export const StickyCTA = () => {
 							<p className="mb-0.5 font-semibold text-[10px] text-white/80 uppercase tracking-[0.2em]">
 								{siteConfig.nameKo}
 							</p>
-							<p className="font-extrabold text-white text-xl leading-tight">첫 상담, 무료입니다</p>
+							<p
+								id="sticky-cta-heading"
+								className="font-extrabold text-white text-xl leading-tight"
+							>
+								첫 상담, 무료입니다
+							</p>
 							<p className="mt-2 flex items-center gap-1.5 text-white/90 text-xs">
 								<span className="inline-block h-1.5 w-1.5 rounded-full bg-green-400" />
 								영업일 1일 내 회신 · 계약 압박 없음
@@ -121,7 +127,8 @@ export const StickyCTA = () => {
 				type="button"
 				onClick={() => setOpen((v) => !v)}
 				aria-expanded={open}
-				aria-label="빠른 상담 열기"
+				aria-controls="sticky-cta-heading"
+				aria-label="CONTACT 빠른 상담 열기"
 				className="gradient-brand fixed right-6 bottom-6 z-50 flex h-20 w-20 flex-col items-center justify-center gap-1 rounded-full text-white shadow-[0_8px_32px_rgba(124,58,237,0.5)] transition-transform hover:scale-110 active:scale-95 md:right-8 md:bottom-8"
 			>
 				<span className="gradient-brand absolute inset-0 animate-ping rounded-full opacity-20" />

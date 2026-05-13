@@ -104,7 +104,7 @@ export const RegulationChecklist = () => {
 												</div>
 
 												{/* 법령 라벨 */}
-												<span className="hidden shrink-0 font-mono text-slate-400 text-xs tracking-[0.1em] sm:block">
+												<span className="hidden shrink-0 font-mono text-slate-500 text-xs tracking-[0.1em] sm:block">
 													{item.law}
 												</span>
 											</motion.li>
@@ -113,7 +113,7 @@ export const RegulationChecklist = () => {
 
 									{/* 하단 라벨 */}
 									<div className="mt-4 px-6 text-right">
-										<p className="font-mono text-slate-400 text-xs tracking-[0.12em]">
+										<p className="font-mono text-slate-500 text-xs tracking-[0.12em]">
 											Growth Wave 자체 체크리스트 — 직군별 항목 보강
 										</p>
 									</div>

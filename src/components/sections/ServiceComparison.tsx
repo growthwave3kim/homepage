@@ -32,7 +32,7 @@ export const ServiceComparison = () => {
 					<table className="w-full min-w-[480px]">
 						<thead>
 							<tr className="border-slate-100 border-b">
-								<th className="px-6 py-5 text-left font-medium text-slate-400 text-sm">기준</th>
+								<th className="px-6 py-5 text-left font-medium text-slate-600 text-sm">기준</th>
 								{COMPARISON_CHANNELS.map((ch) => (
 									<th
 										key={ch}

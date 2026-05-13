@@ -83,7 +83,7 @@ export const FaqDirectory = () => {
 									"shrink-0 rounded-full px-4 py-1.5 font-semibold text-sm transition-all duration-200",
 									active === cat
 										? "bg-[#7c3aed] text-white"
-										: "bg-slate-100 text-slate-500 hover:bg-slate-200 hover:text-slate-900",
+										: "bg-slate-100 text-slate-700 hover:bg-slate-200 hover:text-slate-900",
 								)}
 							>
 								{cat}
@@ -97,7 +97,7 @@ export const FaqDirectory = () => {
 				<div className="md:grid md:grid-cols-[240px_1fr] md:gap-12">
 					{/* 데스크탑 sticky 사이드바 */}
 					<aside className="hidden self-start md:sticky md:top-24 md:block">
-						<p className="mb-4 font-mono text-[10px] text-slate-400 uppercase tracking-[0.25em]">
+						<p className="mb-4 font-mono text-[10px] text-slate-500 uppercase tracking-[0.25em]">
 							CATEGORIES · {FAQ_ITEMS.length} ITEMS
 						</p>
 						<nav className="flex flex-col gap-0.5">
@@ -149,7 +149,7 @@ export const FaqDirectory = () => {
 												<h3 className="font-bold text-2xl text-slate-900 tracking-tight">{cat}</h3>
 											</div>
 										</div>
-										<span className="font-mono text-[10px] text-slate-400 uppercase tracking-[0.2em]">
+										<span className="font-mono text-[10px] text-slate-500 uppercase tracking-[0.2em]">
 											{items.length} questions
 										</span>
 									</div>

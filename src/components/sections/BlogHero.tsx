@@ -56,7 +56,10 @@ export const BlogHero = () => {
 							<span className="h-3 w-3 rounded-full bg-red-400" />
 							<span className="h-3 w-3 rounded-full bg-yellow-400" />
 							<span className="h-3 w-3 rounded-full bg-green-400" />
-							<div className="ml-3 flex-1 rounded-md bg-white px-3 py-1.5 text-slate-400 text-xs">
+							<div
+								className="ml-3 flex-1 rounded-md bg-white px-3 py-1.5 text-slate-500 text-xs"
+								aria-hidden="true"
+							>
 								search.naver.com
 							</div>
 						</div>
@@ -113,7 +116,7 @@ export const BlogHero = () => {
 									<div className="mb-1 flex items-center gap-2">
 										<span
 											className={`rounded px-1.5 py-0.5 font-semibold text-[10px] ${
-												result.highlight ? "bg-[#7c3aed] text-white" : "bg-slate-100 text-slate-500"
+												result.highlight ? "bg-[#7c3aed] text-white" : "bg-slate-100 text-slate-700"
 											}`}
 										>
 											블로그
@@ -146,11 +149,11 @@ export const BlogHero = () => {
 			<motion.button
 				type="button"
 				onClick={scrollDown}
-				className="absolute bottom-10 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-2 text-slate-400 transition-colors hover:text-slate-600"
+				className="absolute bottom-10 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-2 text-slate-500 transition-colors hover:text-slate-600"
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1 }}
 				transition={{ duration: 0.6, delay: 0.8 }}
-				aria-label="아래로 스크롤"
+				aria-label="더 알아보기"
 			>
 				<motion.div
 					className="flex h-11 w-11 items-center justify-center rounded-full border border-slate-300"

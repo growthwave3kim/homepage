@@ -45,10 +45,10 @@ export const CaseTestimonial = ({ cases, dark = false }: Props) => {
 									<span className="mb-4 inline-block rounded-full bg-white/10 px-3 py-1 font-semibold text-white/70 text-xs">
 										{c.discipline}
 									</span>
-									<p className="mb-1 text-white/40 text-xs">{c.metric}</p>
+									<p className="mb-1 text-white/50 text-xs">{c.metric}</p>
 									<div className="flex items-baseline gap-2">
 										<span className="text-sm text-white/30 line-through">{c.before}</span>
-										<span className="text-white/40 text-xs">→</span>
+										<span className="text-white/50 text-xs">→</span>
 										<span className="font-bold text-[#a78bfa] text-xl">{c.after}</span>
 									</div>
 									<p className="mt-2 text-white/30 text-xs">{c.caption}</p>
@@ -58,11 +58,11 @@ export const CaseTestimonial = ({ cases, dark = false }: Props) => {
 								<div className="flex flex-1 flex-col bg-white px-6 py-5">
 									<p className="flex-1 break-keep text-slate-600 text-sm leading-relaxed">
 										<span className="mr-1 font-bold text-2xl text-[#7c3aed]/40 leading-none">
-											"
+											{'"'}
 										</span>
 										{c.testimonial}
 									</p>
-									<p className="mt-4 border-slate-50 border-t pt-4 font-medium text-slate-400 text-xs">
+									<p className="mt-4 border-slate-50 border-t pt-4 font-medium text-slate-500 text-xs">
 										— {c.author}
 									</p>
 								</div>

@@ -37,7 +37,7 @@ export const ReviewCardPhone = ({ review }: Props) => {
 			{/* Footer label */}
 			<div className="mt-3 text-center">
 				<p className="font-medium text-[#0a0a0a] text-xs">{review.authorLabel}</p>
-				<p className="text-slate-400 text-xs">{review.fieldLabel}</p>
+				<p className="text-slate-500 text-xs">{review.fieldLabel}</p>
 			</div>
 		</div>
 	);

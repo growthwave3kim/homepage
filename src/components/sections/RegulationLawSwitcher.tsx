@@ -119,7 +119,7 @@ export const RegulationLawSwitcher = () => {
 							<summary className="flex cursor-pointer list-none items-center justify-between py-4">
 								<div>
 									<span className="font-semibold text-[#0a0a0a] text-sm">{r.profession}</span>
-									<span className="ml-2 font-mono text-[10px] text-slate-400">{r.law}</span>
+									<span className="ml-2 font-mono text-[10px] text-slate-500">{r.law}</span>
 								</div>
 								<ChevronDown className="h-4 w-4 shrink-0 text-slate-400 transition-transform duration-200 group-open:rotate-180" />
 							</summary>

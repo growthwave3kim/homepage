@@ -29,7 +29,7 @@ export const AboutCaseHighlight = () => {
 									<span className="rounded-full bg-[#7c3aed]/10 px-3 py-1 font-semibold text-[#7c3aed] text-xs">
 										{c.discipline}
 									</span>
-									<span className="text-slate-400 text-xs">{c.metric}</span>
+									<span className="text-slate-500 text-xs">{c.metric}</span>
 								</div>
 
 								<div className="mb-4">
@@ -48,7 +48,7 @@ export const AboutCaseHighlight = () => {
 				</div>
 
 				<Reveal className="mt-10 text-center">
-					<p className="font-mono text-slate-400 text-xs tracking-[0.2em]">
+					<p className="font-mono text-slate-500 text-xs tracking-[0.2em]">
 						클라이언트 정보는 익명 처리합니다.
 					</p>
 				</Reveal>

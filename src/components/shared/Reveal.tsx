@@ -22,7 +22,10 @@ export const Reveal = ({
 	const scrollDirRef = useRef<"down" | "up">("down");
 	const isInView = useInView(ref, { once: false, margin: "-120px" });
 	const prefersReducedMotion = useReducedMotion();
-	const [visible, setVisible] = useState(false);
+	const [{ visible, enteredDown }, setAnimState] = useState({
+		visible: false,
+		enteredDown: false,
+	});
 
 	useEffect(() => {
 		let lastY = window.scrollY;
@@ -37,13 +40,13 @@ export const Reveal = ({
 
 	useEffect(() => {
 		if (isInView) {
-			setVisible(true);
+			setAnimState({ visible: true, enteredDown: scrollDirRef.current === "down" });
 		} else if (scrollDirRef.current === "up") {
-			// 위로 스크롤 중 뷰포트 아래로 벗어남 → 다음 스크롤다운을 위해 리셋
-			setVisible(false);
+			setAnimState({ visible: false, enteredDown: false });
 		}
-		// 아래로 스크롤 중 뷰포트 위로 벗어남 → 경계 지점 루프 방지를 위해 visible 유지
 	}, [isInView]);
+
+	const shouldAnimate = visible && enteredDown && !prefersReducedMotion;
 
 	const directionMap = {
 		up: { y: 90, x: 0 },
@@ -64,8 +67,6 @@ export const Reveal = ({
 			? { opacity: 1, scale: 1, x: 0, y: 0 }
 			: { opacity: 1, x: 0, y: 0 }
 		: initial;
-
-	const shouldAnimate = visible && scrollDirRef.current === "down" && !prefersReducedMotion;
 
 	const transition = shouldAnimate
 		? { duration, delay, ease: [0.22, 1, 0.36, 1] as const }

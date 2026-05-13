@@ -135,7 +135,7 @@ export const AboutHero = () => {
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1 }}
 				transition={{ duration: 0.6, delay: 0.8, ease }}
-				aria-label="아래로 스크롤"
+				aria-label="더 알아보기"
 			>
 				<motion.div
 					className="flex h-11 w-11 items-center justify-center rounded-full border border-white/30"
