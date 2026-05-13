@@ -31,8 +31,8 @@ export const TeamPage = () => (
 		<TeamScene />
 		<CTACard
 			variant="gradient"
-			headline="팀이 직접 검토합니다."
-			sub="첫 미팅에서 직군·채널·법령 조항까지 같이 봅니다."
+			headline="한 번 맡겨보세요."
+			sub="판단은 그 다음에 하셔도 됩니다."
 			buttonText="마케팅 컨설팅"
 		/>
 	</>

@@ -7,7 +7,7 @@ const REASONS = [
 		id: "regulation",
 		Icon: ShieldCheck,
 		title: "광고 규정 직접 검토",
-		desc: "변호사법·의료법 등 6개 직군 규정을 발행 전 항목별로 체크합니다.",
+		desc: "변호사법·의료법 등 12개 직군 규정을 발행 전 항목별로 체크합니다.",
 	},
 	{
 		id: "data",

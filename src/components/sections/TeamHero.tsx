@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowDown, ChevronDown } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import { motion } from "motion/react";
 import Image from "next/image";
 
@@ -50,18 +50,6 @@ export const TeamHero = () => {
 				>
 					규정 검수부터 발행까지, 외주 없이 한 공간에서.
 				</motion.p>
-
-				<motion.button
-					type="button"
-					onClick={scrollDown}
-					className="inline-flex items-center gap-2 rounded-xl border border-slate-300 bg-white/60 px-5 py-2.5 font-semibold text-slate-700 text-sm backdrop-blur-sm transition-all hover:border-[#7c3aed]/40 hover:bg-white hover:text-[#7c3aed]"
-					initial={{ opacity: 0, y: 16 }}
-					animate={{ opacity: 1, y: 0 }}
-					transition={{ duration: 0.6, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
-				>
-					팀 소개 보기
-					<ArrowDown className="h-4 w-4" aria-hidden="true" />
-				</motion.button>
 			</div>
 
 			{/* ── Right photo mosaic (desktop only) ── */}

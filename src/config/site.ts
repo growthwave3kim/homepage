@@ -50,20 +50,20 @@ export const siteConfig = {
 				{
 					label: "전문직 마케팅",
 					href: "/services/professional",
-					description: "변호사·의사·한의사·수의사 등 광고 규정이 까다로운 직군 전용",
+					description: "광고 규정 직접 검토 · 12개 직군 전용",
 					icon: "Crown",
 					flagship: true,
 				},
 				{
 					label: "블로그 마케팅",
 					href: "/services/blog",
-					description: "검색 의도 기반 콘텐츠로 상위노출까지",
+					description: "검색에서 상담으로 이어지는 콘텐츠",
 					icon: "FileText",
 				},
 				{
 					label: "숏폼 마케팅",
 					href: "/services/shortform",
-					description: "릴스·쇼츠·틱톡으로 전문가 신뢰 누적",
+					description: "릴스·쇼츠·틱톡 전문가 채널 구축",
 					icon: "Clapperboard",
 				},
 			],

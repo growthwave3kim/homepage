@@ -78,7 +78,7 @@ export const Header = () => {
 									<button
 										type="button"
 										className={cn(
-											"flex items-center gap-1 rounded-lg px-4 py-2 font-semibold text-[15px] transition-colors",
+											"flex items-center gap-1 rounded-lg px-4 py-2 font-bold text-[16px] transition-colors",
 											isLight
 												? "text-white/80 hover:bg-white/10 hover:text-white"
 												: "hover:bg-slate-50",
@@ -135,9 +135,7 @@ export const Header = () => {
 																</span>
 																{child.flagship && <span className="badge-purple">대표</span>}
 															</div>
-															<p className="truncate text-muted-foreground text-xs">
-																{child.description}
-															</p>
+															<p className="text-muted-foreground text-xs">{child.description}</p>
 														</div>
 													</Link>
 												);
@@ -154,7 +152,7 @@ export const Header = () => {
 								key={item.href}
 								href={item.href}
 								className={cn(
-									"relative rounded-lg px-4 py-2 font-semibold text-[15px] transition-colors",
+									"relative rounded-lg px-4 py-2 font-bold text-[16px] transition-colors",
 									isLight
 										? "text-white/80 hover:bg-white/10 hover:text-white"
 										: cn(

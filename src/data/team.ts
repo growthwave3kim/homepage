@@ -9,7 +9,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
 		quote: "심의 통과가 먼저, 성과는 그 다음입니다.",
 		careers: [
 			"변호사·의료광고 규정 검토 8년",
-			"6개 직군 키워드 데이터베이스 설계",
+			"12개 직군 키워드 데이터베이스 설계",
 			"그로스웨이브 창업 및 전략 총괄",
 		],
 		photo: "/images/team/taehoon-kim.png",
