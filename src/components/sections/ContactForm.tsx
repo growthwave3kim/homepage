@@ -28,6 +28,18 @@ const PROFESSION_OPTIONS = [
 	{ id: "other", label: "기타" },
 ] as const;
 
+const formatPhone = (value: string) => {
+	const digits = value.replace(/\D/g, "").slice(0, 11);
+	if (digits.startsWith("02")) {
+		if (digits.length <= 2) return digits;
+		if (digits.length <= 6) return `${digits.slice(0, 2)}-${digits.slice(2)}`;
+		return `${digits.slice(0, 2)}-${digits.slice(2, 6)}-${digits.slice(6, 10)}`;
+	}
+	if (digits.length <= 3) return digits;
+	if (digits.length <= 7) return `${digits.slice(0, 3)}-${digits.slice(3)}`;
+	return `${digits.slice(0, 3)}-${digits.slice(3, 7)}-${digits.slice(7, 11)}`;
+};
+
 export const ContactForm = () => {
 	const [source, setSource] = useState("");
 	const [sent, setSent] = useState(false);
@@ -35,6 +47,7 @@ export const ContactForm = () => {
 	const [error, setError] = useState("");
 	const [profession, setProfession] = useState("");
 	const [professionOpen, setProfessionOpen] = useState(false);
+	const [tel, setTel] = useState("");
 	const professionRef = useRef<HTMLDivElement>(null);
 
 	useEffect(() => {
@@ -338,6 +351,8 @@ export const ContactForm = () => {
 									type="tel"
 									placeholder="010-0000-0000"
 									required
+									value={tel}
+									onChange={(e) => setTel(formatPhone(e.target.value))}
 									className="h-12 border-slate-200 text-sm focus-visible:border-[#7c3aed] focus-visible:ring-2 focus-visible:ring-[#7c3aed]/15"
 								/>
 							</div>
