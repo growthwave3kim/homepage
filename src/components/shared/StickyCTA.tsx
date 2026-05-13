@@ -70,13 +70,13 @@ export const StickyCTA = () => {
 							>
 								<X className="h-3.5 w-3.5 text-white" />
 							</button>
-							<p className="mb-0.5 font-semibold text-[10px] text-white/60 uppercase tracking-[0.2em]">
+							<p className="mb-0.5 font-semibold text-[10px] text-white/80 uppercase tracking-[0.2em]">
 								{siteConfig.nameKo}
 							</p>
-							<p className="font-extrabold text-white text-xl leading-tight">마케팅 컨설팅 받기</p>
-							<p className="mt-2 flex items-center gap-1.5 text-white/75 text-xs">
+							<p className="font-extrabold text-white text-xl leading-tight">첫 상담, 무료입니다</p>
+							<p className="mt-2 flex items-center gap-1.5 text-white/90 text-xs">
 								<span className="inline-block h-1.5 w-1.5 rounded-full bg-green-400" />
-								영업일 1일 내 답변 보장
+								영업일 1일 내 회신 · 계약 압박 없음
 							</p>
 						</div>
 
@@ -86,7 +86,7 @@ export const StickyCTA = () => {
 							<Link
 								href="/contact"
 								onClick={() => setOpen(false)}
-								className="gradient-brand mb-3 flex w-full items-center justify-center gap-2 rounded-xl py-3.5 font-bold text-sm text-white shadow-[0_4px_16px_rgba(124,58,237,0.4)] transition-opacity hover:opacity-90"
+								className="mb-3 flex w-full items-center justify-center gap-2 rounded-xl bg-[#0a0a0a] py-3.5 font-bold text-sm text-white transition-opacity hover:opacity-85"
 							>
 								<MessageSquare className="h-4 w-4" aria-hidden="true" />
 								마케팅 컨설팅
@@ -95,19 +95,19 @@ export const StickyCTA = () => {
 							{/* 전화 */}
 							<a
 								href={`tel:${siteConfig.contact.tel}`}
-								className="mb-4 flex items-center gap-3 rounded-xl border border-slate-100 bg-slate-50 px-4 py-3 transition-colors hover:bg-slate-100"
+								className="mb-4 flex items-center gap-3 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 transition-colors hover:bg-slate-100"
 							>
-								<div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#7c3aed]/10">
+								<div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#7c3aed]/15">
 									<Phone className="h-4 w-4 text-[#7c3aed]" aria-hidden="true" />
 								</div>
 								<div>
-									<p className="font-medium text-[10px] text-slate-400 tracking-wide">전화 문의</p>
+									<p className="font-medium text-[10px] text-slate-500 tracking-wide">전화 문의</p>
 									<p className="font-bold text-slate-900 text-sm">{siteConfig.contact.tel}</p>
 								</div>
 							</a>
 
 							{/* 영업시간 */}
-							<div className="flex items-center justify-center gap-1.5 text-slate-400 text-xs">
+							<div className="flex items-center justify-center gap-1.5 text-slate-500 text-xs">
 								<Clock className="h-3 w-3" aria-hidden="true" />
 								<span>{siteConfig.contact.businessHours}</span>
 							</div>

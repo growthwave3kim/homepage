@@ -107,12 +107,31 @@ export const ContactHero = () => {
 				<motion.button
 					type="button"
 					onClick={scrollToForm}
-					className="gradient-brand inline-flex items-center gap-2 rounded-md px-8 py-3.5 font-semibold text-base text-white shadow-[0_4px_24px_rgba(124,58,237,0.35)] transition-opacity hover:opacity-90"
+					className="gradient-brand relative inline-flex items-center gap-2 overflow-hidden rounded-md px-8 py-3.5 font-semibold text-base text-white shadow-[0_4px_28px_rgba(124,58,237,0.45)]"
 					initial={{ opacity: 0, y: 10 }}
 					animate={{ opacity: 1, y: 0 }}
-					transition={{ duration: 0.5, delay: 0.45 }}
+					transition={{ duration: 0.5, delay: 0.45, ease: [0.22, 1, 0.36, 1] }}
+					whileHover={{ scale: 1.03 }}
 				>
-					문의 작성하기
+					{/* Shimmer sweep */}
+					<motion.span
+						aria-hidden="true"
+						className="pointer-events-none absolute top-0 h-full w-10"
+						style={{
+							background:
+								"linear-gradient(90deg, transparent, rgba(255,255,255,0.32), transparent)",
+							transform: "skewX(-15deg)",
+						}}
+						animate={{ left: ["-15%", "115%"] }}
+						transition={{
+							duration: 0.85,
+							repeat: Number.POSITIVE_INFINITY,
+							repeatDelay: 3.2,
+							ease: "easeInOut",
+							delay: 2,
+						}}
+					/>
+					지금 물어보기
 					<ArrowDown className="h-4 w-4" aria-hidden="true" />
 				</motion.button>
 			</div>
@@ -131,26 +150,6 @@ export const ContactHero = () => {
 				</div>
 				<div className="h-px flex-1 bg-slate-200" />
 			</motion.div>
-
-			{/* Scroll indicator */}
-			<motion.button
-				type="button"
-				onClick={scrollToForm}
-				className="absolute right-6 bottom-10 z-10 flex flex-col items-center gap-2 text-slate-500 transition-colors hover:text-slate-800 md:right-10"
-				initial={{ opacity: 0 }}
-				animate={{ opacity: 1 }}
-				transition={{ duration: 0.6, delay: 0.8 }}
-				aria-label="문의 폼으로 이동"
-			>
-				<span className="font-mono text-[10px] uppercase tracking-[0.25em]">scroll</span>
-				<motion.div
-					className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-300"
-					animate={{ y: [0, 5, 0] }}
-					transition={{ duration: 1.8, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
-				>
-					<ArrowDown className="h-4 w-4" />
-				</motion.div>
-			</motion.button>
 		</section>
 	);
 };
