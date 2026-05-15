@@ -18,7 +18,7 @@ export const AboutSignature = () => {
 						처음부터 <span className="gradient-text">달랐습니다.</span>
 					</h2>
 					<p className="mx-auto mt-4 max-w-md break-keep text-slate-500 leading-relaxed">
-						8년간 전문직 광고 규정만 봤습니다.
+						대표가 8년간 전문직 광고 규정만 봤습니다.
 					</p>
 				</Reveal>
 

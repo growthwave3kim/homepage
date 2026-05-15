@@ -17,7 +17,7 @@ export const FinalCTA = () => {
 					<p className="mb-10 text-lg text-white/60 leading-relaxed">
 						3분이면 컨설팅 요청이 끝납니다.
 						<br />
-						24시간 안으로 답변드립니다.
+						영업일 1일 내 답변드립니다.
 					</p>
 					<div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
 						<Link

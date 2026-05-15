@@ -21,6 +21,6 @@ export const ABOUT_TRUST = [
 		value: 0,
 		suffix: "",
 		label: "광고 규정 위반",
-		caption: "8년간 누적",
+		caption: "대표 경력 기준 누적",
 	},
 ] as const;

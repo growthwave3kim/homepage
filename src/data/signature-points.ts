@@ -8,7 +8,7 @@ export const SIGNATURE_POINTS: SignaturePoint[] = [
 	{
 		num: "01",
 		title: "규정부터 봅니다",
-		body: "광고 규정 위반 0건. 8년 누적 데이터입니다.",
+		body: "광고 규정 위반 0건. 대표 경력 기준 누적 데이터입니다.",
 	},
 	{
 		num: "02",

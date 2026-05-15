@@ -26,7 +26,7 @@ export const RegulationPledge = () => {
 								Growth Wave 약속
 							</p>
 							<p className="mt-8 font-mono text-white/60 text-xs tracking-[0.15em]">
-								대표 검수 — 김도현
+								대표 검수 — 김태훈
 							</p>
 						</div>
 

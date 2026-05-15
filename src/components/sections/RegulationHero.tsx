@@ -74,7 +74,7 @@ const DOCS = [
 
 const STATS = [
 	{ value: "12개", label: "직군" },
-	{ value: "200+", label: "검토 누적" },
+	{ value: "200+", label: "누적 콘텐츠" },
 	{ value: "0건", label: "위반" },
 ] as const;
 

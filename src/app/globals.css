@@ -70,11 +70,11 @@
 	}
 	html {
 		overflow-x: hidden;
+		scrollbar-gutter: stable;
 	}
 	body {
 		@apply bg-background text-foreground;
 		overflow-x: hidden;
-		overflow-y: scroll;
 		word-break: keep-all;
 		font-family:
 			var(--font-pretendard), "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont,
