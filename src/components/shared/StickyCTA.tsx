@@ -4,11 +4,12 @@ import { Clock, MessageSquare, Phone, X } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { siteConfig } from "@/config/site";
 
 export const StickyCTA = () => {
-	const [open, setOpen] = useState(true);
+	const [open, setOpen] = useState(false);
+	const triggeredRef = useRef(false);
 	const pathname = usePathname();
 
 	const isHidden = pathname.startsWith("/contact");
@@ -20,6 +21,26 @@ export const StickyCTA = () => {
 		window.addEventListener("keydown", onKey);
 		return () => window.removeEventListener("keydown", onKey);
 	}, []);
+
+	// 후기 섹션 중간 도달 시 1회 자동 오픈
+	// biome-ignore lint/correctness/useExhaustiveDependencies: pathname is the trigger, not consumed
+	useEffect(() => {
+		const target = document.getElementById("real-reviews");
+		if (!target) return;
+		const observer = new IntersectionObserver(
+			(entries) => {
+				for (const entry of entries) {
+					if (entry.isIntersecting && !triggeredRef.current) {
+						triggeredRef.current = true;
+						setOpen(true);
+					}
+				}
+			},
+			{ rootMargin: "-50% 0px -50% 0px" },
+		);
+		observer.observe(target);
+		return () => observer.disconnect();
+	}, [pathname]);
 
 	if (isHidden) return null;
 
@@ -78,11 +99,11 @@ export const StickyCTA = () => {
 								id="sticky-cta-heading"
 								className="font-extrabold text-white text-xl leading-tight"
 							>
-								첫 상담, 무료입니다
+								부담 없이, 먼저 물어보세요
 							</p>
 							<p className="mt-2 flex items-center gap-1.5 text-white/90 text-xs">
 								<span className="inline-block h-1.5 w-1.5 rounded-full bg-green-400" />
-								영업일 1일 내 회신 · 계약 압박 없음
+								영업일 1일 내 회신
 							</p>
 						</div>
 
@@ -95,7 +116,7 @@ export const StickyCTA = () => {
 								className="mb-3 flex w-full items-center justify-center gap-2 rounded-xl bg-[#0a0a0a] py-3.5 font-bold text-sm text-white transition-opacity hover:opacity-85"
 							>
 								<MessageSquare className="h-4 w-4" aria-hidden="true" />
-								마케팅 컨설팅
+								문의하기
 							</Link>
 
 							{/* 전화 */}

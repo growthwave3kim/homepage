@@ -39,14 +39,14 @@ export const ProcessSteps = () => {
 			<div className="mx-auto max-w-[1440px]">
 				<Reveal>
 					<div className="mb-14 text-center md:mb-16">
-						<p className="mb-4 font-semibold text-[#7c3aed] text-sm uppercase tracking-[0.25em]">
-							Process
+						<p className="mb-4 font-semibold text-[#7c3aed] text-lg uppercase tracking-[0.25em] md:text-xl">
+							진행방식
 						</p>
 						<h2 className="font-bold text-5xl text-foreground leading-tight tracking-tight md:text-6xl lg:text-7xl">
-							이렇게 함께합니다.
+							이렇게 진행합니다.
 						</h2>
 						<p className="mx-auto mt-5 max-w-2xl text-muted-foreground text-xl leading-relaxed md:text-2xl">
-							상담부터 발행까지, 규정 검토가 모든 단계에 있습니다.
+							상담 → 전략 수립 → 발행 → 성과점검, 4단계면 끝!
 						</p>
 					</div>
 				</Reveal>

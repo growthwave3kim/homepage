@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight, BookOpen, Clapperboard, Users } from "lucide-react";
+import { ArrowRight, BookOpen, Clapperboard, Share2, Users } from "lucide-react";
 import { motion, useInView, useReducedMotion } from "motion/react";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
@@ -11,6 +11,7 @@ const ICON_MAP: Record<string, React.ElementType> = {
 	Users,
 	BookOpen,
 	Clapperboard,
+	Share2,
 };
 
 type FlipCardProps = {
@@ -74,57 +75,78 @@ const FlipCard = ({ children, delay }: FlipCardProps) => {
 
 export const ServiceCards = () => {
 	return (
-		<section className="bg-[#F8FAFC] px-4 pt-20 pb-24 md:pb-28">
-			<div className="mx-auto max-w-6xl">
+		<section className="relative overflow-hidden bg-white px-4 pt-20 pb-24 md:pb-28">
+			{/* 옅은 보라 틴트 */}
+			<div className="pointer-events-none absolute inset-x-0 top-0 h-[420px] bg-[radial-gradient(ellipse_55%_50%_at_50%_0%,rgba(124,58,237,0.06),transparent_70%)]" />
+
+			<div className="relative mx-auto max-w-6xl">
 				<Reveal>
 					<div className="mb-14 text-center">
-						<h2 className="font-extrabold text-3xl text-[#0a0a0a] leading-tight tracking-tight md:text-4xl">
-							전문직 마케팅 <span className="gradient-text">세 가지</span>면 끝납니다.
+						<p className="mb-3 font-bold text-2xl text-[#7c3aed] md:text-3xl">어떻게?</p>
+						<h2 className="font-extrabold text-4xl text-[#0a0a0a] leading-tight tracking-tight md:text-5xl">
+							전문직 마케팅, <span className="gradient-text">세 가지</span>면 끝납니다.
 						</h2>
 					</div>
 				</Reveal>
 
-				<div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+				<div className="grid grid-cols-1 items-stretch gap-6 md:grid-cols-3">
 					{SERVICE_CARDS.map((card, i) => {
 						const Icon = ICON_MAP[card.icon] ?? Users;
 						return (
 							<FlipCard key={card.href} delay={i * 0.12}>
 								<Link
 									href={card.href}
-									className="group flex h-full flex-col rounded-xl border border-slate-200 bg-white p-8 transition-all duration-300 hover:-translate-y-1 hover:border-[#7c3aed]/40 hover:shadow-[0_8px_32px_rgba(124,58,237,0.08)]"
+									className="group relative flex h-full min-h-[420px] flex-col overflow-hidden rounded-2xl border border-white/[0.06] bg-gradient-to-b from-[#241f33] to-[#15131c] p-8 shadow-[0_20px_50px_-20px_rgba(124,58,237,0.30)] transition-all duration-300 hover:-translate-y-1.5 hover:border-[#7c3aed]/40 hover:shadow-[0_28px_70px_-20px_rgba(124,58,237,0.50)]"
 								>
-									{/* 아이콘 */}
-									<div className="mb-6 flex h-12 w-12 items-center justify-center rounded-md bg-[#7c3aed]/[0.08] transition-colors group-hover:bg-[#7c3aed]/[0.14]">
-										<Icon className="h-6 w-6 text-[#7c3aed]" aria-hidden="true" />
+									{/* 상단 엣지 하이라이트 */}
+									<div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+
+									{/* 코너 블룸 */}
+									<div className="pointer-events-none absolute -top-20 -right-20 h-44 w-44 rounded-full bg-[#7c3aed] opacity-[0.12] blur-3xl transition-opacity duration-500 group-hover:opacity-30" />
+
+									{/* 번호 + 아이콘 */}
+									<div className="relative mb-8 flex items-center justify-between">
+										<span className="font-mono text-slate-500 text-xs tracking-[0.3em]">
+											0{i + 1}
+										</span>
+										<div className="flex h-11 w-11 items-center justify-center rounded-xl border border-[#7c3aed]/25 bg-[#7c3aed]/15">
+											<Icon className="h-5 w-5 text-[#a78bfa]" aria-hidden="true" />
+										</div>
 									</div>
 
-									{/* Eyebrow */}
-									<p className="mb-2 font-semibold text-[#a78bfa] text-xs uppercase tracking-widest">
+									{/* 큰 타이틀 */}
+									<p className="relative mb-3 font-bold text-3xl text-white leading-tight tracking-tight">
 										{card.eyebrow}
 									</p>
 
-									{/* 제목 */}
-									<h3 className="mb-3 whitespace-pre-line font-bold text-foreground text-xl leading-snug tracking-tight">
-										{card.title}
-									</h3>
+									{/* 구분선 */}
+									<div className="relative mb-4 h-px w-10 bg-gradient-to-r from-[#7c3aed] to-transparent" />
 
 									{/* 설명 */}
-									<p className="mb-6 flex-1 text-muted-foreground text-sm leading-relaxed">
+									<p className="relative min-h-12 text-slate-300 text-sm leading-relaxed">
 										{card.description}
 									</p>
 
-									{/* KPI 배지 */}
-									{card.kpi && (
-										<div className="mb-5 inline-block self-start rounded-sm bg-[#7c3aed]/[0.08] px-3 py-1.5">
-											<span className="font-semibold text-[#7c3aed] text-xs">{card.kpi}</span>
-										</div>
+									{/* 포인트 리스트 */}
+									{card.points && (
+										<ul className="relative mt-5 flex-1 space-y-2.5">
+											{card.points.map((point) => (
+												<li
+													key={point}
+													className="flex items-start gap-2.5 text-slate-400 text-xs leading-relaxed"
+												>
+													<span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-[#a78bfa]" />
+													{point}
+												</li>
+											))}
+										</ul>
 									)}
 
 									{/* CTA */}
-									<span className="flex items-center gap-1.5 self-start border-current border-b pb-0.5 font-semibold text-[#0a0a0a] text-sm transition-opacity group-hover:opacity-70">
+									<span className="relative mt-8 flex items-center gap-1.5 self-start font-semibold text-[#a78bfa] text-sm transition-colors group-hover:text-white">
 										{card.cta}
 										<ArrowRight
-											className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5"
+											className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1"
 											aria-hidden="true"
 										/>
 									</span>

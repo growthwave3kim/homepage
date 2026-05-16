@@ -38,7 +38,7 @@ export const siteConfig = {
 		businessNumber: "112-31-25690",
 		kakaoOpenChat: "https://open.kakao.com/o/sgn3wFti",
 		naverBlog: "https://blog.naver.com/growthwave-",
-		businessHours: "월–금 09:00–18:00",
+		businessHours: "24시간 문의 접수 · 연중무휴",
 	},
 	nav: [
 		{ label: "회사소개", href: "/about" },

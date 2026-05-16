@@ -192,7 +192,7 @@ export const Header = () => {
 								: "bg-linear-to-r from-[#7c3aed] to-[#4338ca] text-white",
 						)}
 					>
-						마케팅 컨설팅
+						문의하기
 					</Link>
 					<MobileMenu />
 				</div>
