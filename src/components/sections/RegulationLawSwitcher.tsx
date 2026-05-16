@@ -105,7 +105,7 @@ export const RegulationLawSwitcher = () => {
 
 								{/* 하단 라벨 */}
 								<p className="mt-5 text-right font-mono text-slate-500 text-xs tracking-[0.12em]">
-									발행 전 직접 검토 — 위반 0건
+									발행 전 직접 검토 — 리스크 즉시 대응
 								</p>
 							</motion.div>
 						</AnimatePresence>

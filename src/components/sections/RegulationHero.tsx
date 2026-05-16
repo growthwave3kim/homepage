@@ -75,7 +75,7 @@ const DOCS = [
 const STATS = [
 	{ value: "12개", label: "직군" },
 	{ value: "200+", label: "누적 콘텐츠" },
-	{ value: "0건", label: "위반" },
+	{ value: "즉시", label: "리스크 대응" },
 ] as const;
 
 export const RegulationHero = () => {
@@ -117,8 +117,9 @@ export const RegulationHero = () => {
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.6, delay: 0.1 }}
 					>
-						<span className="gradient-text">규정</span>에<br />
-						걸리지 않습니다.
+						<span className="gradient-text">규정</span>에 걸려도,
+						<br />
+						바로 잡습니다.
 					</motion.h1>
 					<motion.p
 						className="mb-10 max-w-sm break-keep text-base text-white/75 leading-relaxed"

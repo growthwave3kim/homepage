@@ -7,7 +7,7 @@ export const AESlogan = () => {
 						노출은 만들 수 있습니다. 상담을 만드는 건 다릅니다.
 					</p>
 					<p className="font-medium text-lg text-white/50 leading-tight md:text-xl">
-						광고 규정을 모르는 콘텐츠는 발행하지 않습니다.
+						보고는 노출 수가 아니라 상담 신청 수로 합니다.
 					</p>
 				</div>
 				<p

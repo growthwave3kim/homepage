@@ -26,16 +26,9 @@ export const AboutTrustCounter = () => {
 						>
 							<div className="flex flex-col px-8 py-10">
 								<p className="mb-2 font-bold text-[56px] leading-none tracking-tight md:text-[64px]">
-									{item.value === 0 ? (
-										<span className="text-[#0a0a0a]">
-											{item.value}
-											{item.suffix}
-										</span>
-									) : (
-										<span className="gradient-text">
-											<CountUp to={item.value} suffix={item.suffix} />
-										</span>
-									)}
+									<span className="gradient-text">
+										<CountUp to={item.value} suffix={item.suffix} />
+									</span>
 								</p>
 								<p className="mb-1 font-semibold text-[#0a0a0a] text-base">{item.label}</p>
 								<p className="break-keep text-slate-500 text-xs leading-relaxed">{item.caption}</p>

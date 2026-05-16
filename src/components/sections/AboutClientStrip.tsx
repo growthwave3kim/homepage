@@ -23,7 +23,7 @@ export const AboutClientStrip = () => {
 						<span className="gradient-text">12개</span> 전문직 직군
 					</h2>
 					<p className="mx-auto mt-4 max-w-md break-keep text-slate-500 leading-relaxed">
-						각 직군의 광고 규정과 검색 의도를 직접 학습한 팀
+						각 직군의 검색 의도를 직접 학습한 팀
 					</p>
 				</Reveal>
 			</div>

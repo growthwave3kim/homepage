@@ -6,8 +6,8 @@ export const COMPARISON_ROWS: ComparisonRow[] = [
 		growthwave: "고객 검색 의도 기반 발행",
 	},
 	{
-		general: "직군 광고 규정 별도 검토 없음",
-		growthwave: "직군별 광고 규정 사전 검토 후 제작",
+		general: "범용 외주 작가가 작성",
+		growthwave: "직군 전담 인하우스 작가가 작성",
 	},
 	{
 		general: "노출 수에 집착",

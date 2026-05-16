@@ -68,7 +68,6 @@ export const siteConfig = {
 				},
 			],
 		},
-		{ label: "광고 규정", href: "/regulation" },
 		{ label: "팀", href: "/team" },
 		{ label: "FAQ", href: "/faq" },
 	] as NavItem[],

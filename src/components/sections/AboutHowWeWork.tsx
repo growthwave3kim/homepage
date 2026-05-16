@@ -45,7 +45,7 @@ export const AboutHowWeWork = () => {
 							콘텐츠 한 편, <span className="gradient-text">이렇게</span> 만듭니다.
 						</h2>
 						<p className="mx-auto mt-4 max-w-sm break-keep text-slate-500 leading-relaxed">
-							규정 검토 없는 콘텐츠는 발행하지 않습니다.
+							검수를 통과한 콘텐츠만 발행합니다.
 						</p>
 					</div>
 				</Reveal>

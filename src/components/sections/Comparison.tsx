@@ -52,7 +52,7 @@ export const Comparison = () => {
 							이런 분들은 정중히 거절하고 있습니다
 						</p>
 						<p className="text-muted-foreground text-sm">
-							단기간 1위만 원하시는 분 · 컨펌 없이 전체 위임 원하시는 분 · 광고 규정을 무시하시는 분
+							단기간 1위만 원하시는 분 · 컨펌 없이 전체 위임 원하시는 분 · 노출 수만 보시는 분
 						</p>
 					</div>
 				</Reveal>

@@ -9,7 +9,7 @@ export const ABOUT_TRUST = [
 		value: 12,
 		suffix: "",
 		label: "전담 직군",
-		caption: "광고 규정 직접 검토",
+		caption: "직군별 전담 작가 배정",
 	},
 	{
 		value: 90,
@@ -18,9 +18,9 @@ export const ABOUT_TRUST = [
 		caption: "장기 유지 클라이언트",
 	},
 	{
-		value: 0,
-		suffix: "",
-		label: "광고 규정 위반",
-		caption: "대표 경력 기준 누적",
+		value: 8,
+		suffix: "년",
+		label: "대표 운영 경력",
+		caption: "전문직 마케팅 직접 운영",
 	},
 ] as const;

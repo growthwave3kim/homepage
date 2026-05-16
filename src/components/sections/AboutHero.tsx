@@ -98,11 +98,11 @@ export const AboutHero = () => {
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.75, delay: 0.1, ease }}
 					>
-						규정을 모르면,
+						노출이 아니라,
 						<br />
-						<span className="gradient-text">마케팅이</span>
+						<span className="gradient-text">의뢰를</span>
 						<br />
-						아닙니다.
+						만듭니다.
 					</motion.h1>
 
 					<motion.p
@@ -111,9 +111,9 @@ export const AboutHero = () => {
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.65, delay: 0.2, ease }}
 					>
-						대부분의 대행사는 변호사법·의료법·세무사법을 검토하지 않습니다.
+						대부분의 대행사는 노출 수를 보고합니다.
 						<br />
-						8년간 그걸 처음부터 당연한 일로 했습니다.
+						우리는 8년간 의뢰로 이어지는 콘텐츠만 만들었습니다.
 					</motion.p>
 
 					<motion.p
@@ -122,7 +122,7 @@ export const AboutHero = () => {
 						animate={{ opacity: 1 }}
 						transition={{ duration: 0.5, delay: 0.3, ease }}
 					>
-						전문직 12개 직군 · 광고 위반 0건 · 재계약율 90%+
+						전문직 12개 직군 · 누적 200+ 콘텐츠 · 재계약율 90%+
 					</motion.p>
 				</div>
 			</div>
