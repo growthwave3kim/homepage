@@ -8,7 +8,6 @@ import { ProfessionRotator } from "@/components/sections/ProfessionRotator";
 import { RealReviews } from "@/components/sections/RealReviews";
 import { ServiceCards } from "@/components/sections/ServiceCards";
 import { TeamPreview } from "@/components/sections/TeamPreview";
-import { WhyUsBold } from "@/components/sections/WhyUsBold";
 
 export const HomePage = () => {
 	return (
@@ -18,7 +17,6 @@ export const HomePage = () => {
 			<ProfessionRotator />
 			<KPIShowcase />
 			<CaseHighlight />
-			<WhyUsBold />
 			<ServiceCards />
 			<ProcessSteps />
 			<RealReviews />

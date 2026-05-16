@@ -78,11 +78,8 @@ export const ServiceCards = () => {
 			<div className="mx-auto max-w-6xl">
 				<Reveal>
 					<div className="mb-14 text-center">
-						<p className="mb-4 font-semibold text-[#7c3aed] text-sm uppercase tracking-[0.25em]">
-							Services
-						</p>
 						<h2 className="font-extrabold text-3xl text-[#0a0a0a] leading-tight tracking-tight md:text-4xl">
-							전문직 마케팅, <span className="gradient-text">세 가지</span>로 합니다.
+							전문직 마케팅 <span className="gradient-text">세 가지</span>면 끝납니다.
 						</h2>
 					</div>
 				</Reveal>
