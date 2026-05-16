@@ -1,4 +1,3 @@
-import { CaseGrid } from "@/components/sections/CaseGrid";
 import { CaseHighlight } from "@/components/sections/CaseHighlight";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 import { Hero } from "@/components/sections/Hero";
@@ -19,7 +18,6 @@ export const HomePage = () => {
 			<ProfessionRotator />
 			<KPIShowcase />
 			<CaseHighlight />
-			<CaseGrid />
 			<WhyUsBold />
 			<ServiceCards />
 			<ProcessSteps />

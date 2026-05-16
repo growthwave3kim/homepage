@@ -5,6 +5,17 @@ import { useEffect, useRef, useState } from "react";
 import { Reveal } from "@/components/shared/Reveal";
 import { KPI_SHOWCASE } from "@/data/kpi-showcase";
 
+const LiveResponseValue = ({ numClass }: { numClass: string }) => {
+	return (
+		<p className="font-extrabold leading-none tracking-tighter">
+			<span className={`text-[44px] sm:text-[52px] md:text-[60px] lg:text-[72px] ${numClass}`}>
+				실시간
+			</span>
+			<span className="ml-2 inline-flex size-2.5 animate-pulse rounded-full bg-emerald-400 align-middle" />
+		</p>
+	);
+};
+
 const CountUp = ({ to, duration = 1.4 }: { to: number; duration?: number }) => {
 	const [val, setVal] = useState(0);
 	const ref = useRef<HTMLSpanElement>(null);
@@ -56,11 +67,9 @@ export const KPIShowcase = () => {
 		<section className="bg-white py-20 md:py-28">
 			<div className="mx-auto max-w-7xl px-4 md:px-8">
 				<Reveal className="mb-12 text-center">
-					<p className="mb-3 font-semibold text-[#7c3aed] text-sm uppercase tracking-[0.25em]">
-						운영 데이터
-					</p>
-					<h2 className="font-bold text-4xl text-[#0a0a0a] tracking-tight md:text-5xl">
-						숫자가 증명합니다.
+					<p className="mb-3 font-bold text-[#7c3aed] text-xl md:text-2xl">저희는</p>
+					<h2 className="font-bold text-5xl text-[#0a0a0a] tracking-tight md:text-6xl lg:text-7xl">
+						숫자로 증명합니다.
 					</h2>
 				</Reveal>
 
@@ -79,18 +88,22 @@ export const KPIShowcase = () => {
 										{item.index}
 									</span>
 
-									<p className="font-extrabold leading-none tracking-tighter">
-										<span
-											className={`text-[52px] sm:text-[60px] md:text-[68px] lg:text-[80px] ${meta.numClass}`}
-										>
-											<CountUp to={item.value} />
-										</span>
-										<span
-											className={`ml-0.5 align-top text-xl md:text-2xl lg:text-3xl ${meta.numClass}`}
-										>
-											{item.suffix}
-										</span>
-									</p>
+									{i === 3 ? (
+										<LiveResponseValue numClass={meta.numClass} />
+									) : (
+										<p className="font-extrabold leading-none tracking-tighter">
+											<span
+												className={`text-[52px] sm:text-[60px] md:text-[68px] lg:text-[80px] ${meta.numClass}`}
+											>
+												<CountUp to={item.value} />
+											</span>
+											<span
+												className={`ml-0.5 align-top text-xl md:text-2xl lg:text-3xl ${meta.numClass}`}
+											>
+												{item.suffix}
+											</span>
+										</p>
+									)}
 
 									<h3 className="mt-3 break-keep font-bold text-[#0a0a0a] text-base tracking-tight md:text-lg">
 										{item.label}
