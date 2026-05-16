@@ -78,7 +78,7 @@ export const Header = () => {
 									<button
 										type="button"
 										className={cn(
-											"flex items-center gap-1 rounded-lg px-4 py-2 font-bold text-[16px] transition-colors",
+											"flex w-24 items-center justify-center gap-1 rounded-lg px-4 py-2 font-bold text-[16px] transition-colors",
 											isLight
 												? "text-white/80 hover:bg-white/10 hover:text-white"
 												: "hover:bg-slate-50",
@@ -152,7 +152,7 @@ export const Header = () => {
 								key={item.href}
 								href={item.href}
 								className={cn(
-									"relative rounded-lg px-4 py-2 font-bold text-[16px] transition-colors",
+									"relative w-24 rounded-lg px-4 py-2 text-center font-bold text-[16px] transition-colors",
 									isLight
 										? "text-white/80 hover:bg-white/10 hover:text-white"
 										: cn(

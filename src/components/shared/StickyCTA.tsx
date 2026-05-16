@@ -1,6 +1,6 @@
 "use client";
 
-import { Clock, MessageSquare, Phone, X } from "lucide-react";
+import { ChevronRight, Clock, MessageSquare, Phone, X } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -73,36 +73,52 @@ export const StickyCTA = () => {
 						aria-modal="true"
 						role="dialog"
 						aria-labelledby="sticky-cta-heading"
-						className="fixed right-6 bottom-[7.5rem] z-50 w-[calc(100vw-3rem)] max-w-[340px] overflow-hidden rounded-2xl bg-white shadow-[0_24px_60px_rgba(15,23,42,0.2)] md:right-8"
+						className="fixed right-6 bottom-[7.5rem] z-50 w-[calc(100vw-3rem)] max-w-[348px] overflow-hidden rounded-3xl bg-white shadow-[0_30px_80px_-20px_rgba(15,23,42,0.4)] ring-1 ring-black/[0.06] md:right-8"
 					>
 						{/* 그라디언트 헤더 */}
-						<div className="gradient-brand relative overflow-hidden px-5 py-5">
+						<div className="gradient-brand relative overflow-hidden px-6 pt-6 pb-7">
 							<div
-								className="pointer-events-none absolute inset-0 opacity-20"
+								className="pointer-events-none absolute inset-0 opacity-25"
 								style={{
 									backgroundImage:
-										"radial-gradient(circle at 85% 15%, rgba(255,255,255,0.8) 0%, transparent 55%)",
+										"radial-gradient(circle at 88% 12%, rgba(255,255,255,0.85) 0%, transparent 50%)",
+								}}
+							/>
+							<div
+								className="pointer-events-none absolute inset-0 opacity-[0.12]"
+								style={{
+									backgroundImage:
+										"linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)",
+									backgroundSize: "28px 28px",
+									maskImage: "radial-gradient(ellipse 80% 70% at 30% 100%, black, transparent 70%)",
+									WebkitMaskImage:
+										"radial-gradient(ellipse 80% 70% at 30% 100%, black, transparent 70%)",
 								}}
 							/>
 							<button
 								type="button"
 								onClick={() => setOpen(false)}
 								aria-label="닫기"
-								className="absolute top-3.5 right-3.5 flex h-7 w-7 items-center justify-center rounded-full bg-white/20 transition-colors hover:bg-white/30"
+								className="absolute top-4 right-4 flex h-7 w-7 items-center justify-center rounded-full bg-white/15 ring-1 ring-white/20 backdrop-blur-sm transition-colors hover:bg-white/25"
 							>
 								<X className="h-3.5 w-3.5 text-white" />
 							</button>
-							<p className="mb-0.5 font-semibold text-[10px] text-white/80 uppercase tracking-[0.2em]">
+							<p className="relative mb-1.5 font-mono text-[10px] text-white/70 uppercase tracking-[0.3em]">
 								{siteConfig.nameKo}
 							</p>
 							<p
 								id="sticky-cta-heading"
-								className="font-extrabold text-white text-xl leading-tight"
+								className="relative font-extrabold text-2xl text-white leading-tight tracking-tight"
 							>
-								부담 없이, 먼저 물어보세요
+								부담 없이,
+								<br />
+								먼저 물어보세요
 							</p>
-							<p className="mt-2 flex items-center gap-1.5 text-white/90 text-xs">
-								<span className="inline-block h-1.5 w-1.5 rounded-full bg-green-400" />
+							<p className="relative mt-3 flex items-center gap-2 text-white/85 text-xs">
+								<span className="relative flex h-2 w-2">
+									<span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75" />
+									<span className="relative inline-flex h-2 w-2 rounded-full bg-green-400" />
+								</span>
 								영업일 1일 내 회신
 							</p>
 						</div>
@@ -113,28 +129,36 @@ export const StickyCTA = () => {
 							<Link
 								href="/contact"
 								onClick={() => setOpen(false)}
-								className="mb-3 flex w-full items-center justify-center gap-2 rounded-xl bg-[#0a0a0a] py-3.5 font-bold text-sm text-white transition-opacity hover:opacity-85"
+								className="group mb-3 flex w-full items-center justify-center gap-2 rounded-xl bg-[#0a0a0a] py-4 font-bold text-sm text-white shadow-[0_8px_24px_-8px_rgba(124,58,237,0.5)] transition-all hover:scale-[1.02] hover:shadow-[0_12px_32px_-8px_rgba(124,58,237,0.65)]"
 							>
 								<MessageSquare className="h-4 w-4" aria-hidden="true" />
 								문의하기
+								<ChevronRight
+									className="h-4 w-4 transition-transform group-hover:translate-x-0.5"
+									aria-hidden="true"
+								/>
 							</Link>
 
 							{/* 전화 */}
 							<a
 								href={`tel:${siteConfig.contact.tel}`}
-								className="mb-4 flex items-center gap-3 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 transition-colors hover:bg-slate-100"
+								className="group flex items-center gap-3 rounded-xl bg-slate-50 px-4 py-3.5 ring-1 ring-slate-100 transition-all hover:bg-slate-100/80 hover:ring-slate-200"
 							>
-								<div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#7c3aed]/15">
+								<div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#7c3aed]/12 ring-1 ring-[#7c3aed]/15">
 									<Phone className="h-4 w-4 text-[#7c3aed]" aria-hidden="true" />
 								</div>
-								<div>
+								<div className="flex-1">
 									<p className="font-medium text-[10px] text-slate-500 tracking-wide">전화 문의</p>
 									<p className="font-bold text-slate-900 text-sm">{siteConfig.contact.tel}</p>
 								</div>
+								<ChevronRight
+									className="h-4 w-4 text-slate-400 transition-transform group-hover:translate-x-0.5"
+									aria-hidden="true"
+								/>
 							</a>
 
 							{/* 영업시간 */}
-							<div className="flex items-center justify-center gap-1.5 text-slate-500 text-xs">
+							<div className="mt-4 flex items-center justify-center gap-1.5 border-slate-100 border-t pt-4 text-slate-500 text-xs">
 								<Clock className="h-3 w-3" aria-hidden="true" />
 								<span>{siteConfig.contact.businessHours}</span>
 							</div>
