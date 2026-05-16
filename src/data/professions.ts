@@ -1,4 +1,11 @@
-export type ProfessionSlug = "lawyer" | "doctor" | "oriental" | "vet" | "labor" | "tax";
+export type ProfessionSlug =
+	| "lawyer"
+	| "doctor"
+	| "oriental"
+	| "vet"
+	| "labor"
+	| "tax"
+	| "pharmacist";
 
 export type Profession = {
 	slug: ProfessionSlug;
@@ -96,5 +103,19 @@ export const PROFESSIONS: Profession[] = [
 		],
 		strength: "종소세·양도세 시즌 공략",
 		tag: "개인 세무사 · 세무법인",
+	},
+	{
+		slug: "pharmacist",
+		label: "약사",
+		icon: "Pill",
+		adRule: true,
+		description: "약사법 광고 규정을 검토하고 환자가 먼저 찾는 약국으로 포지셔닝합니다.",
+		keyPoints: [
+			"약사법 광고 규정 사전 검토 발행",
+			"복약 지도·건강기능식품 키워드 분석",
+			"내방 전환 중심 콘텐츠 설계",
+		],
+		strength: "약사법 광고 규정 준수 발행",
+		tag: "약국 · 개국 약사",
 	},
 ];
