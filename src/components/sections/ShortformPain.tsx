@@ -3,8 +3,8 @@
 import { Reveal } from "@/components/shared/Reveal";
 
 const BUBBLES = [
-	{ initial: "K", role: "치과 원장", text: "조회수는 떴는데, 상담 전화는 없습니다." },
 	{ initial: "L", role: "변호사", text: "출연자가 부담스러워해서 1회로 끝납니다." },
+	{ initial: "K", role: "치과 원장", text: "조회수는 떴는데, 상담 전화는 없습니다." },
 	{ initial: "M", role: "한의사", text: "릴스만 만들었더니, 유튜브·틱톡은 비어있습니다." },
 	{ initial: "P", role: "세무사", text: "후반 작업이 늦어져 발행이 자꾸 미뤄집니다." },
 ] as const;
