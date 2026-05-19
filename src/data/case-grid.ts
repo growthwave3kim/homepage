@@ -13,7 +13,7 @@ export const CASE_GRID = [
 	},
 	{
 		id: "2",
-		field: "D 정형외과",
+		field: "D 피부과",
 		duration: "5개월",
 		metricLabel: "월 신규 예약",
 		before: 12,
