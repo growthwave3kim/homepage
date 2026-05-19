@@ -31,7 +31,7 @@ export const siteConfig = {
 	authors: [{ name: "Growth Wave", url }],
 	creator: "Growth Wave",
 	contact: {
-		tel: "010-4048-6460",
+		tel: "010-4667-6460",
 		email: "growthwave.3kim@gmail.com",
 		address: "경기도 화성시 동탄구 동탄중심상가1길 36, 8층",
 		businessName: "그로스웨이브",
