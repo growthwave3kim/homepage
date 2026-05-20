@@ -10,23 +10,18 @@ export default function OgImage() {
 	const logoBase64 = `data:image/png;base64,${logoData.toString("base64")}`;
 
 	return new ImageResponse(
-		(
-			<div
-				style={{
-					width: "100%",
-					height: "100%",
-					display: "flex",
-					alignItems: "center",
-					justifyContent: "center",
-					backgroundColor: "#ffffff",
-				}}
-			>
-				<img
-					src={logoBase64}
-					style={{ width: "100%", height: "100%", objectFit: "contain" }}
-				/>
-			</div>
-		),
+		<div
+			style={{
+				width: "100%",
+				height: "100%",
+				display: "flex",
+				alignItems: "center",
+				justifyContent: "center",
+				backgroundColor: "#ffffff",
+			}}
+		>
+			<img src={logoBase64} style={{ width: "100%", height: "100%", objectFit: "contain" }} />
+		</div>,
 		{ ...size },
 	);
 }
