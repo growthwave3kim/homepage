@@ -46,6 +46,13 @@ export const NoticePage = () => {
 					{siteConfig.contact.businessName} · 사업자등록번호 {siteConfig.contact.businessNumber}
 				</p>
 				<p className="mt-1">기존 문의 관련 사항은 {ONKETING_NAME}으로 문의해 주세요.</p>
+				<p className="mt-1">
+					그로스웨이브로 접수된 개인정보의 열람·정정·삭제 요청은{" "}
+					<a href={`mailto:${siteConfig.contact.email}`} className="underline">
+						{siteConfig.contact.email}
+					</a>{" "}
+					로 연락해 주세요.
+				</p>
 			</footer>
 		</main>
 	);
