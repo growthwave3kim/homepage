@@ -31,9 +31,11 @@ export const metadata: Metadata = {
 		title: "온케팅으로 이전했습니다 | 그로스웨이브",
 		description: "그로스웨이브는 온케팅으로 이전했습니다. 온케팅에서 이어서 만나보실 수 있습니다.",
 	},
+	// 온케팅 이전 — 검색엔진 색인에서 제거 (noindex)
 	robots: {
-		index: true,
-		follow: true,
+		index: false,
+		follow: false,
+		googleBot: { index: false, follow: false },
 	},
 	alternates: {
 		canonical: siteConfig.url,
