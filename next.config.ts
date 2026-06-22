@@ -12,12 +12,6 @@ import type { NextConfig } from "next";
 // - 외부 폰트/이미지 추가 시 해당 도메인을 CSP에 추가할 것
 // ─────────────────────────────────────────────────────────────────────────────
 const securityHeaders = [
-	// 검색엔진 색인 차단 — 온케팅 이전에 따라 그로스웨이브 사이트 노출 제거
-	{
-		key: "X-Robots-Tag",
-		value: "noindex, nofollow",
-	},
-
 	// 클릭재킹(Clickjacking) 방지
 	{
 		key: "X-Frame-Options",
